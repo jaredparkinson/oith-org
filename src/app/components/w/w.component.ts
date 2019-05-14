@@ -32,8 +32,8 @@ export class WComponent implements OnInit {
 
       const bold = multiIncludes([this.richTextEnum.verseNumber], richTexts);
       const italic = multiIncludes([this.richTextEnum.clarityWord], richTexts);
-      console.log(bold);
-      console.log(italic);
+      // console.log(bold);
+      // console.log(italic);
 
       if (bold && italic) {
         return 'bolditalica';
@@ -44,5 +44,13 @@ export class WComponent implements OnInit {
       }
     }
     return '';
+  }
+
+  public click(): void {
+    if (this.w.wRef) {
+      console.log('asdf');
+
+      this.w.wRef = undefined;
+    }
   }
 }

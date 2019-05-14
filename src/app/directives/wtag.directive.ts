@@ -1,16 +1,36 @@
-import { Directive, Input, ElementRef, AfterViewInit } from '@angular/core';
+import {
+  Directive,
+  Input,
+  ElementRef,
+  AfterViewInit,
+  DoCheck,
+} from '@angular/core';
 import { WMerged, RichText, WRef, Color } from '../shared/enums/wtags';
 import { last } from 'lodash';
 
 @Directive({
   selector: '[appWTag]',
 })
-export class WTagDirective implements AfterViewInit {
+export class WTagDirective implements AfterViewInit, DoCheck {
   @Input() public wMerged: WMerged;
   private element: HTMLElement;
   public color = Color;
   public constructor(private el: ElementRef) {
     this.element = el.nativeElement as HTMLElement;
+  }
+
+  public ngDoCheck(): void {
+    //Called every time that the input properties of a component or a directive are checked. Use it to extend change detection by performing a custom check.
+    //Add 'implements DoCheck' to the class.
+    this.element.className = '';
+    if (this.wMerged) {
+      if (this.wMerged.wRef) {
+        this.addRefStyling(this.wMerged.wRef);
+      }
+      if (this.wMerged.wHighlight) {
+        this.convertToColor('highlight', last(this.wMerged.wHighlight));
+      }
+    }
   }
 
   public ngAfterViewInit(): void {
