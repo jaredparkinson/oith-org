@@ -1,17 +1,19 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { WTagGroupA, Verse } from 'src/app/shared/enums/wtags';
 import { WTagService } from 'src/app/services/wtag.service';
+import { WTagComponent } from './WTagComponent';
 
 @Component({
   selector: 'app-wtag-group-aruby',
   template: '',
   styles: [''],
 })
-export class WTagGroupARubyComponent implements OnInit {
+export class WTagGroupARubyComponent extends WTagComponent implements OnInit {
   @Input() public wTagGroup: WTagGroupA;
-  @Input() public verse: Verse;
 
-  public constructor(public wTagService: WTagService) {}
+  public constructor(public wTagService: WTagService) {
+    super();
+  }
 
   public ngOnInit(): void {
     throw 'Not implemented';

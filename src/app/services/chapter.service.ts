@@ -29,7 +29,7 @@ export class ChapterService {
             (wTagGroup): void => {
               wTagGroup.charCount = range(
                 wTagGroup.charCountCompress[0],
-                wTagGroup.charCountCompress[1],
+                wTagGroup.charCountCompress[1] + 1,
               );
             },
           );
@@ -38,7 +38,6 @@ export class ChapterService {
           verse.wTags.map(
             (wTag): void => {
               wTag.charCountUncompressed = this.expandRange(wTag.charCount);
-              console.log(wTag.charCountUncompressed);
             },
           );
         }

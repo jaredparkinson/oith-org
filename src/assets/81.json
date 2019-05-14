@@ -34,19 +34,19 @@
     "text": "1 Verily, verily, I say unto you my servant Frederick G. Williams: Listen to the voice of him who speaketh, to the word of the Lord your God, and hearken to the calling wherewith you are called, even to be a high priest in my church, and a counselor unto my servant Joseph Smith, Jun.;",
     "wTagGroups": [{ "charCountCompress": [0, 284], "type": 1 }],
     "wTags": [
-      { "wType": 1, "verseID": "p1", "charCount": [[0, 1]], "richText": 0 },
+      { "wType": 1, "verseID": "p1", "charCount": [[0, 2]], "richText": 0 },
       {
         "wType": 4,
         "verseID": "p1",
         "optional": true,
-        "charCount": [[208, 218]],
+        "charCount": [[208, 219]],
         "ref": "128370466"
       },
       {
         "wType": 4,
         "verseID": "p1",
         "optional": true,
-        "charCount": [[240, 248]],
+        "charCount": [[240, 249]],
         "ref": "128370467"
       }
     ]
@@ -57,19 +57,19 @@
     "text": "2 Unto whom I have given the keys of the kingdom, which belong always unto the Presidency of the High Priesthood:",
     "wTagGroups": [{ "charCountCompress": [0, 112], "type": 1 }],
     "wTags": [
-      { "wType": 1, "verseID": "p2", "charCount": [[0, 1]], "richText": 0 },
+      { "wType": 1, "verseID": "p2", "charCount": [[0, 2]], "richText": 0 },
       {
         "wType": 4,
         "verseID": "p2",
         "optional": true,
-        "charCount": [[29, 32]],
+        "charCount": [[29, 33]],
         "ref": "128370468"
       },
       {
         "wType": 4,
         "verseID": "p2",
         "optional": true,
-        "charCount": [[79, 88]],
+        "charCount": [[79, 89]],
         "ref": "128370469"
       }
     ]
@@ -80,19 +80,19 @@
     "text": "3 Therefore, verily I acknowledge him and will bless him, and also thee, inasmuch as thou art faithful in counsel, in the office which I have appointed unto you, in prayer always, vocally and in thy heart, in public and in private, also in thy ministry in proclaiming the gospel in the land of the living, and among thy brethren.",
     "wTagGroups": [{ "charCountCompress": [0, 328], "type": 1 }],
     "wTags": [
-      { "wType": 1, "verseID": "p3", "charCount": [[0, 1]], "richText": 0 },
+      { "wType": 1, "verseID": "p3", "charCount": [[0, 2]], "richText": 0 },
       {
         "wType": 4,
         "verseID": "p3",
         "optional": true,
-        "charCount": [[244, 251]],
+        "charCount": [[244, 252]],
         "ref": "128370470"
       },
       {
         "wType": 4,
         "verseID": "p3",
         "optional": true,
-        "charCount": [[286, 289]],
+        "charCount": [[286, 290]],
         "ref": "128370471"
       }
     ]
@@ -103,19 +103,19 @@
     "text": "4 And in doing these things thou wilt do the greatest good unto thy fellow beings, and wilt promote the glory of him who is your Lord.",
     "wTagGroups": [{ "charCountCompress": [0, 133], "type": 1 }],
     "wTags": [
-      { "wType": 1, "verseID": "p4", "charCount": [[0, 1]], "richText": 0 },
+      { "wType": 1, "verseID": "p4", "charCount": [[0, 2]], "richText": 0 },
       {
         "wType": 4,
         "verseID": "p4",
         "optional": true,
-        "charCount": [[54, 57]],
+        "charCount": [[54, 58]],
         "ref": "128370472"
       },
       {
         "wType": 4,
         "verseID": "p4",
         "optional": true,
-        "charCount": [[104, 108]],
+        "charCount": [[104, 109]],
         "ref": "128370473"
       }
     ]
@@ -126,33 +126,33 @@
     "text": "5 Wherefore, be faithful; stand in the office which I have appointed unto you; succor the weak, lift up the hands which hang down, and strengthen the feeble knees.",
     "wTagGroups": [{ "charCountCompress": [0, 162], "type": 1 }],
     "wTags": [
-      { "wType": 1, "verseID": "p5", "charCount": [[0, 1]], "richText": 0 },
+      { "wType": 1, "verseID": "p5", "charCount": [[0, 2]], "richText": 0 },
       {
         "wType": 4,
         "verseID": "p5",
         "optional": true,
-        "charCount": [[79, 84]],
+        "charCount": [[79, 85]],
         "ref": "128370474"
       },
       {
         "wType": 4,
         "verseID": "p5",
         "optional": true,
-        "charCount": [[90, 93]],
+        "charCount": [[90, 94]],
         "ref": "128370475"
       },
       {
         "wType": 4,
         "verseID": "p5",
         "optional": true,
-        "charCount": [[135, 144]],
+        "charCount": [[135, 145]],
         "ref": "128370476"
       },
       {
         "wType": 4,
         "verseID": "p5",
         "optional": true,
-        "charCount": [[150, 155]],
+        "charCount": [[150, 156]],
         "ref": "128370477"
       }
     ]
@@ -163,33 +163,33 @@
     "text": "6 And if thou art faithful unto the end thou shalt have a crown of immortality, and eternal life in the mansions which I have prepared in the house of my Father.",
     "wTagGroups": [{ "charCountCompress": [0, 160], "type": 1 }],
     "wTags": [
-      { "wType": 1, "verseID": "p6", "charCount": [[0, 1]], "richText": 0 },
+      { "wType": 1, "verseID": "p6", "charCount": [[0, 2]], "richText": 0 },
       {
         "wType": 4,
         "verseID": "p6",
         "optional": true,
-        "charCount": [[18, 25]],
+        "charCount": [[18, 26]],
         "ref": "128370478"
       },
       {
         "wType": 4,
         "verseID": "p6",
         "optional": true,
-        "charCount": [[58, 62]],
+        "charCount": [[58, 63]],
         "ref": "128370479"
       },
       {
         "wType": 4,
         "verseID": "p6",
         "optional": true,
-        "charCount": [[67, 77]],
+        "charCount": [[67, 78]],
         "ref": "128370480"
       },
       {
         "wType": 4,
         "verseID": "p6",
         "optional": true,
-        "charCount": [[84, 95]],
+        "charCount": [[84, 96]],
         "ref": "tc-dc-81-6b",
         "noteType": 3
       },
@@ -197,7 +197,7 @@
         "wType": 4,
         "verseID": "p6",
         "optional": true,
-        "charCount": [[104, 111]],
+        "charCount": [[104, 112]],
         "ref": "128370481"
       }
     ]
@@ -208,7 +208,7 @@
     "text": "7 Behold, and lo, these are the words of Alpha and Omega, even Jesus Christ. Amen.",
     "wTagGroups": [{ "charCountCompress": [0, 81], "type": 1 }],
     "wTags": [
-      { "wType": 1, "verseID": "p7", "charCount": [[0, 1]], "richText": 0 }
+      { "wType": 1, "verseID": "p7", "charCount": [[0, 2]], "richText": 0 }
     ]
   }
 ]

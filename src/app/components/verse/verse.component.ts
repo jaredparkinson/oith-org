@@ -10,12 +10,5 @@ export class VerseComponent implements OnInit {
   @Input() public verse: Verse;
   public constructor() {}
 
-  public ngOnInit(): void {
-    if (this.verse.wTags)
-      this.verse.wTags.map(
-        (wtagGroup): void => {
-          console.log(wtagGroup);
-        },
-      );
-  }
+  public ngOnInit(): void {}
 }

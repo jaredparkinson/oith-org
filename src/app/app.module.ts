@@ -25,6 +25,7 @@ import { WTagGroupRubyComponent } from './components/verse/w-tag-groups/wtag-gro
 import { WTagGroupTextComponent } from './components/verse/w-tag-groups/wtag-group-text.component';
 import { WTagGroupRBComponent } from './components/verse/w-tag-groups/wtag-group-rb.component';
 import { WTagGroupARubyComponent } from './components/verse/w-tag-groups/wtag-group-aruby.component';
+import { WTagDirective } from './directives/wtag.directive';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { WTagGroupARubyComponent } from './components/verse/w-tag-groups/wtag-gr
     WTagGroupRBComponent,
     WTagGroupRTComponent,
     WTagGroupARubyComponent,
+    WTagDirective,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
