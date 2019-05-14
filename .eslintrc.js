@@ -7,7 +7,11 @@ module.exports = {
   ],
   rules: {
     '@typescript-eslint/no-parameter-properties': false,
-    accessibility: 'explicit',
+
+    eqeqeq: ['error', 'always'],
+    'no-var': 'error',
+    quotes: ['error', 'single'],
+    'prefer-const': 'error',
     'member-ordering': [
       true,
       {

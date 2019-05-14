@@ -1,3 +1,36 @@
-<p>
-  verse works!
-</p>
+<verse>
+  <ng-container *ngFor="let wTagGroup of this.verse.wTagGroups">
+    <ng-container [ngSwitch]="wTagGroup.type">
+      <app-wtag-group-a
+        *ngSwitchCase="0"
+        [wTagGroup]="wTagGroup"
+        [verse]="this.verse"
+      ></app-wtag-group-a>
+      <app-wtag-group-text
+        *ngSwitchCase="this.wGroupType.Text"
+        [wTagGroup]="wTagGroup"
+        [verse]="this.verse"
+      ></app-wtag-group-text>
+      <app-wtag-group-ruby
+        *ngSwitchCase="this.wGroupType.Ruby"
+        [wTagGroup]="wTagGroup"
+        [verse]="this.verse"
+      ></app-wtag-group-ruby>
+      <app-wtag-group-rb
+        *ngSwitchCase="this.wGroupType.RB"
+        [wTagGroup]="wTagGroup"
+        [verse]="this.verse"
+      ></app-wtag-group-rb>
+      <app-wtag-group-rt
+        *ngSwitchCase="this.wGroupType.RT"
+        [wTagGroup]="wTagGroup"
+        [verse]="this.verse"
+      ></app-wtag-group-rt>
+      <app-wtag-group-aruby
+        *ngSwitchCase="this.wGroupType.ARuby"
+        [wTagGroup]="wTagGroup"
+        [verse]="this.verse"
+      ></app-wtag-group-aruby>
+    </ng-container>
+  </ng-container>
+</verse>

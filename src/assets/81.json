@@ -1,0 +1,214 @@
+[
+  {
+    "_id": "title_number1",
+    "classList": ["title-number"],
+    "text": "Section 81",
+    "wTagGroups": [{ "charCountCompress": [0, 9], "type": 1 }]
+  },
+  {
+    "_id": "study_intro1",
+    "classList": ["study-intro"],
+    "text": "Revelation given through Joseph Smith the Prophet, at Hiram, Ohio, March 15, 1832. Frederick G. Williams is called to be a high priest and a counselor in the Presidency of the High Priesthood. The historical records show that when this revelation was received in March 1832, it called Jesse Gause to the office of counselor to Joseph Smith in the Presidency. However, when he failed to continue in a manner consistent with this appointment, the call was subsequently transferred to Frederick G. Williams. The revelation (dated March 1832) should be regarded as a step toward the formal organization of the First Presidency, specifically calling for the office of counselor in that body and explaining the dignity of the appointment. Brother Gause served for a time but was excommunicated from the Church in December 1832. Brother Williams was ordained to the specified office on March 18, 1833.",
+    "wTagGroups": [{ "charCountCompress": [0, 893], "type": 1 }]
+  },
+  {
+    "_id": "",
+    "classList": ["page-break"],
+    "text": "​",
+    "wTagGroups": [{ "charCountCompress": [0, 0], "type": 1 }]
+  },
+  {
+    "_id": "study_summary1",
+    "classList": ["study-summary"],
+    "text": "1–2, The keys of the kingdom are always held by the First Presidency; 3–7, If Frederick G. Williams is faithful in his ministry, he will have eternal life.",
+    "wTagGroups": [
+      { "charCountCompress": [0, 2], "type": 0, "href": "#/dc/81.1-2" },
+      { "charCountCompress": [3, 69], "type": 1 },
+      { "charCountCompress": [70, 72], "type": 0, "href": "#/dc/81.3-7" },
+      { "charCountCompress": [73, 154], "type": 1 }
+    ]
+  },
+  {
+    "_id": "p1",
+    "classList": ["verse"],
+    "text": "1 Verily, verily, I say unto you my servant Frederick G. Williams: Listen to the voice of him who speaketh, to the word of the Lord your God, and hearken to the calling wherewith you are called, even to be a high priest in my church, and a counselor unto my servant Joseph Smith, Jun.;",
+    "wTagGroups": [{ "charCountCompress": [0, 284], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p1", "charCount": [[0, 1]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p1",
+        "optional": true,
+        "charCount": [[208, 218]],
+        "ref": "128370466"
+      },
+      {
+        "wType": 4,
+        "verseID": "p1",
+        "optional": true,
+        "charCount": [[240, 248]],
+        "ref": "128370467"
+      }
+    ]
+  },
+  {
+    "_id": "p2",
+    "classList": ["verse"],
+    "text": "2 Unto whom I have given the keys of the kingdom, which belong always unto the Presidency of the High Priesthood:",
+    "wTagGroups": [{ "charCountCompress": [0, 112], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p2", "charCount": [[0, 1]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p2",
+        "optional": true,
+        "charCount": [[29, 32]],
+        "ref": "128370468"
+      },
+      {
+        "wType": 4,
+        "verseID": "p2",
+        "optional": true,
+        "charCount": [[79, 88]],
+        "ref": "128370469"
+      }
+    ]
+  },
+  {
+    "_id": "p3",
+    "classList": ["verse"],
+    "text": "3 Therefore, verily I acknowledge him and will bless him, and also thee, inasmuch as thou art faithful in counsel, in the office which I have appointed unto you, in prayer always, vocally and in thy heart, in public and in private, also in thy ministry in proclaiming the gospel in the land of the living, and among thy brethren.",
+    "wTagGroups": [{ "charCountCompress": [0, 328], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p3", "charCount": [[0, 1]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p3",
+        "optional": true,
+        "charCount": [[244, 251]],
+        "ref": "128370470"
+      },
+      {
+        "wType": 4,
+        "verseID": "p3",
+        "optional": true,
+        "charCount": [[286, 289]],
+        "ref": "128370471"
+      }
+    ]
+  },
+  {
+    "_id": "p4",
+    "classList": ["verse"],
+    "text": "4 And in doing these things thou wilt do the greatest good unto thy fellow beings, and wilt promote the glory of him who is your Lord.",
+    "wTagGroups": [{ "charCountCompress": [0, 133], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p4", "charCount": [[0, 1]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p4",
+        "optional": true,
+        "charCount": [[54, 57]],
+        "ref": "128370472"
+      },
+      {
+        "wType": 4,
+        "verseID": "p4",
+        "optional": true,
+        "charCount": [[104, 108]],
+        "ref": "128370473"
+      }
+    ]
+  },
+  {
+    "_id": "p5",
+    "classList": ["verse"],
+    "text": "5 Wherefore, be faithful; stand in the office which I have appointed unto you; succor the weak, lift up the hands which hang down, and strengthen the feeble knees.",
+    "wTagGroups": [{ "charCountCompress": [0, 162], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p5", "charCount": [[0, 1]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p5",
+        "optional": true,
+        "charCount": [[79, 84]],
+        "ref": "128370474"
+      },
+      {
+        "wType": 4,
+        "verseID": "p5",
+        "optional": true,
+        "charCount": [[90, 93]],
+        "ref": "128370475"
+      },
+      {
+        "wType": 4,
+        "verseID": "p5",
+        "optional": true,
+        "charCount": [[135, 144]],
+        "ref": "128370476"
+      },
+      {
+        "wType": 4,
+        "verseID": "p5",
+        "optional": true,
+        "charCount": [[150, 155]],
+        "ref": "128370477"
+      }
+    ]
+  },
+  {
+    "_id": "p6",
+    "classList": ["verse"],
+    "text": "6 And if thou art faithful unto the end thou shalt have a crown of immortality, and eternal life in the mansions which I have prepared in the house of my Father.",
+    "wTagGroups": [{ "charCountCompress": [0, 160], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p6", "charCount": [[0, 1]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p6",
+        "optional": true,
+        "charCount": [[18, 25]],
+        "ref": "128370478"
+      },
+      {
+        "wType": 4,
+        "verseID": "p6",
+        "optional": true,
+        "charCount": [[58, 62]],
+        "ref": "128370479"
+      },
+      {
+        "wType": 4,
+        "verseID": "p6",
+        "optional": true,
+        "charCount": [[67, 77]],
+        "ref": "128370480"
+      },
+      {
+        "wType": 4,
+        "verseID": "p6",
+        "optional": true,
+        "charCount": [[84, 95]],
+        "ref": "tc-dc-81-6b",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p6",
+        "optional": true,
+        "charCount": [[104, 111]],
+        "ref": "128370481"
+      }
+    ]
+  },
+  {
+    "_id": "p7",
+    "classList": ["verse"],
+    "text": "7 Behold, and lo, these are the words of Alpha and Omega, even Jesus Christ. Amen.",
+    "wTagGroups": [{ "charCountCompress": [0, 81], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p7", "charCount": [[0, 1]], "richText": 0 }
+    ]
+  }
+]

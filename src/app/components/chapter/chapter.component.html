@@ -1,3 +1,6 @@
-<p>
-  chapter works!
-</p>
+<ng-container *ngIf="this.chapterService.verses">
+  <app-verse
+    *ngFor="let verse of this.chapterService.verses"
+    [verse]="verse"
+  ></app-verse>
+</ng-container>
