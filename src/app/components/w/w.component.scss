@@ -2,5 +2,54 @@
   color: blue;
 }
 w {
-  // color: green;
+  &.w-ref-multi {
+    border-bottom: 1px solid grey;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-decoration-color: grey;
+  }
+  &.w-ref-single {
+    border-bottom: 1px solid grey;
+  }
+  &.highlight-yellow,
+  &.underline-yellow {
+    background-color: #fff8aa;
+  }
+  &.highlight-blue,
+  &.underline-blue {
+    background-color: #aaf6ff;
+  }
+  &.highlight-green,
+  &.underline-green {
+    background-color: #d6ffaa;
+  }
+  &.highlight-red,
+  &.underline-red {
+    background-color: #ff9b9f;
+  }
+  &.highlight-purple,
+  &.underline-purple {
+    background-color: #d7d5fc;
+  }
+
+  &.highlight-orange,
+  &.underline-orange {
+    background-color: #ffbf98;
+  }
+  &.highlight-pink,
+  &.underline-pink {
+    background-color: #ffc2e9;
+  }
+  &.highlight-gray,
+  &.underline-gray {
+    background-color: #dddddd;
+  }
+  &.highlight-brown,
+  &.underline-brown {
+    background-color: #dfcdba;
+  }
+  &.highlight-dark-blue,
+  &.underline-dark-blue {
+    background-color: #a8c7e6;
+  }
 }

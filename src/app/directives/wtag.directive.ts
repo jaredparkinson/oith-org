@@ -1,30 +1,74 @@
 import { Directive, Input, ElementRef, AfterViewInit } from '@angular/core';
-import { WMerged, RichText } from '../shared/enums/wtags';
+import { WMerged, RichText, WRef, Color } from '../shared/enums/wtags';
+import { last } from 'lodash';
 
 @Directive({
   selector: '[appWTag]',
 })
 export class WTagDirective implements AfterViewInit {
   @Input() public wMerged: WMerged;
-  public constructor(private el: ElementRef) {}
+  private element: HTMLElement;
+  public color = Color;
+  public constructor(private el: ElementRef) {
+    this.element = el.nativeElement as HTMLElement;
+  }
 
   public ngAfterViewInit(): void {
     if (this.wMerged) {
       if (this.wMerged.wRef) {
-        this.el.nativeElement.style.backgroundColor = 'red';
+        this.addRefStyling(this.wMerged.wRef);
       }
-      if (this.wMerged.wRichText) {
-        this.wMerged.wRichText.map(
-          (wRichText): void => {
-            switch (wRichText.richText) {
-              case RichText.verseNumber: {
-                (this.el.nativeElement as HTMLElement).style.fontWeight =
-                  'bold';
-              }
-            }
-          },
-        );
+      if (this.wMerged.wHighlight) {
+        this.convertToColor('highlight', last(this.wMerged.wHighlight));
       }
+    }
+  }
+
+  private addRefStyling(wRef: WRef[]): void {
+    this.element.classList.add(
+      wRef.length > 1 ? 'w-ref-multi' : 'w-ref-single',
+    );
+  }
+
+  private convertToColor(
+    type: string,
+    color: { color: Color } | undefined,
+  ): void {
+    let className: string = type;
+    if (color) {
+      switch (color.color) {
+        case this.color.blue: {
+          className = `${className}-blue`;
+        }
+        case this.color.yellow: {
+          className = `${className}-yellow`;
+        }
+        case this.color.green: {
+          className = `${className}-green`;
+        }
+        case this.color.red: {
+          className = `${className}-red`;
+        }
+        case this.color.purple: {
+          className = `${className}-purple`;
+        }
+        case this.color.orange: {
+          className = `${className}-orange`;
+        }
+        case this.color.pink: {
+          className = `${className}-pink`;
+        }
+        case this.color.gray: {
+          className = `${className}-gray`;
+        }
+        case this.color.brown: {
+          className = `${className}-brown`;
+        }
+        case this.color.darkBlue: {
+          className = `${className}-dark-blue`;
+        }
+      }
+      this.element.classList.add(className);
     }
   }
 }
