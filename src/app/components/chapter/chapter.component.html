@@ -1,6 +1,11 @@
-<ng-container *ngIf="this.chapterService.verses">
-  <app-verse
-    *ngFor="let verse of this.chapterService.verses"
-    [verse]="verse"
-  ></app-verse>
-</ng-container>
+<div class="oith-content">
+  <div class="body-block ">
+    <ng-container *ngIf="this.chapterService.verses">
+      <app-verse
+        *ngFor="let verse of this.chapterService.verses"
+        [verse]="verse"
+      ></app-verse>
+    </ng-container>
+  </div>
+  <div style="background-color: red" class=""></div>
+</div>

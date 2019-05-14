@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'app/styles/bootstrap.min.css';
+
+* {
+  font-family: serif !important;
+}
+body {
+  // overflow: hidden;
+}
+router-outlet {
+  display: none;
+}
+
+.oith-root {
+  app-header {
+    background-color: green;
+  }
+  app-navigation {
+    background-color: black;
+  }
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  grid-template-rows: 32px auto 32px;
+
+  .oith-content-parent {
+    display: grid;
+    grid-template-columns: 300px auto;
+
+    .oith-content {
+      display: grid;
+      grid-template-columns: auto 300px;
+      height: 100%;
+      .body-block {
+        overflow-y: scroll;
+        verse {
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
