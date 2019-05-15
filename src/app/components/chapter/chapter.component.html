@@ -1,6 +1,6 @@
 <div class="oith-content">
   <div class="body-block ">
-    <div></div>
+    <div style="background: green"></div>
     <div>
       <ng-container *ngIf="this.chapterService.verses">
         <app-verse
@@ -10,7 +10,7 @@
         <div style="height: 90vh;"></div>
       </ng-container>
     </div>
-    <div></div>
+    <div style="background: green"></div>
   </div>
   <div style="background-color: red" class="footer">
     <ng-container *ngIf="this.chapterService.notes">
@@ -18,6 +18,7 @@
         [note]="note"
         *ngFor="let note of this.chapterService.notes"
       ></app-note>
+      <div style="height: 90vh;"></div>
     </ng-container>
   </div>
 </div>

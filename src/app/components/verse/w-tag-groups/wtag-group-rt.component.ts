@@ -12,7 +12,7 @@ export class WTagGroupRTComponent extends WTagComponent implements OnInit {
   @Input() public wTagGroup: WTagGroupA;
 
   public constructor(public wTagService: WTagService) {
-    super();
+    super(wTagService);
   }
 
   public ngOnInit(): void {
