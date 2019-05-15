@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Verse } from '../shared/enums/wtags';
 import { range } from 'lodash';
+import { Note } from 'oith.notes/src/models/Note';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ChapterService {
   public verses: Verse[];
+  public notes: Note[] | undefined;
   public constructor() {}
 
   private expandRange(compressedRanges: [number, number][]): number[] {
