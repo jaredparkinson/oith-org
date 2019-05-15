@@ -1,13 +1,11 @@
 <ng-container [ngSwitch]="this.w.wRichText !== undefined">
-  <w *ngSwitchCase="true" appWTag [wMerged]="this.w" (click)="this.click()">
-    <ng-container [ngSwitch]="this.isBoldItalicOrBoth(this.w.wRichText)">
-      <i *ngSwitchCase="'italic'">{{ this.w.text }}</i>
-      <b *ngSwitchCase="'bold'">{{ this.w.text }}</b>
-      <i *ngSwitchCase="'bolditalic'"
-        ><b>{{ this.w.text }}</b></i
-      ><w *ngSwitchDefault>{{ this.w.text }}</w>
-    </ng-container>
-  </w>
+  <w
+    *ngSwitchCase="true"
+    appWTag
+    [wMerged]="this.w"
+    (click)="this.click()"
+    [innerHTML]="this.renderText()"
+  ></w>
   <w *ngSwitchCase="false" appWTag [wMerged]="this.w" (click)="this.click()">{{
     this.w.text
   }}</w></ng-container

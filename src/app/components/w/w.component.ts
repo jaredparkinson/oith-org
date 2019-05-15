@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { WMerged, RichText, WRichText } from 'src/app/shared/enums/wtags';
 import { multiIncludes } from './multiIncludes';
+import { MarkService } from 'src/app/services/mark.service';
 
 @Component({
   selector: 'app-w',
@@ -11,7 +12,7 @@ export class WComponent implements OnInit {
   private richTextEnum = RichText;
   @Input() public w: WMerged;
   public ref = false;
-  public constructor() {}
+  public constructor(public markService: MarkService) {}
   public ngOnInit(): void {
     if (this.w.wRef) {
       this.ref = true;
@@ -51,6 +52,20 @@ export class WComponent implements OnInit {
       console.log('asdf');
 
       this.w.wRef = undefined;
+    }
+  }
+
+  public renderText(): string {
+    if (this.w.wRichText && this.w.text) {
+      const richTexts = this.w.wRichText.map(
+        (rich): RichText => {
+          return rich.richText;
+        },
+      );
+      const temp = this.markService.renderWTagMark(richTexts, this.w.text);
+      return this.markService.renderWTagMark(richTexts, this.w.text);
+    } else {
+      return this.w.text ? this.w.text : '';
     }
   }
 }

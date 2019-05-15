@@ -1,0 +1,25 @@
+export enum RichText {
+  verseNumber = 0,
+  clarityWord,
+  translit,
+  language,
+  deityName,
+  smallCaps,
+  uppercase,
+  entry,
+  closing,
+  signature,
+  shortTitle,
+  break,
+  salutation,
+  office,
+  date,
+  addressee,
+  answer,
+  question,
+  line,
+  paraMark,
+  selah,
+}
+
+export const richText = RichText;
