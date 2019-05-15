@@ -26,6 +26,9 @@ import { WTagGroupTextComponent } from './components/verse/w-tag-groups/wtag-gro
 import { WTagGroupRBComponent } from './components/verse/w-tag-groups/wtag-group-rb.component';
 import { WTagGroupARubyComponent } from './components/verse/w-tag-groups/wtag-group-aruby.component';
 import { WTagDirective } from './directives/wtag.directive';
+import { SecondaryNoteComponent } from './components/note/secondary-note-component';
+import { NotePhraseComponent } from './components/note/note-phrase-component';
+import { NoteRefComponent } from './components/note/note-ref-component';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,9 @@ import { WTagDirective } from './directives/wtag.directive';
     NavigationComponent,
     SearchComponent,
     SettingsComponent,
+    SecondaryNoteComponent,
+    NotePhraseComponent,
+    NoteRefComponent,
     WTagGroupAComponent,
     WTagGroupRubyComponent,
     WTagGroupTextComponent,

@@ -1,3 +1,8 @@
-<p>
-  note works!
-</p>
+<note>
+  <span>{{ this.note.noteTitle }}</span>
+  <span>{{ this.note.noteShortTitle }}</span>
+  <app-secondary-note
+    *ngFor="let secondaryNote of this.getSecondaryNotes()"
+    [secondaryNote]="secondaryNote"
+  ></app-secondary-note>
+</note>

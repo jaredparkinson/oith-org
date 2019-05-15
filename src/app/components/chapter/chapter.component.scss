@@ -6,7 +6,8 @@
 .oith-content {
   display: grid;
   @media #{$phoneMediaQuery} {
-    grid-template-columns: 100vw 0px;
+    grid-template-rows: 50% 50%;
+    height: 100vh;
   }
   @media #{$largeMediaQuery} {
     grid-template-columns: auto 300px;
@@ -18,5 +19,8 @@
     grid-template-columns: 32px auto 32px;
     verse {
     }
+  }
+  .footer {
+    overflow: scroll;
   }
 }
