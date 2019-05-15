@@ -1,3 +1,16 @@
 verse {
   display: block;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  // width: 80%;
+  &.highlight {
+    border-left: 3px solid #f68d2e;
+  }
+  &.paragraph {
+    &.highlight {
+      /* background-color: rgba(184,184,106,.815); */
+      background-color: rgba(184, 184, 106, 0.815);
+    }
+  }
 }

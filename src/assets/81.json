@@ -1,214 +1,1270 @@
 [
   {
+    "_id": "title1",
+    "classList": [""],
+    "text": "The Second Book of Nephi",
+    "wTagGroups": [{ "charCountCompress": [0, 23], "type": 1 }]
+  },
+  {
+    "_id": "intro1",
+    "classList": ["intro"],
+    "text": "An account of the death of Lehi. Nephi’s brethren rebel against him. The Lord warns Nephi to depart into the wilderness. His journeyings in the wilderness, and so forth.",
+    "wTagGroups": [{ "charCountCompress": [0, 168], "type": 1 }]
+  },
+  {
     "_id": "title_number1",
     "classList": ["title-number"],
-    "text": "Section 81",
-    "wTagGroups": [{ "charCountCompress": [0, 9], "type": 1 }]
-  },
-  {
-    "_id": "study_intro1",
-    "classList": ["study-intro"],
-    "text": "Revelation given through Joseph Smith the Prophet, at Hiram, Ohio, March 15, 1832. Frederick G. Williams is called to be a high priest and a counselor in the Presidency of the High Priesthood. The historical records show that when this revelation was received in March 1832, it called Jesse Gause to the office of counselor to Joseph Smith in the Presidency. However, when he failed to continue in a manner consistent with this appointment, the call was subsequently transferred to Frederick G. Williams. The revelation (dated March 1832) should be regarded as a step toward the formal organization of the First Presidency, specifically calling for the office of counselor in that body and explaining the dignity of the appointment. Brother Gause served for a time but was excommunicated from the Church in December 1832. Brother Williams was ordained to the specified office on March 18, 1833.",
-    "wTagGroups": [{ "charCountCompress": [0, 893], "type": 1 }]
-  },
-  {
-    "_id": "",
-    "classList": ["page-break"],
-    "text": "​",
-    "wTagGroups": [{ "charCountCompress": [0, 0], "type": 1 }]
+    "text": "Chapter 1",
+    "wTagGroups": [{ "charCountCompress": [0, 8], "type": 1 }]
   },
   {
     "_id": "study_summary1",
     "classList": ["study-summary"],
-    "text": "1–2, The keys of the kingdom are always held by the First Presidency; 3–7, If Frederick G. Williams is faithful in his ministry, he will have eternal life.",
-    "wTagGroups": [
-      { "charCountCompress": [0, 2], "type": 0, "href": "#/dc/81.1-2" },
-      { "charCountCompress": [3, 69], "type": 1 },
-      { "charCountCompress": [70, 72], "type": 0, "href": "#/dc/81.3-7" },
-      { "charCountCompress": [73, 154], "type": 1 }
-    ]
+    "text": "Lehi prophesies of a land of liberty—His seed will be scattered and smitten if they reject the Holy One of Israel—He exhorts his sons to put on the armor of righteousness. About 588–570 B.C.",
+    "wTagGroups": [{ "charCountCompress": [0, 189], "type": 1 }]
   },
   {
     "_id": "p1",
     "classList": ["verse"],
-    "text": "1 Verily, verily, I say unto you my servant Frederick G. Williams: Listen to the voice of him who speaketh, to the word of the Lord your God, and hearken to the calling wherewith you are called, even to be a high priest in my church, and a counselor unto my servant Joseph Smith, Jun.;",
-    "wTagGroups": [{ "charCountCompress": [0, 284], "type": 1 }],
+    "text": "1 And now it came to pass that after I, Nephi, had made an end of teaching my brethren, our father, Lehi, also spake many things unto them, and rehearsed unto them, how great things the Lord had done for them in bringing them out of the land of Jerusalem.",
+    "wTagGroups": [{ "charCountCompress": [0, 254], "type": 1 }],
     "wTags": [
       { "wType": 1, "verseID": "p1", "charCount": [[0, 2]], "richText": 0 },
       {
         "wType": 4,
         "verseID": "p1",
         "optional": true,
-        "charCount": [[208, 219]],
-        "ref": "128370466"
+        "charCount": [[92, 98]],
+        "ref": "128345077"
       },
       {
         "wType": 4,
         "verseID": "p1",
         "optional": true,
-        "charCount": [[240, 249]],
-        "ref": "128370467"
+        "charCount": [[92, 98]],
+        "ref": "tc-2-ne-1-1a",
+        "noteType": 3
       }
     ]
   },
   {
     "_id": "p2",
     "classList": ["verse"],
-    "text": "2 Unto whom I have given the keys of the kingdom, which belong always unto the Presidency of the High Priesthood:",
-    "wTagGroups": [{ "charCountCompress": [0, 112], "type": 1 }],
+    "text": "2 And he spake unto them concerning their rebellions upon the waters, and the mercies of God in sparing their lives, that they were not swallowed up in the sea.",
+    "wTagGroups": [{ "charCountCompress": [0, 159], "type": 1 }],
     "wTags": [
       { "wType": 1, "verseID": "p2", "charCount": [[0, 2]], "richText": 0 },
       {
         "wType": 4,
         "verseID": "p2",
         "optional": true,
-        "charCount": [[29, 33]],
-        "ref": "128370468"
+        "charCount": [[42, 52]],
+        "ref": "128345078"
       },
       {
         "wType": 4,
         "verseID": "p2",
         "optional": true,
-        "charCount": [[79, 89]],
-        "ref": "128370469"
+        "charCount": [[42, 52]],
+        "ref": "tc-2-ne-1-2a",
+        "noteType": 3
       }
     ]
   },
   {
     "_id": "p3",
     "classList": ["verse"],
-    "text": "3 Therefore, verily I acknowledge him and will bless him, and also thee, inasmuch as thou art faithful in counsel, in the office which I have appointed unto you, in prayer always, vocally and in thy heart, in public and in private, also in thy ministry in proclaiming the gospel in the land of the living, and among thy brethren.",
-    "wTagGroups": [{ "charCountCompress": [0, 328], "type": 1 }],
+    "text": "3 And he also spake unto them concerning the land of promise, which they had obtained—how merciful the Lord had been in warning us that we should flee out of the land of Jerusalem.",
+    "wTagGroups": [{ "charCountCompress": [0, 179], "type": 1 }],
     "wTags": [
       { "wType": 1, "verseID": "p3", "charCount": [[0, 2]], "richText": 0 },
       {
         "wType": 4,
         "verseID": "p3",
         "optional": true,
-        "charCount": [[244, 252]],
-        "ref": "128370470"
+        "charCount": [[90, 98]],
+        "ref": "128345079"
       },
       {
         "wType": 4,
         "verseID": "p3",
         "optional": true,
-        "charCount": [[286, 290]],
-        "ref": "128370471"
+        "charCount": [[120, 127]],
+        "ref": "128345080"
       }
     ]
   },
   {
     "_id": "p4",
     "classList": ["verse"],
-    "text": "4 And in doing these things thou wilt do the greatest good unto thy fellow beings, and wilt promote the glory of him who is your Lord.",
-    "wTagGroups": [{ "charCountCompress": [0, 133], "type": 1 }],
+    "text": "4 For, behold, said he, I have seen a vision, in which I know that Jerusalem is destroyed; and had we remained in Jerusalem we should also have perished.",
+    "wTagGroups": [{ "charCountCompress": [0, 152], "type": 1 }],
     "wTags": [
       { "wType": 1, "verseID": "p4", "charCount": [[0, 2]], "richText": 0 },
       {
         "wType": 4,
         "verseID": "p4",
         "optional": true,
-        "charCount": [[54, 58]],
-        "ref": "128370472"
+        "charCount": [[31, 35]],
+        "ref": "128345081"
       },
       {
         "wType": 4,
         "verseID": "p4",
         "optional": true,
-        "charCount": [[104, 109]],
-        "ref": "128370473"
+        "charCount": [[38, 44]],
+        "ref": "128345082"
+      },
+      {
+        "wType": 4,
+        "verseID": "p4",
+        "optional": true,
+        "charCount": [[67, 76]],
+        "ref": "128345083"
+      },
+      {
+        "wType": 4,
+        "verseID": "p4",
+        "optional": true,
+        "charCount": [[80, 89]],
+        "ref": "128345084"
+      },
+      {
+        "wType": 4,
+        "verseID": "p4",
+        "optional": true,
+        "charCount": [[144, 152]],
+        "ref": "128345085"
+      },
+      {
+        "wType": 4,
+        "verseID": "p4",
+        "optional": true,
+        "charCount": [[38, 44]],
+        "ref": "tc-2-ne-1-4a",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p4",
+        "optional": true,
+        "charCount": [[67, 76]],
+        "ref": "tc-2-ne-1-4b",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p4",
+        "optional": true,
+        "charCount": [[144, 152]],
+        "ref": "tc-2-ne-1-4c",
+        "noteType": 3
       }
     ]
   },
   {
     "_id": "p5",
     "classList": ["verse"],
-    "text": "5 Wherefore, be faithful; stand in the office which I have appointed unto you; succor the weak, lift up the hands which hang down, and strengthen the feeble knees.",
-    "wTagGroups": [{ "charCountCompress": [0, 162], "type": 1 }],
+    "text": "5 But, said he, notwithstanding our afflictions, we have obtained a land of promise, a land which is choice above all other lands; a land which the Lord God hath covenanted ​with me should be a land for the inheritance of my seed. Yea, the Lord hath covenanted this land unto me, and to my children forever, and also all those who should be led out of other countries by the hand of the Lord.",
+    "wTagGroups": [{ "charCountCompress": [0, 391], "type": 1 }],
     "wTags": [
       { "wType": 1, "verseID": "p5", "charCount": [[0, 2]], "richText": 0 },
       {
         "wType": 4,
         "verseID": "p5",
         "optional": true,
-        "charCount": [[79, 85]],
-        "ref": "128370474"
+        "charCount": [[68, 83]],
+        "ref": "128345086"
       },
       {
         "wType": 4,
         "verseID": "p5",
         "optional": true,
-        "charCount": [[90, 94]],
-        "ref": "128370475"
+        "charCount": [[101, 107]],
+        "ref": "128345087"
       },
       {
         "wType": 4,
         "verseID": "p5",
         "optional": true,
-        "charCount": [[135, 145]],
-        "ref": "128370476"
+        "charCount": [[162, 172]],
+        "ref": "128345088"
       },
       {
         "wType": 4,
         "verseID": "p5",
         "optional": true,
-        "charCount": [[150, 156]],
-        "ref": "128370477"
+        "charCount": [[250, 260]],
+        "ref": "128345089"
+      },
+      {
+        "wType": 4,
+        "verseID": "p5",
+        "optional": true,
+        "charCount": [[341, 344]],
+        "ref": "128345090"
+      },
+      {
+        "wType": 4,
+        "verseID": "p5",
+        "optional": true,
+        "charCount": [[68, 83]],
+        "ref": "tc-2-ne-1-5a",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p5",
+        "optional": true,
+        "charCount": [[101, 107]],
+        "ref": "tc-2-ne-1-5b",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p5",
+        "optional": true,
+        "charCount": [[250, 260]],
+        "ref": "tc-2-ne-1-5c",
+        "noteType": 3
       }
     ]
   },
   {
     "_id": "p6",
     "classList": ["verse"],
-    "text": "6 And if thou art faithful unto the end thou shalt have a crown of immortality, and eternal life in the mansions which I have prepared in the house of my Father.",
-    "wTagGroups": [{ "charCountCompress": [0, 160], "type": 1 }],
+    "text": "6 Wherefore, I, Lehi, prophesy according to the workings of the Spirit which is in me, that there shall none come into this land save they shall be brought by the hand of the Lord.",
+    "wTagGroups": [{ "charCountCompress": [0, 179], "type": 1 }],
     "wTags": [
       { "wType": 1, "verseID": "p6", "charCount": [[0, 2]], "richText": 0 },
       {
         "wType": 4,
         "verseID": "p6",
         "optional": true,
-        "charCount": [[18, 26]],
-        "ref": "128370478"
+        "charCount": [[104, 108]],
+        "ref": "128345091"
       },
       {
         "wType": 4,
         "verseID": "p6",
         "optional": true,
-        "charCount": [[58, 63]],
-        "ref": "128370479"
-      },
-      {
-        "wType": 4,
-        "verseID": "p6",
-        "optional": true,
-        "charCount": [[67, 78]],
-        "ref": "128370480"
-      },
-      {
-        "wType": 4,
-        "verseID": "p6",
-        "optional": true,
-        "charCount": [[84, 96]],
-        "ref": "tc-dc-81-6b",
+        "charCount": [[104, 108]],
+        "ref": "tc-2-ne-1-6a",
         "noteType": 3
-      },
-      {
-        "wType": 4,
-        "verseID": "p6",
-        "optional": true,
-        "charCount": [[104, 112]],
-        "ref": "128370481"
       }
     ]
   },
   {
     "_id": "p7",
     "classList": ["verse"],
-    "text": "7 Behold, and lo, these are the words of Alpha and Omega, even Jesus Christ. Amen.",
-    "wTagGroups": [{ "charCountCompress": [0, 81], "type": 1 }],
+    "text": "7 Wherefore, this land is consecrated unto him whom he shall bring. And if it so be that they shall serve him according to the commandments which he hath given, it shall be a land of liberty unto them; wherefore, they shall never be brought down into captivity; if so, it shall be because of iniquity; for if iniquity shall abound cursed shall be the land for their sakes, but unto the righteous it shall be blessed forever.",
+    "wTagGroups": [{ "charCountCompress": [0, 423], "type": 1 }],
     "wTags": [
-      { "wType": 1, "verseID": "p7", "charCount": [[0, 2]], "richText": 0 }
+      { "wType": 1, "verseID": "p7", "charCount": [[0, 2]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p7",
+        "optional": true,
+        "charCount": [[18, 22]],
+        "ref": "128345092"
+      },
+      {
+        "wType": 4,
+        "verseID": "p7",
+        "optional": true,
+        "charCount": [[183, 190]],
+        "ref": "128345093"
+      },
+      {
+        "wType": 4,
+        "verseID": "p7",
+        "optional": true,
+        "charCount": [[331, 337]],
+        "ref": "128345094"
+      },
+      {
+        "wType": 4,
+        "verseID": "p7",
+        "optional": true,
+        "charCount": [[18, 22]],
+        "ref": "tc-2-ne-1-7a",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p7",
+        "optional": true,
+        "charCount": [[183, 190]],
+        "ref": "tc-2-ne-1-7b",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p7",
+        "optional": true,
+        "charCount": [[331, 337]],
+        "ref": "tc-2-ne-1-7c",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p8",
+    "classList": ["verse"],
+    "text": "8 And behold, it is wisdom that this land should be kept as yet from the knowledge of other nations; for behold, many nations would overrun the land, that there would be no place for an inheritance.",
+    "wTagGroups": [{ "charCountCompress": [0, 197], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p8", "charCount": [[0, 2]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p8",
+        "optional": true,
+        "charCount": [[52, 56]],
+        "ref": "128345095"
+      },
+      {
+        "wType": 4,
+        "verseID": "p8",
+        "optional": true,
+        "charCount": [[92, 99]],
+        "ref": "128345096"
+      }
+    ]
+  },
+  {
+    "_id": "p9",
+    "classList": ["verse"],
+    "text": "9 Wherefore, I, Lehi, have obtained a promise, that inasmuch as those whom the Lord God shall bring out of the land of Jerusalem shall keep his commandments, they shall prosper upon the face of this land; and they shall be kept from all other nations, that they may possess this land unto themselves. And if it so be that they shall keep his commandments they shall be blessed upon the face of this land, and there shall be none to molest them, nor to take away the land of their inheritance; and they shall dwell safely forever.",
+    "wTagGroups": [{ "charCountCompress": [0, 528], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p9", "charCount": [[0, 2]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p9",
+        "optional": true,
+        "charCount": [[38, 45]],
+        "ref": "128345097"
+      },
+      {
+        "wType": 4,
+        "verseID": "p9",
+        "optional": true,
+        "charCount": [[52, 60]],
+        "ref": "128345098"
+      },
+      {
+        "wType": 4,
+        "verseID": "p9",
+        "optional": true,
+        "charCount": [[169, 176]],
+        "ref": "128345099"
+      },
+      {
+        "wType": 4,
+        "verseID": "p9",
+        "optional": true,
+        "charCount": [[333, 337]],
+        "ref": "128345100"
+      },
+      {
+        "wType": 4,
+        "verseID": "p9",
+        "optional": true,
+        "charCount": [[480, 491]],
+        "ref": "128345101"
+      },
+      {
+        "wType": 4,
+        "verseID": "p9",
+        "optional": true,
+        "charCount": [[52, 60]],
+        "ref": "tc-2-ne-1-9a",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p9",
+        "optional": true,
+        "charCount": [[169, 176]],
+        "ref": "tc-2-ne-1-9b",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p9",
+        "optional": true,
+        "charCount": [[333, 337]],
+        "ref": "tc-2-ne-1-9c",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p10",
+    "classList": ["verse"],
+    "text": "10 But behold, when the time cometh that they shall dwindle in unbelief, after they have received so great blessings from the hand of the Lord—having a knowledge of the creation of the earth, and all men, knowing the great and marvelous works of the Lord from the creation of the world; having power given them to do all things by faith; having all the commandments from the beginning, and having been brought by his infinite goodness into this precious land of promise—behold, I say, if the day shall come that they will reject the Holy One of Israel, the true Messiah, their Redeemer and their God, behold, the judgments of him that is just shall rest upon them.",
+    "wTagGroups": [{ "charCountCompress": [0, 663], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p10", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p10",
+        "optional": true,
+        "charCount": [[63, 71]],
+        "ref": "128345102"
+      },
+      {
+        "wType": 4,
+        "verseID": "p10",
+        "optional": true,
+        "charCount": [[562, 569]],
+        "ref": "128345103"
+      },
+      {
+        "wType": 4,
+        "verseID": "p10",
+        "optional": true,
+        "charCount": [[638, 642]],
+        "ref": "128345104"
+      },
+      {
+        "wType": 4,
+        "verseID": "p10",
+        "optional": true,
+        "charCount": [[562, 569]],
+        "ref": "tc-2-ne-1-10a",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p11",
+    "classList": ["verse"],
+    "text": "11 Yea, he will bring other nations unto them, and he will give unto them power, and he will take away from them the lands of their possessions, and he will cause them to be scattered and smitten.",
+    "wTagGroups": [{ "charCountCompress": [0, 195], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p11", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p11",
+        "optional": true,
+        "charCount": [[22, 35]],
+        "ref": "128345105"
+      },
+      {
+        "wType": 4,
+        "verseID": "p11",
+        "optional": true,
+        "charCount": [[174, 183]],
+        "ref": "128345106"
+      },
+      {
+        "wType": 4,
+        "verseID": "p11",
+        "optional": true,
+        "charCount": [[22, 35]],
+        "ref": "tc-2-ne-1-11a",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p11",
+        "optional": true,
+        "charCount": [[174, 183]],
+        "ref": "tc-2-ne-1-11b",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p12",
+    "classList": ["verse"],
+    "text": "12 Yea, as one generation passeth to another there shall be bloodsheds, and great visitations among them; wherefore, my sons, I would that ye would remember; yea, I would that ye would hearken unto my words.",
+    "wTagGroups": [{ "charCountCompress": [0, 206], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p12", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p12",
+        "optional": true,
+        "charCount": [[60, 70]],
+        "ref": "128345107"
+      },
+      {
+        "wType": 4,
+        "verseID": "p12",
+        "optional": true,
+        "charCount": [[60, 70]],
+        "ref": "tc-2-ne-1-12a",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p13",
+    "classList": ["verse"],
+    "text": "13 O that ye would awake; awake from a deep sleep, yea, even from the sleep of hell, and shake off the awful chains by which ye are bound, which are the chains which bind the children of men, that they are carried away captive down to the eternal gulf of misery and woe.",
+    "wTagGroups": [{ "charCountCompress": [0, 269], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p13", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p13",
+        "optional": true,
+        "charCount": [[44, 49]],
+        "ref": "128345108"
+      },
+      {
+        "wType": 4,
+        "verseID": "p13",
+        "optional": true,
+        "charCount": [[79, 83]],
+        "ref": "128345109"
+      },
+      {
+        "wType": 4,
+        "verseID": "p13",
+        "optional": true,
+        "charCount": [[109, 115]],
+        "ref": "128345110"
+      },
+      {
+        "wType": 4,
+        "verseID": "p13",
+        "optional": true,
+        "charCount": [[247, 251]],
+        "ref": "128345111"
+      },
+      {
+        "wType": 4,
+        "verseID": "p13",
+        "optional": true,
+        "charCount": [[79, 83]],
+        "ref": "tc-2-ne-1-13a",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p13",
+        "optional": true,
+        "charCount": [[109, 115]],
+        "ref": "tc-2-ne-1-13b",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p13",
+        "optional": true,
+        "charCount": [[247, 251]],
+        "ref": "tc-2-ne-1-13c",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p14",
+    "classList": ["verse"],
+    "text": "14 Awake! and arise from the dust, and hear the words of a trembling parent, whose limbs ye must soon lay down in the cold and silent grave, from whence no traveler can return; a few more days and I go the way of all the earth.",
+    "wTagGroups": [{ "charCountCompress": [0, 226], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p14", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p14",
+        "optional": true,
+        "charCount": [[69, 75]],
+        "ref": "128345112"
+      },
+      {
+        "wType": 4,
+        "verseID": "p14",
+        "optional": true,
+        "charCount": [[134, 139]],
+        "ref": "128345113"
+      },
+      {
+        "wType": 4,
+        "verseID": "p14",
+        "optional": true,
+        "charCount": [[169, 175]],
+        "ref": "128345114"
+      },
+      {
+        "wType": 4,
+        "verseID": "p14",
+        "optional": true,
+        "charCount": [[188, 192]],
+        "ref": "128345115"
+      },
+      {
+        "wType": 4,
+        "verseID": "p14",
+        "optional": true,
+        "charCount": [[206, 209]],
+        "ref": "128345116"
+      },
+      {
+        "wType": 4,
+        "verseID": "p14",
+        "optional": true,
+        "charCount": [[69, 75]],
+        "ref": "tc-2-ne-1-14a",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p14",
+        "optional": true,
+        "charCount": [[134, 139]],
+        "ref": "tc-2-ne-1-14b",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p14",
+        "optional": true,
+        "charCount": [[206, 209]],
+        "ref": "tc-2-ne-1-14c",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p15",
+    "classList": ["verse"],
+    "text": "15 But behold, the Lord hath redeemed my soul from hell; I have beheld his glory, and I am encircled about eternally in the arms of his love.",
+    "wTagGroups": [{ "charCountCompress": [0, 140], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p15", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p15",
+        "optional": true,
+        "charCount": [[29, 37]],
+        "ref": "128345117"
+      },
+      {
+        "wType": 4,
+        "verseID": "p15",
+        "optional": true,
+        "charCount": [[75, 80]],
+        "ref": "128345118"
+      },
+      {
+        "wType": 4,
+        "verseID": "p15",
+        "optional": true,
+        "charCount": [[124, 128]],
+        "ref": "128345119"
+      },
+      {
+        "wType": 4,
+        "verseID": "p15",
+        "optional": true,
+        "charCount": [[136, 140]],
+        "ref": "128345120"
+      },
+      {
+        "wType": 4,
+        "verseID": "p15",
+        "optional": true,
+        "charCount": [[29, 37]],
+        "ref": "tc-2-ne-1-15a",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p15",
+        "optional": true,
+        "charCount": [[124, 128]],
+        "ref": "tc-2-ne-1-15b",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p15",
+        "optional": true,
+        "charCount": [[136, 140]],
+        "ref": "tc-2-ne-1-15c",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p16",
+    "classList": ["verse"],
+    "text": "16 And I desire that ye should remember to observe the statutes and the judgments of the Lord; behold, this hath been the anxiety of my soul from the beginning.",
+    "wTagGroups": [{ "charCountCompress": [0, 159], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p16", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p16",
+        "optional": true,
+        "charCount": [[55, 63]],
+        "ref": "128345121"
+      },
+      {
+        "wType": 4,
+        "verseID": "p16",
+        "optional": true,
+        "charCount": [[55, 63]],
+        "ref": "tc-2-ne-1-16a",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p17",
+    "classList": ["verse"],
+    "text": "17 My heart hath been weighed down with sorrow from time to time, for I have feared, lest for the hardness of your hearts the Lord your God should come out in the fulness of his wrath upon you, that ye be cut off and destroyed forever;",
+    "wTagGroups": [{ "charCountCompress": [0, 234], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p17", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p17",
+        "optional": true,
+        "charCount": [[178, 183]],
+        "ref": "128345122"
+      },
+      {
+        "wType": 4,
+        "verseID": "p17",
+        "optional": true,
+        "charCount": [[205, 212]],
+        "ref": "128345123"
+      },
+      {
+        "wType": 4,
+        "verseID": "p17",
+        "optional": true,
+        "charCount": [[178, 183]],
+        "ref": "tc-2-ne-1-17a",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p17",
+        "optional": true,
+        "charCount": [[205, 212]],
+        "ref": "tc-2-ne-1-17b",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p18",
+    "classList": ["verse"],
+    "text": "18 Or, that a cursing should come upon you for the space of many generations; and ye are visited by sword, and by famine, and are hated, and are led according to the will and captivity of the devil.",
+    "wTagGroups": [{ "charCountCompress": [0, 197], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p18", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p18",
+        "optional": true,
+        "charCount": [[14, 21]],
+        "ref": "128345124"
+      },
+      {
+        "wType": 4,
+        "verseID": "p18",
+        "optional": true,
+        "charCount": [[60, 76]],
+        "ref": "128345125"
+      },
+      {
+        "wType": 4,
+        "verseID": "p18",
+        "optional": true,
+        "charCount": [[192, 197]],
+        "ref": "128345126"
+      },
+      {
+        "wType": 4,
+        "verseID": "p18",
+        "optional": true,
+        "charCount": [[60, 76]],
+        "ref": "tc-2-ne-1-18a",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p18",
+        "optional": true,
+        "charCount": [[192, 197]],
+        "ref": "tc-2-ne-1-18b",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p19",
+    "classList": ["verse"],
+    "text": "19 O my sons, that these things might not come upon you, but that ye might be a choice and a favored people of the Lord. But behold, his will be done; for his ways are righteousness forever.",
+    "wTagGroups": [{ "charCountCompress": [0, 189], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p19", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p19",
+        "optional": true,
+        "charCount": [[93, 100]],
+        "ref": "128345127"
+      },
+      {
+        "wType": 4,
+        "verseID": "p19",
+        "optional": true,
+        "charCount": [[159, 163]],
+        "ref": "128345128"
+      },
+      {
+        "wType": 4,
+        "verseID": "p19",
+        "optional": true,
+        "charCount": [[93, 100]],
+        "ref": "tc-2-ne-1-19a",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p19",
+        "optional": true,
+        "charCount": [[159, 163]],
+        "ref": "tc-2-ne-1-19b",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p20",
+    "classList": ["verse"],
+    "text": "20 And he hath said that: Inasmuch as ye shall keep my commandments ye shall prosper in the land; but inasmuch as ye will not keep my commandments ye shall be cut off from my presence.",
+    "wTagGroups": [{ "charCountCompress": [0, 183], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p20", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p20",
+        "optional": true,
+        "charCount": [[26, 34]],
+        "ref": "128345129"
+      },
+      {
+        "wType": 4,
+        "verseID": "p20",
+        "optional": true,
+        "charCount": [[55, 67]],
+        "ref": "128345130"
+      },
+      {
+        "wType": 4,
+        "verseID": "p20",
+        "optional": true,
+        "charCount": [[77, 84]],
+        "ref": "128345131"
+      },
+      {
+        "wType": 4,
+        "verseID": "p20",
+        "optional": true,
+        "charCount": [[26, 34]],
+        "ref": "tc-2-ne-1-20a",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p20",
+        "optional": true,
+        "charCount": [[55, 67]],
+        "ref": "tc-2-ne-1-20b",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p20",
+        "optional": true,
+        "charCount": [[77, 84]],
+        "ref": "tc-2-ne-1-20c",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p21",
+    "classList": ["verse"],
+    "text": "21 And now that my soul might have joy in you, and that my heart might leave this world with gladness because of you, that I might not be brought down with grief and sorrow to the grave, arise from the dust, my sons, and be men, and be determined in one mind and in one heart, united in all things, that ye may not come down into captivity;",
+    "wTagGroups": [{ "charCountCompress": [0, 339], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p21", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p21",
+        "optional": true,
+        "charCount": [[224, 227]],
+        "ref": "128345132"
+      },
+      {
+        "wType": 4,
+        "verseID": "p21",
+        "optional": true,
+        "charCount": [[250, 253]],
+        "ref": "128345133"
+      },
+      {
+        "wType": 4,
+        "verseID": "p21",
+        "optional": true,
+        "charCount": [[224, 227]],
+        "ref": "tc-2-ne-1-21a",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p21",
+        "optional": true,
+        "charCount": [[250, 253]],
+        "ref": "tc-2-ne-1-21b",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p22",
+    "classList": ["verse"],
+    "text": "22 That ye may not be cursed with a sore cursing; and also, that ye may not incur the displeasure of a just God upon you, unto the destruction, yea, the eternal destruction of both soul and body.",
+    "wTagGroups": [{ "charCountCompress": [0, 194], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p22", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p22",
+        "optional": true,
+        "charCount": [[22, 28]],
+        "ref": "128345134"
+      },
+      {
+        "wType": 4,
+        "verseID": "p22",
+        "optional": true,
+        "charCount": [[103, 107]],
+        "ref": "128345135"
+      },
+      {
+        "wType": 4,
+        "verseID": "p22",
+        "optional": true,
+        "charCount": [[103, 107]],
+        "ref": "tc-2-ne-1-22a",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p23",
+    "classList": ["verse"],
+    "text": "23 Awake, my sons; put on the armor of righteousness. Shake off the chains with which ye are bound, and come forth out of obscurity, and arise from the dust.",
+    "wTagGroups": [{ "charCountCompress": [0, 156], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p23", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p23",
+        "optional": true,
+        "charCount": [[30, 35]],
+        "ref": "tc-2-ne-1-23a",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p23",
+        "optional": true,
+        "charCount": [[39, 52]],
+        "ref": "128345136"
+      },
+      {
+        "wType": 4,
+        "verseID": "p23",
+        "optional": true,
+        "charCount": [[68, 74]],
+        "ref": "128345137"
+      }
+    ]
+  },
+  {
+    "_id": "p24",
+    "classList": ["verse"],
+    "text": "24 Rebel no more against your brother, whose views have been glorious, and who hath kept the commandments from the time that we left Jerusalem; and who hath been an instrument in the hands of God, in bringing us forth into the land of promise; for were it not for him, we must have perished with hunger in the wilderness; nevertheless, ye sought to take away his ​life; yea, and he hath suffered much sorrow because of you.",
+    "wTagGroups": [{ "charCountCompress": [0, 422], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p24", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p24",
+        "optional": true,
+        "charCount": [[61, 69]],
+        "ref": "128345138"
+      },
+      {
+        "wType": 4,
+        "verseID": "p24",
+        "optional": true,
+        "charCount": [[296, 302]],
+        "ref": "128345139"
+      },
+      {
+        "wType": 4,
+        "verseID": "p24",
+        "optional": true,
+        "charCount": [[349, 358]],
+        "ref": "128345140"
+      },
+      {
+        "wType": 4,
+        "verseID": "p24",
+        "optional": true,
+        "charCount": [[296, 302]],
+        "ref": "tc-2-ne-1-24a",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p24",
+        "optional": true,
+        "charCount": [[349, 358]],
+        "ref": "tc-2-ne-1-24b",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p25",
+    "classList": ["verse"],
+    "text": "25 And I exceedingly fear and tremble because of you, lest he shall suffer again; for behold, ye have accused him that he sought power and authority over you; but I know that he hath not sought for power nor authority over you, but he hath sought the glory of God, and your own eternal welfare.",
+    "wTagGroups": [{ "charCountCompress": [0, 293], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p25", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p25",
+        "optional": true,
+        "charCount": [[102, 109]],
+        "ref": "128345141"
+      },
+      {
+        "wType": 4,
+        "verseID": "p25",
+        "optional": true,
+        "charCount": [[139, 148]],
+        "ref": "128345142"
+      },
+      {
+        "wType": 4,
+        "verseID": "p25",
+        "optional": true,
+        "charCount": [[139, 148]],
+        "ref": "tc-2-ne-1-25a",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p26",
+    "classList": ["verse"],
+    "text": "26 And ye have murmured because he hath been plain unto you. Ye say that he hath used sharpness; ye say that he hath been angry with you; but behold, his sharpness was the sharpness of the power of the word of God, which was in him; and that which ye call anger was the truth, according to that which is in God, which he could not restrain, manifesting boldly concerning your iniquities.",
+    "wTagGroups": [{ "charCountCompress": [0, 386], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p26", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p26",
+        "optional": true,
+        "charCount": [[86, 95]],
+        "ref": "128345143"
+      },
+      {
+        "wType": 4,
+        "verseID": "p26",
+        "optional": true,
+        "charCount": [[154, 163]],
+        "ref": "128345144"
+      },
+      {
+        "wType": 4,
+        "verseID": "p26",
+        "optional": true,
+        "charCount": [[86, 95]],
+        "ref": "tc-2-ne-1-26a",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p27",
+    "classList": ["verse"],
+    "text": "27 And it must needs be that the power of God must be with him, even unto his commanding you that ye must obey. But behold, it was not he, but it was the Spirit of the Lord which was in him, which opened his mouth to utterance that he could not shut it.",
+    "wTagGroups": [{ "charCountCompress": [0, 252], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p27", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p27",
+        "optional": true,
+        "charCount": [[33, 38]],
+        "ref": "128345145"
+      },
+      {
+        "wType": 4,
+        "verseID": "p27",
+        "optional": true,
+        "charCount": [[154, 160]],
+        "ref": "128345146"
+      },
+      {
+        "wType": 4,
+        "verseID": "p27",
+        "optional": true,
+        "charCount": [[197, 203]],
+        "ref": "128345147"
+      },
+      {
+        "wType": 4,
+        "verseID": "p27",
+        "optional": true,
+        "charCount": [[33, 38]],
+        "ref": "tc-2-ne-1-27a",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p27",
+        "optional": true,
+        "charCount": [[154, 160]],
+        "ref": "tc-2-ne-1-27b",
+        "noteType": 3
+      },
+      {
+        "wType": 4,
+        "verseID": "p27",
+        "optional": true,
+        "charCount": [[197, 203]],
+        "ref": "tc-2-ne-1-27c",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p28",
+    "classList": ["verse"],
+    "text": "28 And now my son, Laman, and also Lemuel and Sam, and also my sons who are the sons of Ishmael, behold, if ye will hearken unto the voice of Nephi ye shall not perish. And if ye will hearken unto him I leave unto you a blessing, yea, even my first blessing.",
+    "wTagGroups": [{ "charCountCompress": [0, 257], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p28", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p28",
+        "optional": true,
+        "charCount": [[220, 228]],
+        "ref": "128345148"
+      },
+      {
+        "wType": 4,
+        "verseID": "p28",
+        "optional": true,
+        "charCount": [[220, 228]],
+        "ref": "tc-2-ne-1-28a",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p29",
+    "classList": ["verse"],
+    "text": "29 But if ye will not hearken unto him I take away my first blessing, yea, even my blessing, and it shall rest upon him.",
+    "wTagGroups": [{ "charCountCompress": [0, 119], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p29", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p29",
+        "optional": true,
+        "charCount": [[54, 59]],
+        "ref": "128345149"
+      },
+      {
+        "wType": 4,
+        "verseID": "p29",
+        "optional": true,
+        "charCount": [[54, 59]],
+        "ref": "tc-2-ne-1-29a",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p30",
+    "classList": ["verse"],
+    "text": "30 And now, Zoram, I speak unto you: Behold, thou art the servant of Laban; nevertheless, thou hast been brought out of the land of Jerusalem, and I know that thou art a true friend unto my son, Nephi, forever.",
+    "wTagGroups": [{ "charCountCompress": [0, 209], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p30", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p30",
+        "optional": true,
+        "charCount": [[58, 65]],
+        "ref": "128345150"
+      },
+      {
+        "wType": 4,
+        "verseID": "p30",
+        "optional": true,
+        "charCount": [[175, 181]],
+        "ref": "128345151"
+      },
+      {
+        "wType": 4,
+        "verseID": "p30",
+        "optional": true,
+        "charCount": [[58, 65]],
+        "ref": "tc-2-ne-1-30a",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p31",
+    "classList": ["verse"],
+    "text": "31 Wherefore, because thou hast been faithful thy seed shall be blessed with his seed, that they dwell in prosperity long upon the face of this land; and nothing, save it shall be iniquity among them, shall harm or disturb their prosperity upon the face of this land forever.",
+    "wTagGroups": [{ "charCountCompress": [0, 274], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p31", "charCount": [[0, 3]], "richText": 0 },
+      {
+        "wType": 4,
+        "verseID": "p31",
+        "optional": true,
+        "charCount": [[72, 76]],
+        "ref": "128345152"
+      },
+      {
+        "wType": 4,
+        "verseID": "p31",
+        "optional": true,
+        "charCount": [[72, 76]],
+        "ref": "tc-2-ne-1-31a",
+        "noteType": 3
+      }
+    ]
+  },
+  {
+    "_id": "p32",
+    "classList": ["verse"],
+    "text": "32 Wherefore, if ye shall keep the commandments of the Lord, the Lord hath consecrated this land for the security of thy seed with the seed of my son.",
+    "wTagGroups": [{ "charCountCompress": [0, 149], "type": 1 }],
+    "wTags": [
+      { "wType": 1, "verseID": "p32", "charCount": [[0, 3]], "richText": 0 }
     ]
   }
 ]

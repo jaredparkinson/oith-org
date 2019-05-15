@@ -1,0 +1,16 @@
+$phoneMediaQuery: screen and
+  (
+    min-width: 320px
+  )
+  or or
+  (
+    orientation: landscape
+  );
+$largeMediaQuery: screen and
+  (
+    min-width: 1000px
+  )
+  or or
+  (
+    orientation: landscape
+  );

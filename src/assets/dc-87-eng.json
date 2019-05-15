@@ -1,0 +1,1015 @@
+{
+  "language": "eng",
+  "nextPage": "",
+  "notes": [
+    {
+      "_id": "note1",
+      "noteShortTitle": "Doctrine and Covenants 87:1 Notes",
+      "noteTitle": "Verse 1 Notes",
+      "secondaryNotes": [
+        {
+          "noteRefs": [
+            {
+              "_id": "note1a",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/dc/45.26\">D&C 45:26</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370599",
+          "noteMarker": "a",
+          "notePhrase": {
+            "_id": "128370599",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“wars”"
+          },
+          "verseMarker": "1"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "note1b",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/js-h/1.41.40-41\">JS—H 1:41 (40–41)</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370600",
+          "noteMarker": "b",
+          "notePhrase": {
+            "_id": "128370600",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“shortly”"
+          },
+          "verseMarker": "1"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "note1c",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/dc/130.12.12-13\">D&C 130:12 (12–13)</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370601",
+          "noteMarker": "c",
+          "notePhrase": {
+            "_id": "128370601",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“South Carolina”"
+          },
+          "verseMarker": "1"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-tc"],
+              "text": "<a class=\"scripture-ref\" href=\"#/dc/130.12-13\">D&C 130:12–13</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["tc-note"],
+          "id": "tc-dc-87-1a",
+          "noteMarker": "a",
+          "notePhrase": {
+            "_id": "tc-dc-87-1a",
+            "classList": ["note-phrase", "note-phrase-tc"],
+            "text": "“South Carolina”"
+          },
+          "verseMarker": "1"
+        }
+      ]
+    },
+    {
+      "_id": "note2",
+      "noteShortTitle": "Doctrine and Covenants 87:2 Notes",
+      "noteTitle": "Verse 2 Notes",
+      "secondaryNotes": [
+        {
+          "noteRefs": [
+            {
+              "_id": "note2a",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/tg/last-days\">Last Days</a>.",
+              "referenceLabel": {
+                "refLabelName": "tg",
+                "refLabelShortName": "TG"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370603",
+          "noteMarker": "a",
+          "notePhrase": {
+            "_id": "128370603",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“time”"
+          },
+          "verseMarker": "2"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "note2b",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/joel/3.9.9-16\">Joel 3:9 (9–16)</a>; <a class=\"scripture-ref\" href=\"#/matt/24.6.6-7\">Matt. 24:6 (6–7)</a>; <a class=\"scripture-ref\" href=\"#/dc/38.29\">D&C 38:29</a>; <a class=\"scripture-ref\" href=\"#/dc/45.63.26,63\">45:63 (26, 63)</a>; <a class=\"scripture-ref\" href=\"#/dc/63.33\">63:33</a>; <a class=\"scripture-ref\" href=\"#/dc/130.12\">130:12</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370604",
+          "noteMarker": "b",
+          "notePhrase": {
+            "_id": "128370604",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“war”"
+          },
+          "verseMarker": "2"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-tc"],
+              "text": "<a class=\"scripture-ref\" href=\"#/joel/3.9-16\">Joel 3:9–16</a>; <a class=\"scripture-ref\" href=\"#/matt/24.6-7\">Matt. 24:6–7</a>; <a class=\"scripture-ref\" href=\"#/dc/45.26,63\">D&C 45:26, 63</a>; <a class=\"scripture-ref\" href=\"#/dc/63.33\">63:33</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["tc-note"],
+          "id": "tc-dc-87-2a",
+          "noteMarker": "a",
+          "notePhrase": {
+            "_id": "tc-dc-87-2a",
+            "classList": ["note-phrase", "note-phrase-tc"],
+            "text": "“war”"
+          },
+          "verseMarker": "2"
+        }
+      ]
+    },
+    {
+      "_id": "note3",
+      "noteShortTitle": "Doctrine and Covenants 87:3 Notes",
+      "noteTitle": "Verse 3 Notes",
+      "secondaryNotes": [
+        {
+          "noteRefs": [
+            {
+              "_id": "note3a",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/dc/45.69\">D&C 45:69</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370605",
+          "noteMarker": "a",
+          "notePhrase": {
+            "_id": "128370605",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“war”"
+          },
+          "verseMarker": "3"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-tc"],
+              "text": "<a class=\"scripture-ref\" href=\"#/dc/45.68-69\">D&C 45:68–69</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["tc-note"],
+          "id": "tc-dc-87-3a",
+          "noteMarker": "a",
+          "notePhrase": {
+            "_id": "tc-dc-87-3a",
+            "classList": ["note-phrase", "note-phrase-tc"],
+            "text": "“war”"
+          },
+          "verseMarker": "3"
+        }
+      ]
+    },
+    {
+      "_id": "note4",
+      "noteShortTitle": "Doctrine and Covenants 87:4 Notes",
+      "noteTitle": "Verse 4 Notes",
+      "secondaryNotes": [
+        {
+          "noteRefs": [
+            {
+              "_id": "note4a",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/dc/134.12\">D&C 134:12</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370606",
+          "noteMarker": "a",
+          "notePhrase": {
+            "_id": "128370606",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“slaves”"
+          },
+          "verseMarker": "4"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-tc"],
+              "text": "<a class=\"scripture-ref\" href=\"#/dc/134.12\">D&C 134:12</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["tc-note"],
+          "id": "tc-dc-87-4a",
+          "noteMarker": "a",
+          "notePhrase": {
+            "_id": "tc-dc-87-4a",
+            "classList": ["note-phrase", "note-phrase-tc"],
+            "text": "“slaves”"
+          },
+          "verseMarker": "4"
+        }
+      ]
+    },
+    {
+      "_id": "note5",
+      "noteShortTitle": "Doctrine and Covenants 87:5 Notes",
+      "noteTitle": "Verse 5 Notes",
+      "secondaryNotes": [
+        {
+          "noteRefs": [
+            {
+              "_id": "note5a",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/micah/5.8.8-15\">Micah 5:8 (8–15)</a>; <a class=\"scripture-ref\" href=\"#/3-ne/16.15.7-15\">3 Ne. 16:15 (7–15)</a>; <a class=\"scripture-ref\" href=\"#/3-ne/20.16.15-21\">20:16 (15–21)</a>; <a class=\"scripture-ref\" href=\"#/3-ne/21.12.12-21\">21:12 (12–21)</a>; <a class=\"scripture-ref\" href=\"#/dc/109.65.65-67\">D&C 109:65 (65–67)</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            },
+            {
+              "_id": "note5a",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/tg/israel-remnant-of\">Israel, Remnant of</a>.",
+              "referenceLabel": {
+                "refLabelName": "tg",
+                "refLabelShortName": "TG"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370607",
+          "noteMarker": "a",
+          "notePhrase": {
+            "_id": "128370607",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“remnants”"
+          },
+          "verseMarker": "5"
+        }
+      ]
+    },
+    {
+      "_id": "note6",
+      "noteShortTitle": "Doctrine and Covenants 87:6 Notes",
+      "noteTitle": "Verse 6 Notes",
+      "secondaryNotes": [
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-new"],
+              "text": "<a class=\"scripture-ref\" href=\"#/matt/24.30\">Matt. 24:30</a>; <a class=\"scripture-ref\" href=\"#/dc/45.49\">D&C 45:49</a>; <a class=\"scripture-ref\" href=\"#/dc/97.21\">97:21</a>; <a class=\"scripture-ref\" href=\"#/js-m/1.36\">JS—M 1:36</a>; see <a class=\"scripture-ref\" href=\"#/zech/12.11-12\">Zech. 12:11–12</a>; <a class=\"scripture-ref\" href=\"#/3-ne/8.25\">3 Ne. 8:25</a>; <a class=\"scripture-ref\" href=\"#/dc/29.15\">D&C 29:15</a>",
+              "referenceLabel": {
+                "refLabelName": "phrasing",
+                "refLabelShortName": "PHR"
+              }
+            }
+          ],
+          "classList": ["new-note"],
+          "id": "2018-12-08-17-27-26-24",
+          "noteMarker": null,
+          "notePhrase": {
+            "_id": "2018-12-08-17-27-26-24",
+            "classList": ["note-phrase", "note-phrase-new"],
+            "text": "“inhabitants of the earth shall mourn”"
+          },
+          "verseMarker": null
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-new"],
+              "text": "the punishment announced",
+              "referenceLabel": {
+                "refLabelName": "archaic",
+                "refLabelShortName": "KJV"
+              }
+            },
+            {
+              "_id": "",
+              "classList": ["note-reference-new"],
+              "text": "<a class=\"scripture-ref\" href=\"#/isa/10.22\">Isa. 10:22</a> (quoted in <a class=\"scripture-ref\" href=\"#/rom/9.2728\">Rom. 9:2728</a>)",
+              "referenceLabel": {
+                "refLabelName": "phrasing",
+                "refLabelShortName": "PHR"
+              }
+            }
+          ],
+          "classList": ["new-note"],
+          "id": "2018-09-15-15-49-49-99",
+          "noteMarker": null,
+          "notePhrase": {
+            "_id": "2018-09-15-15-49-49-99",
+            "classList": ["note-phrase", "note-phrase-new"],
+            "text": "“consumption decreed”"
+          },
+          "verseMarker": null
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-new"],
+              "text": "plague, destruction, completion; see also <a class=\"scripture-ref\" href=\"#/rom/9.27-28\">Rom. 9:27–28</a> (<a class=\"scripture-ref\" href=\"#/isa/10.22-23\">Isa. 10:22–23</a>): the Lord will cut short his work",
+              "referenceLabel": {
+                "refLabelName": "archaic",
+                "refLabelShortName": "KJV"
+              }
+            },
+            {
+              "_id": "",
+              "classList": ["note-reference-new"],
+              "text": "<a class=\"scripture-ref\" href=\"#/lev/26.16\">Lev. 26:16</a>; <a class=\"scripture-ref\" href=\"#/deut/28.22\">Deut. 28:22</a>; <a class=\"scripture-ref\" href=\"#/isa/10.22-23\">Isa. 10:22–23</a>; <a class=\"scripture-ref\" href=\"#/isa/28.22\">28:22</a>",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["new-note"],
+          "id": "2018-09-15-15-49-50-45",
+          "noteMarker": null,
+          "notePhrase": {
+            "_id": "2018-09-15-15-49-50-45",
+            "classList": ["note-phrase", "note-phrase-new"],
+            "text": "“consumption”"
+          },
+          "verseMarker": null
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "note6a",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/deut/32.41\">Deut. 32:41</a>; <a class=\"scripture-ref\" href=\"#/2-ne/1.12\">2 Ne. 1:12</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370608",
+          "noteMarker": "a",
+          "notePhrase": {
+            "_id": "128370608",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“sword”"
+          },
+          "verseMarker": "6"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "note6b",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/dc/29.15.14-21\">D&C 29:15 (14–21)</a>; <a class=\"scripture-ref\" href=\"#/dc/45.49\">45:49</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            },
+            {
+              "_id": "note6b",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/tg/mourning\">Mourning</a>.",
+              "referenceLabel": {
+                "refLabelName": "tg",
+                "refLabelShortName": "TG"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370609",
+          "noteMarker": "b",
+          "notePhrase": {
+            "_id": "128370609",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“mourn”"
+          },
+          "verseMarker": "6"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "note6c",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/joel/1.10\">Joel 1:10</a>; <a class=\"scripture-ref\" href=\"#/dc/43.25.24-25\">D&C 43:25 (24–25)</a>; <a class=\"scripture-ref\" href=\"#/js-m/1.29\">JS—M 1:29</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            },
+            {
+              "_id": "note6c",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/tg/drought\">Drought</a>; <a class=\"scripture-ref\" href=\"#/tg/famine\">Famine</a>; <a class=\"scripture-ref\" href=\"#/tg/plague\">Plague</a>.",
+              "referenceLabel": {
+                "refLabelName": "tg",
+                "refLabelShortName": "TG"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370610",
+          "noteMarker": "c",
+          "notePhrase": {
+            "_id": "128370610",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“famine”"
+          },
+          "verseMarker": "6"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "note6d",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/tg/chastening\">Chastening</a>.",
+              "referenceLabel": {
+                "refLabelName": "tg",
+                "refLabelShortName": "TG"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370611",
+          "noteMarker": "d",
+          "notePhrase": {
+            "_id": "128370611",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“chastening”"
+          },
+          "verseMarker": "6"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "note6e",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/ether/1.1\">Ether 1:1</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370612",
+          "noteMarker": "e",
+          "notePhrase": {
+            "_id": "128370612",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“hand”"
+          },
+          "verseMarker": "6"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "note6f",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/tg/world-end-of\">World, End of</a>.",
+              "referenceLabel": {
+                "refLabelName": "tg",
+                "refLabelShortName": "TG"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370613",
+          "noteMarker": "f",
+          "notePhrase": {
+            "_id": "128370613",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“end”"
+          },
+          "verseMarker": "6"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "note6g",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/mark/13.8\">Mark 13:8</a>; <a class=\"scripture-ref\" href=\"#/1-ne/14.15\">1 Ne. 14:15</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370614",
+          "noteMarker": "g",
+          "notePhrase": {
+            "_id": "128370614",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“nations”"
+          },
+          "verseMarker": "6"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-tc"],
+              "text": "<a class=\"scripture-ref\" href=\"#/dc/29.14-21\">D&C 29:14–21</a>; <a class=\"scripture-ref\" href=\"#/dc/45.49\">45:49</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["tc-note"],
+          "id": "tc-dc-87-6a",
+          "noteMarker": "a",
+          "notePhrase": {
+            "_id": "tc-dc-87-6a",
+            "classList": ["note-phrase", "note-phrase-tc"],
+            "text": "“mourn”"
+          },
+          "verseMarker": "6"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-tc"],
+              "text": "<a class=\"scripture-ref\" href=\"#/js-m/1.29\">JS—M 1:29</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["tc-note"],
+          "id": "tc-dc-87-6b",
+          "noteMarker": "b",
+          "notePhrase": {
+            "_id": "tc-dc-87-6b",
+            "classList": ["note-phrase", "note-phrase-tc"],
+            "text": "“famine”"
+          },
+          "verseMarker": "6"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-tc"],
+              "text": "<a class=\"scripture-ref\" href=\"#/gs/chasten-chastening\">Chasten, Chastening</a>.",
+              "referenceLabel": {
+                "refLabelName": "gs",
+                "refLabelShortName": "GS"
+              }
+            }
+          ],
+          "classList": ["tc-note"],
+          "id": "tc-dc-87-6c",
+          "noteMarker": "c",
+          "notePhrase": {
+            "_id": "tc-dc-87-6c",
+            "classList": ["note-phrase", "note-phrase-tc"],
+            "text": "“chastening”"
+          },
+          "verseMarker": "6"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-tc"],
+              "text": "<a class=\"scripture-ref\" href=\"#/world/end-of-the-world\">World—End of the world</a>.",
+              "referenceLabel": {
+                "refLabelName": "gs",
+                "refLabelShortName": "GS"
+              }
+            }
+          ],
+          "classList": ["tc-note"],
+          "id": "tc-dc-87-6d",
+          "noteMarker": "d",
+          "notePhrase": {
+            "_id": "tc-dc-87-6d",
+            "classList": ["note-phrase", "note-phrase-tc"],
+            "text": "“end”"
+          },
+          "verseMarker": "6"
+        }
+      ]
+    },
+    {
+      "_id": "note7",
+      "noteShortTitle": "Doctrine and Covenants 87:7 Notes",
+      "noteTitle": "Verse 7 Notes",
+      "secondaryNotes": [
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-new"],
+              "text": "<a class=\"scripture-ref\" href=\"#/gen/4.10\">Gen. 4:10</a>",
+              "referenceLabel": {
+                "refLabelName": "phrasing",
+                "refLabelShortName": "PHR"
+              }
+            },
+            {
+              "_id": "",
+              "classList": ["note-reference-new"],
+              "text": "<a class=\"scripture-ref\" href=\"#/2-ne/26.3\">2 Ne. 26:3</a>; <a class=\"scripture-ref\" href=\"#/2-ne/28.10\">28:10</a>; <a class=\"scripture-ref\" href=\"#/morm/8.27\">Morm. 8:27</a>; <a class=\"scripture-ref\" href=\"#/ether/8.22\">Ether 8:22</a>; <a class=\"scripture-ref\" href=\"#/dc/136.36\">D&C 136:36</a>",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["new-note"],
+          "id": "2018-09-15-15-49-50-95",
+          "noteMarker": null,
+          "notePhrase": {
+            "_id": "2018-09-15-15-49-50-95",
+            "classList": ["note-phrase", "note-phrase-new"],
+            "text": "“blood of the Saints … come up into the ears”"
+          },
+          "verseMarker": null
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "note7a",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/rev/6.10.1,10\">Rev. 6:10 (1, 10)</a>; <a class=\"scripture-ref\" href=\"#/rev/19.2\">19:2</a>; <a class=\"scripture-ref\" href=\"#/2-ne/28.10\">2 Ne. 28:10</a>; <a class=\"scripture-ref\" href=\"#/morm/8.27.27,40-41\">Morm. 8:27 (27, 40–41)</a>; <a class=\"scripture-ref\" href=\"#/ether/8.22.22-24\">Ether 8:22 (22–24)</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370615",
+          "noteMarker": "a",
+          "notePhrase": {
+            "_id": "128370615",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“blood”"
+          },
+          "verseMarker": "7"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "note7b",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/james/5.4\">James 5:4</a>; <a class=\"scripture-ref\" href=\"#/dc/88.2\">D&C 88:2</a>; <a class=\"scripture-ref\" href=\"#/dc/95.7\">95:7</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370616",
+          "noteMarker": "b",
+          "notePhrase": {
+            "_id": "128370616",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“Sabaoth”"
+          },
+          "verseMarker": "7"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-tc"],
+              "text": "<a class=\"scripture-ref\" href=\"#/ether/8.22-24\">Ether 8:22–24</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["tc-note"],
+          "id": "tc-dc-87-7a",
+          "noteMarker": "a",
+          "notePhrase": {
+            "_id": "tc-dc-87-7a",
+            "classList": ["note-phrase", "note-phrase-tc"],
+            "text": "“blood”"
+          },
+          "verseMarker": "7"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-tc"],
+              "text": "<a class=\"scripture-ref\" href=\"#/james/5.4\">James 5:4</a>; <a class=\"scripture-ref\" href=\"#/dc/88.2\">D&C 88:2</a>; <a class=\"scripture-ref\" href=\"#/dc/95.7\">95:7</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["tc-note"],
+          "id": "tc-dc-87-7b",
+          "noteMarker": "b",
+          "notePhrase": {
+            "_id": "tc-dc-87-7b",
+            "classList": ["note-phrase", "note-phrase-tc"],
+            "text": "“Sabaoth”"
+          },
+          "verseMarker": "7"
+        }
+      ]
+    },
+    {
+      "_id": "note8",
+      "noteShortTitle": "Doctrine and Covenants 87:8 Notes",
+      "noteTitle": "Verse 8 Notes",
+      "secondaryNotes": [
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-new"],
+              "text": "<a class=\"scripture-ref\" href=\"#/dc/45.32\">D&C 45:32</a>; <a class=\"scripture-ref\" href=\"#/dc/101.22\">101:22</a>; see <a class=\"scripture-ref\" href=\"#/ps/46.4-5\">Ps. 46:4–5</a>",
+              "referenceLabel": {
+                "refLabelName": "phrasing",
+                "refLabelShortName": "PHR"
+              }
+            }
+          ],
+          "classList": ["new-note"],
+          "id": "2018-09-15-15-49-51-52",
+          "noteMarker": null,
+          "notePhrase": {
+            "_id": "2018-09-15-15-49-51-52",
+            "classList": ["note-phrase", "note-phrase-new"],
+            "text": "“stand ye in holy places, and be not moved”"
+          },
+          "verseMarker": null
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-new"],
+              "text": "<a class=\"scripture-ref\" href=\"#/2-chr/35.5\">2 Chr. 35:5</a>; <a class=\"scripture-ref\" href=\"#/ps/24.3\">Ps. 24:3</a>; <a class=\"scripture-ref\" href=\"#/dc/45.32\">D&C 45:32</a>; <a class=\"scripture-ref\" href=\"#/dc/87.8\">87:8</a>; <a class=\"scripture-ref\" href=\"#/dc/101.22,64\">101:22, 64</a>; <a class=\"scripture-ref\" href=\"#/js-m/1.12\">JS—M 1:12</a> (<a class=\"scripture-ref\" href=\"#/matt/24.15\">Matt. 24:15</a>; <a class=\"scripture-ref\" href=\"#/mark/13.14\">Mark 13:14</a>); see <a class=\"scripture-ref\" href=\"#/ex/26.33\">Ex. 26:33</a>; <a class=\"scripture-ref\" href=\"#/1-kgs/8.10\">1 Kgs. 8:10</a>; etc.; <a class=\"scripture-ref\" href=\"#/dc/124.39\">D&C 124:39</a>",
+              "referenceLabel": {
+                "refLabelName": "phrasing",
+                "refLabelShortName": "PHR"
+              }
+            },
+            {
+              "_id": "",
+              "classList": ["note-reference-new"],
+              "text": "<a class=\"scripture-ref\" href=\"#/ex/3.5\">Ex. 3:5</a>; <a class=\"scripture-ref\" href=\"#/josh/5.15\">Josh. 5:15</a>; <a class=\"scripture-ref\" href=\"#/dc/115.7\">D&C 115:7</a>",
+              "referenceLabel": {
+                "refLabelName": "phrasing",
+                "refLabelShortName": "PHR"
+              }
+            }
+          ],
+          "classList": ["new-note"],
+          "id": "2018-12-02-17-56-23-83",
+          "noteMarker": null,
+          "notePhrase": {
+            "_id": "2018-12-02-17-56-23-83",
+            "classList": ["note-phrase", "note-phrase-new"],
+            "text": "“stand ye in holy places”"
+          },
+          "verseMarker": null
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-new"],
+              "text": "<a class=\"scripture-ref\" href=\"#/ps/16.8\">Ps. 16:8</a>; <a class=\"scripture-ref\" href=\"#/ps/21.7\">21:7</a>; <a class=\"scripture-ref\" href=\"#/ps/46.5\">46:5</a>; etc.",
+              "referenceLabel": {
+                "refLabelName": "phrasing",
+                "refLabelShortName": "PHR"
+              }
+            }
+          ],
+          "classList": ["new-note"],
+          "id": "2018-09-15-15-49-52-08",
+          "noteMarker": null,
+          "notePhrase": {
+            "_id": "2018-09-15-15-49-52-08",
+            "classList": ["note-phrase", "note-phrase-new"],
+            "text": "“be not moved”"
+          },
+          "verseMarker": null
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-new"],
+              "text": "<a class=\"scripture-ref\" href=\"#/isa/2.12\">Isa. 2:12</a>; <a class=\"scripture-ref\" href=\"#/isa/13.6,9\">13:6, 9</a>; <a class=\"scripture-ref\" href=\"#/jer/46.10\">Jer. 46:10</a>; etc.; <a class=\"scripture-ref\" href=\"#/1-thes/5.2\">1 Thes. 5:2</a>; <a class=\"scripture-ref\" href=\"#/2-pet/3.10\">2 Pet. 3:10</a>; <a class=\"scripture-ref\" href=\"#/2-ne/12.12-13\">2 Ne. 12:12–13</a>; <a class=\"scripture-ref\" href=\"#/2-ne/23.6,9\">23:6, 9</a>; <a class=\"scripture-ref\" href=\"#/dc/45.42\">D&C 45:42</a>; <a class=\"scripture-ref\" href=\"#/moses/7.45\">Moses 7:45</a>; (of the Lord Jesus) <a class=\"scripture-ref\" href=\"#/1-cor/5.5\">1 Cor. 5:5</a>; <a class=\"scripture-ref\" href=\"#/2-cor/1.14\">2 Cor. 1:14</a>; (great day of the Lord) <a class=\"scripture-ref\" href=\"#/zeph/1.14\">Zeph. 1:14</a>; <a class=\"scripture-ref\" href=\"#/dc/43.17,20-22\">D&C 43:17, 20–22</a>; <a class=\"scripture-ref\" href=\"#/dc/45.39\">45:39</a>; <a class=\"scripture-ref\" href=\"#/dc/49.24\">49:24</a>; <a class=\"scripture-ref\" href=\"#/dc/128.24\">128:24</a>; <a class=\"scripture-ref\" href=\"#/dc/133.10\">133:10</a>; (great and terrible) <a class=\"scripture-ref\" href=\"#/joel/2.11,31\">Joel 2:11, 31</a>; (great and dreadful) <a class=\"scripture-ref\" href=\"#/mal/4.5\">Mal. 4:5</a>; <a class=\"scripture-ref\" href=\"#/3-ne/25.5\">3 Ne. 25:5</a>; <a class=\"scripture-ref\" href=\"#/dc/2.1\">D&C 2:1</a>; <a class=\"scripture-ref\" href=\"#/dc/110.14,16\">110:14, 16</a>; <a class=\"scripture-ref\" href=\"#/dc/128.17\">128:17</a>; <a class=\"scripture-ref\" href=\"#/dc/138.46\">138:46</a>; <a class=\"scripture-ref\" href=\"#/js-h/1.38\">JS—H 1:38</a>; (great and notable) <a class=\"scripture-ref\" href=\"#/acts/2.20\">Acts 2:20</a>; (acceptable) <a class=\"scripture-ref\" href=\"#/dc/138.31\">D&C 138:31</a> (see <a class=\"scripture-ref\" href=\"#/isa/58.5\">Isa. 58:5</a>; <a class=\"scripture-ref\" href=\"#/isa/61.2\">61:2</a>); (day of the Lord’s) <a class=\"scripture-ref\" href=\"#/isa/34.8\">Isa. 34:8</a>; etc.",
+              "referenceLabel": {
+                "refLabelName": "phrasing",
+                "refLabelShortName": "PHR"
+              }
+            },
+            {
+              "_id": "",
+              "classList": ["note-reference-new-2"],
+              "text": "(day of the Lord) <a class=\"scripture-ref\" href=\"#/ezek/13.5\">Ezek. 13:5</a>; <a class=\"scripture-ref\" href=\"#/ezek/30.3\">30:3</a>; <a class=\"scripture-ref\" href=\"#/joel/1.15\">Joel 1:15</a>; <a class=\"scripture-ref\" href=\"#/joel/2.1\">2:1</a>; <a class=\"scripture-ref\" href=\"#/joel/3.14\">3:14</a>; <a class=\"scripture-ref\" href=\"#/amos/5.18,20\">Amos 5:18, 20</a>; <a class=\"scripture-ref\" href=\"#/obad/1.15\">Obad. 1:15</a>; <a class=\"scripture-ref\" href=\"#/zeph/1.7\">Zeph. 1:7</a>; <a class=\"scripture-ref\" href=\"#/zech/14.1\">Zech. 14:1</a>; (day of the Lord’s) <a class=\"scripture-ref\" href=\"#/lam/2.22\">Lam. 2:22</a>; <a class=\"scripture-ref\" href=\"#/zeph/1.18\">Zeph. 1:18</a>; <a class=\"scripture-ref\" href=\"#/zeph/2.2-3\">2:2–3</a>; see <a class=\"scripture-ref\" href=\"#/zeph/1.8\">Zeph. 1:8</a>",
+              "referenceLabel": {
+                "refLabelName": "phrasing",
+                "refLabelShortName": "PHR"
+              }
+            }
+          ],
+          "classList": ["new-note"],
+          "id": "2019-01-03-10-47-51-45",
+          "noteMarker": null,
+          "notePhrase": {
+            "_id": "2019-01-03-10-47-51-45",
+            "classList": [
+              "note-phrase",
+              "note-phrase-new",
+              "note-phrase-new-2"
+            ],
+            "text": "“day of the Lord”"
+          },
+          "verseMarker": null
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "note8a",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/matt/24.15\">Matt. 24:15</a>; <a class=\"scripture-ref\" href=\"#/dc/45.32\">D&C 45:32</a>; <a class=\"scripture-ref\" href=\"#/dc/101.22.21-22,64\">101:22 (21–22, 64)</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370617",
+          "noteMarker": "a",
+          "notePhrase": {
+            "_id": "128370617",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“stand”"
+          },
+          "verseMarker": "8"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "note8b",
+              "classList": ["note-reference-eng"],
+              "text": "<a class=\"scripture-ref\" href=\"#/rev/3.11\">Rev. 3:11</a>; <a class=\"scripture-ref\" href=\"#/dc/1.12\">D&C 1:12</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["eng-note"],
+          "id": "128370618",
+          "noteMarker": "b",
+          "notePhrase": {
+            "_id": "128370618",
+            "classList": ["note-phrase", "note-phrase-eng"],
+            "text": "“quickly”"
+          },
+          "verseMarker": "8"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-tc"],
+              "text": "<a class=\"scripture-ref\" href=\"#/matt/24.15\">Matt. 24:15</a>; <a class=\"scripture-ref\" href=\"#/dc/45.32\">D&C 45:32</a>; <a class=\"scripture-ref\" href=\"#/dc/101.21-22\">101:21–22</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["tc-note"],
+          "id": "tc-dc-87-8a",
+          "noteMarker": "a",
+          "notePhrase": {
+            "_id": "tc-dc-87-8a",
+            "classList": ["note-phrase", "note-phrase-tc"],
+            "text": "“stand”"
+          },
+          "verseMarker": "8"
+        },
+        {
+          "noteRefs": [
+            {
+              "_id": "",
+              "classList": ["note-reference-tc"],
+              "text": "<a class=\"scripture-ref\" href=\"#/rev/3.11\">Rev. 3:11</a>.",
+              "referenceLabel": {
+                "refLabelName": "cr",
+                "refLabelShortName": "CR"
+              }
+            }
+          ],
+          "classList": ["tc-note"],
+          "id": "tc-dc-87-8b",
+          "noteMarker": "b",
+          "notePhrase": {
+            "_id": "tc-dc-87-8b",
+            "classList": ["note-phrase", "note-phrase-tc"],
+            "text": "“quickly”"
+          },
+          "verseMarker": "8"
+        }
+      ]
+    }
+  ],
+  "paragraphs": [
+    {
+      "classList": [],
+      "nodeName": "w-header",
+      "verseIds": ["title_number1", "study_intro1", "study_summary1"]
+    },
+    {
+      "classList": ["hidden-paragraph"],
+      "nodeName": "w-div",
+      "verseIds": ["p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8"]
+    }
+  ],
+  "previousPage": "",
+  "shortTitle": "D&C 87",
+  "testament": "dc-testament",
+  "title": "Doctrine and Covenants 87",
+
+  "_id": "dc-87-eng",
+  "dataAid": "128370586"
+}

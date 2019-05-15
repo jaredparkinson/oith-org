@@ -1,3 +1,22 @@
+@import '../../styles/mediaQueries.scss';
 .chapter-block {
   height: 100vh;
+}
+
+.oith-content {
+  display: grid;
+  @media #{$phoneMediaQuery} {
+    grid-template-columns: 100vw 0px;
+  }
+  @media #{$largeMediaQuery} {
+    grid-template-columns: auto 300px;
+  }
+  height: 100%;
+  .body-block {
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 32px auto 32px;
+    verse {
+    }
+  }
 }
