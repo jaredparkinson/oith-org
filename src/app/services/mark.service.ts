@@ -22,7 +22,6 @@ export class MarkService {
       `${markDownText.preText}<w>${wTagText}</w>${markDownText.postText}`,
       { sanitize: false },
     );
-    console.log(markedOutput);
 
     // const asdf =
     ['<w>', '</w>', '<p>', '</p>'].map(
@@ -31,7 +30,7 @@ export class MarkService {
         markedOutput = markedOutput.replace(replace, '');
       },
     );
-    console.log(markedOutput);
+    // console.log(markedOutput);
 
     return outputText;
     // return marked(`${markDownText.preText}${wTagText}${markDownText.postText}`);

@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ParamService } from 'src/app/services/param.service';
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import { Verse } from 'oith.wtags';
-import { ChapterService } from 'src/app/services/chapter.service';
+import {
+  ChapterService,
+  urlToIDs as urlToChapterId,
+} from 'src/app/services/chapter.service';
 import { Note } from '../../../../oith.notes/src/models/Note';
 
 @Component({
@@ -23,11 +26,22 @@ export class ChapterComponent implements OnInit {
       async (params): Promise<void> => {
         const chapterParams = this.paramService.parseChapterParams(params);
         console.log(chapterParams);
+        const ids = await urlToChapterId(chapterParams, 'eng');
 
-        const chapterData = await axios.get('assets/81.json');
-        const noteData = await axios.get('assets/dc-87-eng.json');
+        console.log(ids);
 
-        const notes = noteData.data.notes as Note[];
+        const chapterData = await axios.get(
+          `assets/scripture_files/${ids}-wtags.json`,
+        );
+        let noteData: AxiosResponse<any>;
+        let notes: Note[] | undefined;
+        try {
+          noteData = await axios.get(
+            `assets/scripture_files/${ids}-notes.json`,
+          );
+          notes = noteData.data.notes as Note[];
+        } catch (error) {}
+
         const verses = chapterData.data as Verse[];
         if (verses) {
           await this.chapterService.expandWTagCharacterCount(verses);

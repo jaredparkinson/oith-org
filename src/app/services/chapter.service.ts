@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Verse } from 'oith.wtags';
 import { range } from 'lodash';
 import { Note } from 'oith.notes/src/models/Note';
+import { DataService } from './data.service';
+import { ChapterParams } from './ChapterParams';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +11,7 @@ import { Note } from 'oith.notes/src/models/Note';
 export class ChapterService {
   public verses: Verse[];
   public notes: Note[] | undefined;
-  public constructor() {}
+  public constructor(private dataService: DataService) {}
 
   private expandRange(compressedRanges: [number, number][]): number[] {
     let newRange: number[] = [];
@@ -46,4 +48,11 @@ export class ChapterService {
       },
     );
   }
+}
+
+export async function urlToIDs(
+  chapterParams: ChapterParams,
+  language: string,
+): Promise<string> {
+  return `${chapterParams.book}-${chapterParams.chapter}-${language}`;
 }

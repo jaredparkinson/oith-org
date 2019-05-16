@@ -26,7 +26,7 @@
     "lint": "tslint -t stylish --project \"tsconfig.json\"",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "start": "touch data/temp.json && rm data/*.* && tsc && node --abort-on-uncaught-exception --max-old-space-size=4000 build/src/main.js"
+    "start": " tsc && node --abort-on-uncaught-exception --max-old-space-size=16000 build/src/main.js"
   },
   "author": "Jared Parkinson <jared@parkinson.im>",
   "license": "Apache-2.0",

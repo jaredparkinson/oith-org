@@ -1,9 +1,9 @@
 import { removeRubyInAElements } from './preprocessor/flattenWTags';
 import { flatten } from 'lodash';
 import { parseWTagGroups } from './preprocessor/wTagGroups';
-import { loadFile } from './preprocessor/dom';
+import { loadFile, getID, getLanguage } from './preprocessor/dom';
 import { queryWTags } from './preprocessor/wtags';
-import { basename, normalize } from 'path';
+import { normalize } from 'path';
 import { writeFile, pathExists, mkdir } from 'fs-extra';
 import { getFiles } from './preprocessor/files';
 
@@ -22,11 +22,22 @@ async function processFiles(fileNames: string[]): Promise<void> {
         if (!(await pathExists(normalize('../src/assets/scripture_files')))) {
           await mkdir(normalize('../src/assets/scripture_files'));
         }
+        const language = await getLanguage(document);
+        console.log(
+          normalize(
+            `../src/assets/scripture_files/${await getID(
+              document,
+              language,
+            )}-wtags.json`,
+          ),
+        );
+
         await writeFile(
           normalize(
-            `../src/assets/scripture_files/${basename(
-              fileName.replace('html', 'json'),
-            )}`,
+            `../src/assets/scripture_files/${await getID(
+              document,
+              language,
+            )}-wtags.json`,
           ),
           JSON.stringify(verses),
         );
