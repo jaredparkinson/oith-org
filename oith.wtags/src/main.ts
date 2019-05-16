@@ -4,7 +4,7 @@ import { parseWTagGroups } from './preprocessor/wTagGroups';
 import { loadFile } from './preprocessor/dom';
 import { queryWTags } from './preprocessor/wtags';
 import { basename, normalize } from 'path';
-import { writeFile } from 'fs-extra';
+import { writeFile, pathExists, mkdir } from 'fs-extra';
 import { getFiles } from './preprocessor/files';
 
 async function processFiles(fileNames: string[]): Promise<void> {
@@ -15,26 +15,19 @@ async function processFiles(fileNames: string[]): Promise<void> {
 
       removeRubyInAElements(document);
       const verses = parseWTagGroups(document);
-      const wTags = flatten(await queryWTags(document));
-      console.log(wTags);
+      flatten(await queryWTags(document));
+      // console.log(wTags);
 
-      verses.map(
-        (verse): void => {
-          verse.wTags = wTags.filter(
-            (w): boolean => {
-              return w.verseID === verse._id;
-            },
-          );
-          if (verse.wTags.length > 0) {
-            console.log(verse.wTags);
-          } else {
-            verse.wTags = undefined;
-          }
-        },
-      );
       try {
+        if (!(await pathExists(normalize('../src/assets/scripture_files')))) {
+          await mkdir(normalize('../src/assets/scripture_files'));
+        }
         await writeFile(
-          normalize(`./data/${basename(fileName.replace('html', 'json'))}`),
+          normalize(
+            `../src/assets/scripture_files/${basename(
+              fileName.replace('html', 'json'),
+            )}`,
+          ),
           JSON.stringify(verses),
         );
       } catch {}

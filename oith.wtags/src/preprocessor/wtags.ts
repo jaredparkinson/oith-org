@@ -1,5 +1,5 @@
 import { queryVerses } from './dom';
-import * as cuid from 'cuid';
+import cuid from 'cuid';
 import { uniq, first } from 'lodash';
 import { writeFile } from 'fs-extra';
 import { normalize } from 'path';

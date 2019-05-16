@@ -1,4 +1,4 @@
-import * as cuid from 'cuid';
+import cuid from 'cuid';
 import { writeFileSync } from 'fs-extra';
 import { normalize } from 'path';
 import { WTagGroupType } from '../enums/WTagGroupType';
