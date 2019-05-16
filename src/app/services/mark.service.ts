@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import * as MarkdownIt from 'markdown-it';
-import { RichText, richText } from 'oith.wtags/src/RichText';
 import { uniq } from 'lodash';
 import * as marked from 'marked';
+import { RichTextEnum, RichText } from 'oith.wtags';
 @Injectable({
   providedIn: 'root',
 })
@@ -43,14 +43,17 @@ export class MarkService {
       (rich): void => {
         let addedText = '';
         switch (rich) {
-          case richText.verseNumber: {
+          case RichTextEnum.verseNumber: {
             addedText = '**';
           }
         }
-        commonMark.preText = `${addedText}${commonMark.preText}`;
-        commonMark.postText = `${commonMark.postText}${addedText}`;
+        commonMark.preText = `[assets/test.html](${addedText}${
+          commonMark.preText
+        }`;
+        commonMark.postText = `${commonMark.postText}${addedText})`;
       },
     );
+
     return commonMark;
   }
 }

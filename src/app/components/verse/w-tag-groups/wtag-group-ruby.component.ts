@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { WTagGroupA, Verse } from 'src/app/shared/enums/wtags';
+import { WTagGroupA, Verse } from 'oith.wtags';
 import { WTagService } from 'src/app/services/wtag.service';
 import { WTagComponent } from './WTagComponent';
 

@@ -2,16 +2,16 @@ import { Injectable } from '@angular/core';
 import {
   WType,
   Verse,
-  WTagGroup,
   WMerged,
   WPoetry,
   WHighlight,
   WRichText,
   WUnderline,
   WRef,
-} from '../shared/enums/wtags';
+} from 'oith.wtags';
 import { intersection, isEqual, range } from 'lodash';
 import { last } from '@angular/router/src/utils/collection';
+import { WTagGroup } from 'oith.wtags/src/interfaces/WTagGroup';
 
 @Injectable({
   providedIn: 'root',

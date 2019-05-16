@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ParamService } from 'src/app/services/param.service';
 import axios from 'axios';
-import { Verse } from 'src/app/shared/enums/wtags';
+import { Verse } from 'oith.wtags';
 import { ChapterService } from 'src/app/services/chapter.service';
 import { Note } from '../../../../oith.notes/src/models/Note';
 

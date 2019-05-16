@@ -21,5 +21,3 @@ export enum RichText {
   paraMark,
   selah,
 }
-
-export const richText = RichText;

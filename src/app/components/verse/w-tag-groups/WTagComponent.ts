@@ -1,6 +1,7 @@
-import { Verse, WType, WTagGroup, WMerged } from 'src/app/shared/enums/wtags';
+import { Verse, WType, WMerged } from 'oith.wtags';
 import { Input } from '@angular/core';
 import { WTagService } from 'src/app/services/wtag.service';
+import { WTagGroup } from 'oith.wtags/src/interfaces/WTagGroup';
 export abstract class WTagComponent {
   @Input() public verse: Verse;
   public wTags: WMerged[] | undefined;

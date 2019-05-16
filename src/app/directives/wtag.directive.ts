@@ -5,7 +5,7 @@ import {
   AfterViewInit,
   DoCheck,
 } from '@angular/core';
-import { WMerged, RichText, WRef, Color } from '../shared/enums/wtags';
+import { WMerged, RichText, WRef, Color } from 'oith.wtags';
 import { last } from 'lodash';
 
 @Directive({

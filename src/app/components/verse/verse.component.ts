@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Verse, WTagGroupType } from 'src/app/shared/enums/wtags';
+import { Verse, WTagGroupType } from 'oith.wtags';
 @Component({
   selector: 'app-verse',
   templateUrl: './verse.component.html',

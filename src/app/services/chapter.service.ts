@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Verse } from '../shared/enums/wtags';
+import { Verse } from 'oith.wtags';
 import { range } from 'lodash';
 import { Note } from 'oith.notes/src/models/Note';
 

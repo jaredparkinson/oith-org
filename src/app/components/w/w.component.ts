@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { WMerged, RichText, WRichText } from 'src/app/shared/enums/wtags';
+import { WMerged, RichText, WRichText } from 'oith.wtags';
 import { multiIncludes } from './multiIncludes';
 import { MarkService } from 'src/app/services/mark.service';
 
