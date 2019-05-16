@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ParamService } from 'src/app/services/param.service';
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 import { Verse } from 'oith.wtags';
 import {
   ChapterService,
@@ -33,16 +33,11 @@ export class ChapterComponent implements OnInit {
         const chapterData = await axios.get(
           `assets/scripture_files/${ids}-wtags.json`,
         );
-        let noteData: AxiosResponse<any>;
-        let notes: Note[] | undefined;
-        try {
-          noteData = await axios.get(
-            `assets/scripture_files/${ids}-notes.json`,
-          );
-          notes = noteData.data.notes as Note[];
-        } catch (error) {}
-
+        const noteData = await axios.get(
+          `assets/scripture_files/${ids}-notes.json`,
+        );
         const verses = chapterData.data as Verse[];
+        const notes = noteData.data as Note[];
         if (verses) {
           await this.chapterService.expandWTagCharacterCount(verses);
           console.log('test');
