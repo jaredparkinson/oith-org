@@ -1,9 +1,9 @@
-export function parseElementAttribute(
+export async function parseElementAttribute(
   document: Document,
   selector: string,
   attrName: string,
   regex: RegExp = new RegExp(/.+/g),
-): string {
+): Promise<string> {
   const rootElement = document.querySelector(selector);
   const elementAttribute = rootElement
     ? rootElement.getAttribute(attrName)

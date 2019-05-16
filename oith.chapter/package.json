@@ -32,10 +32,12 @@
   "dependencies": {
     "@types/expand-tilde": "^2.0.0",
     "@types/fs-extra": "^7.0.0",
+    "@types/he": "^1.1.0",
     "@types/jsdom": "^12.2.3",
     "expand-tilde": "^2.0.2",
     "fast-glob": "^2.2.6",
     "fs-extra": "^8.0.1",
+    "he": "^1.2.0",
     "jsdom": "^15.1.0",
     "tslib": "~1.9.3"
   }

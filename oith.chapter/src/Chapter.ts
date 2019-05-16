@@ -5,19 +5,18 @@ import { Paragraph } from './Paragraph';
 export class Chapter {
   public _id: string;
   public _rev: string | undefined;
+  public paragraphs: Paragraph[] | undefined;
   public dataAid: string | undefined;
   public language: string;
-  public nextPage: string | null;
-  public notes: Note[] | undefined;
-  public paragraphs: Paragraph[] | undefined;
-  public previousPage: string | null;
+  public notesIDs: string[] | undefined;
   public shortTitle: string;
   public testament: string;
   public title: string;
-  public verses: Verse[] | undefined;
-  public wTagsFileID: string;
+  public versesFileID: string;
   public notesFileID: string;
-  public verseIDs: string[];
-  public notesIDs: string[];
+  public verses: Verse[] | undefined;
+  public notes: Note[] | undefined;
   public wTags: W[] | undefined;
+  public nextPage: string | null;
+  public previousPage: string | null;
 }
