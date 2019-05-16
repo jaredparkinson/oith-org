@@ -3,6 +3,7 @@
     "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "importHelpers": true,
@@ -16,8 +17,10 @@
     "noUnusedParameters": true,
     "noImplicitAny": false,
     "noImplicitThis": false,
-    "strictNullChecks": false,
-    "outDir": "build"
+    "strictNullChecks": true,
+    "outDir": "build",
+    "typeRoots": ["node_modules/@types"],
+    "incremental": true
   },
-  "include": ["src/**/*", "__tests__/**/*", "index.ts"]
+  "include": ["src/**/*"]
 }

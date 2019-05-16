@@ -1,7 +1,6 @@
 import { Color } from './src/enums/Color';
 import { RichText } from './src/enums/RichText';
-import { W } from './src/interfaces/W';
-import { WTagGroup } from './src/interfaces/WTagGroup';
+import { NoteType } from './src/enums/NoteType';
 
 // Enums
 export { RichText } from './src/enums/RichText';
@@ -26,3 +25,4 @@ export { WUnderline } from './src/models/WUnderline';
 
 export const ColorEnum = Color;
 export const RichTextEnum = RichText;
+export const NoteTypeEnum = NoteType;

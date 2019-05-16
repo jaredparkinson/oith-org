@@ -18,13 +18,21 @@ export class MarkService {
     let outputText = this.markdownIt.render(
       `${markDownText.preText}<w>${wTagText}</w>${markDownText.postText}`,
     );
+    let markedOutput = marked(
+      `${markDownText.preText}<w>${wTagText}</w>${markDownText.postText}`,
+      { sanitize: false },
+    );
+    console.log(markedOutput);
 
     // const asdf =
     ['<w>', '</w>', '<p>', '</p>'].map(
       (replace): void => {
         outputText = outputText.replace(replace, '');
+        markedOutput = markedOutput.replace(replace, '');
       },
     );
+    console.log(markedOutput);
+
     return outputText;
     // return marked(`${markDownText.preText}${wTagText}${markDownText.postText}`);
     return this.markdownIt.render(
@@ -47,10 +55,8 @@ export class MarkService {
             addedText = '**';
           }
         }
-        commonMark.preText = `[assets/test.html](${addedText}${
-          commonMark.preText
-        }`;
-        commonMark.postText = `${commonMark.postText}${addedText})`;
+        commonMark.preText = `[${addedText}${commonMark.preText}`;
+        commonMark.postText = `${commonMark.postText}${addedText}](asdf.html)`;
       },
     );
 
