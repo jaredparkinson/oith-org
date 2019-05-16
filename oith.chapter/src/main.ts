@@ -44,7 +44,7 @@ export async function parseChapter(
 
   const shortTitle = await extractInnerHTML(document, '[type=short-citation]');
   const title = await extractInnerHTML(document, 'title');
-  console.log(id);
+  // console.log(id);
 
   chapter._id = `${id}-chapter`;
   chapter.language = language;
@@ -61,7 +61,7 @@ export async function parseChapter(
 
 async function main(): Promise<void> {
   // await getFiles();
-  console.log(await getFiles());
+  // console.log(await getFiles());
   try {
     const promises = (await getFiles()).map(
       async (fileName: string): Promise<void> => {
@@ -76,7 +76,7 @@ async function main(): Promise<void> {
                 `~/source/repos/scripture_files/scriptures/${chapter._id}.json`,
               ),
             );
-            console.log(chapter);
+            // console.log(chapter);
 
             await writeFile(outPath, JSON.stringify(chapter));
 

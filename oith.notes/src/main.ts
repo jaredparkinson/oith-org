@@ -10,6 +10,7 @@ import { NoteRef } from './models/NoteRef';
 import { parseReferenceLabel } from './parseReferenceLabel';
 import { parseID } from './parseID';
 import { getLanguage } from './getLanguage';
+import expandTilde = require('expand-tilde');
 
 export async function parseNoteRefs(
   secondaryNoteElement: Element,
@@ -50,9 +51,10 @@ export async function parseNoteRefs(
 
 export async function parseSecondaryNotes(
   document: Document,
+  noteId: string,
 ): Promise<SecondaryNote[]> {
   const secondaryNotePromises = Array.from(
-    document.querySelectorAll('note > div'),
+    document.querySelectorAll(`#${noteId} > div`),
   ).map(
     async (secondaryNoteElement): Promise<SecondaryNote> => {
       const secondaryNote = new SecondaryNote();
@@ -94,7 +96,7 @@ export async function parseNotes(document: Document): Promise<Note[]> {
       note.noteShortTitle = noteShortTitle;
       note.noteTitle = noteTitle;
 
-      note.secondaryNotes = await parseSecondaryNotes(document);
+      note.secondaryNotes = await parseSecondaryNotes(document, id);
       return note;
     },
   );
@@ -114,6 +116,16 @@ async function main(): Promise<void> {
 
           const notes = await parseNotes(document);
           const language = await getLanguage(document);
+          const outPath = normalize(
+            expandTilde(
+              `~/source/repos/scripture_files/scriptures/${await parseID(
+                document,
+                language,
+              )}-notes.json`,
+            ),
+          );
+          await writeFile(outPath, JSON.stringify(notes));
+
           await writeFile(
             normalize(
               `../src/assets/scripture_files/${await parseID(
