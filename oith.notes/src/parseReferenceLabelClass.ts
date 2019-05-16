@@ -1,4 +1,6 @@
-export async function parseReferenceLabelClass(className: string) {
+export async function parseReferenceLabelClass(
+  className: string,
+): Promise<[string, string]> {
   switch (className) {
     case 'reference-label-quotation': {
       return ['quotation', 'QUO'];

@@ -5,6 +5,7 @@ import { WTagGroupType } from '../enums/WTagGroupType';
 import { queryVerses, convertTextNodeToNode, getElementIds } from './dom';
 import { WTagGroup } from '../interfaces/WTagGroup';
 import { WTagGroupA, Verse } from '../..';
+
 /*
   WTagGroups were necessitaed by the need to preserve some the existing structure found in the source files,
   without having to include the information as WTag information. During development of the WTags, two potentially

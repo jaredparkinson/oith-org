@@ -1,9 +1,6 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 import { normalize } from 'path';
-
 const FastGlob = require('fast-glob');
 const expandTidle = require('expand-tilde');
-
 export async function getFiles(): Promise<string[]> {
   return (await FastGlob(
     `${normalize(

@@ -6,8 +6,11 @@ import { queryWTags } from './preprocessor/wtags';
 import { normalize } from 'path';
 import { writeFile, pathExists, mkdir } from 'fs-extra';
 import { getFiles } from './preprocessor/files';
+import expandTilde = require('expand-tilde');
+import { makeOutputDir } from './makeOutputDir';
 
 async function processFiles(fileNames: string[]): Promise<void> {
+  await makeOutputDir();
   const files = fileNames.slice(0, 10000).map(
     async (fileName): Promise<void> => {
       const jsdom = await loadFile(fileName);
@@ -32,6 +35,15 @@ async function processFiles(fileNames: string[]): Promise<void> {
           ),
         );
 
+        const id = await getID(document, language);
+        const outPath = normalize(
+          expandTilde(
+            `~/source/repos/scripture_files/scriptures/${id}-wtags.json`,
+          ),
+        );
+        console.log(outPath);
+
+        await writeFile(outPath, JSON.stringify(verses));
         await writeFile(
           normalize(
             `../src/assets/scripture_files/${await getID(

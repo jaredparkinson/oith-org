@@ -14,6 +14,7 @@
     "**/.DS_Store": true,
     "node_modules": true,
     "oith.wtags": true,
-    "oith.notes": true
+    "oith.notes": true,
+    "oith.chapter": true
   }
 }

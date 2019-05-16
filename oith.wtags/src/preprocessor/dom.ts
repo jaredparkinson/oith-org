@@ -6,12 +6,12 @@ export async function loadFile(fileName: string): Promise<JSDOM> {
     return new JSDOM(file.toString());
   } catch (error) {
     console.log(error);
-    throw `Couldn't load dom`;
+    throw 'Couldn\'t load dom';
   }
 }
 
 function convertHrefs(document: Document): void {
-  Array.from(document.querySelectorAll(`a[href*='..']`)).map(
+  Array.from(document.querySelectorAll('a[href*=".."]')).map(
     (a): void => {
       const regex = new RegExp(
         /((?<=(([\.\.\/]{2,3}))(scriptures\/)(.+?\/)).+\/.+)/s,

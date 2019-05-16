@@ -8,7 +8,7 @@ import { parseNotePhrase } from './parseNotePhrase';
 import { extractTextContent } from './extractTextContent';
 import { NoteRef } from './models/NoteRef';
 import { parseReferenceLabel } from './parseReferenceLabel';
-import { getID } from './getID';
+import { parseID } from './parseID';
 import { getLanguage } from './getLanguage';
 
 export async function parseNoteRefs(
@@ -116,7 +116,7 @@ async function main(): Promise<void> {
           const language = await getLanguage(document);
           await writeFile(
             normalize(
-              `../src/assets/scripture_files/${await getID(
+              `../src/assets/scripture_files/${await parseID(
                 document,
                 language,
               )}-notes.json`,
