@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Paragraph } from 'oith.chapter/src/Paragraph';
 
 @Component({
   selector: 'app-paragraph',
   templateUrl: './paragraph.component.html',
-  styleUrls: ['./paragraph.component.scss']
+  styleUrls: ['./paragraph.component.scss'],
 })
 export class ParagraphComponent implements OnInit {
+  @Input() public paragraph: Paragraph;
+  public constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  public ngOnInit(): void {}
 }

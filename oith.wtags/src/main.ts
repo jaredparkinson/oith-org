@@ -18,7 +18,24 @@ async function processFiles(fileNames: string[]): Promise<void> {
 
       removeRubyInAElements(document);
       const verses = parseWTagGroups(document);
-      flatten(await queryWTags(document));
+      const wTags = flatten(await queryWTags(document));
+      // console.log(wTags);
+
+      verses.map(
+        (verse): void => {
+          verse.wTags = wTags.filter(
+            (w): boolean => {
+              return w.verseID === verse._id;
+            },
+          );
+          if (verse.wTags.length > 0) {
+            // console.log(verse.wTags);
+            console.log(verse.wTags);
+          } else {
+            verse.wTags = undefined;
+          }
+        },
+      );
       // console.log(wTags);
 
       try {
@@ -26,14 +43,6 @@ async function processFiles(fileNames: string[]): Promise<void> {
           await mkdir(normalize('../src/assets/scripture_files'));
         }
         const language = await getLanguage(document);
-        console.log(
-          normalize(
-            `../src/assets/scripture_files/${await getID(
-              document,
-              language,
-            )}-wtags.json`,
-          ),
-        );
 
         const id = await getID(document, language);
         const outPath = normalize(
@@ -41,7 +50,7 @@ async function processFiles(fileNames: string[]): Promise<void> {
             `~/source/repos/scripture_files/scriptures/${id}-wtags.json`,
           ),
         );
-        console.log(outPath);
+        // console.log(outPath);
 
         await writeFile(outPath, JSON.stringify(verses));
         await writeFile(

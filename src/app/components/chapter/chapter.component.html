@@ -2,11 +2,15 @@
   <div class="body-block ">
     <div style="background: green"></div>
     <div>
-      <ng-container *ngIf="this.chapterService.verses">
-        <app-verse
-          *ngFor="let verse of this.chapterService.verses"
-          [verse]="verse"
-        ></app-verse>
+      <ng-container
+        *ngIf="
+          this.chapterService.chapter && this.chapterService.chapter.paragraphs
+        "
+      >
+        <app-paragraph
+          *ngFor="let paragraph of this.chapterService.chapter.paragraphs"
+          [paragraph]="paragraph"
+        ></app-paragraph>
         <div style="height: 90vh;"></div>
       </ng-container>
     </div>

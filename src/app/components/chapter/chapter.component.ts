@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ParamService } from 'src/app/services/param.service';
 import axios from 'axios';
 import { Verse } from 'oith.wtags';
@@ -19,31 +19,37 @@ export class ChapterComponent implements OnInit {
     public activatedRoute: ActivatedRoute,
     public paramService: ParamService,
     public chapterService: ChapterService,
+    public router: Router,
   ) {}
 
   public async ngOnInit(): Promise<void> {
     this.activatedRoute.params.subscribe(
       async (params): Promise<void> => {
-        const chapterParams = this.paramService.parseChapterParams(params);
-        console.log(chapterParams);
-        const ids = await urlToChapterId(chapterParams, 'eng');
+        // const chapterParams = this.paramService.parseChapterParams(params);
+        // console.log(chapterParams);
+        // const ids = await urlToChapterId(chapterParams, 'eng');
 
-        console.log(ids);
+        // console.log(ids);
 
-        const chapterData = await axios.get(
-          `assets/scripture_files/${ids}-wtags.json`,
-        );
-        const noteData = await axios.get(
-          `assets/scripture_files/${ids}-notes.json`,
-        );
-        const verses = chapterData.data as Verse[];
-        const notes = noteData.data as Note[];
-        if (verses) {
-          await this.chapterService.expandWTagCharacterCount(verses);
-          console.log('test');
+        // const chapterData = await axios.get(
+        //   `assets/scripture_files/${ids}-wtags.json`,
+        // );
+        // const noteData = await axios.get(
+        //   `assets/scripture_files/${ids}-notes.json`,
+        // );
+        // const verses = chapterData.data as Verse[];
+        // const notes = noteData.data as Note[];
+        // if (verses) {
+        //   await this.chapterService.expandWTagCharacterCount(verses);
+        //   console.log('test');
 
-          this.chapterService.verses = verses;
-          this.chapterService.notes = notes;
+        //   this.chapterService.verses = verses;
+        //   this.chapterService.notes = notes;
+        // }
+        try {
+          await this.chapterService.queryChapter(params);
+        } catch (error) {
+          this.router.navigateByUrl('');
         }
       },
     );

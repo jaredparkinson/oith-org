@@ -4,14 +4,23 @@ import { range } from 'lodash';
 import { Note } from 'oith.notes/src/models/Note';
 import { DataService } from './data.service';
 import { ChapterParams } from './ChapterParams';
+import { Params } from '@angular/router';
+import { ParamService } from './param.service';
+import { addVersesToParagraphs } from './addVersesToParagraphs';
+import { Chapter } from 'oith.chapter/src/Chapter';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ChapterService {
   public verses: Verse[];
+
+  public chapter: Chapter;
   public notes: Note[] | undefined;
-  public constructor(private dataService: DataService) {}
+  public constructor(
+    private dataService: DataService,
+    private paramService: ParamService,
+  ) {}
 
   private expandRange(compressedRanges: [number, number][]): number[] {
     let newRange: number[] = [];
@@ -25,6 +34,30 @@ export class ChapterService {
     );
     return newRange;
   }
+  public async queryChapter(params: Params): Promise<void> {
+    try {
+      const chapterParams = this.paramService.parseChapterParams(params);
+      console.log(chapterParams);
+
+      const baseID = `${chapterParams.book}-${chapterParams.chapter}-eng`;
+      const chapterID = `${baseID}-chapter.json`;
+      const versesID = `${baseID}-wtags.json`;
+      const notesID = `${baseID}-notes.json`;
+
+      const chapter = await this.dataService.queryChapterData<Chapter>(
+        chapterID,
+      );
+      const verses = await this.dataService.queryChapterData<Verse[]>(versesID);
+      const notes = await this.dataService.queryChapterData(notesID);
+      await this.expandWTagCharacterCount(verses);
+      await addVersesToParagraphs(chapter, verses);
+
+      this.chapter = chapter;
+    } catch (error) {
+      throw error;
+    }
+  }
+
   public async expandWTagCharacterCount(verses: Verse[]): Promise<void> {
     verses.map(
       (verse): void => {

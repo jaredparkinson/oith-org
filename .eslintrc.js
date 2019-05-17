@@ -6,6 +6,7 @@ module.exports = {
     'plugin:prettier/recommended', // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ],
   rules: {
+    '@typescript-eslint/no-parameter-properties': [false],
     eqeqeq: ['error', 'always'],
     'no-var': 'error',
     quotes: ['error', 'single'],

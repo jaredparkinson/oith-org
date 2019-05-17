@@ -1,3 +1,6 @@
-<p>
-  paragraph works!
+<p *ngIf="this.paragraph.verses">
+  <app-verse
+    *ngFor="let verse of this.paragraph.verses"
+    [verse]="verse"
+  ></app-verse>
 </p>
