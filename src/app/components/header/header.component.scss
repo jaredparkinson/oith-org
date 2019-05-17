@@ -1,0 +1,18 @@
+.oith-header {
+  display: grid;
+  grid-template-rows: 48px;
+  grid-template-columns: 48px 48px 48px;
+  li {
+    display: grid;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: 31px;
+    color: black;
+    font-weight: bold;
+    svg {
+      width: 24px;
+    }
+  }
+}

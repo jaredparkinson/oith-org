@@ -10,22 +10,27 @@ export class HeaderComponent implements OnInit {
   public constructor(public saveState: SaveStateService) {}
 
   public ngOnInit(): void {}
-  public navigationPaneToggle(): void {
+  public async navigationPaneToggle(): Promise<void> {
     this.saveState.data.navigationPaneToggle = !this.saveState.data
       .navigationPaneToggle;
+    await this.saveState.save();
   }
-  public notesPaneToggle(): void {
+  public async notesPaneToggle(): Promise<void> {
     this.saveState.data.notesPaneToggle = !this.saveState.data.notesPaneToggle;
+    await this.saveState.save();
   }
-  public paragraphsVisible(): void {
+  public async paragraphsVisible(): Promise<void> {
     this.saveState.data.paragraphsVisible = !this.saveState.data
       .paragraphsVisible;
+    await this.saveState.save();
   }
-  public poetryVisible(): void {
+  public async poetryVisible(): Promise<void> {
     this.saveState.data.poetryVisible = !this.saveState.data.poetryVisible;
+    await this.saveState.save();
   }
-  public secondaryNotesVisible(): void {
+  public async secondaryNotesVisible(): Promise<void> {
     this.saveState.data.secondaryNotesVisible = !this.saveState.data
       .secondaryNotesVisible;
+    await this.saveState.save();
   }
 }
