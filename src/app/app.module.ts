@@ -3,6 +3,7 @@ import {
   NgModule,
   CUSTOM_ELEMENTS_SCHEMA,
   NO_ERRORS_SCHEMA,
+  APP_INITIALIZER,
 } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,6 +30,13 @@ import { WTagDirective } from './directives/wtag.directive';
 import { SecondaryNoteComponent } from './components/note/secondary-note-component';
 import { NotePhraseComponent } from './components/note/note-phrase-component';
 import { NoteRefComponent } from './components/note/note-ref-component';
+import { SaveStateService } from './services/save-state.service';
+
+export function load(saveState: SaveStateService) {
+  return async (): Promise<void> => {
+    await saveState.load();
+  };
+}
 
 @NgModule({
   declarations: [
@@ -57,7 +65,14 @@ import { NoteRefComponent } from './components/note/note-ref-component';
     WTagDirective,
   ],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: load,
+      deps: [SaveStateService],
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
