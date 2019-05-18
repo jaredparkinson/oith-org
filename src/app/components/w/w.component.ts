@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { WMerged, RichText, WRichText } from 'oith.wtags';
 import { multiIncludes } from './multiIncludes';
 import { MarkService } from 'src/app/services/mark.service';
+import { PreMarkdown } from './PreMarkdown';
 
 @Component({
   selector: 'app-w',
@@ -23,7 +24,38 @@ export class WComponent implements OnInit {
     return classList ? classList.toString().replace(',', ' ') : '';
   }
 
+  public getMarkDown(): string {
+    const preMarkDown = new PreMarkdown();
+    preMarkDown.text = this.w.text;
+    if (this.w.wRichText) {
+      const richTexts = this.w.wRichText.map(
+        (rich): RichText => {
+          return rich.richText;
+        },
+      );
+
+      if (!preMarkDown.bold) {
+        preMarkDown.bold = multiIncludes(
+          [this.richTextEnum.verseNumber],
+          richTexts,
+        );
+      }
+      if (!preMarkDown.italic) {
+        preMarkDown.italic = multiIncludes(
+          [this.richTextEnum.clarityWord],
+          richTexts,
+        );
+      }
+    }
+
+    return preMarkDown.getMarkdown();
+  }
+
   public isBoldItalicOrBoth(richText: WRichText[]): string {
+    const bold = false;
+    const italic = false;
+    const preMarkDown = new PreMarkdown();
+
     if (richText) {
       const richTexts = richText.map(
         (rich): RichText => {
@@ -31,8 +63,15 @@ export class WComponent implements OnInit {
         },
       );
 
-      const bold = multiIncludes([this.richTextEnum.verseNumber], richTexts);
-      const italic = multiIncludes([this.richTextEnum.clarityWord], richTexts);
+      preMarkDown.bold = multiIncludes(
+        [this.richTextEnum.verseNumber],
+        richTexts,
+      );
+      preMarkDown.italic = multiIncludes(
+        [this.richTextEnum.clarityWord],
+        richTexts,
+      );
+
       // console.log(bold);
       // console.log(italic);
 

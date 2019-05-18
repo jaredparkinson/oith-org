@@ -1,4 +1,4 @@
-<verse>
+<verse [ngClass]="{ paragraph: this.saveState.data.paragraphsVisible }">
   <ng-container *ngFor="let wTagGroup of this.verse.wTagGroups">
     <ng-container [ngSwitch]="wTagGroup.type">
       <app-wtag-group-a

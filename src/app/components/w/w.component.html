@@ -4,7 +4,7 @@
     appWTag
     [wMerged]="this.w"
     (click)="this.click()"
-    [innerHTML]="this.renderText()"
+    [innerHTML]="this.getMarkDown()"
   ></w>
   <w *ngSwitchCase="false" appWTag [wMerged]="this.w" (click)="this.click()">{{
     this.w.text
