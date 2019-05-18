@@ -1,12 +1,10 @@
 <ng-container [ngSwitch]="this.w.wRichText !== undefined">
-  <w
-    *ngSwitchCase="true"
-    appWTag
-    [wMerged]="this.w"
+  <F *ngSwitchCase="true" (click)="this.click()" [class]="this.getClassList()"
+    ><F [innerHTML]="this.getMarkDown()"></F></F
+  ><F
+    *ngSwitchCase="false"
+    [class]="this.getClassList()"
     (click)="this.click()"
-    [innerHTML]="this.getMarkDown()"
-  ></w>
-  <w *ngSwitchCase="false" appWTag [wMerged]="this.w" (click)="this.click()">{{
-    this.w.text
-  }}</w></ng-container
+    >{{ this.w.text }}</F
+  ></ng-container
 >

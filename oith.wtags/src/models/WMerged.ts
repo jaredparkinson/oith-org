@@ -11,4 +11,5 @@ export class WMerged {
   public wPoetry: WPoetry | undefined;
   public characterCount: number[] = [];
   public text: string | undefined = undefined;
+  public classList: string[] | undefined;
 }
