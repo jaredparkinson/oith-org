@@ -17,10 +17,10 @@
     <div style="background: green"></div>
   </div>
   <div style="background-color: red" class="footer">
-    <ng-container *ngIf="this.chapterService.notes">
+    <ng-container *ngIf="this.chapterService.chapter">
       <app-note
         [note]="note"
-        *ngFor="let note of this.chapterService.notes"
+        *ngFor="let note of this.chapterService.chapter.notes"
       ></app-note>
       <div style="height: 90vh;"></div>
     </ng-container>

@@ -6,13 +6,15 @@ import { NoteRef } from 'oith.notes/src/models/NoteRef';
 @Component({
   selector: 'app-note-ref',
   template: `
-    nju
+    <note-ref [innerHTML]="this.noteRef.text"></note-ref>
   `,
   styles: [''],
 })
 export class NoteRefComponent implements OnInit {
   @Input() public noteRef: NoteRef;
-  constructor() {}
+  constructor() {
+    console.log(this.noteRef);
+  }
 
   ngOnInit() {}
 }

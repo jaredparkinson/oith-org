@@ -31,6 +31,7 @@ import { SecondaryNoteComponent } from './components/note/secondary-note-compone
 import { NotePhraseComponent } from './components/note/note-phrase-component';
 import { NoteRefComponent } from './components/note/note-ref-component';
 import { SaveStateService } from './services/save-state.service';
+import { RefService } from './services/ref.service';
 
 export function load(saveState: SaveStateService) {
   return async (): Promise<void> => {
@@ -73,6 +74,7 @@ export function load(saveState: SaveStateService) {
       multi: true,
     },
     SaveStateService,
+    RefService,
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],

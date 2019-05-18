@@ -11,6 +11,23 @@ import { parseReferenceLabel } from './parseReferenceLabel';
 import { parseID } from './parseID';
 import { getLanguage } from './getLanguage';
 import expandTilde = require('expand-tilde');
+import { NoteType } from './models/NoteType';
+
+export async function parseNoteType(
+  noteRefElement: Element,
+): Promise<NoteType> {
+  if (noteRefElement.className.includes('note-reference-eng')) {
+    return NoteType.Eng;
+  }
+  if (noteRefElement.className.includes('note-reference-new')) {
+    return NoteType.New;
+  }
+  if (noteRefElement.className.includes('note-reference-tc')) {
+    return NoteType.TC;
+  }
+
+  return NoteType.Eng;
+}
 
 export async function parseNoteRefs(
   secondaryNoteElement: Element,
@@ -31,8 +48,13 @@ export async function parseNoteRefs(
         noteRef.classList = classList.length > 0 ? classList : undefined;
         noteRef.text = text;
         noteRef.referenceLabel = referenceLabel;
+        noteRef.type = await parseNoteType(noteRefElement);
+        console.log(noteRef);
+
         return noteRef;
       } catch (error) {
+        console.log(error);
+
         return undefined;
       }
     },
@@ -69,7 +91,7 @@ export async function parseSecondaryNotes(
       secondaryNote.noteMarker = noteMarker ? noteMarker : undefined;
       secondaryNote.verseMarker = verseMarker ? verseMarker : undefined;
       secondaryNote.notePhrase = await parseNotePhrase(secondaryNoteElement);
-      await parseNoteRefs(secondaryNoteElement);
+      secondaryNote.noteRefs = await parseNoteRefs(secondaryNoteElement);
       return secondaryNote;
     },
   );
@@ -104,6 +126,7 @@ export async function parseNotes(document: Document): Promise<Note[]> {
 }
 
 async function main(): Promise<void> {
+  console.log('hhg');
   // await getFiles();
   try {
     const promises = (await getFiles()).map(

@@ -20,5 +20,5 @@
     "outDir": "build",
     "incremental": true
   },
-  "include": ["src/**/*", "__tests__/**/*"]
+  "include": ["src/**/*"]
 }

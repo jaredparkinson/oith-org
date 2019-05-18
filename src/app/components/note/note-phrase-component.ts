@@ -6,7 +6,7 @@ import { NotePhrase } from 'oith.notes/src/models/NotePhrase';
 @Component({
   selector: 'app-note-phrase',
   template: `
-    p
+    <note-phrase>{{ this.notePhrase.text }}</note-phrase>
   `,
   styles: [''],
 })

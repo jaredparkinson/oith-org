@@ -8,6 +8,7 @@ import { Params } from '@angular/router';
 import { ParamService } from './param.service';
 import { addVersesToParagraphs } from './addVersesToParagraphs';
 import { Chapter } from 'oith.chapter/src/Chapter';
+import { RefService } from './ref.service';
 
 @Injectable({
   providedIn: 'root',
@@ -20,6 +21,7 @@ export class ChapterService {
   public constructor(
     private dataService: DataService,
     private paramService: ParamService,
+    private refService: RefService,
   ) {}
 
   private expandRange(compressedRanges: [number, number][]): number[] {
@@ -48,10 +50,13 @@ export class ChapterService {
         chapterID,
       );
       const verses = await this.dataService.queryChapterData<Verse[]>(versesID);
-      const notes = await this.dataService.queryChapterData(notesID);
+      const notes = await this.dataService.queryChapterData<Note[]>(notesID);
       await this.expandWTagCharacterCount(verses);
       await addVersesToParagraphs(chapter, verses);
 
+      this.refService.initRefVisibility(notes);
+      chapter.verses = verses;
+      chapter.notes = notes;
       this.chapter = chapter;
     } catch (error) {
       throw error;
