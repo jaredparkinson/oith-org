@@ -1,10 +1,12 @@
-import * as MarkdownIt from 'markdown-it';
+// import {} from 'markdown-it';
+import { parse } from 'marked';
 
 export class PreMarkdown {
   public a: boolean | undefined;
-  private markdownIt = new MarkdownIt({
-    html: true,
-  });
+  // private markdownIt = new MarkdownIt({
+  //   html: true,
+  // });
+
   public bold: boolean | undefined;
   public italic: boolean | undefined;
   public href: string | undefined;
@@ -20,18 +22,23 @@ export class PreMarkdown {
         `[${this.href}](`,
         ')',
       );
-      this.addMarkdown(this.italic, '*');
+      this.addMarkdown(this.italic, '_');
       this.addMarkdown(this.bold, '**');
 
-      this.text = this.markdownIt.render(this.text);
+      // console.log(marked.parse(this.text));
+      this.text = parse(this.text, { sanitize: false });
+
+      // this.text = this.markdownIt.render(this.text);
       // const asdf =
-      ['<w>', '</w>', '<p>', '</p>'].map(
+      ['<w>', '</w>', '<F>', '</F>', '<p>', '</p>'].map(
         (replace): void => {
           if (this.text) {
             this.text = this.text.replace(replace, '');
           }
         },
       );
+      // console.log(this.text);
+
       return this.text;
     }
     return '';

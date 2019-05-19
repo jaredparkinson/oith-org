@@ -1,4 +1,9 @@
-<div class="oith-root">
+<div
+  class="oith-root"
+  [ngClass]="{
+    'display-navigation': this.saveStateService.data.navigationPaneToggle
+  }"
+>
   <app-header></app-header>
   <div class="oith-content-parent">
     <app-navigation></app-navigation>

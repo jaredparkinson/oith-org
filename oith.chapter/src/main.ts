@@ -85,7 +85,7 @@ async function main(): Promise<void> {
                 `../src/assets/scripture_files/${await parseID(
                   document,
                   chapter.language,
-                )}.json`,
+                )}-chapter.json`,
               ),
               JSON.stringify(chapter),
             );

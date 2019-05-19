@@ -30,7 +30,7 @@ async function processFiles(fileNames: string[]): Promise<void> {
           );
           if (verse.wTags.length > 0) {
             // console.log(verse.wTags);
-            console.log(verse.wTags);
+            // console.log(verse.wTags);
           } else {
             verse.wTags = undefined;
           }

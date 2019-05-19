@@ -1,4 +1,4 @@
-import { Verse } from 'oith.wtags';
+import { Verse } from '../../oith.wtags';
 
 export class Paragraph {
   public classList: string[] | undefined;

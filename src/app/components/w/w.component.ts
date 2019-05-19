@@ -1,8 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Sanitizer } from '@angular/core';
 import { WMerged, RichText, RichTextEnum } from 'oith.wtags';
 import { multiIncludes } from './multiIncludes';
 import { MarkService } from 'src/app/services/mark.service';
 import { PreMarkdown } from './PreMarkdown';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-w',
@@ -12,7 +13,10 @@ import { PreMarkdown } from './PreMarkdown';
 export class WComponent implements OnInit {
   @Input() public w: WMerged;
   public ref = false;
-  public constructor(public markService: MarkService) {}
+  public constructor(
+    public markService: MarkService,
+    public domSanitizer: DomSanitizer,
+  ) {}
   public ngOnInit(): void {
     if (this.w.wRef) {
       this.ref = true;
@@ -38,7 +42,7 @@ export class WComponent implements OnInit {
     return classList.toString().replace(',', ' ');
   }
 
-  public getMarkDown(): string {
+  public getMarkDown(): SafeHtml {
     const preMarkDown = new PreMarkdown();
     preMarkDown.text = this.w.text;
     if (this.w.wRichText) {
@@ -59,6 +63,7 @@ export class WComponent implements OnInit {
       }
     }
 
+    return this.domSanitizer.bypassSecurityTrustHtml(preMarkDown.getMarkdown());
     return preMarkDown.getMarkdown();
   }
 

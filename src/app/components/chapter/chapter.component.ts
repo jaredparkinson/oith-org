@@ -1,13 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ParamService } from 'src/app/services/param.service';
-import axios from 'axios';
-import { Verse } from 'oith.wtags';
-import {
-  ChapterService,
-  urlToIDs as urlToChapterId,
-} from 'src/app/services/chapter.service';
-import { Note } from '../../../../oith.notes/src/models/Note';
+import { ChapterService } from 'src/app/services/chapter.service';
+import { SaveStateService } from 'src/app/services/save-state.service';
 
 @Component({
   selector: 'app-chapter',
@@ -20,6 +15,7 @@ export class ChapterComponent implements OnInit {
     public paramService: ParamService,
     public chapterService: ChapterService,
     public router: Router,
+    public saveStateService: SaveStateService,
   ) {}
 
   public async ngOnInit(): Promise<void> {

@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import 'app/styles/grid.scss';
 @import 'app/styles/bootstrap.min.css';
 @import 'app/styles/mediaQueries.scss';
 * {
@@ -12,45 +12,6 @@ body {
 router-outlet {
   display: none;
 }
-
-@mixin rootGrid($mediaQuery, $gridTemplateCol) {
-  @media #{$mediaQuery} {
-    .oith-content-parent {
-      display: grid;
-      grid-template-columns: #{$gridTemplateCol};
-    }
-  }
-}
-
-.oith-root {
-  app-header {
-    background-color: green;
-  }
-  app-navigation {
-    background-color: black;
-  }
-  display: grid;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  grid-template-rows: 48px auto;
-
-  @include rootGrid($phoneMediaQuery, 100vw);
-  @include rootGrid($largeMediaQuery, 200px auto);
-} /* Extra small devices (phones, 600px and down) */
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-$oo: '@media only screen and (min-width: 600px)';
-
-/* Medium devices (landscape tablets, 768px and up) */
-$oo: '@media only screen and (min-width: 768px)';
-
-/* Large devices (laptops/desktops, 992px and up) */
-$oo: '@media only screen and (min-width: 992px)';
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-$oo: '@media only screen and (min-width: 1200px)';
-
 w > p {
   display: inline;
 }

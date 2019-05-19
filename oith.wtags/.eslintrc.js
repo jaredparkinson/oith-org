@@ -6,8 +6,6 @@ module.exports = {
     'prettier/@typescript-eslint',
   ],
   rules: {
-    '@typescript-eslint/no-parameter-properties': [false],
-
     eqeqeq: ['error', 'always'],
     'no-var': 'error',
     quotes: ['error', 'single'],

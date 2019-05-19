@@ -49,7 +49,7 @@ export async function parseNoteRefs(
         noteRef.text = text;
         noteRef.referenceLabel = referenceLabel;
         noteRef.type = await parseNoteType(noteRefElement);
-        console.log(noteRef);
+        // console.log(noteRef);
 
         return noteRef;
       } catch (error) {
