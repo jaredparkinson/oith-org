@@ -20,7 +20,7 @@ $chapterGridMargins: 32px;
   width: 32px;
   i {
     fill: gainsboro;
-    position: absolute;
+    position: fixed;
 
     @media #{$smallScreen} {
       top: 30%;
