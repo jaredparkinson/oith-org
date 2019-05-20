@@ -12,9 +12,9 @@ import { NoteRef } from 'oith.notes/src/models/NoteRef';
 })
 export class NoteRefComponent implements OnInit {
   @Input() public noteRef: NoteRef;
-  constructor() {
+  public constructor() {
     // console.log(this.noteRef);
   }
 
-  ngOnInit() {}
+  public ngOnInit() {}
 }

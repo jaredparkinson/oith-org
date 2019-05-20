@@ -3,23 +3,52 @@
   [ngClass]="{ 'display-notes': this.saveStateService.data.notesPaneToggle }"
 >
   <div class="body-block ">
-    <div style="background: green"></div>
-    <div class="oith-chapter-container">
-      <ng-container
-        *ngIf="
-          this.chapterService.chapter && this.chapterService.chapter.paragraphs
-        "
-      >
-        <app-paragraph
-          *ngFor="let paragraph of this.chapterService.chapter.paragraphs"
-          [paragraph]="paragraph"
-        ></app-paragraph>
-        <div style="height: 90vh;"></div>
-      </ng-container>
+    <div class="oith-chapter-parent">
+      <div></div>
+      <div class="left-chapter-nav-btn chapter-nav-btn">
+        <i
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+          >
+            <path d="M11.67 3.87L9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z" />
+            <path fill="none" d="M0 0h24v24H0z" />
+          </svg>
+        </i>
+      </div>
+      <div class="oith-chapter-container">
+        <ng-container
+          *ngIf="
+            this.chapterService.chapter &&
+            this.chapterService.chapter.paragraphs
+          "
+        >
+          <app-paragraph
+            *ngFor="let paragraph of this.chapterService.chapter.paragraphs"
+            [paragraph]="paragraph"
+          ></app-paragraph>
+          <div style="height: 90vh;"></div>
+        </ng-container>
+      </div>
+      <div class="right-chapter-nav-btn chapter-nav-btn">
+        <i>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z" />
+            <path fill="none" d="M0 0h24v24H0z" />
+          </svg>
+        </i>
+      </div>
+      <div></div>
     </div>
-    <div style="background: green"></div>
   </div>
-  <div style="background-color: red" class="footer">
+  <div style="background-color: gainsboro" class="footer">
     <ng-container
       *ngIf="
         this.chapterService.chapter &&

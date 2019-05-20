@@ -7,6 +7,6 @@ import { SaveStateService } from './services/save-state.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'oith-org';
+  public title = 'oith-org';
   public constructor(public saveStateService: SaveStateService) {}
 }

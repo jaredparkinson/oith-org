@@ -1,1 +1,55 @@
 @import '../../styles/mediaQueries.scss';
+
+$chapterGridMargins: 32px;
+@mixin oithChapterParent(
+  $mediaQuery,
+  $gridTemplateColumn,
+  $oithChapterContainerWidth
+) {
+  @media #{$mediaQuery} {
+    grid-template-columns: $gridTemplateColumn;
+    .oith-chapter-container {
+      // margin: auto;
+      justify-self: center;
+
+      width: $oithChapterContainerWidth;
+    }
+  }
+}
+.chapter-nav-btn {
+  width: 32px;
+  i {
+    fill: gainsboro;
+    position: absolute;
+
+    @media #{$smallScreen} {
+      top: 30%;
+    }
+    @media #{$mediumScreen} {
+      top: 50%;
+    }
+    // width: 32px;
+  }
+}
+
+.body-block {
+  overflow-y: scroll;
+  .oith-chapter-parent {
+    display: grid;
+    // grid-template-columns: auto $chapterGridMargins 50vw $chapterGridMargins auto;
+    @include oithChapterParent(
+      $smallScreen,
+      16px $chapterGridMargins auto $chapterGridMargins 16px,
+      auto
+    );
+    @include oithChapterParent(
+      $largeScreen,
+      16px $chapterGridMargins auto $chapterGridMargins 16px,
+      80%
+    );
+  }
+  // justify-content: center;
+}
+.footer {
+  overflow: scroll;
+}
