@@ -18,4 +18,7 @@ export class WTagGroupRTComponent extends WTagComponent implements OnInit {
   public ngOnInit(): void {
     throw 'Not implemented';
   }
+  public getClassList(): string {
+    return super.getClassList(this.wTagGroup);
+  }
 }

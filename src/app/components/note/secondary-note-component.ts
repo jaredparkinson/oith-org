@@ -18,7 +18,14 @@ import { RefService } from 'src/app/services/ref.service';
       ></app-note-ref>
     </secondary-note>
   `,
-  styles: [''],
+  styles: [
+    `
+      secondary-note {
+        display: grid;
+        grid-gap: 5px;
+      }
+    `,
+  ],
 })
 export class SecondaryNoteComponent implements OnInit {
   @Input() public secondaryNote: SecondaryNote;

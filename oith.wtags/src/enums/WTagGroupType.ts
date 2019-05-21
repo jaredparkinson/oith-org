@@ -5,4 +5,7 @@ export enum WTagGroupType {
   ARuby = 3,
   RB = 4,
   RT = 5,
+  SPAN = 6,
 }
+
+export const WTagGroupTypeEnum = WTagGroupType;

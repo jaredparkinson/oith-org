@@ -19,12 +19,17 @@
     display: grid;
   }
   .oith-header-left {
+    justify-content: left;
   }
   .oith-header-middle {
     grid-template-columns: 48px 48px 48px 48px;
   }
   .oith-header-right {
-    grid-template-columns: 48px 48px 48px 48px;
+    grid-template-columns: 48px;
+    justify-content: right;
+  }
+  ul {
+    height: 48px;
   }
 
   li {

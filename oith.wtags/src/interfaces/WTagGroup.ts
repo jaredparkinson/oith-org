@@ -4,4 +4,5 @@ export interface WTagGroup {
   type: WTagGroupType;
   charCount: number[] | undefined;
   charCountCompress: [number, number];
+  classList: string[] | undefined;
 }

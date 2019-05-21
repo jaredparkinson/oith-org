@@ -8,7 +8,16 @@ import { NotePhrase } from 'oith.notes/src/models/NotePhrase';
   template: `
     <note-phrase>{{ this.notePhrase.text }}</note-phrase>
   `,
-  styles: [''],
+  styles: [
+    `
+      note-phrase {
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        padding-left: 4pt;
+      }
+    `,
+  ],
 })
 export class NotePhraseComponent implements OnInit {
   @Input() public notePhrase: NotePhrase;

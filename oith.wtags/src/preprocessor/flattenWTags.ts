@@ -49,8 +49,8 @@ export function convertTextNodeToNode(
     );
 }
 
-export function removeRubyInAElements(document: Document): void {
-  queryARubyParents(document).map(
+export async function removeRubyInAElements(document: Document): Promise<void> {
+  (await queryARubyParents(document)).map(
     (parent): void => {
       Array.from(parent.childNodes)
         .filter(

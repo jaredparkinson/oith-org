@@ -1,6 +1,6 @@
 <note>
-  <span>{{ this.note.noteTitle }}</span>
-  <span>{{ this.note.noteShortTitle }}</span>
+  <!-- <span>{{ this.note.noteTitle }}</span> -->
+  <span class="note-short-title">{{ this.note.noteShortTitle }}</span>
   <app-secondary-note
     *ngFor="let secondaryNote of this.getSecondaryNotes()"
     [secondaryNote]="secondaryNote"

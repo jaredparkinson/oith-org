@@ -12,7 +12,7 @@ export async function addVersesToParagraphs(
             (verseID): void => {
               const verse = verses.find(
                 (verse): boolean => {
-                  return verse._id === verseID;
+                  return verse.id === verseID;
                 },
               );
               if (verse) {

@@ -8,4 +8,5 @@ export class WTagGroupRubyA implements WTagGroup {
   public postRubyText: [number, number] | undefined;
   public wRT: [number, number];
   public wRB: [number, number];
+  classList: string[] | undefined;
 }

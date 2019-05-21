@@ -119,9 +119,9 @@ function parseGroups(verse: Element): PreWTagGroup1[] {
   return preWTagGroup1s;
 }
 
-function parseWTagStep1(document: Document): PreWTagGroup1[] {
+async function parseWTagStep1(document: Document): Promise<PreWTagGroup1[]> {
   let preWTagGroup1s: PreWTagGroup1[] = [];
-  const verses = queryVerses(document);
+  const verses = await queryVerses(document);
   Array.from(verses).map(
     (verse): void => {
       convertTextNodeToNode(document, verse);
@@ -174,6 +174,7 @@ function preWTagGroup2sToWTagGroup(
         charCountCompress: preWTagGroup2.charCount,
         type: WTagGroupType.Text,
         charCount: undefined,
+        classList: undefined,
       };
       switch (preWTagGroup2.type) {
         case WTagGroupType.A: {
@@ -224,6 +225,7 @@ function preWTagGroup2ToVerse(
         text: verse.textContent ? verse.textContent : '',
         wTagGroups: preGroup,
         wTags: [],
+        id: '',
       });
     },
   );
@@ -231,9 +233,9 @@ function preWTagGroup2ToVerse(
 
   return verses;
 }
-export function parseWTagGroups(document: Document): Verse[] {
-  const verseElements = Array.from(queryVerses(document));
-  const preWTagGroup1s = parseWTagStep1(document);
+export async function parseWTagGroups(document: Document): Promise<Verse[]> {
+  const verseElements = Array.from(await queryVerses(document));
+  const preWTagGroup1s = await parseWTagStep1(document);
   const preWTagGroup2 = parseWTagGroupStrp2(
     getElementIds(verseElements),
     preWTagGroup1s,

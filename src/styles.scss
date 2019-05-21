@@ -4,7 +4,7 @@
 @import 'app/styles/mediaQueries.scss';
 * {
   font-family: serif !important;
-  font-size: 16px;
+  // font-size: 16px;
 }
 body {
   // overflow: hidden;
@@ -14,4 +14,16 @@ router-outlet {
 }
 w > p {
   display: inline;
+}
+
+.dominant > f {
+  line-height: normal;
+  display: block;
+  font-size: 52px !important;
+}
+verse {
+  font-size: 16px;
+}
+note {
+  font-size: smaller;
 }

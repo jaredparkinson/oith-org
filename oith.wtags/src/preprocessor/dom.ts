@@ -45,7 +45,9 @@ function convertHrefs(document: Document): void {
   );
 }
 
-export function queryVerses(document: Document): NodeListOf<Element> {
+export async function queryVerses(
+  document: Document,
+): Promise<NodeListOf<Element>> {
   convertHrefs(document);
   return document.querySelectorAll(
     'header > *,.hidden-paragraph > .verse, .body-block > p, nav > ul > li > *, .body-block > div > *,.body-block .verse',
@@ -73,8 +75,10 @@ export function convertTextNodeToNode(
     );
 }
 
-export function queryARubyParents(document: Document): Element[] {
-  const verseElements = queryVerses(document);
+export async function queryARubyParents(
+  document: Document,
+): Promise<Element[]> {
+  const verseElements = await queryVerses(document);
   const t: string[] = ['a[href] ruby'];
   const parents: Element[] = [];
 

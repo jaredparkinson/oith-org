@@ -1,13 +1,12 @@
-import { removeRubyInAElements } from './preprocessor/flattenWTags';
 import { flatten } from 'lodash';
-import { parseWTagGroups } from './preprocessor/wTagGroups';
 import { loadFile, getID, getLanguage } from './preprocessor/dom';
 import { queryWTags } from './preprocessor/wtags';
 import { normalize } from 'path';
-import { writeFile, pathExists, mkdir } from 'fs-extra';
+import { writeFile } from 'fs-extra';
 import { getFiles } from './preprocessor/files';
 import expandTilde = require('expand-tilde');
 import { makeOutputDir } from './makeOutputDir';
+import { parseWTagGroups2 } from './preprocessor/WTagGroupsProcessor';
 
 async function processFiles(fileNames: string[]): Promise<void> {
   await makeOutputDir();
@@ -15,17 +14,19 @@ async function processFiles(fileNames: string[]): Promise<void> {
     async (fileName): Promise<void> => {
       const jsdom = await loadFile(fileName);
       const document = jsdom.window.document;
+      const verses = await parseWTagGroups2(document);
 
-      removeRubyInAElements(document);
-      const verses = parseWTagGroups(document);
+      const language = await getLanguage(document);
+      const id = await getID(document, language);
+      const outPath = normalize(expandTilde(`./data/${id}-wtags.json`));
+      // console.log(outPath);
       const wTags = flatten(await queryWTags(document));
-      // console.log(wTags);
 
       verses.map(
         (verse): void => {
           verse.wTags = wTags.filter(
             (w): boolean => {
-              return w.verseID === verse._id;
+              return w.verseID === verse.id;
             },
           );
           if (verse.wTags.length > 0) {
@@ -36,33 +37,40 @@ async function processFiles(fileNames: string[]): Promise<void> {
           }
         },
       );
-      // console.log(wTags);
 
-      try {
-        if (!(await pathExists(normalize('../src/assets/scripture_files')))) {
-          await mkdir(normalize('../src/assets/scripture_files'));
-        }
-        const language = await getLanguage(document);
+      await writeFile(outPath, JSON.stringify(verses));
+      return;
 
-        const id = await getID(document, language);
-        const outPath = normalize(
-          expandTilde(
-            `~/source/repos/scripture_files/scriptures/${id}-wtags.json`,
-          ),
-        );
-        // console.log(outPath);
+      // removeRubyInAElements(document);
+      // const verses = await parseWTagGroups(document);
+      // // console.log(wTags);
+      // // console.log(wTags);
 
-        await writeFile(outPath, JSON.stringify(verses));
-        await writeFile(
-          normalize(
-            `../src/assets/scripture_files/${await getID(
-              document,
-              language,
-            )}-wtags.json`,
-          ),
-          JSON.stringify(verses),
-        );
-      } catch {}
+      // try {
+      //   if (!(await pathExists(normalize('../src/assets/scripture_files')))) {
+      //     await mkdir(normalize('../src/assets/scripture_files'));
+      //   }
+      //   const language = await getLanguage(document);
+
+      //   const id = await getID(document, language);
+      //   const outPath = normalize(
+      //     expandTilde(
+      //       `~/source/repos/scripture_files/scriptures/${id}-wtags.json`,
+      //     ),
+      //   );
+      //   // console.log(outPath);
+
+      //   await writeFile(outPath, JSON.stringify(verses));
+      //   await writeFile(
+      //     normalize(
+      //       `../src/assets/scripture_files/${await getID(
+      //         document,
+      //         language,
+      //       )}-wtags.json`,
+      //     ),
+      //     JSON.stringify(verses),
+      //   );
+      // } catch {}
 
       // queryWTags(document);
     },

@@ -15,4 +15,9 @@ export abstract class WTagComponent {
       console.log(this.wTags);
     }
   }
+  public getClassList(wTagGroup: WTagGroup): string {
+    return wTagGroup.classList
+      ? wTagGroup.classList.toString().replace(',', ' ')
+      : '';
+  }
 }

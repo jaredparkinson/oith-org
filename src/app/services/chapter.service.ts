@@ -71,7 +71,7 @@ export class ChapterService {
             (wTagGroup): void => {
               wTagGroup.charCount = range(
                 wTagGroup.charCountCompress[0],
-                wTagGroup.charCountCompress[1] + 1,
+                wTagGroup.charCountCompress[1],
               );
             },
           );

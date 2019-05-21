@@ -370,7 +370,7 @@ function verseToWTags(verseElement: Element): W[] {
   // );
 }
 export async function queryWTags(document: Document): Promise<W[][]> {
-  const verseElements = nodeListOfToArray(queryVerses(document));
+  const verseElements = nodeListOfToArray(await queryVerses(document));
   const wTags = verseElements.map(
     (verseElement): W[] => {
       return verseToWTags(verseElement);

@@ -1,3 +1,12 @@
 note {
   display: grid;
+  display: grid;
+  grid-auto-flow: row;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-content: center;
+  .note-short-title {
+    margin-top: 6pt;
+    font-weight: bold;
+  }
 }
