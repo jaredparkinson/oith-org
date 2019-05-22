@@ -26,6 +26,14 @@ export class WComponent implements OnInit {
   public getClassList(): string {
     const classList: string[] = [];
 
+    // console.log(this.w.wRef ? this.w.wRef : 0);
+    if (this.w.wRef) {
+      if (this.w.wRef.length === 1) {
+        classList.push('f-ref-single');
+      } else if (this.w.wRef.length > 1) {
+        classList.push('f-ref-multi');
+      }
+    }
     if (this.w.wRichText) {
       this.w.wRichText.map(
         (richText): void => {

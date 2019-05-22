@@ -41,7 +41,7 @@ export class NoteRefComponent implements OnInit {
     // console.log(this.noteRef);
   }
 
-  public ngOnInit() {}
+  public ngOnInit(): void {}
 
   public getRefLabel(): string {
     return this.noteRef.referenceLabel
