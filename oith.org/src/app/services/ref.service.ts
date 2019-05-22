@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { DataService } from './data.service';
-import { Note } from 'oith.notes/src';
 import { flatten } from 'lodash';
-import { NoteTypeEnum } from 'oith.wtags';
 import { SaveStateService } from './save-state.service';
+import { Note, NoteTypeEnum } from '../../../../oith.shared';
 
 @Injectable({
   providedIn: 'root',

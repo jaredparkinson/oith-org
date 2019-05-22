@@ -5,8 +5,8 @@ import {
   AfterViewInit,
   DoCheck,
 } from '@angular/core';
-import { WMerged, RichText, WRef, Color } from 'oith.wtags';
 import { last } from 'lodash';
+import { Color, WMerged, WRef } from '../../../../oith.shared';
 
 @Directive({
   selector: '[appWTag]',

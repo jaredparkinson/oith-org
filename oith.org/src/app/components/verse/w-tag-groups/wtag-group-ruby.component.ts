@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { WTagGroupA, Verse } from 'oith.wtags';
 import { WTagService } from 'src/app/services/wtag.service';
 import { WTagComponent } from './WTagComponent';
+import { WTagGroupA } from '../../../../../../oith.shared';
 
 @Component({
   selector: 'app-wtag-group-ruby',

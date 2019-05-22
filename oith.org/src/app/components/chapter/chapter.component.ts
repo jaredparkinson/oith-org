@@ -3,7 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ParamService } from 'src/app/services/param.service';
 import { ChapterService } from 'src/app/services/chapter.service';
 import { SaveStateService } from 'src/app/services/save-state.service';
-import { element } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-chapter',

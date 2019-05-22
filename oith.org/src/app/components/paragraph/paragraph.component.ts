@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Paragraph } from 'oith.chapter/src/Paragraph';
+import { Paragraph } from '../../../../../oith.shared';
 
 @Component({
   selector: 'app-paragraph',

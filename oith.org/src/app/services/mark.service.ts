@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import * as MarkdownIt from 'markdown-it';
 import { uniq } from 'lodash';
 import * as marked from 'marked';
-import { RichTextEnum, RichText } from 'oith.wtags';
+import { RichText, RichTextEnum } from '../../../../oith.shared';
 @Injectable({
   providedIn: 'root',
 })

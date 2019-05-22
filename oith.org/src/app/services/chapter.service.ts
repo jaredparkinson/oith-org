@@ -1,15 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Verse } from 'oith.wtags';
 import { range } from 'lodash';
-import { Note } from 'oith.notes/src/models/Note';
 import { DataService } from './data.service';
 import { ChapterParams } from './ChapterParams';
 import { Params } from '@angular/router';
 import { ParamService } from './param.service';
 import { addVersesToParagraphs } from './addVersesToParagraphs';
-import { Chapter } from 'oith.chapter/src/Chapter';
 import { RefService } from './ref.service';
-
+import { Chapter, Verse, Note } from '../../../../oith.shared';
 @Injectable({
   providedIn: 'root',
 })

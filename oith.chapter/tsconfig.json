@@ -20,5 +20,5 @@
     "incremental": true,
     "outDir": "build"
   },
-  "include": ["src/**/*", "__tests__/**/*"]
+  "include": ["src/**/*", "__tests__/**/*", "index2.ts"]
 }

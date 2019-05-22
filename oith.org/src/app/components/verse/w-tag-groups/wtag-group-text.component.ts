@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { WTagGroupText } from 'oith.wtags';
 import { WTagService } from 'src/app/services/wtag.service';
 import { WTagComponent } from './WTagComponent';
+import { WTagGroupText } from '../../../../../../oith.shared';
 
 @Component({
   selector: 'app-wtag-group-text',

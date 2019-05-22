@@ -1,5 +1,5 @@
-import { Verse } from 'oith.wtags';
-import { Chapter } from 'oith.chapter/src/Chapter';
+import { Chapter, Verse } from '../../../../oith.shared';
+
 export async function addVersesToParagraphs(
   chapter: Chapter,
   verses: Verse[],

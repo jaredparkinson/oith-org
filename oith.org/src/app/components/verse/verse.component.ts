@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Verse, WTagGroupType } from 'oith.wtags';
 import { SaveStateService } from 'src/app/services/save-state.service';
+import { WTagGroupType, Verse } from '../../../../../oith.wtags';
 @Component({
   selector: 'app-verse',
   templateUrl: './verse.component.html',
