@@ -7,6 +7,7 @@ import { getFiles } from './preprocessor/files';
 import expandTilde = require('expand-tilde');
 import { makeOutputDir } from './makeOutputDir';
 import { parseWTagGroups2 } from './preprocessor/WTagGroupsProcessor';
+import { writeScriptureFile } from '../../oith.shared/src/functions';
 
 async function processFiles(fileNames: string[]): Promise<void> {
   await makeOutputDir();
@@ -20,6 +21,7 @@ async function processFiles(fileNames: string[]): Promise<void> {
       const id = await getID(document, language);
       const outPath = normalize(expandTilde(`./data/${id}-wtags.json`));
       // console.log(outPath);
+      await writeScriptureFile(verses,`${id}-wtags.json`);
       const wTags = flatten(await queryWTags(document));
 
       verses.map(

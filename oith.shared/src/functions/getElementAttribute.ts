@@ -3,7 +3,7 @@ export function getElementAttribute(
   selector: string,
   attrName: string,
   regex: RegExp = new RegExp(/.+/g),
-): string | undefined {
+): string {
   const rootElement = document.querySelector(selector);
   const elementAttribute = rootElement
     ? rootElement.getAttribute(attrName)
@@ -15,5 +15,5 @@ export function getElementAttribute(
     // }
     return text ? `${text[0].toString()}` : '';
   }
-  return undefined;
+  throw 'Attribute not found';
 }

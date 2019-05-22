@@ -6,11 +6,11 @@ export async function writeScriptureFile<T>(
   fileName: string,
 ): Promise<void> {
   try {
-    console.log(normalize(`./scripture_files/scriptures/${fileName}`));
-    return;
+    console.log(normalize(`../scripture_files/scriptures/${fileName}`));
+    // return;
     await createOutputFolder();
     await writeFile(
-      normalize(`./scripture_files/scriptures/${fileName}`),
+      normalize(`../scripture_files/scriptures/${fileName}`),
       data,
     );
   } catch (error) {
