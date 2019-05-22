@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { WTagService } from 'src/app/services/wtag.service';
 import { WTagComponent } from './WTagComponent';
-import { WTagGroupA } from '../../../../../../oith.wtags';
+import { WTagGroupA } from '../../../../../../oith.shared';
 
 @Component({
   selector: 'app-wtag-group-a',

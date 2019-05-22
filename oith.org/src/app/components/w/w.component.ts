@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Sanitizer } from '@angular/core';
-import { WMerged, RichText, RichTextEnum } from '../../../../../oith.wtags';
+import { WMerged, RichText, RichTextEnum } from '../../../../../oith.shared';
 import { multiIncludes } from './multiIncludes';
 import { MarkService } from 'src/app/services/mark.service';
 import { PreMarkdown } from './PreMarkdown';

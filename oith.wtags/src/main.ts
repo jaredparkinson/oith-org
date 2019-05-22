@@ -29,7 +29,7 @@ async function processFiles(fileNames: string[]): Promise<void> {
               return w.verseID === verse.id;
             },
           );
-          if (verse.wTags.length > 0) {
+          if (verse.wTags && verse.wTags.length > 0) {
             // console.log(verse.wTags);
             // console.log(verse.wTags);
           } else {

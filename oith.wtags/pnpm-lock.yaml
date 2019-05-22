@@ -2,11 +2,13 @@ dependencies:
   '@types/expand-tilde': 2.0.0
   '@types/fs-extra': 7.0.0
   '@types/jsdom': 12.2.3
+  '@types/lodash': 4.14.130
   cuid: 2.1.6
   expand-tilde: 2.0.2
   fast-glob: 2.2.7
   fs-extra: 8.0.1
   jsdom: 15.1.0
+  lodash: 4.17.11
   tslib: 1.9.3
 devDependencies:
   '@types/node': 10.14.7
@@ -70,6 +72,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-CxYWGFsBs0VZ/lU9zxfWk7zYfOlQQuSs5yzk34KW/vQQJGE8OGOYxJnqj9kGHE1SBZGVJvhXs1TafIpZL8RvXw==
+  /@types/lodash/4.14.130:
+    dev: false
+    resolution:
+      integrity: sha512-H++wk0tbneBsRVfLkgAAd0IIpmpVr2Bj4T0HncoOsQf3/xrJexRYQK2Tqo0Ej3pFslM8GkMgdis9bu6xIb1ycw==
   /@types/node/10.14.7:
     resolution:
       integrity: sha512-on4MmIDgHXiuJDELPk1NFaKVUxxCFr37tm8E9yN6rAiF5Pzp/9bBfBHkoexqRiY+hk/Z04EJU9kKEb59YqJ82A==
@@ -2395,6 +2401,7 @@ specifiers:
   '@types/expand-tilde': ^2.0.0
   '@types/fs-extra': ^7.0.0
   '@types/jsdom': ^12.2.3
+  '@types/lodash': ^4.14.130
   '@types/node': ^10.12.18
   '@typescript-eslint/eslint-plugin': ^1.7.0
   '@typescript-eslint/parser': ^1.7.0
@@ -2406,6 +2413,7 @@ specifiers:
   fast-glob: ^2.2.6
   fs-extra: ^8.0.1
   jsdom: ^15.1.0
+  lodash: ^4.17.11
   prettier: 1.15.3
   rimraf: ^2.6.3
   ts-jest: ~23.10.5
