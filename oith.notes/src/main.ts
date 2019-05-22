@@ -1,5 +1,10 @@
-import { getFiles } from './files';
-import { readFile, writeFile } from 'fs-extra';
+// import { getFiles } from './files';
+import {
+  getScriptureFiles,
+  writeScriptureFile,
+  getID,
+} from '../../oith.shared/src/functions';
+import { readFile } from 'fs-extra';
 import { normalize } from 'path';
 import { JSDOM } from 'jsdom';
 import { Note } from './models/Note';
@@ -8,9 +13,9 @@ import { parseNotePhrase } from './parseNotePhrase';
 import { extractTextContent } from './extractTextContent';
 import { NoteRef } from './models/NoteRef';
 import { parseReferenceLabel } from './parseReferenceLabel';
-import { parseID } from './parseID';
+// import { parseID } from './parseID';
 import { getLanguage } from './getLanguage';
-import expandTilde = require('expand-tilde');
+// import expandTilde = require('expand-tilde');
 import { NoteType } from './models/NoteType';
 
 export async function parseNoteType(
@@ -129,7 +134,7 @@ async function main(): Promise<void> {
   console.log('hhg');
   // await getFiles();
   try {
-    const promises = (await getFiles()).map(
+    const promises = (await getScriptureFiles()).map(
       async (fileName: string): Promise<void> => {
         try {
           const file = await readFile(normalize(fileName));
@@ -139,25 +144,28 @@ async function main(): Promise<void> {
 
           const notes = await parseNotes(document);
           const language = await getLanguage(document);
-          const outPath = normalize(
-            expandTilde(
-              `~/source/repos/scripture_files/scriptures/${await parseID(
-                document,
-                language,
-              )}-notes.json`,
-            ),
+          // const outPath = normalize(
+          //   expandTilde(
+          //     `~/source/repos/scripture_files/scriptures/${await parseID(
+          //       document,
+          //       language,
+          //     )}-notes.json`,
+          //   ),
+          // );
+          await writeScriptureFile(
+            notes,
+            `${await getID(document, language)}-notes.json`,
           );
-          await writeFile(outPath, JSON.stringify(notes));
 
-          await writeFile(
-            normalize(
-              `../src/assets/scripture_files/${await parseID(
-                document,
-                language,
-              )}-notes.json`,
-            ),
-            JSON.stringify(notes),
-          );
+          // await writeFile(
+          //   normalize(
+          //     `../src/assets/scripture_files/${await parseID(
+          //       document,
+          //       language,
+          //     )}-notes.json`,
+          //   ),
+          //   JSON.stringify(notes),
+          // );
         } catch (error) {
           console.log(error);
         }

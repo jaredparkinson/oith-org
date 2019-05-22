@@ -10,7 +10,9 @@ import { NoteRef } from '../../../../../oith.shared';
         'note-ref-english': this.noteRef.type === 2,
         'note-ref-tc': this.noteRef.type === 3
       }"
-      [innerHTML]="this.noteRef.text"
+    >
+      <span>{{ getRefLabel() }}</span
+      ><span [innerHTML]="this.noteRef.text"></span
     ></note-ref>
   `,
   styles: [
@@ -40,4 +42,10 @@ export class NoteRefComponent implements OnInit {
   }
 
   public ngOnInit() {}
+
+  public getRefLabel(): string {
+    return this.noteRef.referenceLabel
+      ? (this.noteRef.referenceLabel.refLabelShortName as string)
+      : '';
+  }
 }

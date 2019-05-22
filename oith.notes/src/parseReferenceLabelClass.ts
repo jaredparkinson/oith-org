@@ -20,6 +20,9 @@ export async function parseReferenceLabelClass(
     case 'reference-label-greek': {
       return ['greek', 'GR'];
     }
+    case 'reference-label-translation': {
+      return ['translation', 'KJV'];
+    }
     case 'reference-label-archaic': {
       return ['archaic', 'KJV'];
     }

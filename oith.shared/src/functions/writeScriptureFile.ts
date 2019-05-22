@@ -11,7 +11,7 @@ export async function writeScriptureFile<T>(
     await createOutputFolder();
     await writeFile(
       normalize(`../scripture_files/scriptures/${fileName}`),
-      data,
+      JSON.stringify(data),
     );
   } catch (error) {
     throw error;

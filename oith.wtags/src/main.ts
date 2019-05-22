@@ -1,13 +1,14 @@
 import { flatten } from 'lodash';
 import { loadFile, getID, getLanguage } from './preprocessor/dom';
 import { queryWTags } from './preprocessor/wtags';
-import { normalize } from 'path';
-import { writeFile } from 'fs-extra';
-import { getFiles } from './preprocessor/files';
-import expandTilde = require('expand-tilde');
+// import { normalize } from 'path';
+// import expandTilde = require('expand-tilde');
 import { makeOutputDir } from './makeOutputDir';
 import { parseWTagGroups2 } from './preprocessor/WTagGroupsProcessor';
-import { writeScriptureFile } from '../../oith.shared/src/functions';
+import {
+  writeScriptureFile,
+  getScriptureFiles,
+} from '../../oith.shared/src/functions';
 
 async function processFiles(fileNames: string[]): Promise<void> {
   await makeOutputDir();
@@ -19,9 +20,8 @@ async function processFiles(fileNames: string[]): Promise<void> {
 
       const language = await getLanguage(document);
       const id = await getID(document, language);
-      const outPath = normalize(expandTilde(`./data/${id}-wtags.json`));
+      // const outPath = normalize(expandTilde(`./data/${id}-wtags.json`));
       // console.log(outPath);
-      await writeScriptureFile(verses,`${id}-wtags.json`);
       const wTags = flatten(await queryWTags(document));
 
       verses.map(
@@ -39,8 +39,9 @@ async function processFiles(fileNames: string[]): Promise<void> {
           }
         },
       );
+      await writeScriptureFile(verses, `${id}-wtags.json`);
 
-      await writeFile(outPath, JSON.stringify(verses));
+      // await writeFile(outPath, JSON.stringify(verses));
       return;
 
       // removeRubyInAElements(document);
@@ -83,7 +84,8 @@ async function processFiles(fileNames: string[]): Promise<void> {
   console.log('asdfopijasdf');
 }
 async function main(): Promise<void> {
-  await processFiles(await getFiles());
+  const fileNames = await getScriptureFiles();
+  await processFiles(fileNames);
   // console.log('asdf');
 }
 main();
