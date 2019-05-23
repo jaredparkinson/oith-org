@@ -18,9 +18,14 @@ export class SaveStateService {
 
     if (tempData) {
       this.data = JSON.parse(tempData) as SaveStateModel;
+
+      if (this.data.underLineRefs === undefined) {
+        this.data.underLineRefs = true;
+      }
     } else {
       this.data = new SaveStateModel();
     }
+
     // cg.
     console.log(refLabelSettingsTemplate);
 

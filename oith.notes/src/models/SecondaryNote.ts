@@ -7,4 +7,5 @@ export class SecondaryNote {
   public notePhrase: NotePhrase | undefined;
   public noteRefs: NoteRef[] = [];
   public verseMarker: string | undefined | null;
+  public highlight: boolean | undefined;
 }

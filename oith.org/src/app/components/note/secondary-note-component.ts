@@ -6,7 +6,11 @@ import { SecondaryNote, NoteRef } from '../../../../../oith.shared';
 @Component({
   selector: 'app-secondary-note',
   template: `
-    <secondary-note *ngIf="this.setVisibility()">
+    <secondary-note
+      [id]="this.secondaryNote.id"
+      *ngIf="this.setVisibility()"
+      [ngClass]="{ highlight: this.secondaryNote.highlight }"
+    >
       <app-note-phrase
         *ngIf="this.secondaryNote.notePhrase"
         [notePhrase]="secondaryNote.notePhrase"
@@ -19,14 +23,7 @@ import { SecondaryNote, NoteRef } from '../../../../../oith.shared';
       </ng-container>
     </secondary-note>
   `,
-  styles: [
-    `
-      secondary-note {
-        display: grid;
-        grid-gap: 5px;
-      }
-    `,
-  ],
+  styleUrls: ['./secondary-note-component.scss'],
 })
 export class SecondaryNoteComponent implements OnInit {
   @Input() public secondaryNote: SecondaryNote;

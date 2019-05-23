@@ -1,6 +1,6 @@
 import { queryVerses } from './dom';
 import cuid from 'cuid';
-import { uniq, first } from 'lodash';
+import { uniq, first, flatten } from 'lodash';
 import { writeFile } from 'fs-extra';
 import { normalize } from 'path';
 import {
@@ -114,16 +114,33 @@ function splitPreWTags(wTagStage1: WTagStage1[]): void {
 
 function compressPreWTags(wTagStage1: WTagStage1[]): WTagStage1[] {
   const newWTagStage1: WTagStage1[] = [];
+  console.log(
+    uniq(
+      flatten(
+        wTagStage1.map(
+          (w): string[] => {
+            return w.classList as string[];
+          },
+        ),
+      ),
+    ),
+  );
+
   filterUndefined<string>(
     uniq(
-      wTagStage1.map(
-        (w): string => {
-          return w.classList[0];
-        },
+      flatten(
+        wTagStage1.map(
+          (w): string[] => {
+            return w.classList as string[];
+          },
+        ),
       ),
     ),
   ).map(
     (i): void => {
+      if (i === 'tc-heb-1-1a') {
+        console.log('tc-heb-1-1a');
+      }
       const wTagStage1Filtered = wTagStage1.filter(
         (w): boolean => {
           return w.classList.includes(i);
@@ -154,7 +171,6 @@ function compressPreWTags(wTagStage1: WTagStage1[]): WTagStage1[] {
       }
     },
   );
-
   return newWTagStage1;
 }
 
@@ -165,6 +181,9 @@ function isRef(classList: string): boolean {
   // console.log(classList);
 
   const ref = first(classList);
+  if (ref === 'tc-heb-1-1a') {
+    console.log('tc-heb-1-1a');
+  }
 
   return ref
     ? newNoteRegex.test(ref) ||
@@ -342,6 +361,11 @@ function convertWTagStage1ToWTag(wTagStage1s: WTagStage1[]): W[] {
 
   wTagStage1s.map(
     (wTagStage1): void => {
+      if (wTagStage1.verseID === 'p1') {
+        if (wTagStage1.classList.includes('tc-heb-1-1a')) {
+          console.log('tc-heb-1-1a');
+        }
+      }
       if (isIgnore(wTagStage1.classList as string[])) {
       } else if (isRef(wTagStage1.classList as string)) {
         wTags.push(convertClassToRef(wTagStage1));
@@ -362,7 +386,8 @@ function verseToWTags(verseElement: Element): W[] {
     },
   );
   splitPreWTags(wTagStage1);
-  return convertWTagStage1ToWTag(compressPreWTags(wTagStage1));
+  const compressed = compressPreWTags(wTagStage1);
+  return convertWTagStage1ToWTag(compressed);
   // return wTagStage1.filter(
   //   (w): boolean => {
   //     return w.classList.length === 1;

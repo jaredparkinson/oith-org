@@ -17,6 +17,7 @@ export class SaveStateModel {
   public language: string;
   public lineHeight = '20';
   public refLabelSettings: RefLabelSetting[] = [];
+  public underLineRefs: boolean = true;
 }
 
 export const refLabelSettingsTemplate = [

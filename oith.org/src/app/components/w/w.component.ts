@@ -1,9 +1,16 @@
 import { Component, OnInit, Input, Sanitizer } from '@angular/core';
-import { WMerged, RichText, RichTextEnum } from '../../../../../oith.shared';
+import {
+  WMerged,
+  RichText,
+  RichTextEnum,
+  WRef,
+} from '../../../../../oith.shared';
 import { multiIncludes } from './multiIncludes';
 import { MarkService } from 'src/app/services/mark.service';
 import { PreMarkdown } from './PreMarkdown';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { SaveStateService } from 'src/app/services/save-state.service';
+import { RefService } from 'src/app/services/ref.service';
 
 @Component({
   selector: 'app-w',
@@ -13,9 +20,14 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 export class WComponent implements OnInit {
   @Input() public w: WMerged;
   public ref = false;
+
+  public fTagClickList: WRef[] | undefined;
+
   public constructor(
     public markService: MarkService,
     public domSanitizer: DomSanitizer,
+    public saveStateService: SaveStateService,
+    public refService: RefService,
   ) {}
   public ngOnInit(): void {
     if (this.w.wRef) {
@@ -27,7 +39,7 @@ export class WComponent implements OnInit {
     const classList: string[] = [];
 
     // console.log(this.w.wRef ? this.w.wRef : 0);
-    if (this.w.wRef) {
+    if (this.saveStateService.data.underLineRefs && this.w.wRef) {
       const count = this.w.wRef.filter(
         (wRef): boolean => {
           return wRef.visible === true;
@@ -82,9 +94,35 @@ export class WComponent implements OnInit {
 
   public click(): void {
     if (this.w.wRef) {
-      console.log('asdf');
+      if (!this.fTagClickList) {
+        this.setFTagClickList();
+      }
+      if (this.fTagClickList && this.fTagClickList.length > 0) {
+        const id = this.fTagClickList.shift();
+        if (id) {
+          this.refService.resetNoteHighlight(id.ref);
 
-      this.w.wRef = undefined;
+          const secondaryNote = document.getElementById(`${id.ref}`);
+          if (secondaryNote) {
+            secondaryNote.scrollIntoView();
+          }
+        } else {
+          this.fTagClickList = undefined;
+        }
+      } else {
+        this.refService.resetNoteHighlight('');
+        this.fTagClickList = undefined;
+      }
+    }
+  }
+
+  private setFTagClickList(): void {
+    if (this.w.wRef) {
+      this.fTagClickList = this.w.wRef.filter(
+        (wRef): boolean => {
+          return wRef.visible === true;
+        },
+      );
     }
   }
 }

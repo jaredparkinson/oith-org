@@ -68,6 +68,7 @@ export class RefService {
           note.secondaryNotes.map(
             (secondaryNote): void => {
               this.secondaryNotes.set(secondaryNote.id, secondaryNote);
+              secondaryNote.highlight = false;
               this.setSecondaryNoteVisibility(secondaryNote);
               secondaryNote.noteRefs.map(
                 (noteRef): void => {
@@ -88,6 +89,22 @@ export class RefService {
         this.setSecondaryNoteVisibility(secondaryNote);
       },
     );
+  }
+
+  public async resetNoteHighlight(id: string): Promise<void> {
+    this.mapToArray(this.secondaryNotes).map(
+      (secondaryNote): void => {
+        if (secondaryNote.id === id) {
+          secondaryNote.highlight = true;
+        } else {
+          secondaryNote.highlight = false;
+        }
+      },
+    );
+  }
+
+  private mapToArray<T, T1>(map: Map<T, T1>): T1[] {
+    return Array.from(map.values());
   }
 
   private setSecondaryNoteVisibility(secondaryNote: SecondaryNote): void {
