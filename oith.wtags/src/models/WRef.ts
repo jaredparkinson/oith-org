@@ -10,4 +10,5 @@ export class WRef implements W {
   public text: string | undefined;
   public ref: string;
   public noteType: NoteType;
+  public visible: boolean | undefined;
 }

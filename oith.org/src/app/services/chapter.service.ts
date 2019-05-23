@@ -52,11 +52,12 @@ export class ChapterService {
       await addVersesToParagraphs(chapter, verses);
 
       this.refService.initRefVisibility(notes);
-      this.refService.flattenRefs(notes);
-      this.refService.resetSecondaryNotesVisibility();
+      // this.refService.flattenNotes(notes);
+      // this.refService.resetSecondaryNotesVisibility();
       chapter.noteRefs = this.refService.noteRefs;
       chapter.verses = verses;
       chapter.notes = notes;
+      this.refService.flattenChapter(chapter);
       this.chapter = chapter;
     } catch (error) {
       throw error;

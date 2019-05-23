@@ -9,7 +9,10 @@ import {
   NoteRef,
   NoteType,
   NotePhrase,
+  Chapter,
+  WRef,
 } from '../../../../oith.shared';
+import { wType } from '../../../../oith.wtags/src/enums/WType';
 
 @Injectable({
   providedIn: 'root',
@@ -19,56 +22,86 @@ export class RefService {
   public notePhrases: NotePhrase[] = [];
   public noteRefs: NoteRef[] = [];
   public secondaryNotes = new Map<string, SecondaryNote>();
+  public noteVis = new Map<string, boolean>();
   public constructor(private saveState: SaveStateService) {}
   public initRefVisibility(notes: Note[]): void {
-    flatten(
-      notes.map(
-        (note): void => {
-          if (note.secondaryNotes) {
-            note.secondaryNotes.map(
-              (secondaryNote): void => {
-                secondaryNote.noteRefs.map(
-                  (noteRef): void => {
-                    switch (noteRef.type) {
-                      case NoteTypeEnum.Eng: {
-                        this.refs.set(
-                          noteRef._id,
-                          this.saveState.data.englishNotesVisible,
-                        );
-                        break;
-                      }
-                      case NoteTypeEnum.New: {
-                        this.refs.set(
-                          noteRef._id,
-                          this.saveState.data.newNotesVisible,
-                        );
-                        break;
-                      }
-                      case NoteTypeEnum.TC: {
-                        this.refs.set(
-                          noteRef._id,
-                          this.saveState.data.translatorNotesVisible,
-                        );
-                        break;
-                      }
-                    }
-                  },
-                );
+    // flatten(
+    //   notes.map(
+    //     (note): void => {
+    //       if (note.secondaryNotes) {
+    //         note.secondaryNotes.map(
+    //           (secondaryNote): void => {
+    //             secondaryNote.noteRefs.map(
+    //               (noteRef): void => {
+    //                 switch (noteRef.type) {
+    //                   case NoteTypeEnum.Eng: {
+    //                     this.refs.set(
+    //                       noteRef._id,
+    //                       this.saveState.data.englishNotesVisible,
+    //                     );
+    //                     break;
+    //                   }
+    //                   case NoteTypeEnum.New: {
+    //                     this.refs.set(
+    //                       noteRef._id,
+    //                       this.saveState.data.newNotesVisible,
+    //                     );
+    //                     break;
+    //                   }
+    //                   case NoteTypeEnum.TC: {
+    //                     this.refs.set(
+    //                       noteRef._id,
+    //                       this.saveState.data.translatorNotesVisible,
+    //                     );
+    //                     break;
+    //                   }
+    //                 }
+    //               },
+    //             );
+    //           },
+    //         );
+    //       }
+    //     },
+    //   ),
+    // );
+  }
+
+  public flattenChapter(chapter: Chapter): void {
+    if (chapter.notes) {
+      this.flattenNotes(chapter.notes);
+      // chapter.verses
+    }
+    if (chapter.verses) {
+      chapter.verses.map(
+        (verse): void => {
+          if (verse.wTags) {
+            verse.wTags.map(
+              (f): void => {
+                if (f.wType === wType.Refs) {
+                  this.resetRefFTags(f);
+                }
               },
             );
           }
         },
-      ),
-    );
+      );
+    }
+  }
+  public resetRefFTags(fTags: WRef): void {
+    // if () {
+    // this.flattenNotes(chapter.notes);
+    // }
+    fTags.visible = this.noteVis.get(fTags.ref);
   }
 
-  public flattenRefs(notes: Note[]): void {
+  public flattenNotes(notes: Note[]): void {
     notes.map(
       (note): void => {
         if (note.secondaryNotes) {
           note.secondaryNotes.map(
             (secondaryNote): void => {
               this.secondaryNotes.set(secondaryNote.id, secondaryNote);
+              this.setSecondaryNoteVisibility(secondaryNote);
               secondaryNote.noteRefs.map(
                 (noteRef): void => {
                   this.setNoteRefVisibility(noteRef);
@@ -115,6 +148,7 @@ export class RefService {
           return noteRef.visible === true;
         },
       ).length > 0;
+    this.noteVis.set(notePhrase._id, notePhrase.visible);
   }
 
   private setNoteRefVisibility(noteRef: NoteRef): void {

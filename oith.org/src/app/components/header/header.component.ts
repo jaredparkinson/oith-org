@@ -32,15 +32,7 @@ export class HeaderComponent implements OnInit {
   public async paragraphsVisible(): Promise<void> {
     this.saveState.data.paragraphsVisible = !this.saveState.data
       .paragraphsVisible;
-    this.saveState.data.newNotesVisible = !this.saveState.data.newNotesVisible;
-    this.saveState.data.translatorNotesVisible = !this.saveState.data
-      .translatorNotesVisible;
-    this.saveState.data.englishNotesVisible = !this.saveState.data
-      .englishNotesVisible;
-    if (this.chapterServicd.chapter.notes) {
-      // this.refService.resetNetNoteResfVisibility();
-      this.refService.initRefVisibility(this.chapterServicd.chapter.notes);
-    }
+
     await this.saveState.save();
   }
   public async poetryVisible(): Promise<void> {
