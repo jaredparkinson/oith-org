@@ -11,10 +11,12 @@ import { SecondaryNote, NoteRef } from '../../../../../oith.shared';
         *ngIf="this.secondaryNote.notePhrase"
         [notePhrase]="secondaryNote.notePhrase"
       ></app-note-phrase>
-      <app-note-ref
-        *ngFor="let noteRef of noteRefs"
-        [noteRef]="noteRef"
-      ></app-note-ref>
+      <ng-container *ngFor="let noteRef of this.secondaryNote.noteRefs">
+        <app-note-ref
+          *ngIf="noteRef.visible"
+          [noteRef]="noteRef"
+        ></app-note-ref>
+      </ng-container>
     </secondary-note>
   `,
   styles: [
@@ -34,14 +36,21 @@ export class SecondaryNoteComponent implements OnInit {
   public ngOnInit() {}
 
   public setVisibility(): boolean {
-    this.noteRefs = this.secondaryNote.noteRefs.filter(
-      (noteRef): boolean => {
-        return this.refService.refs.get(noteRef._id) === true;
-      },
-    );
+    // this.noteRefs = this.secondaryNote.noteRefs.filter(
+    //   (noteRef): boolean => {
+    //     return this.refService.refs.get(noteRef._id) === true;
+    //   },
+    // );
 
     // console.log(this.refService.refs);
-
-    return this.noteRefs.length > 0;
+    return (
+      this.secondaryNote.noteRefs &&
+      this.secondaryNote.noteRefs.filter(
+        (noteRef): boolean => {
+          return noteRef.visible === true;
+        },
+      ).length > 0
+    );
+    return true; // this.noteRefs.length > 0;
   }
 }

@@ -4,6 +4,7 @@ import { Verse, WMerged, WType } from '../../../../../../oith.shared';
 import { WTagGroup } from '../../../../../../oith.wtags/src/interfaces/WTagGroup';
 export abstract class WTagComponent {
   @Input() public verse: Verse;
+
   public wTags: WMerged[] | undefined;
   public wTagTypes = WType;
 

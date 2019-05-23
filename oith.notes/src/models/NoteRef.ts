@@ -10,4 +10,5 @@ export class NoteRef {
 
   public text: string;
   public type: NoteType | undefined;
+  public visible: boolean | undefined;
 }

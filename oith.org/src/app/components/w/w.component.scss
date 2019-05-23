@@ -2,7 +2,8 @@
   color: blue;
 }
 
-w {
+w,
+f {
   &.f-ref-multi {
     border-bottom: 1px solid grey;
     text-decoration: underline;

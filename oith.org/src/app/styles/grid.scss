@@ -6,6 +6,7 @@ $chapterGridMargins: 32px;
   @media #{$mediaQuery} {
     .oith-content-parent {
       display: grid;
+      overflow: hidden;
       grid-template-columns: #{$gridTemplateCol};
     }
   }

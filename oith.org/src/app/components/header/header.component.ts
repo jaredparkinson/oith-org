@@ -35,6 +35,10 @@ export class HeaderComponent implements OnInit {
     this.saveState.data.englishNotesVisible = !this.saveState.data
       .englishNotesVisible;
     if (this.chapterServicd.chapter.notes) {
+      this.saveState.data.refLabelSettings.map(h => {
+        h.visible = !h.visible;
+      });
+      this.refService.resetNetNoteResfVisibility();
       this.refService.initRefVisibility(this.chapterServicd.chapter.notes);
     }
     await this.saveState.save();

@@ -52,6 +52,7 @@ export class ChapterService {
       await addVersesToParagraphs(chapter, verses);
 
       this.refService.initRefVisibility(notes);
+      this.refService.flattenRefs(notes);
       chapter.verses = verses;
       chapter.notes = notes;
       this.chapter = chapter;
