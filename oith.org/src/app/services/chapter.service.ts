@@ -53,6 +53,8 @@ export class ChapterService {
 
       this.refService.initRefVisibility(notes);
       this.refService.flattenRefs(notes);
+      this.refService.resetSecondaryNotesVisibility();
+      chapter.noteRefs = this.refService.noteRefs;
       chapter.verses = verses;
       chapter.notes = notes;
       this.chapter = chapter;

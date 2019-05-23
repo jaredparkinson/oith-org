@@ -34,6 +34,7 @@ import { SaveStateService } from './services/save-state.service';
 import { RefService } from './services/ref.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 export function load(saveState: SaveStateService) {
   return async (): Promise<void> => {
@@ -67,7 +68,14 @@ export function load(saveState: SaveStateService) {
     WTagGroupARubyComponent,
     WTagDirective,
   ],
-  imports: [BrowserModule, AppRoutingModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
+  imports: [
+    NgbModule,
+    BrowserModule,
+    AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+    }),
+  ],
   providers: [
     {
       provide: APP_INITIALIZER,

@@ -6,4 +6,5 @@ export class NotePhrase {
   public _rev: string | undefined;
   public classList: string[] | undefined;
   public text: string | undefined;
+  public visible: boolean | undefined;
 }

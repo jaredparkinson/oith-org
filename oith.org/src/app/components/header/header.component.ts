@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SaveStateService } from 'src/app/services/save-state.service';
 import { RefService } from 'src/app/services/ref.service';
 import { ChapterService } from 'src/app/services/chapter.service';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header',
@@ -13,6 +14,8 @@ export class HeaderComponent implements OnInit {
     public saveState: SaveStateService,
     public refService: RefService,
     public chapterServicd: ChapterService,
+
+    public modalService: NgbModal,
   ) {}
 
   public ngOnInit(): void {}
@@ -35,10 +38,7 @@ export class HeaderComponent implements OnInit {
     this.saveState.data.englishNotesVisible = !this.saveState.data
       .englishNotesVisible;
     if (this.chapterServicd.chapter.notes) {
-      this.saveState.data.refLabelSettings.map(h => {
-        h.visible = !h.visible;
-      });
-      this.refService.resetNetNoteResfVisibility();
+      // this.refService.resetNetNoteResfVisibility();
       this.refService.initRefVisibility(this.chapterServicd.chapter.notes);
     }
     await this.saveState.save();
@@ -51,5 +51,23 @@ export class HeaderComponent implements OnInit {
     this.saveState.data.secondaryNotesVisible = !this.saveState.data
       .secondaryNotesVisible;
     await this.saveState.save();
+  }
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  public async open(content) {
+    await this.modalService.open(content, {
+      ariaLabelledBy: 'modal-basic-title',
+    }).result;
+  }
+  public refLabelClick(ref: { visible: boolean } | string): void {
+    if ((ref as { visible: boolean }).visible !== undefined) {
+      (ref as { visible: boolean }).visible = !(ref as { visible: boolean })
+        .visible;
+      console.log(ref);
+    } else {
+      this.saveState.data[ref as string] = !this.saveState.data[ref as string];
+    }
+    this.refService.resetSecondaryNotesVisibility();
+    this.saveState.save();
+    // this.refService.resetNetNoteResfVisibility();
   }
 }

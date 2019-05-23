@@ -28,6 +28,7 @@
     <li
       id="btnNotesFlyout"
       class="right-pane-ignore notes-settings waves-effect waves-light"
+      (click)="open(content)"
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
         <path d="M0 0h24v24H0z" fill="none" />
@@ -35,6 +36,77 @@
           d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
         />
       </svg>
+      <ng-template #content let-modal>
+        <div class="modal-header">
+          <h1 class="modal-title" id="modal-basic-title">Settings</h1>
+          <button
+            type="button"
+            class="close"
+            aria-label="Close"
+            (click)="modal.dismiss('Cross click')"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body settings">
+          <h2>Note Categories</h2>
+          <ul>
+            <li
+              (click)="refLabelClick(r)"
+              *ngFor="let r of this.saveState.data.refLabelSettings"
+              [ngClass]="{
+                'btn-primary': r.visible,
+                ' btn-secondary': !r.visible
+              }"
+              class="btn btn-primary"
+            >
+              {{ r.refLabelShortName }}
+            </li>
+          </ul>
+          <h2>Note Types</h2>
+          <ul>
+            <li
+              (click)="refLabelClick('englishNotesVisible')"
+              [ngClass]="{
+                'btn-primary': this.saveState.data.englishNotesVisible,
+                ' btn-secondary': !this.saveState.data.englishNotesVisible
+              }"
+              class="btn btn-primary"
+            >
+              English
+            </li>
+            <li
+              (click)="refLabelClick('newNotesVisible')"
+              [ngClass]="{
+                'btn-primary': this.saveState.data.newNotesVisible,
+                ' btn-secondary': !this.saveState.data.newNotesVisible
+              }"
+              class="btn btn-primary"
+            >
+              New
+            </li>
+            <li
+              (click)="refLabelClick('translatorNotesVisible')"
+              [ngClass]="{
+                'btn-primary': this.saveState.data.translatorNotesVisible,
+                ' btn-secondary': !this.saveState.data.translatorNotesVisible
+              }"
+              class="btn btn-primary"
+            >
+              Translation
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-outline-dark"
+            (click)="modal.close('Save click')"
+          >
+            Save
+          </button>
+        </div>
+      </ng-template>
     </li>
   </ul>
   <ul class="oith-header-right">

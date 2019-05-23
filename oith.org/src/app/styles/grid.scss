@@ -60,3 +60,17 @@ $chapterGridMargins: 32px;
     height: 100%;
   }
 } /* Extra small devices (phones, 600px and down) */
+
+.settings {
+  text-align: center;
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 0;
+    grid-auto-rows: 48px;
+    list-style-type: none;
+    .category-visible {
+    }
+  }
+}

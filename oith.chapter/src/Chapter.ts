@@ -1,4 +1,4 @@
-import { Verse } from '../../oith.wtags';
+import { Verse, NoteRef } from '../../oith.wtags';
 import { Note } from '../../oith.notes/src';
 import { W } from '../../oith.wtags/src/interfaces/W';
 import { Paragraph } from './Paragraph';
@@ -19,4 +19,5 @@ export class Chapter {
   public wTags: W[] | undefined;
   public nextPage: string | null;
   public previousPage: string | null;
+  public noteRefs: NoteRef[] = [];
 }
