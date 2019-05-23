@@ -1,6 +1,6 @@
 import { W } from '../interfaces/W';
 import { WType } from '../enums/WType';
-export class WBase implements W {
+export class WBase extends W {
   public charCountUncompressed: number[];
   public verseID: string;
   public charCount: [number, number][];

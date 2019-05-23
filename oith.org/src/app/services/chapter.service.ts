@@ -51,13 +51,14 @@ export class ChapterService {
       await this.expandWTagCharacterCount(verses);
       await addVersesToParagraphs(chapter, verses);
 
-      this.refService.initRefVisibility(notes);
       // this.refService.flattenNotes(notes);
       // this.refService.resetSecondaryNotesVisibility();
-      chapter.noteRefs = this.refService.noteRefs;
+      // chapter.noteRefs = this.refService.noteRefs;
       chapter.verses = verses;
       chapter.notes = notes;
-      this.refService.flattenChapter(chapter);
+      // this.refService.flattenChapter(chapter);
+      await this.refService.setChapter(chapter);
+      await this.refService.resetChapterVisbility();
       this.chapter = chapter;
     } catch (error) {
       throw error;

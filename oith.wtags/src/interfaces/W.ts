@@ -1,10 +1,11 @@
 import { WType } from '../enums/WType';
 
-export interface W {
-  charCount: [number, number][];
-  charCountUncompressed: number[];
-  optional: boolean | undefined;
-  wType: WType;
-  text: string | undefined;
-  verseID: string;
+export abstract class W {
+  public charCount: [number, number][];
+  public charCountUncompressed: number[];
+  public optional: boolean | undefined;
+  public wType: WType;
+  public text: string | undefined;
+  public verseID: string;
+  public visible: boolean | undefined;
 }

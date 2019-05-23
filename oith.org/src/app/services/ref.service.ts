@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { DataService } from './data.service';
-import { flatten } from 'lodash';
 import { SaveStateService } from './save-state.service';
 import {
   Note,
@@ -19,54 +17,23 @@ import { wType } from '../../../../oith.wtags/src/enums/WType';
 })
 export class RefService {
   public refs: Map<string, boolean> = new Map<string, boolean>();
-  public notePhrases: NotePhrase[] = [];
-  public noteRefs: NoteRef[] = [];
+  public notePhrases: Map<string, NotePhrase> = new Map<string, NotePhrase>();
+  public noteRefs: Map<string, NoteRef> = new Map<string, NoteRef>();
   public secondaryNotes = new Map<string, SecondaryNote>();
   public noteVis = new Map<string, boolean>();
+  private chapter: Chapter | undefined;
   public constructor(private saveState: SaveStateService) {}
-  public initRefVisibility(notes: Note[]): void {
-    // flatten(
-    //   notes.map(
-    //     (note): void => {
-    //       if (note.secondaryNotes) {
-    //         note.secondaryNotes.map(
-    //           (secondaryNote): void => {
-    //             secondaryNote.noteRefs.map(
-    //               (noteRef): void => {
-    //                 switch (noteRef.type) {
-    //                   case NoteTypeEnum.Eng: {
-    //                     this.refs.set(
-    //                       noteRef._id,
-    //                       this.saveState.data.englishNotesVisible,
-    //                     );
-    //                     break;
-    //                   }
-    //                   case NoteTypeEnum.New: {
-    //                     this.refs.set(
-    //                       noteRef._id,
-    //                       this.saveState.data.newNotesVisible,
-    //                     );
-    //                     break;
-    //                   }
-    //                   case NoteTypeEnum.TC: {
-    //                     this.refs.set(
-    //                       noteRef._id,
-    //                       this.saveState.data.translatorNotesVisible,
-    //                     );
-    //                     break;
-    //                   }
-    //                 }
-    //               },
-    //             );
-    //           },
-    //         );
-    //       }
-    //     },
-    //   ),
-    // );
-  }
 
+  public async resetChapterVisbility(): Promise<void> {
+    if (this.chapter) {
+      this.flattenChapter(this.chapter);
+    }
+  }
+  public async setChapter(chapter: Chapter): Promise<void> {
+    this.chapter = chapter;
+  }
   public flattenChapter(chapter: Chapter): void {
+    this.chapter = chapter;
     if (chapter.notes) {
       this.flattenNotes(chapter.notes);
       // chapter.verses
@@ -78,7 +45,7 @@ export class RefService {
             verse.wTags.map(
               (f): void => {
                 if (f.wType === wType.Refs) {
-                  this.resetRefFTags(f);
+                  this.resetRefFTags(f as WRef);
                 }
               },
             );
@@ -130,25 +97,21 @@ export class RefService {
           this.setNoteRefVisibility(noteRef);
         },
       );
-      this.setNotePhraseVisibility(
-        secondaryNote.notePhrase,
-        secondaryNote.noteRefs,
-      );
+      this.setNotePhraseVisibility(secondaryNote);
     }
   }
 
-  private setNotePhraseVisibility(
-    notePhrase: NotePhrase,
-    noteRefs: NoteRef[],
-  ): void {
+  private setNotePhraseVisibility(secondaryNote: SecondaryNote): void {
     // notePhrase.visible =this.getNoteTypeVis(notePhrase.)
-    notePhrase.visible =
-      noteRefs.filter(
-        (noteRef): boolean => {
-          return noteRef.visible === true;
-        },
-      ).length > 0;
-    this.noteVis.set(notePhrase._id, notePhrase.visible);
+    if (secondaryNote.notePhrase) {
+      secondaryNote.notePhrase.visible =
+        secondaryNote.noteRefs.filter(
+          (noteRef): boolean => {
+            return noteRef.visible === true;
+          },
+        ).length > 0;
+      this.noteVis.set(secondaryNote.id, secondaryNote.notePhrase.visible);
+    }
   }
 
   private setNoteRefVisibility(noteRef: NoteRef): void {

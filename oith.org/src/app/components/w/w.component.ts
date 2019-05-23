@@ -28,9 +28,14 @@ export class WComponent implements OnInit {
 
     // console.log(this.w.wRef ? this.w.wRef : 0);
     if (this.w.wRef) {
-      if (this.w.wRef.length === 1) {
+      const count = this.w.wRef.filter(
+        (wRef): boolean => {
+          return wRef.visible === true;
+        },
+      ).length;
+      if (count === 1) {
         classList.push('f-ref-single');
-      } else if (this.w.wRef.length > 1) {
+      } else if (count > 1) {
         classList.push('f-ref-multi');
       }
     }

@@ -1,7 +1,7 @@
 import { W } from '../interfaces/W';
 import { WType } from '../enums/WType';
 import { Color } from '../enums/Color';
-export class WHighlight implements W {
+export class WHighlight extends W {
   public charCountUncompressed: number[];
   public verseID: string;
   public charCount: [number, number][];

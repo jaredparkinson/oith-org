@@ -58,7 +58,7 @@ export class HeaderComponent implements OnInit {
     } else {
       this.saveState.data[ref as string] = !this.saveState.data[ref as string];
     }
-    this.refService.resetSecondaryNotesVisibility();
+    this.refService.resetChapterVisbility();
     this.saveState.save();
     // this.refService.resetNetNoteResfVisibility();
   }

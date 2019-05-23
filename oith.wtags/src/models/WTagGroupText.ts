@@ -6,5 +6,5 @@ export class WTagGroupText implements WTagGroup {
   public charCount: [number, number] | undefined;
   public type: WTagGroupType = WTagGroupType.Text;
   public wTags: W[];
-  classList: string[] | undefined;
+  public classList: string[] | undefined;
 }

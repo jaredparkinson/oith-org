@@ -6,5 +6,5 @@ export class WTagGroupRuby implements WTagGroup {
   public type: WTagGroupType = WTagGroupType.Ruby;
   public wRT: [number, number];
   public wRB: [number, number];
-  classList: string[] | undefined;
+  public classList: string[] | undefined;
 }

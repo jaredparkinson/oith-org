@@ -1,7 +1,7 @@
 import { W } from '../interfaces/W';
 import { WType } from '../enums/WType';
 import { Poetry } from '../enums/Poetry';
-export class WPoetry implements W {
+export class WPoetry extends W {
   public charCountUncompressed: number[];
   public verseID: string;
   public charCount: [number, number][];

@@ -7,5 +7,5 @@ export class WTagGroupA implements WTagGroup {
   public type: WTagGroupType = WTagGroupType.A;
   public wTags: W[];
   public href: string;
-  classList: string[] | undefined;
+  public classList: string[] | undefined;
 }
