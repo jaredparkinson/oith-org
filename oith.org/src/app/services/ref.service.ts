@@ -21,6 +21,7 @@ export class RefService {
   public noteRefs: Map<string, NoteRef> = new Map<string, NoteRef>();
   public secondaryNotes = new Map<string, SecondaryNote>();
   public noteVis = new Map<string, boolean>();
+  public noteHiglight = new Map<string, boolean>();
   private chapter: Chapter | undefined;
   public constructor(private saveState: SaveStateService) {}
 
@@ -61,6 +62,16 @@ export class RefService {
     fTags.visible = this.noteVis.get(fTags.ref);
   }
 
+  public ftagIsSelected(fRefs: string[]): boolean {
+    return (
+      fRefs.filter(
+        (ref): boolean => {
+          return this.noteHiglight.get(ref) === true;
+        },
+      ).length > 0
+    );
+  }
+
   public flattenNotes(notes: Note[]): void {
     notes.map(
       (note): void => {
@@ -96,7 +107,9 @@ export class RefService {
       (secondaryNote): void => {
         if (secondaryNote.id === id) {
           secondaryNote.highlight = true;
+          this.noteHiglight.set(secondaryNote.id, true);
         } else {
+          this.noteHiglight.set(secondaryNote.id, false);
           secondaryNote.highlight = false;
         }
       },

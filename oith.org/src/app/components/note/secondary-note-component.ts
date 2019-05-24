@@ -14,6 +14,7 @@ import { SecondaryNote, NoteRef } from '../../../../../oith.shared';
       <app-note-phrase
         *ngIf="this.secondaryNote.notePhrase"
         [notePhrase]="secondaryNote.notePhrase"
+        [id]="secondaryNote.id"
       ></app-note-phrase>
       <ng-container *ngFor="let noteRef of this.secondaryNote.noteRefs">
         <app-note-ref

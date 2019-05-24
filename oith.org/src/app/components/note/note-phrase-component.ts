@@ -1,10 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NotePhrase } from '../../../../../oith.shared';
+import { RefService } from 'src/app/services/ref.service';
 
 @Component({
   selector: 'app-note-phrase',
   template: `
-    <note-phrase>{{ this.notePhrase.text }}</note-phrase>
+    <note-phrase (click)="click()">{{ this.notePhrase.text }}</note-phrase>
   `,
   styles: [
     `
@@ -19,7 +20,16 @@ import { NotePhrase } from '../../../../../oith.shared';
 })
 export class NotePhraseComponent implements OnInit {
   @Input() public notePhrase: NotePhrase;
-  constructor() {}
+  @Input() public id: string;
+  public clicked = false;
+  constructor(public refService: RefService) {}
 
   ngOnInit() {}
+
+  public click(): void {
+    this.clicked = !this.clicked;
+    this.clicked
+      ? this.refService.resetNoteHighlight(this.id)
+      : this.refService.resetNoteHighlight('');
+  }
 }

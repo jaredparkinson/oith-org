@@ -50,6 +50,17 @@ export class WComponent implements OnInit {
       } else if (count > 1) {
         classList.push('f-ref-multi');
       }
+      if (
+        this.refService.ftagIsSelected(
+          this.w.wRef.map(
+            (wref): string => {
+              return wref.ref;
+            },
+          ),
+        )
+      ) {
+        classList.push('selected');
+      }
     }
     if (this.w.wRichText) {
       this.w.wRichText.map(

@@ -9,9 +9,17 @@ f {
     text-decoration: underline;
     text-decoration-skip-ink: none;
     text-decoration-color: grey;
+    &.selected {
+      text-decoration: none;
+      border-bottom: 3px solid #dc143c;
+    }
   }
   &.f-ref-single {
     border-bottom: 1px solid grey;
+    &.selected {
+      text-decoration: none;
+      border-bottom: 3px solid #f68d2e;
+    }
   }
   &.highlight-yellow,
   &.underline-yellow {
