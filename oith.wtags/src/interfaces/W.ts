@@ -9,3 +9,7 @@ export abstract class W {
   public verseID: string;
   public visible: boolean | undefined;
 }
+
+export class FTemp extends W {
+  public wType = WType.Temp;
+}

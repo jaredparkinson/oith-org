@@ -8,6 +8,7 @@ export enum WType {
   Link = 6,
   RubyRB = 7,
   RubyRT = 8,
+  Temp = -1,
 }
 
 export const wType = WType;
