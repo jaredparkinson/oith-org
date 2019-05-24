@@ -7,6 +7,7 @@ import { ParamService } from './param.service';
 import { addVersesToParagraphs } from './addVersesToParagraphs';
 import { RefService } from './ref.service';
 import { Chapter, Verse, Note } from '../../../../oith.shared';
+import { TextSelectService } from './text-select.service';
 @Injectable({
   providedIn: 'root',
 })
@@ -18,6 +19,7 @@ export class ChapterService {
   public constructor(
     private dataService: DataService,
     private paramService: ParamService,
+    private textSelectionService: TextSelectService,
     private refService: RefService,
   ) {}
 
@@ -60,6 +62,7 @@ export class ChapterService {
       await this.refService.setChapter(chapter);
       await this.refService.resetChapterVisbility();
       this.chapter = chapter;
+      this.textSelectionService.init(chapter);
     } catch (error) {
       throw error;
     }

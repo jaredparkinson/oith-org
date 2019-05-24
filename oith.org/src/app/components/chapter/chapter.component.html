@@ -9,8 +9,11 @@
     (scroll)="this.onScroll()"
   >
     <div class="oith-chapter-parent">
-      <div></div>
-      <div class="left-chapter-nav-btn chapter-nav-btn">
+      <div style=" user-select: none;"></div>
+      <div
+        class="left-chapter-nav-btn chapter-nav-btn"
+        style=" user-select: none;"
+      >
         <i
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -34,10 +37,13 @@
             *ngFor="let paragraph of this.chapterService.chapter.paragraphs"
             [paragraph]="paragraph"
           ></app-paragraph>
-          <div style="height: 90vh;"></div>
+          <div style="height: 90vh;" style=" user-select: none;"></div>
         </ng-container>
       </div>
-      <div class="right-chapter-nav-btn chapter-nav-btn">
+      <div
+        class="right-chapter-nav-btn chapter-nav-btn"
+        style=" user-select: none;"
+      >
         <i>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -50,10 +56,10 @@
           </svg>
         </i>
       </div>
-      <div></div>
+      <div style=" user-select: none;"></div>
     </div>
   </div>
-  <div style="background-color: gainsboro" class="footer">
+  <div style="background-color: gainsboro; user-select: none;" class="footer">
     <ng-container
       *ngIf="
         this.chapterService.chapter &&
@@ -64,7 +70,7 @@
         [note]="note"
         *ngFor="let note of this.chapterService.chapter.notes"
       ></app-note>
-      <div style="height: 90vh;"></div>
+      <div style="height: 90vh;" style=" user-select: none;"></div>
     </ng-container>
   </div>
 </div>

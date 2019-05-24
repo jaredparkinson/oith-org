@@ -3,6 +3,7 @@ import { SaveStateService } from 'src/app/services/save-state.service';
 import { RefService } from 'src/app/services/ref.service';
 import { ChapterService } from 'src/app/services/chapter.service';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { TextSelectService } from 'src/app/services/text-select.service';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,7 @@ export class HeaderComponent implements OnInit {
     public saveState: SaveStateService,
     public refService: RefService,
     public chapterServicd: ChapterService,
-
+    public textSelectionService: TextSelectService,
     public modalService: NgbModal,
   ) {}
 
@@ -30,6 +31,7 @@ export class HeaderComponent implements OnInit {
     await this.saveState.save();
   }
   public async paragraphsVisible(): Promise<void> {
+    this.textSelectionService.getSelection();
     this.saveState.data.paragraphsVisible = !this.saveState.data
       .paragraphsVisible;
 

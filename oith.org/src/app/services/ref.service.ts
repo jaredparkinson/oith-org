@@ -171,7 +171,7 @@ export class RefService {
         return this.saveState.data.newNotesVisible;
       }
       case NoteTypeEnum.TC: {
-        console.log('jhh9');
+        // console.log('jhh9');
 
         return this.saveState.data.translatorNotesVisible;
       }
