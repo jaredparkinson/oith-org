@@ -7,7 +7,7 @@ import { WTagGroupA } from '../../../../../../oith.shared';
   selector: 'app-wtag-group-a',
   template: `
     <a [href]="this.wTagGroup.href" class="{{ this.getClassList() }}">
-      <app-w *ngFor="let w of this.wTags" [w]="w"></app-w>
+      <app-w [verse]="this.verse" *ngFor="let w of this.wTags" [w]="w"></app-w>
     </a>
   `,
   styles: [''],
@@ -21,6 +21,7 @@ export class WTagGroupAComponent extends WTagComponent implements OnInit {
 
   public ngOnInit(): void {
     super.ngOnInit(this.wTagGroup);
+    this.verse._id;
     // this.wTagService.buildWTags(this.verse, this.wTagGroup);
   }
   public getClassList(): string {

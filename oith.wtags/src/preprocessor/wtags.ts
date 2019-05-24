@@ -114,17 +114,7 @@ function splitPreWTags(wTagStage1: WTagStage1[]): void {
 
 function compressPreWTags(wTagStage1: WTagStage1[]): WTagStage1[] {
   const newWTagStage1: WTagStage1[] = [];
-  console.log(
-    uniq(
-      flatten(
-        wTagStage1.map(
-          (w): string[] => {
-            return w.classList as string[];
-          },
-        ),
-      ),
-    ),
-  );
+ 
 
   filterUndefined<string>(
     uniq(

@@ -1,8 +1,15 @@
 <ng-container [ngSwitch]="this.w.wRichText !== undefined">
-  <F *ngSwitchCase="true" (click)="this.click()" [class]="this.getClassList()"
+  <F
+    *ngSwitchCase="true"
+    [attr.vid]="this.verse._id"
+    [attr.cc]="getCharacterCount()"
+    (click)="this.click()"
+    [class]="this.getClassList()"
     ><F [innerHTML]="this.getMarkDown()"></F></F
   ><F
     *ngSwitchCase="false"
+    [attr.vid]="this.verse._id"
+    [attr.cc]="getCharacterCount()"
     [class]="this.getClassList()"
     (click)="this.click()"
     >{{ this.w.text }}</F

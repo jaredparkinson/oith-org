@@ -4,6 +4,7 @@ import {
   RichText,
   RichTextEnum,
   WRef,
+  Verse,
 } from '../../../../../oith.shared';
 import { multiIncludes } from './multiIncludes';
 import { MarkService } from 'src/app/services/mark.service';
@@ -11,6 +12,7 @@ import { PreMarkdown } from './PreMarkdown';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { SaveStateService } from 'src/app/services/save-state.service';
 import { RefService } from 'src/app/services/ref.service';
+import { first, last } from 'lodash';
 
 @Component({
   selector: 'app-w',
@@ -19,6 +21,8 @@ import { RefService } from 'src/app/services/ref.service';
 })
 export class WComponent implements OnInit {
   @Input() public w: WMerged;
+  @Input() public verse: Verse;
+
   public ref = false;
 
   public fTagClickList: WRef[] | undefined;
@@ -35,6 +39,15 @@ export class WComponent implements OnInit {
     }
   }
 
+  public getCharacterCount(): [number, number] {
+    const f = first(this.w.characterCount);
+    const l = last(this.w.characterCount);
+
+    if (f && l) {
+      return [f, l];
+    }
+    return [-1, -1];
+  }
   public getClassList(): string {
     const classList: string[] = [];
 

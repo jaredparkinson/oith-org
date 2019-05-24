@@ -7,6 +7,7 @@ import { WTagGroupText } from '../../../../../../oith.shared';
   selector: 'app-wtag-group-text',
   template: `
     <app-w
+      [verse]="this.verse"
       class="{{ this.getClassList() }}"
       *ngFor="let w of this.wTags"
       [w]="w"
