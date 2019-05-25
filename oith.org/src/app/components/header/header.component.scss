@@ -22,17 +22,20 @@
     justify-content: left;
   }
   .oith-header-middle {
-    grid-template-columns: 48px 48px 48px 48px;
+    grid-template-columns: 48px 48px 48px 1fr 48px 48px 48px;
   }
   .oith-header-right {
     grid-template-columns: 48px;
     justify-content: right;
   }
   ul {
+    margin: 0;
+    padding: 0;
     height: 48px;
   }
 
   li {
+    width: 48px;
     display: grid;
     align-items: center;
     height: 100%;
@@ -42,6 +45,10 @@
     color: black;
     font-weight: bold;
     user-select: none;
+    &#chapterName.chapter-name {
+      font-family: serif !important;
+      width: auto;
+    }
     svg {
       width: 24px;
     }

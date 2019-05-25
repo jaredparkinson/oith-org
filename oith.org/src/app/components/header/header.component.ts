@@ -3,6 +3,7 @@ import { SaveStateService } from 'src/app/services/save-state.service';
 import { RefService } from 'src/app/services/ref.service';
 import { ChapterService } from 'src/app/services/chapter.service';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { Location } from '@angular/common';
 import { TextSelectService } from 'src/app/services/text-select.service';
 
 @Component({
@@ -17,6 +18,7 @@ export class HeaderComponent implements OnInit {
     public chapterServicd: ChapterService,
     public textSelectionService: TextSelectService,
     public modalService: NgbModal,
+    private location: Location,
   ) {}
 
   public ngOnInit(): void {}
@@ -46,8 +48,7 @@ export class HeaderComponent implements OnInit {
       .secondaryNotesVisible;
     await this.saveState.save();
   }
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-  public async open(content) {
+  public async open(content): Promise<void> {
     await this.modalService.open(content, {
       ariaLabelledBy: 'modal-basic-title',
     }).result;
@@ -62,6 +63,11 @@ export class HeaderComponent implements OnInit {
     }
     this.refService.resetChapterVisbility();
     this.saveState.save();
-    // this.refService.resetNetNoteResfVisibility();
+  }
+  public async backClick(): Promise<void> {
+    this.location.back();
+  }
+  public async forwardClick(): Promise<void> {
+    this.location.forward();
   }
 }
