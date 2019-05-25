@@ -16,27 +16,30 @@ import { wType } from '../../../../oith.wtags/src/enums/WType';
   providedIn: 'root',
 })
 export class RefService {
-  public refs: Map<string, boolean> = new Map<string, boolean>();
-  public notePhrases: Map<string, NotePhrase> = new Map<string, NotePhrase>();
-  public noteRefs: Map<string, NoteRef> = new Map<string, NoteRef>();
+  // public refs: Map<string, boolean> = new Map<string, boolean>();
+  // public notePhrases: Map<string, NotePhrase> = new Map<string, NotePhrase>();
+  // public noteRefs: Map<string, NoteRef> = new Map<string, NoteRef>();
   public secondaryNotes = new Map<string, SecondaryNote>();
   public noteVis = new Map<string, boolean>();
   public noteHiglight = new Map<string, boolean>();
   private chapter: Chapter | undefined;
   public constructor(private saveState: SaveStateService) {}
 
-  public async resetChapterVisbility(): Promise<void> {
+  public async resetChapterVisbility(init: boolean = true): Promise<void> {
     if (this.chapter) {
-      this.flattenChapter(this.chapter);
+      this.flattenChapter(this.chapter, init);
     }
   }
   public async setChapter(chapter: Chapter): Promise<void> {
     this.chapter = chapter;
   }
-  public flattenChapter(chapter: Chapter): void {
+  public flattenChapter(chapter: Chapter, init: boolean): void {
     this.chapter = chapter;
     if (chapter.notes) {
-      this.flattenNotes(chapter.notes);
+      if (init) {
+        this.flattenNotes(chapter.notes);
+      }
+      this.resetNoteHighlight('');
       // chapter.verses
     }
     if (chapter.verses) {

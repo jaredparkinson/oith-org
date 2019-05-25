@@ -60,7 +60,7 @@ export class ChapterService {
       chapter.notes = notes;
       // this.refService.flattenChapter(chapter);
       await this.refService.setChapter(chapter);
-      await this.refService.resetChapterVisbility();
+      await this.refService.resetChapterVisbility(true);
       this.chapter = chapter;
       this.textSelectionService.init(chapter);
     } catch (error) {

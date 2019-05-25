@@ -70,4 +70,6 @@ export class HeaderComponent implements OnInit {
   public async forwardClick(): Promise<void> {
     this.location.forward();
   }
+
+  public async showOrphanRefs(): Promise<void> {}
 }

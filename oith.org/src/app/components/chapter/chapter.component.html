@@ -66,10 +66,12 @@
         this.saveStateService.data.notesPaneToggle
       "
     >
-      <app-note
-        [note]="note"
-        *ngFor="let note of this.chapterService.chapter.notes"
-      ></app-note>
+      <ng-container *ngFor="let note of this.chapterService.chapter.notes">
+        <app-note
+          [note]="note"
+          *ngIf="note.secondaryNotes.length > 0"
+        ></app-note>
+      </ng-container>
       <div style="height: 90vh; user-select: none;"></div>
     </ng-container>
   </div>

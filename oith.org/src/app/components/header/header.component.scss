@@ -34,7 +34,8 @@
     height: 48px;
   }
 
-  li {
+  li,
+  li.dropdown span {
     width: 48px;
     display: grid;
     align-items: center;
@@ -51,6 +52,10 @@
     }
     svg {
       width: 24px;
+    }
+
+    .dropdown-toggle::after {
+      display: none;
     }
   }
 }

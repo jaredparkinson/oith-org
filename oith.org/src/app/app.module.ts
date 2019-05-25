@@ -34,7 +34,11 @@ import { SaveStateService } from './services/save-state.service';
 import { RefService } from './services/ref.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {
+  NgbModule,
+  NgbDropdown,
+  NgbDropdownMenu,
+} from '@ng-bootstrap/ng-bootstrap';
 
 export function load(saveState: SaveStateService) {
   return async (): Promise<void> => {
