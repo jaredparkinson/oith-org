@@ -20,7 +20,7 @@ export class DataService {
     //   return (data as unknown) as T;
     // } catch {}
     try {
-      const data = await axios.get(`assets/scripture_files/${id}`);
+      const data = await axios.get(`assets/scriptures/${id}`);
       return data.data as T;
     } catch (error) {
       throw error;

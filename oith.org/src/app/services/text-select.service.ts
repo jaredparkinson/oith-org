@@ -93,7 +93,7 @@ export class TextSelectService {
   }
   private generateVerseFTags(
     verse: Element,
-    cc1: [string, string],
+    cc1: [string, string] = ['-1', '0'],
     offset1: number,
     cc2: [string, string],
     offset2: number,
@@ -116,18 +116,17 @@ export class TextSelectService {
     endContainerID: string,
   ): FTemp[] {
     const fTemps: FTemp[] = [];
+    const verse = this.queryVerse(startContainerID);
+    const verse2 = this.queryVerse(endContainerID);
     const verseElements = Array.from(document.querySelectorAll('verse'));
-    const verse = document.querySelector(`verse[guid=${startContainerID}]`);
-    const verse2 = document.querySelector(`verse[guid=${endContainerID}]`);
+    this.sliceVerses(startContainerID, endContainerID);
+
     if (
       verse &&
       verse2 &&
       startContainer.parentElement &&
       endContainer.parentElement
     ) {
-      console.log(verseElements.indexOf(verse));
-      console.log(verseElements.indexOf(verse2));
-
       const cc1 = startContainer.parentElement.getAttribute('cc');
       const cc2 = endContainer.parentElement.getAttribute('cc');
 
@@ -179,5 +178,32 @@ export class TextSelectService {
    */
   public destroy(): void {
     this.chapter = undefined;
+  }
+
+  private getCharacterCount(element: Element): [string, string] | undefined {
+    const cc = element.getAttribute('cc');
+
+    if (cc) {
+      return cc.split(',') as [string, string];
+    }
+    return undefined;
+  }
+
+  private queryVerse(guid: string): Element | null {
+    return document.querySelector(`verse[guid=${guid}]`);
+  }
+
+  private sliceVerses(startVerseGUID: string, endVerseGUID: string): Element[] {
+    const startVerse = this.queryVerse(startVerseGUID);
+    const endVerse = this.queryVerse(endVerseGUID);
+    if (startVerse && endVerse) {
+      const verseElements = Array.from(document.querySelectorAll('verse'));
+      const startVerseIndex = verseElements.indexOf(startVerse);
+      const endVerseIndex = verseElements.indexOf(endVerse);
+
+      verseElements.slice(startVerseIndex, endVerseIndex);
+      console.log(verseElements);
+    }
+    return [];
   }
 }

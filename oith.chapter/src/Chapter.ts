@@ -1,7 +1,5 @@
-import { Verse, NoteRef } from '../../oith.wtags';
-import { Note } from '../../oith.notes/src';
 import { W } from '../../oith.wtags/src/interfaces/W';
-import { Paragraph } from './Paragraph';
+import { Verse, Paragraph, Note, NoteRef } from '../../oith.shared';
 export class Chapter {
   public _id: string;
   public _rev: string | undefined;

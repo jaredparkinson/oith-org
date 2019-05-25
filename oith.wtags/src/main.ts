@@ -3,7 +3,6 @@ import { loadFile, getID, getLanguage } from './preprocessor/dom';
 import { queryWTags } from './preprocessor/wtags';
 // import { normalize } from 'path';
 // import expandTilde = require('expand-tilde');
-import { makeOutputDir } from './makeOutputDir';
 import { parseWTagGroups2 } from './preprocessor/WTagGroupsProcessor';
 import {
   writeScriptureFile,
@@ -11,7 +10,6 @@ import {
 } from '../../oith.shared/src/functions';
 
 async function processFiles(fileNames: string[]): Promise<void> {
-  await makeOutputDir();
   const files = fileNames.slice(0, 10000).map(
     async (fileName): Promise<void> => {
       const jsdom = await loadFile(fileName);

@@ -1,16 +1,18 @@
 import { normalize } from 'path';
 
-import { readFile, writeFile } from 'fs-extra';
+import { readFile } from 'fs-extra';
 import { JSDOM } from 'jsdom';
 import { parseLanguage } from './parseLanguage';
 import { parseID } from './parseID';
-import { getFiles } from './getFiles';
 
 import { Chapter } from './Chapter';
-import expandTilde = require('expand-tilde');
 import { parseParagraphs } from './parseParagraphs';
 import { parseElementAttribute } from './parseElementAttribute';
 import * as he from 'he';
+import {
+  writeScriptureFile,
+  getScriptureFiles,
+} from '../../oith.shared/src/functions';
 export async function parseNoteIDS(document: Document): Promise<string[]> {
   return Array.from(document.querySelectorAll('footer note')).map(
     (note): string => {
@@ -63,7 +65,7 @@ async function main(): Promise<void> {
   // await getFiles();
   // console.log(await getFiles());
   try {
-    const promises = (await getFiles()).map(
+    const promises = (await getScriptureFiles()).map(
       async (fileName: string): Promise<void> => {
         try {
           const file = await readFile(normalize(fileName));
@@ -71,24 +73,25 @@ async function main(): Promise<void> {
 
           const chapter = await parseChapter(document);
           if (chapter) {
-            const outPath = normalize(
-              expandTilde(
-                `~/source/repos/scripture_files/scriptures/${chapter._id}.json`,
-              ),
-            );
-            // console.log(chapter);
+            // const outPath = normalize(
+            //   expandTilde(
+            //     `~/source/repos/scripture_files/scriptures/${chapter._id}.json`,
+            //   ),
+            // );
+            // // console.log(chapter);
+            writeScriptureFile(chapter, `${chapter._id}.json`);
 
-            await writeFile(outPath, JSON.stringify(chapter));
+            // await writeFile(outPath, JSON.stringify(chapter));
 
-            await writeFile(
-              normalize(
-                `../src/assets/scripture_files/${await parseID(
-                  document,
-                  chapter.language,
-                )}-chapter.json`,
-              ),
-              JSON.stringify(chapter),
-            );
+            // await writeFile(
+            //   normalize(
+            //     `../src/assets/scripture_files/${await parseID(
+            //       document,
+            //       chapter.language,
+            //     )}-chapter.json`,
+            //   ),
+            //   JSON.stringify(chapter),
+            // );
           }
         } catch (error) {
           console.log(error);

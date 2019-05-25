@@ -56,9 +56,6 @@ export async function parseNoteRefs(
         noteRef.type = await parseNoteType(noteRefElement);
         // console.log(noteRef);
 
-        if (noteRef._id === '') {
-          console.log(noteRefElement.outerHTML);
-        }
         return noteRef;
       } catch (error) {
         console.log(error);
