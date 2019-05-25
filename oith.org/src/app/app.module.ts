@@ -39,6 +39,7 @@ import {
   NgbDropdown,
   NgbDropdownMenu,
 } from '@ng-bootstrap/ng-bootstrap';
+import { HeaderDropdownComponent } from './components/header/dropdown/header.dropdown.component';
 
 export function load(saveState: SaveStateService) {
   return async (): Promise<void> => {
@@ -71,6 +72,7 @@ export function load(saveState: SaveStateService) {
     WTagGroupRTComponent,
     WTagGroupARubyComponent,
     WTagDirective,
+    HeaderDropdownComponent,
   ],
   imports: [
     NgbModule,

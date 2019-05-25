@@ -11,6 +11,7 @@ import {
   WRef,
 } from '../../../../oith.shared';
 import { wType } from '../../../../oith.wtags/src/enums/WType';
+import { flatten } from 'lodash';
 
 @Injectable({
   providedIn: 'root',
@@ -25,15 +26,102 @@ export class RefService {
   private chapter: Chapter | undefined;
   public constructor(private saveState: SaveStateService) {}
 
+  /**
+   * setListOfNotesVisibility
+   * Takes an array of Secondary Note ids and sets their visbility to the provided boolean
+   * while setting all other Secondary Notes to the opposite value
+   */
+  public async setListOfNotesVisibility(
+    ids: string[],
+    visibility: boolean,
+  ): Promise<void> {
+    this.mapToArray(this.secondaryNotes).map(
+      (secondaryNote): void => {
+        secondaryNote.highlight = false;
+        let vis: boolean;
+        if (ids.includes(secondaryNote.id)) {
+          this.noteVis.set(secondaryNote.id, visibility);
+          vis = visibility;
+        } else {
+          this.noteVis.set(secondaryNote.id, !visibility);
+          vis = !visibility;
+        }
+
+        if (secondaryNote.notePhrase) {
+          secondaryNote.notePhrase.visible = true;
+        }
+        if (secondaryNote.noteRefs) {
+          secondaryNote.noteRefs.map(
+            (noteRef): void => {
+              noteRef.visible = vis;
+            },
+          );
+        }
+      },
+    );
+    if (this.chapter) {
+      await this.resetFRefs(this.chapter);
+    }
+  }
+
+  public async getWRefList(): Promise<string[] | undefined> {
+    if (this.chapter) {
+      if (this.chapter.verses) {
+        const fRefs = flatten(
+          this.chapter.verses.map(
+            (verse): WRef[] => {
+              if (verse.wTags) {
+                return verse.wTags.filter(
+                  (fTag): boolean => {
+                    return fTag.wType === wType.Refs;
+                  },
+                ) as WRef[];
+              }
+              return [];
+            },
+          ),
+        );
+
+        return fRefs.map(
+          (fRef): string => {
+            return fRef.ref;
+          },
+        );
+      }
+      return undefined;
+    }
+    return undefined;
+  }
+
   public async resetChapterVisbility(init: boolean = true): Promise<void> {
     if (this.chapter) {
-      this.flattenChapter(this.chapter, init);
+      await this.flattenChapter(this.chapter, init);
     }
   }
   public async setChapter(chapter: Chapter): Promise<void> {
     this.chapter = chapter;
   }
-  public flattenChapter(chapter: Chapter, init: boolean): void {
+
+  private async queryFTags(chapter: Chapter): Promise<WRef[]> {
+    if (chapter.verses) {
+      return flatten(
+        chapter.verses.map(
+          (verse): WRef[] => {
+            if (verse.wTags) {
+              return verse.wTags.filter(
+                (f): boolean => {
+                  return f.wType === wType.Refs;
+                },
+              ) as WRef[];
+            }
+            return [];
+          },
+        ),
+      );
+    }
+    return [];
+  }
+  public async flattenChapter(chapter: Chapter, init: boolean): Promise<void> {
     this.chapter = chapter;
     if (chapter.notes) {
       if (init) {
@@ -42,27 +130,40 @@ export class RefService {
       this.resetNoteHighlight('');
       // chapter.verses
     }
-    if (chapter.verses) {
-      chapter.verses.map(
-        (verse): void => {
-          if (verse.wTags) {
-            verse.wTags.map(
-              (f): void => {
-                if (f.wType === wType.Refs) {
-                  this.resetRefFTags(f as WRef);
-                }
-              },
-            );
-          }
-        },
-      );
-    }
+
+    await this.resetFRefs(chapter);
+    // if (chapter.verses) {
+    //   chapter.verses.map(
+    //     (verse): void => {
+    //       if (verse.wTags) {
+    //         verse.wTags.map(
+    //           (f): void => {
+    //             if (f.wType === wType.Refs) {
+    //               this.resetRefFTags(f as WRef);
+    //             }
+    //           },
+    //         );
+    //       }
+    //     },
+    //   );
+    // }
   }
+  private async resetFRefs(chapter: Chapter): Promise<void> {
+    (await this.queryFTags(chapter)).map(
+      (fTag): void => {
+        this.resetRefFTags(fTag);
+      },
+    );
+  }
+
   public resetRefFTags(fTags: WRef): void {
     // if () {
     // this.flattenNotes(chapter.notes);
     // }
     fTags.visible = this.noteVis.get(fTags.ref);
+    if (fTags.visible) {
+      console.log(fTags.visible);
+    }
   }
 
   public ftagIsSelected(fRefs: string[]): boolean {
