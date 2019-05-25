@@ -34,14 +34,10 @@ import { SaveStateService } from './services/save-state.service';
 import { RefService } from './services/ref.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import {
-  NgbModule,
-  NgbDropdown,
-  NgbDropdownMenu,
-} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderDropdownComponent } from './components/header/dropdown/header.dropdown.component';
 
-export function load(saveState: SaveStateService) {
+export function load(saveState: SaveStateService): () => Promise<void> {
   return async (): Promise<void> => {
     await saveState.load();
   };

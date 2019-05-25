@@ -6,7 +6,6 @@ import {
   SecondaryNote,
   NoteRef,
   NoteType,
-  NotePhrase,
   Chapter,
   WRef,
 } from '../../../../oith.shared';
@@ -151,20 +150,17 @@ export class RefService {
   private async resetFRefs(chapter: Chapter): Promise<void> {
     (await this.queryFTags(chapter)).map(
       (fTag): void => {
-        this.resetRefFTags(fTag);
+        // this.resetRefFTags(fTag);
+        fTag.visible = this.noteVis.get(fTag.ref);
       },
     );
   }
 
-  public resetRefFTags(fTags: WRef): void {
-    // if () {
-    // this.flattenNotes(chapter.notes);
-    // }
-    fTags.visible = this.noteVis.get(fTags.ref);
-    if (fTags.visible) {
-      console.log(fTags.visible);
-    }
-  }
+  // public resetRefFTags(fTags: WRef): void {
+  //   // if () {
+  //   // this.flattenNotes(chapter.notes);
+  //   // }
+  // }
 
   public ftagIsSelected(fRefs: string[]): boolean {
     return (

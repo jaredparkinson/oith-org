@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Chapter } from '../../../../oith.shared';
 import { FTemp } from '../../../../oith.wtags/src/interfaces/W';
-import { element } from '@angular/core/src/render3';
 
 @Injectable({
   providedIn: 'root',

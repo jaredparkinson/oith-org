@@ -63,3 +63,8 @@ f {
     background-color: #a8c7e6;
   }
 }
+
+:host-context(.paragraph) f.verse-number {
+  vertical-align: super !important;
+  font-size: 8pt !important;
+}

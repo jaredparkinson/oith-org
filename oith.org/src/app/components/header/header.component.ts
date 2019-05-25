@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SaveStateService } from 'src/app/services/save-state.service';
 import { RefService } from 'src/app/services/ref.service';
 import { ChapterService } from 'src/app/services/chapter.service';
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Location } from '@angular/common';
 import { TextSelectService } from 'src/app/services/text-select.service';
 
