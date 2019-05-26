@@ -1,0 +1,27 @@
+import { verseSelectors } from '../constants/verse-selectors';
+import { queryVerseElements } from './queryVerseElements';
+export async function verifyVerseFlatness(
+  document: Document,
+): Promise<boolean> {
+  return (
+    verseSelectors.filter(
+      (verseSelector): boolean => {
+        return document.querySelectorAll(`${verseSelector} > * > *`).length > 0;
+      },
+    ).length === 0
+  );
+}
+
+export async function getVerseCharacterCounts(
+  document: Document,
+): Promise<[string, string, number][]> {
+  return (await queryVerseElements(document)).map(
+    (verseElement): [string, string, number] => {
+      return [
+        verseElement.id,
+        verseElement.textContent ? verseElement.textContent : '',
+        verseElement.textContent ? verseElement.textContent.length : 0,
+      ];
+    },
+  );
+}

@@ -6,6 +6,8 @@ export const enum FTagGroupType {
   RB = 4,
   RT = 5,
   SPAN = 6,
+  BR = 7,
+  PAGE_BREAK = 8,
 }
 
 // export const FTagGroupTypeEnum = FTagGroupType;
