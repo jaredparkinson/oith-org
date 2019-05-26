@@ -15,12 +15,10 @@ export async function normalizeCharacterCounts(
     (studyNoteRef): void => {
       const marker = studyNoteRef.querySelector('sup');
       if (marker) {
-        studyNoteRef.setAttribute(
-          'marker',
-          marker.textContent ? marker.textContent : marker.innerHTML,
-        );
+        // preserveSuperScript(studyNoteRef, marker);
         marker.remove();
       }
+      studyNoteRef.classList.remove('study-note-ref');
     },
   );
   Array.from(document.querySelectorAll('.clarity-word')).map(
@@ -43,5 +41,15 @@ export async function normalizeCharacterCounts(
           : '';
       }
     },
+  );
+}
+
+export function preserveSuperScript(
+  studyNoteRef: Element,
+  marker: HTMLElement,
+): void {
+  studyNoteRef.setAttribute(
+    'marker',
+    marker.textContent ? marker.textContent : marker.innerHTML,
   );
 }
