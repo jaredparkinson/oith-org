@@ -26,6 +26,12 @@ export { WTagGroupRubyA } from '../oith.wtags/src/models/WTagGroupRubyA';
 export { WTagGroupText } from '../oith.wtags/src/models/WTagGroupText';
 export { WUnderline } from '../oith.wtags/src/models/WUnderline';
 
+export { getID } from './src/functions/browser/getID';
+export { getLanguage } from './src/functions/browser/getLanguage';
+export {
+  getElementAttribute,
+} from './src/functions/browser/getElementAttribute';
+
 export const ColorEnum = Color;
 export const RichTextEnum = RichText;
 export const NoteTypeEnum = NoteType;

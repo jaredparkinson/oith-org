@@ -1,4 +1,4 @@
-import { getElementAttribute } from './functions/getElementAttribute';
+import { getElementAttribute } from './functions/browser/getElementAttribute';
 export async function getID(
   document: Document,
   language: string,

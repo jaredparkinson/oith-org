@@ -5,8 +5,8 @@ export class Verse {
   public _id: string;
   public _rev: string | undefined;
   public id: string;
-  public FTagGroups: FormatGroup[] = [];
+  public formatGroups: FormatGroup[] = [];
   public classList: string[] | undefined;
   public text: string;
-  public wTags: F[] | undefined;
+  public formatTags: F[] | undefined;
 }
