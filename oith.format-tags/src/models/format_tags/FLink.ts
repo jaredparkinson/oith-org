@@ -1,6 +1,6 @@
 import { F } from './F';
 
-import { FType } from '../enums/FType';
+import { FType } from '../../enums/FType';
 
 export class WLink extends F {
   public charCountUncompressed: number[];

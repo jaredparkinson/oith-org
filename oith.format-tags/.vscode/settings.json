@@ -5,5 +5,18 @@
     "javascriptreact",
     { "language": "typescript", "autoFix": true },
     { "language": "typescriptreact", "autoFix": true }
-  ]
+  ],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "node_modules": true,
+    "oith.wtags": true,
+    "oith.notes": true,
+    "oith.chapter": true,
+    "build": true,
+    "dist": true
+  }
 }

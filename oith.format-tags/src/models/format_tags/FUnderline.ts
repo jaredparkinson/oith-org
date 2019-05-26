@@ -1,12 +1,11 @@
-import { Poetry } from '../enums/Poetry';
+import { FType } from '../../enums/FType';
 import { F } from './F';
-import { FType } from '../enums/FType';
-export class WPoetry extends F {
+
+export class WUnderline extends F {
   public charCountUncompressed: number[];
   public verseID: string;
   public charCount: [number, number][];
   public optional: boolean;
-  public FType: FType;
+  public FType: FType = FType.Underline;
   public text: string | undefined;
-  public poetry: Poetry;
 }

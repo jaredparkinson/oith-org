@@ -1,6 +1,6 @@
 import { FTagGroup } from './FTagGroup';
 
-import { FTagGroupType } from '../enums/FTagGroupType';
+import { FTagGroupType } from '../../enums/FTagGroupType';
 
 export class FTagGroupRuby implements FTagGroup {
   public charCountCompress: [number, number];

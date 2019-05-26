@@ -1,6 +1,6 @@
-import { FTagGroupType } from '../enums/FTagGroupType';
-import { F } from './F';
 import { FTagGroup } from './FTagGroup';
+import { FTagGroupType } from '../../enums/FTagGroupType';
+import { F } from '../format_tags/F';
 
 export class FTagGroupA implements FTagGroup {
   public charCount: [number, number] | undefined;

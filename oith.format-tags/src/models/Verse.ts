@@ -1,5 +1,5 @@
-import { F } from './F';
-import { FTagGroup } from './FTagGroup';
+import { FTagGroup } from './format_groups/FTagGroup';
+import { F } from './format_tags/F';
 
 export class Verse {
   public _id: string;

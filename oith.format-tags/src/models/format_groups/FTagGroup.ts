@@ -1,4 +1,4 @@
-import { FTagGroupType } from '../enums/FTagGroupType';
+import { FTagGroupType } from '../../enums/FTagGroupType';
 
 export abstract class FTagGroup {
   public type: FTagGroupType;

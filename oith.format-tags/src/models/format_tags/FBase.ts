@@ -1,4 +1,4 @@
-import { FType } from '../enums/FType';
+import { FType } from '../../enums/FType';
 import { F } from './F';
 
 export class WBase extends F {

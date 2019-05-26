@@ -1,6 +1,6 @@
-import { NoteType } from '../enums/NoteType';
+import { NoteType } from '../../enums/NoteType';
 import { F } from './F';
-import { FType } from '../enums/FType';
+import { FType } from '../../enums/FType';
 export class WRef extends F {
   public charCountUncompressed: number[];
   public verseID: string;

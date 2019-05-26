@@ -1,4 +1,4 @@
-import { FType } from '../enums/FType';
+import { FType } from '../../enums/FType';
 
 export abstract class F {
   public charCount: [number, number][];

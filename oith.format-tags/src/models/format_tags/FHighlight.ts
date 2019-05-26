@@ -1,6 +1,6 @@
-import { Color } from '../enums/Color';
+import { Color } from '../../enums/Color';
 import { F } from './F';
-import { FType } from '../enums/FType';
+import { FType } from '../../enums/FType';
 export class WHighlight extends F {
   public charCountUncompressed: number[];
   public verseID: string;
