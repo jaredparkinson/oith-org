@@ -9,3 +9,5 @@ export async function queryVerseElements(
 export async function isChapter(document: Document): Promise<boolean> {
   return document.querySelector('[data-content-type="chapter"]') !== null;
 }
+
+

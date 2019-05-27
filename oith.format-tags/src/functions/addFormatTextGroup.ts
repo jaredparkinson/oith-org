@@ -26,7 +26,9 @@ function nodesToTextGroup(
   );
 
   const endCount = textContent ? count + textContent.length : count;
-  formatGroup.compressedOffsets = [count, endCount];
+  console.log(`${count} ${endCount}`);
+
+  formatGroup.compressedOffsets = [count, endCount - 1];
   formatGroup.classList = undefined;
   formatGroups.push(formatGroup);
   return endCount;
@@ -74,8 +76,12 @@ function nodeToFormatGroup(
       break;
     }
   }
-  let textContent = '';
+  console.log(node.nodeName);
+
+  let textContent = node.textContent ? node.textContent : '';
   let endCount = count + textContent.length;
+  formatGroup.compressedOffsets = [count, endCount - 1];
+
   formatGroups.push(formatGroup);
   return endCount;
 }
@@ -93,14 +99,20 @@ export async function parseFormatGroups(
 
   const childNodes = await queryChildNodes(verseElement);
 
+  console.log(`${verseElement.id} - ${childNodes.length}`);
+
   childNodes.map(
     (childNode): void => {
       if (breakPoints.includes(childNode as Element)) {
         if (formatTextGroup !== undefined) {
+          console.log(`${childNode.nodeName} ${count}`);
           count = nodesToTextGroup(formatTextGroup, formatGroups, count);
+          console.log(`${childNode.nodeName} ${count}`);
           formatTextGroup = undefined;
         }
+        console.log(`${childNode.nodeName} ${count}`);
         count = nodeToFormatGroup(childNode, formatGroups, count);
+        console.log(`${childNode.nodeName} ${count}`);
       } else {
         if (formatTextGroup === undefined) {
           formatTextGroup = [];
@@ -109,9 +121,18 @@ export async function parseFormatGroups(
       }
     },
   );
+  console.log(formatTextGroup);
+  console.log(formatTextGroup);
 
   if (formatTextGroup !== undefined) {
-    await nodesToTextGroup(formatTextGroup, formatGroups, count);
+    const asdf = nodesToTextGroup(formatTextGroup, formatGroups, count);
+
+    console.log(verseElement.id);
+    console.log(`Format Group ${verseElement.id} - ${formatTextGroup.length}`);
+
+    console.log(count);
+    console.log(asdf);
+
     formatTextGroup = undefined;
   }
 }
@@ -121,6 +142,11 @@ export function verseToFormatTextGroup(
   verseElement: Element,
   formatGroups: FormatGroup[],
 ): void {
+  // let count = 0;
+  // Array.from(document.querySelector('#p14').childNodes).map((childNode)=>{
+  //   console.log(count = count + childNode.textContent.length);
+
+  // })
   const formatGroup = new FormatGroupText();
   let textContent = '';
   textContent = verseElement.textContent ? verseElement.textContent : '';

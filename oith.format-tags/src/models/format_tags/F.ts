@@ -8,8 +8,9 @@ export abstract class F {
   public text: string | undefined;
   public verseID: string;
   public visible: boolean | undefined;
+  public classList: string[] | undefined;
 }
 
-export class FTemp extends F {
+export class FormatTagTemp extends F {
   public FType = FType.Temp;
 }
