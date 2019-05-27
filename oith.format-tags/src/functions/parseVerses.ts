@@ -7,6 +7,8 @@ import { removeEmptySpaces } from './removeEmptySpaces';
 import { parseClassList, parseTextContent } from '../run';
 import { F, FormatTagTemp } from '../models/format_tags/F';
 import { queryChildNodes } from './queryChildNodes';
+
+import { isEqual } from 'lodash';
 // import { getID, getLanguage } from '../../../oith.shared/src/functions';
 
 function verifyChildNodesNotEmpty(childNodes: Node[]): boolean {
@@ -70,10 +72,64 @@ function generateFormatBaseTags(
   }
 }
 
+function formatTempTagsAreEqual(f1: FormatTagTemp, f2: FormatTagTemp): boolean {
+  if (f1.classList === undefined && f2.classList == undefined) {
+    return true;
+  } else if (f1.classList !== undefined && f2.classList !== undefined) {
+    return isEqual(f1.classList.sort(), (f2 as any).classList);
+  } else if (f1.classList === undefined && f2.classList !== undefined) {
+    return isEqual(f1, f2.classList.sort());
+  } else if (f1.classList && f2.classList) {
+    return isEqual(f1.classList.sort(), f2.classList.sort());
+  }
+
+  return false;
+}
+
+function compressFormatTempTags(formatTempTags: FormatTagTemp[]): F[] {
+  const newFormatTempTags: F[] = [];
+  let newFormatTempTag: F | undefined;
+  let count = 0;
+
+  formatTempTags.map(
+    (f): void => {
+      if (!newFormatTempTag) {
+        newFormatTempTag = f;
+
+        newFormatTempTag.charCountUncompressed = [count];
+      } else {
+        if (newFormatTempTag.charCountUncompressed === undefined) {
+          newFormatTempTag.charCountUncompressed = [];
+        }
+        if (formatTempTagsAreEqual(newFormatTempTag, f)) {
+          console.log('asdfoijasdofijasdoifj');
+
+          newFormatTempTag.charCountUncompressed.push(count);
+        } else {
+          newFormatTempTags.push(newFormatTempTag);
+          newFormatTempTag = undefined;
+          newFormatTempTag = f;
+          if (newFormatTempTag.charCountUncompressed === undefined) {
+            newFormatTempTag.charCountUncompressed = [];
+          }
+          newFormatTempTag.charCountUncompressed.push(count);
+        }
+      }
+
+      count = count + 1;
+    },
+  );
+  if (newFormatTempTag) {
+    newFormatTempTags.push(newFormatTempTag);
+  }
+
+  return newFormatTempTags;
+}
+
 async function parseFormatTags(verseElement: Element): Promise<F[]> {
   const childNodes = await queryChildNodes(verseElement);
   if (verifyChildNodesNotEmpty(childNodes)) {
-    const formatTags: F[] = [];
+    const formatTempTags: F[] = [];
 
     childNodes.map(
       (childNode): void => {
@@ -82,10 +138,14 @@ async function parseFormatTags(verseElement: Element): Promise<F[]> {
             ? Array.from((childNode as Element).classList)
             : [];
 
-        generateFormatBaseTags(childNode, formatTags, classList);
+        generateFormatBaseTags(childNode, formatTempTags, classList);
       },
     );
-    return formatTags;
+    // console.log(formatTempTags);
+    const newFormatTempTags = compressFormatTempTags(formatTempTags);
+    // console.log(newFormatTempTags);
+
+    return newFormatTempTags;
   }
 
   const document = verseElement.ownerDocument;

@@ -19,6 +19,7 @@ export async function normalizeCharacterCounts(
         marker.remove();
       }
       studyNoteRef.classList.remove('study-note-ref');
+      studyNoteRef.classList.remove('scripture-ref');
     },
   );
   Array.from(document.querySelectorAll('.clarity-word')).map(
