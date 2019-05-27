@@ -1,6 +1,7 @@
 import { Verse } from './models/Verse';
 import { isChapter } from './functions/queryVerseElements';
 import { parseVerses } from './functions/parseVerses';
+import { Environment } from './Environment';
 
 export async function parseTextContent(
   element: Element | Node,
@@ -16,14 +17,16 @@ export async function parseClassList(
     : undefined;
 }
 
-export async function run(document: Document): Promise<Verse[]> {
+export async function run(
+  document: Document,
+  environment: Environment,
+): Promise<Verse[]> {
   // const language = await getLanguage(document);
   // const chapterID = await getID(document, language);
 
   if (await isChapter(document)) {
-    return await parseVerses(document);
+    return await parseVerses(document, environment);
   } else {
     return [];
   }
 }
-

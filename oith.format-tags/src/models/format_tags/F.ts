@@ -14,3 +14,5 @@ export abstract class F {
 export class FormatTagTemp extends F {
   public FType = FType.Temp;
 }
+
+export class FormatTagLDSSource extends F {}

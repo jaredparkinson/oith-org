@@ -5,8 +5,8 @@ export async function hasSingleFormatGroup(element: Element): Promise<boolean> {
     Array.from(element.querySelectorAll(formatGroupSelectors)).filter(
       (childElement): boolean => {
         const href = childElement.getAttribute('href');
-        if (href && href.startsWith('#note')) {
-          return true;
+        if (href && href.includes('#note')) {
+          return false;
         }
         return !childElement.hasAttribute('marker');
       },

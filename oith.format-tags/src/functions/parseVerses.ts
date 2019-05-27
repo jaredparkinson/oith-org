@@ -5,12 +5,13 @@ import { verifyVerseFlatness } from './verifyVerseFlatness';
 import { queryFormatGroups } from './queryFormatGroups';
 import { removeEmptySpaces } from './removeEmptySpaces';
 import { parseClassList, parseTextContent } from '../run';
-import { F, FormatTagTemp } from '../models/format_tags/F';
+import { F, FormatTagTemp, FormatTagLDSSource } from '../models/format_tags/F';
 import { queryChildNodes } from './queryChildNodes';
 
 import { isEqual, first, last, uniq } from 'lodash';
 import { RichText } from '../enums/RichText';
 import { FormatRichText } from '../models/format_tags/FRichText';
+import { Environment } from '../Environment';
 // import { getID, getLanguage } from '../../../oith.shared/src/functions';
 
 function verifyChildNodesNotEmpty(childNodes: Node[]): boolean {
@@ -140,10 +141,17 @@ function getFirstAndLast<T>(list: T[]): [T, T] | undefined {
 function convertFormatTempTagToFormatTag(
   formatTempTag: FormatTagTemp,
   cssClass: string,
+  environment: Environment,
 ): F | undefined {
   let formatTag: F | undefined;
 
   const firstLast = getFirstAndLast(formatTempTag.charCountUncompressed);
+  if (environment === Environment.browser) {
+    formatTag = new FormatTagLDSSource();
+    formatTag.charCount = firstLast ? [firstLast] : [[0, 0]];
+    formatTag.classList = [cssClass];
+    return formatTag;
+  }
   console.log('First Last');
 
   console.log(formatTempTag.charCountUncompressed);
@@ -170,6 +178,7 @@ function convertFormatTempTagToFormatTag(
 
 function convertFormatTempTagsToFormatTags(
   formatTempTags: FormatTagTemp[],
+  environment: Environment,
 ): F[] {
   const formatTags: F[] = [];
 
@@ -183,7 +192,11 @@ function convertFormatTempTagsToFormatTags(
         // formatTag.optional = false;
         uniq(formatTempTag.classList).map(
           (item): void => {
-            const f = convertFormatTempTagToFormatTag(formatTempTag, item);
+            const f = convertFormatTempTagToFormatTag(
+              formatTempTag,
+              item,
+              environment,
+            );
             if (f) {
               formatTags.push(f);
             }
@@ -206,7 +219,10 @@ function convertFormatTempTagsToFormatTags(
   return formatTags;
 }
 
-async function parseFormatTags(verseElement: Element): Promise<F[]> {
+async function parseFormatTags(
+  verseElement: Element,
+  environment: Environment,
+): Promise<F[]> {
   const childNodes = await queryChildNodes(verseElement);
   if (verifyChildNodesNotEmpty(childNodes)) {
     const formatTempTags: F[] = [];
@@ -225,7 +241,7 @@ async function parseFormatTags(verseElement: Element): Promise<F[]> {
     const newFormatTempTags = compressFormatTempTags(formatTempTags);
     // console.log(newFormatTempTags);
 
-    return convertFormatTempTagsToFormatTags(newFormatTempTags);
+    return convertFormatTempTagsToFormatTags(newFormatTempTags, environment);
   }
 
   const document = verseElement.ownerDocument;
@@ -245,7 +261,10 @@ async function getDataAid(element: Element): Promise<string> {
   }
 }
 
-async function parseVerse(verseElement: Element): Promise<Verse> {
+async function parseVerse(
+  verseElement: Element,
+  environment: Environment,
+): Promise<Verse> {
   const verse = new Verse();
   const formatGroups = await queryFormatGroups(verseElement);
   removeEmptySpaces(verseElement);
@@ -253,7 +272,7 @@ async function parseVerse(verseElement: Element): Promise<Verse> {
   verse.text = await parseTextContent(verseElement);
   verse.formatGroups = formatGroups ? formatGroups : [];
   // verse._id = `${chapterID}-${verseElement.id}`;
-  verse.formatTags = await parseFormatTags(verseElement);
+  verse.formatTags = await parseFormatTags(verseElement, environment);
   verse._id = await getDataAid(verseElement);
   verse.id = `${verseElement.id}`;
 
@@ -265,7 +284,10 @@ async function parseVerse(verseElement: Element): Promise<Verse> {
   return verse;
 }
 
-export async function parseVerses(document: Document): Promise<Verse[]> {
+export async function parseVerses(
+  document: Document,
+  environment: Environment,
+): Promise<Verse[]> {
   await normalizeCharacterCounts(document);
   if (!(await verifyVerseFlatness(document))) {
     throw 'Document isn\'t flat';
@@ -277,7 +299,7 @@ export async function parseVerses(document: Document): Promise<Verse[]> {
   );
   const versePromises = verseElements.map(
     async (verseElement): Promise<Verse | undefined> => {
-      return await parseVerse(verseElement);
+      return await parseVerse(verseElement, environment);
     },
   );
   const verses = (await Promise.all(versePromises)).filter(
