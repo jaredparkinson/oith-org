@@ -1,7 +1,7 @@
 import { FType } from '../../enums/FType';
 import { F } from './F';
 
-export class WBase extends F {
+export class FormatBase extends F {
   public charCountUncompressed: number[];
   public verseID: string;
   public charCount: [number, number][];

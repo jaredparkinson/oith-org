@@ -1,7 +1,7 @@
 import { RichText } from '../../enums/RichText';
 import { F } from './F';
 import { FType } from '../../enums/FType';
-export class WRichText extends F {
+export class FormatRichText extends F {
   public charCountUncompressed: number[];
   public verseID: string;
   public charCount: [number, number][];

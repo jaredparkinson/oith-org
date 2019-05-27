@@ -8,7 +8,9 @@ import { parseClassList, parseTextContent } from '../run';
 import { F, FormatTagTemp } from '../models/format_tags/F';
 import { queryChildNodes } from './queryChildNodes';
 
-import { isEqual } from 'lodash';
+import { isEqual, first, last, uniq } from 'lodash';
+import { RichText } from '../enums/RichText';
+import { FormatRichText } from '../models/format_tags/FRichText';
 // import { getID, getLanguage } from '../../../oith.shared/src/functions';
 
 function verifyChildNodesNotEmpty(childNodes: Node[]): boolean {
@@ -126,6 +128,84 @@ function compressFormatTempTags(formatTempTags: FormatTagTemp[]): F[] {
   return newFormatTempTags;
 }
 
+function getFirstAndLast<T>(list: T[]): [T, T] | undefined {
+  const f = first(list);
+  const l = last(list);
+  console.log(f);
+  console.log(l);
+
+  return f !== undefined && l !== undefined ? [f, l] : undefined;
+}
+
+function convertFormatTempTagToFormatTag(
+  formatTempTag: FormatTagTemp,
+  cssClass: string,
+): F | undefined {
+  let formatTag: F | undefined;
+
+  const firstLast = getFirstAndLast(formatTempTag.charCountUncompressed);
+  console.log('First Last');
+
+  console.log(formatTempTag.charCountUncompressed);
+
+  console.log(firstLast);
+
+  switch (cssClass) {
+    case 'verse-number': {
+      formatTag = new FormatRichText();
+      (formatTag as FormatRichText).richText = RichText.verseNumber;
+
+      break;
+    }
+    default:
+      break;
+  }
+
+  if (formatTag) {
+    formatTag.charCount = firstLast ? [firstLast] : [[0, 0]];
+  }
+
+  return formatTag;
+}
+
+function convertFormatTempTagsToFormatTags(
+  formatTempTags: FormatTagTemp[],
+): F[] {
+  const formatTags: F[] = [];
+
+  formatTempTags.map(
+    (formatTempTag): void => {
+      if (formatTempTag.classList !== undefined) {
+        // let formatTag = new FormatBase();
+        // const f = first(formatTempTag.charCountUncompressed);
+        // const l = last(formatTempTag.charCountUncompressed);
+        // formatTag.charCount = f && l ? [[f, l]] : [[0, 0]];
+        // formatTag.optional = false;
+        uniq(formatTempTag.classList).map(
+          (item): void => {
+            const f = convertFormatTempTagToFormatTag(formatTempTag, item);
+            if (f) {
+              formatTags.push(f);
+            }
+          },
+        );
+      }
+      // else {
+      //   uniq(formatTempTag.classList).map(
+      //     (item): void => {
+      //       const f = convertFormatTempTagToFormatTag(formatTempTag, item);
+      //       if (f) {
+      //         formatTags.push(f);
+      //       }
+      //     },
+      //   );
+      // }
+    },
+  );
+
+  return formatTags;
+}
+
 async function parseFormatTags(verseElement: Element): Promise<F[]> {
   const childNodes = await queryChildNodes(verseElement);
   if (verifyChildNodesNotEmpty(childNodes)) {
@@ -145,7 +225,7 @@ async function parseFormatTags(verseElement: Element): Promise<F[]> {
     const newFormatTempTags = compressFormatTempTags(formatTempTags);
     // console.log(newFormatTempTags);
 
-    return newFormatTempTags;
+    return convertFormatTempTagsToFormatTags(newFormatTempTags);
   }
 
   const document = verseElement.ownerDocument;
