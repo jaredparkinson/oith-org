@@ -2,9 +2,9 @@ import { RichText } from '../../enums/RichText';
 import { F } from './F';
 import { FType } from '../../enums/FType';
 export class FormatRichText extends F {
-  public charCountUncompressed: number[];
+  public compressedOffsets: [number, number][];
   public verseID: string;
-  public charCount: [number, number][];
+  public offsets: number[];
   public optional: boolean;
   public FType: FType = FType.RichText;
   public text: string | undefined;

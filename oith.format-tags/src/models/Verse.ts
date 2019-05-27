@@ -23,5 +23,6 @@ export class Verse {
 }
 
 export class LDSSourceVerse extends Verse {
+  public verseElement: Element;
   public nodeName: NodeName = NodeName.p;
 }

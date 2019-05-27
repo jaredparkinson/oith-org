@@ -27,7 +27,7 @@ function nodesToTextGroup(
 
   const endCount = textContent ? count + textContent.length : count;
 
-  formatGroup.compressedOffsets = [count, endCount - 1];
+  formatGroup.compressedOffsets = [[count, endCount]];
   formatGroup.classList = undefined;
   formatGroups.push(formatGroup);
   return endCount;
@@ -78,7 +78,7 @@ function nodeToFormatGroup(
 
   let textContent = node.textContent ? node.textContent : '';
   let endCount = count + textContent.length;
-  formatGroup.compressedOffsets = [count, endCount - 1];
+  formatGroup.compressedOffsets = [[count, endCount]];
 
   formatGroups.push(formatGroup);
   return endCount;
@@ -137,7 +137,7 @@ export function verseToFormatTextGroup(
   let textContent = '';
   textContent = verseElement.textContent ? verseElement.textContent : '';
 
-  formatGroup.compressedOffsets = [0, textContent ? textContent.length : 0];
+  formatGroup.compressedOffsets = [[0, textContent ? textContent.length : 0]];
   formatGroup.classList = undefined;
   formatGroups.push(formatGroup);
 }

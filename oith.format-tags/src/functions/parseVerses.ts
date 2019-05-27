@@ -79,6 +79,7 @@ function formatTempTagsAreEqual(f1: FormatTagTemp, f2: FormatTagTemp): boolean {
   if (f1.classList === undefined && f2.classList == undefined) {
     return true;
   } else if (f1.classList !== undefined && f2.classList !== undefined) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return isEqual(f1.classList.sort(), (f2 as any).classList);
   } else if (f1.classList === undefined && f2.classList !== undefined) {
     return isEqual(f1, f2.classList.sort());
@@ -99,23 +100,21 @@ function compressFormatTempTags(formatTempTags: FormatTagTemp[]): F[] {
       if (!newFormatTempTag) {
         newFormatTempTag = f;
 
-        newFormatTempTag.charCountUncompressed = [count];
+        newFormatTempTag.offsets = [count];
       } else {
-        if (newFormatTempTag.charCountUncompressed === undefined) {
-          newFormatTempTag.charCountUncompressed = [];
+        if (newFormatTempTag.offsets === undefined) {
+          newFormatTempTag.offsets = [];
         }
         if (formatTempTagsAreEqual(newFormatTempTag, f)) {
-          console.log('asdfoijasdofijasdoifj');
-
-          newFormatTempTag.charCountUncompressed.push(count);
+          newFormatTempTag.offsets.push(count);
         } else {
           newFormatTempTags.push(newFormatTempTag);
           newFormatTempTag = undefined;
           newFormatTempTag = f;
-          if (newFormatTempTag.charCountUncompressed === undefined) {
-            newFormatTempTag.charCountUncompressed = [];
+          if (newFormatTempTag.offsets === undefined) {
+            newFormatTempTag.offsets = [];
           }
-          newFormatTempTag.charCountUncompressed.push(count);
+          newFormatTempTag.offsets.push(count);
         }
       }
 
@@ -132,8 +131,6 @@ function compressFormatTempTags(formatTempTags: FormatTagTemp[]): F[] {
 function getFirstAndLast<T>(list: T[]): [T, T] | undefined {
   const f = first(list);
   const l = last(list);
-  console.log(f);
-  console.log(l);
 
   return f !== undefined && l !== undefined ? [f, l] : undefined;
 }
@@ -145,18 +142,34 @@ function convertFormatTempTagToFormatTag(
 ): F | undefined {
   let formatTag: F | undefined;
 
-  const firstLast = getFirstAndLast(formatTempTag.charCountUncompressed);
+  const firstLast = getFirstAndLast(formatTempTag.offsets);
   if (environment === Environment.browser) {
     formatTag = new FormatTagLDSSource();
-    formatTag.charCount = firstLast ? [firstLast] : [[0, 0]];
+
+    formatTag.compressedOffsets = firstLast ? [firstLast] : [[0, 0]];
     formatTag.classList = [cssClass];
+
+    switch (cssClass) {
+      case 'verse-number': {
+        (formatTag as FormatTagLDSSource).bold = true;
+        break;
+      }
+      case 'italic': {
+        (formatTag as FormatTagLDSSource).italic = true;
+        break;
+      }
+      case 'underline': {
+        (formatTag as FormatTagLDSSource).underline = true;
+        break;
+      }
+      case 'double-underline': {
+        (formatTag as FormatTagLDSSource).doubleUnderline = true;
+        break;
+      }
+    }
+
     return formatTag;
   }
-  console.log('First Last');
-
-  console.log(formatTempTag.charCountUncompressed);
-
-  console.log(firstLast);
 
   switch (cssClass) {
     case 'verse-number': {
@@ -170,7 +183,7 @@ function convertFormatTempTagToFormatTag(
   }
 
   if (formatTag) {
-    formatTag.charCount = firstLast ? [firstLast] : [[0, 0]];
+    formatTag.compressedOffsets = firstLast ? [firstLast] : [[0, 0]];
   }
 
   return formatTag;
@@ -237,9 +250,7 @@ async function parseFormatTags(
         generateFormatBaseTags(childNode, formatTempTags, classList);
       },
     );
-    // console.log(formatTempTags);
     const newFormatTempTags = compressFormatTempTags(formatTempTags);
-    // console.log(newFormatTempTags);
 
     return convertFormatTempTagsToFormatTags(newFormatTempTags, environment);
   }
@@ -306,6 +317,7 @@ async function parseVerse(
 
   if (environment === Environment.browser) {
     verse = new LDSSourceVerse();
+    (verse as LDSSourceVerse).verseElement = verseElement;
     getVerseNodeName(verse as LDSSourceVerse, verseElement);
   }
 
@@ -318,11 +330,6 @@ async function parseVerse(
   verse.formatTags = await parseFormatTags(verseElement, environment);
   verse._id = await getDataAid(verseElement);
   verse.id = `${verseElement.id}`;
-
-  // console.log(verse.id);
-  // console.log(verse.formatGroups.pop());
-  // console.log(verse.formatTags);
-  // console.log(verseElement.textContent ? verseElement.textContent.length : 0);
 
   return verse;
 }
@@ -350,6 +357,5 @@ export async function parseVerses(
       return verse !== undefined;
     },
   ) as Verse[];
-  console.log(verses);
   return verses;
 }

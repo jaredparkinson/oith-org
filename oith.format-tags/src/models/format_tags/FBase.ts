@@ -2,9 +2,9 @@ import { FType } from '../../enums/FType';
 import { F } from './F';
 
 export class FormatBase extends F {
-  public charCountUncompressed: number[];
+  public compressedOffsets: [number, number][];
   public verseID: string;
-  public charCount: [number, number][];
+  public offsets: number[];
   public optional: boolean;
   public FType: FType = FType.Base;
   public text: string;
