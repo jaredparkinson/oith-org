@@ -1,14 +1,14 @@
-import { FormatGroup } from './models/format_groups/FormatGroup';
+import { FormatGroup } from '../models/format_groups/FormatGroup';
 import {
   FormatGroupText,
   FormatGroupBR,
   FormatGroupPageBreak,
-} from './models/format_groups/FormatGroupText';
+} from '../models/format_groups/FormatGroupText';
 import { queryChildNodes } from './queryChildNodes';
-import formatGroupSelectors from './functions/formatGroupSelectors';
-import { FormatGroupRuby } from './models/format_groups/FormatGroupRuby';
-import { FormatGroupRubyA } from './models/format_groups/FormatGroupRubyA';
-import { FormatGroupA } from './models/format_groups/FormatGroupA';
+import formatGroupSelectors from './formatGroupSelectors';
+import { FormatGroupRuby } from '../models/format_groups/FormatGroupRuby';
+import { FormatGroupRubyA } from '../models/format_groups/FormatGroupRubyA';
+import { FormatGroupA } from '../models/format_groups/FormatGroupA';
 
 function nodesToTextGroup(
   nodes: Node[],

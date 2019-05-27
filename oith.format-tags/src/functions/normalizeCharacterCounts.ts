@@ -53,3 +53,24 @@ export function preserveSuperScript(
     marker.textContent ? marker.textContent : marker.innerHTML,
   );
 }
+
+// export async function replaceInnerHTML(
+//   selector: string,
+//   newInnerHTML: string | string[],
+// ): Promise<void> {
+//   const element = document.querySelector(selector);
+
+//   if (element) {
+//     // let text: string;
+
+//     // if ((newInnerHTML as []).length !== undefined) {
+//     //  (newInnerHTML as string[]).map((iH): void =>{
+//     //    text =
+//     //  })
+//     // } else {
+//     //   text = newInnerHTML as string;
+//     // }
+//   } else {
+//     throw `No element with selector: ${selector} could be found on the page`;
+//   }
+// }

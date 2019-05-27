@@ -1,5 +1,5 @@
-import { FormatGroup } from './models/format_groups/FormatGroup';
-import { hasSingleFormatGroup } from './functions/hasSingleFormatGroup';
+import { FormatGroup } from '../models/format_groups/FormatGroup';
+import { hasSingleFormatGroup } from './hasSingleFormatGroup';
 import {
   verseToFormatTextGroup as parseFormatTextGroups,
   parseFormatGroups,
