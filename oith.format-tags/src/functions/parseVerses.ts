@@ -1,4 +1,4 @@
-import { Verse } from '../models/Verse';
+import { Verse, LDSSourceVerse, NodeName } from '../models/Verse';
 import { queryVerseElements } from './queryVerseElements';
 import { normalizeCharacterCounts } from './normalizeCharacterCounts';
 import { verifyVerseFlatness } from './verifyVerseFlatness';
@@ -261,11 +261,54 @@ async function getDataAid(element: Element): Promise<string> {
   }
 }
 
+function getVerseNodeName(verse: LDSSourceVerse, verseElement: Element): void {
+  switch (verseElement.nodeName.toLowerCase()) {
+    case 'p': {
+      verse.nodeName = NodeName.p;
+      break;
+    }
+    case 'h1': {
+      verse.nodeName = NodeName.h1;
+      break;
+    }
+    case 'h2': {
+      verse.nodeName = NodeName.h2;
+      break;
+    }
+    case 'h3': {
+      verse.nodeName = NodeName.h3;
+      break;
+    }
+    case 'h4': {
+      verse.nodeName = NodeName.h4;
+      break;
+    }
+    case 'h5': {
+      verse.nodeName = NodeName.h5;
+      break;
+    }
+    case 'h6': {
+      verse.nodeName = NodeName.h6;
+      break;
+    }
+    case 'span': {
+      verse.nodeName = NodeName.span;
+      break;
+    }
+  }
+}
+
 async function parseVerse(
   verseElement: Element,
   environment: Environment,
 ): Promise<Verse> {
-  const verse = new Verse();
+  let verse = new Verse();
+
+  if (environment === Environment.browser) {
+    verse = new LDSSourceVerse();
+    getVerseNodeName(verse as LDSSourceVerse, verseElement);
+  }
+
   const formatGroups = await queryFormatGroups(verseElement);
   removeEmptySpaces(verseElement);
   verse.classList = await parseClassList(verseElement);

@@ -15,4 +15,9 @@ export class FormatTagTemp extends F {
   public FType = FType.Temp;
 }
 
-export class FormatTagLDSSource extends F {}
+export class FormatTagLDSSource extends F {
+  public bold: boolean;
+  public italic: boolean;
+  public underline: boolean;
+  public doubleUnderline: boolean;
+}
