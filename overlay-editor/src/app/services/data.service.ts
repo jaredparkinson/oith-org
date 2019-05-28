@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Navigation } from '../models/Navigation';
+import { run } from '../../../../oith.format-tags/src/run';
+import { Environment } from '../../../../oith.format-tags/src/Environment';
 
 @Injectable({
   providedIn: 'root',
@@ -10,6 +12,9 @@ export class DataService {
 
   public noteDataAids: Map<string, boolean> = new Map();
   public chapterDocument: Document | undefined;
+
+  public verses: [] | undefined;
+  public notes: [] | undefined;
   public constructor() {}
 
   public loadNotesDocument(file: string): void {
@@ -31,11 +36,12 @@ export class DataService {
       this.loadNavigation();
     } catch (error) {}
   }
-  public loadChapterFile(file: string): void {
+  public async loadChapterFile(file: string): Promise<void> {
     const domParser = new DOMParser();
 
     try {
       console.log('loaded Chapter File');
+
       this.chapterDocument = domParser.parseFromString(file, 'text/html');
 
       const chapterRoot = this.chapterDocument.querySelector('html');
@@ -44,16 +50,23 @@ export class DataService {
         ? chapterRoot.getAttribute('data-aid')
         : undefined;
 
-      if (!chapterDataAid || !this.noteDataAids.has(chapterDataAid)) {
+      if (!chapterDataAid) {
         this.chapterDocument = undefined;
         alert('asodifj');
       }
-
+      if (this.chapterDocument) {
+        try {
+          const asdf = await run(this.chapterDocument, Environment.browser);
+          console.log(asdf);
+        } catch (error) {
+          console.log(error);
+        }
+      }
       // this.loadNavigation();
     } catch (error) {}
   }
 
-  private loadNavigation() {
+  private loadNavigation(): void {
     if (!this.navigation && this.notesDocument) {
       this.navigation = [];
       Array.from(
@@ -64,7 +77,7 @@ export class DataService {
             text: a.textContent,
             href: a.href,
           };
-          if (nav.text && nav.href) {
+          if (nav.text && nav.href && this.navigation) {
             this.navigation.push(nav);
           }
         },

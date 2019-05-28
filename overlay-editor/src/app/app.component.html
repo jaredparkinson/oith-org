@@ -1,31 +1,37 @@
 <!-- <app-navigation *ngIf="dataService.navigation"></app-navigation> -->
+<div class="parent-grid">
+  <div></div>
 
-<ng-container *ngIf="!dataService.notesDocument">
-  <div>
-    <label for="notesFileOpener">Load Notes File</label>
-    <br />
-    <input
-      type="file"
-      name="notes-file"
-      id="notesFileOpener"
-      (change)="this.loadNotesFile($event)"
-    />
-  </div>
-</ng-container>
-<ng-container *ngIf="dataService.notesDocument && !dataService.chapterDocument">
-  <div>
-    <label for="chapterFileOpener">Load Chapter File</label>
-    <br />
-    <input
-      type="file"
-      name="chapter-file"
-      id="chapterFileOpener"
-      (change)="this.loadChapterFile($event)"
-    />
-  </div>
-</ng-container>
+  <ng-container *ngIf="!dataService.verses && !dataService.notes">
+    <div id="chapterDocumentLoader">
+      <ng-container *ngIf="!dataService.chapterDocument && !dataService.verses">
+        <label for="chapterFileOpener">Load Chapter File</label>
 
-<ng-container *ngIf="dataService.notesDocument && dataService.chapterDocument">
-  <app-body-block></app-body-block>
-  <app-notes></app-notes>
-</ng-container>
+        <input
+          type="file"
+          name="chapter-file"
+          id="chapterFileOpener"
+          (change)="this.loadChapterFile($event)"
+        />
+      </ng-container>
+    </div>
+    <div id="notesDocumentLoader">
+      <ng-container *ngIf="!dataService.notesDocument && !dataService.notes">
+        <div>
+          <label for="notesFileOpener">Load Notes File</label>
+          <br />
+          <input
+            type="file"
+            name="notes-file"
+            id="notesFileOpener"
+            (change)="this.loadNotesFile($event)"
+          />
+        </div>
+      </ng-container>
+    </div>
+    <ng-container *ngIf="dataService.verses && dataService.notes">
+      <app-body-block></app-body-block>
+      <app-notes></app-notes>
+    </ng-container>
+  </ng-container>
+</div>
