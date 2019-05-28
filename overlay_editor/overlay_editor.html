@@ -7,6 +7,9 @@
     <title>Overlay Editor</title>
   </head>
   <body>
+    <ul id="navigation">
+      <li v-for="nav in navigation"><nav-item v-bind:nav="nav"></nav-item></li>
+    </ul>
     <div id="app">
       <div v-if="verses">
         <verse-item

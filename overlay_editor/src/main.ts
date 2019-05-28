@@ -3,34 +3,11 @@ import { run } from '../../oith.format-tags/src/run';
 import { LDSSourceVerse, Verse } from '../../oith.format-tags/src/models/Verse';
 import { Environment } from '../../oith.format-tags/src/Environment';
 import 'babel-polyfill';
-
-function loadNotesFromFile(noteFile: string): void {
-  console.log(noteFile);
-}
+import { initNoteFileOpener } from './initNoteFileOpener';
+import { navigation, Navigation } from './functions/loadNotes';
 
 function main(): void {
-  const notesFileOpener = document.querySelector(
-    '#notesFileOpener',
-  ) as HTMLInputElement;
-
-  if (notesFileOpener) {
-    notesFileOpener.addEventListener(
-      'change',
-      (): void => {
-        if (notesFileOpener.files) {
-          const file = notesFileOpener.files[0];
-          if (file.type === 'text/xml') {
-            const reader = new FileReader();
-            let asdf: string | null | ArrayBuffer = null;
-            reader.onload = (): void => {
-              loadNotesFromFile(reader.result as string);
-            };
-            reader.readAsText(file);
-          }
-        }
-      },
-    );
-  }
+  initNoteFileOpener();
   // browser();
   // const verses = run(document, Environment.browser) as LDSSourceVerse[];
   // console.log(verses);
@@ -45,9 +22,26 @@ Vue.component('verse-item', {
   template: `<p v-bind:class="verse.classList ? verse.classList.toString().replace(',',''): ''" >{{ verse.text }}</p>`,
 });
 
-new Vue({
+Vue.component('nav-item', {
+  props: ['nav'],
+  template: `<a  v-on:click="navigationClick(nav)">{{ nav.text }}</a>`,
+});
+
+export const appVue = new Vue({
   el: '#app',
   data: data,
+});
+
+export const navigationVue = new Vue({
+  el: '#navigation',
+  data: {
+    navigation: navigation,
+  },
+  methods: {
+    navigationClick(nav: Navigation): void {
+      console.log(nav.href);
+    },
+  },
 });
 
 window.addEventListener(
