@@ -29,9 +29,9 @@
         </div>
       </ng-container>
     </div>
-    <ng-container *ngIf="dataService.verses && dataService.notes">
-      <app-body-block></app-body-block>
-      <app-notes></app-notes>
-    </ng-container>
+  </ng-container>
+  <ng-container *ngIf="dataService.verses && dataService.notes">
+    <app-body-block></app-body-block>
+    <app-notes></app-notes>
   </ng-container>
 </div>

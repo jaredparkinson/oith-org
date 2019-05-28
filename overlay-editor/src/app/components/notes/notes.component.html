@@ -1,3 +1,18 @@
-<p>
-  notes works!
-</p>
+<ng-container
+  *ngIf="this.dataService.notes && this.dataService.notes.length > 0"
+>
+  <ul>
+    <li *ngFor="let note of this.dataService.notes">
+      <p class="note-title">{{ note.noteTitle }}s</p>
+      <p class="note-short-title">{{ note.noteShortTitle }}</p>
+      <ng-container
+        *ngIf="note.secondaryNotes && note.secondaryNotes.length > 0"
+      >
+        <app-secondary-note
+          [secondaryNote]="secondaryNote"
+          *ngFor="let secondaryNote of note.secondaryNotes"
+        ></app-secondary-note>
+      </ng-container>
+    </li>
+  </ul>
+</ng-container>

@@ -12,9 +12,10 @@
     height: 100vh;
     justify-content: center;
     align-content: center;
+    grid-column-gap: 10px;
     grid-template-columns: auto auto;
-    > * {
-      height: 100vh;
-    }
+    // > * {
+    //   height: 100vh;
+    // }
   }
 }

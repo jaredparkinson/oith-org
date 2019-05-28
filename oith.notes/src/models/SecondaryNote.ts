@@ -8,4 +8,5 @@ export class SecondaryNote {
   public noteRefs: NoteRef[] = [];
   public verseMarker: string | undefined | null;
   public highlight: boolean | undefined;
+  public offset: [number, number][];
 }

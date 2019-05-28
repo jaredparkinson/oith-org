@@ -6,6 +6,10 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { BodyBlockComponent } from './components/body-block/body-block.component';
 import { NotesComponent } from './components/notes/notes.component';
 import { FileLoaderComponent } from './components/file-loader/file-loader.component';
+import { SecondaryNoteComponent } from './components/secondary-note/secondary-note.component';
+import { NoteTitleComponent } from './components/note-title/note-title.component';
+import { NotePhraseComponent } from './components/note-phrase/note-phrase.component';
+import { NoteReferenceComponent } from './components/note-reference/note-reference.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +17,11 @@ import { FileLoaderComponent } from './components/file-loader/file-loader.compon
     NavigationComponent,
     BodyBlockComponent,
     NotesComponent,
-    FileLoaderComponent
+    FileLoaderComponent,
+    SecondaryNoteComponent,
+    NoteTitleComponent,
+    NotePhraseComponent,
+    NoteReferenceComponent
   ],
   imports: [
     BrowserModule
