@@ -11,7 +11,9 @@ export class SecondaryNoteComponent implements OnInit {
   @Input() public secondaryNote: SecondaryNoteLDSSource;
   public constructor() {}
 
-  public ngOnInit() {}
+  public ngOnInit(): void {
+    console.log(this.secondaryNote);
+  }
 
   public getClassList(): string {
     return '';
@@ -19,11 +21,11 @@ export class SecondaryNoteComponent implements OnInit {
   public getOffSets(): string {
     return '';
   }
-  public getNotePhrase(): NotePhrase {
-    return new NotePhrase();
+  public getNotePhrase(): string {
+    return this.secondaryNote.notePhrase ? this.secondaryNote.notePhrase : '';
   }
 
-  public getNoteRefs(): NoteRef[] {
-    return [];
+  public getNoteRefs(): string[] {
+    return this.secondaryNote.noteRefs ? this.secondaryNote.noteRefs : [];
   }
 }

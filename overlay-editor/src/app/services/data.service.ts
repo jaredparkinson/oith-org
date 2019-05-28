@@ -3,9 +3,12 @@ import { Navigation } from '../models/Navigation';
 import { run } from '../../../../oith.format-tags/src/run';
 import { Environment } from '../../../../oith.format-tags/src/Environment';
 import { Verse } from '../../../../oith.format-tags/src/models/Verse';
-import { Note } from '../../../../oith.shared';
+import { Note, SecondaryNote } from '../../../../oith.shared';
 import { queryVerseElements } from '../../../../oith.format-tags/src/functions/queryVerseElements';
-import { NoteLDSSource } from '../../../../oith.notes/src/models/Note';
+import {
+  NoteLDSSource,
+  SecondaryNoteLDSSource,
+} from '../../../../oith.notes/src/models/Note';
 
 @Injectable({
   providedIn: 'root',
@@ -19,6 +22,8 @@ export class DataService {
 
   public verses: Verse[] | undefined;
   public notes: NoteLDSSource[] | undefined;
+  public allNotes: NoteLDSSource[] | undefined;
+  public chapterDataAid: string | undefined;
   public constructor() {}
 
   public loadNotesDocument(file: string): void {
@@ -34,11 +39,80 @@ export class DataService {
           if (dataAid) {
             this.noteDataAids.set(dataAid, true);
           }
+          this.parseNotes(chapter, dataAid as string);
         },
       );
 
-      this.loadNavigation();
-    } catch (error) {}
+      // this.loadNavigation();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  public getTextContent(element: Element, selector: string): string {
+    const child = element.querySelector(selector);
+
+    return child && child.textContent ? child.textContent : '';
+  }
+
+  public parseNoteRefs(secondaryNoteElement: Element): string[] {
+    return Array.from(
+      secondaryNoteElement.querySelectorAll(
+        `[id="${secondaryNoteElement.id}"] > .note-reference`,
+      ),
+    ).map(
+      (noteRefElement): string => {
+        return noteRefElement.innerHTML;
+      },
+    );
+  }
+
+  public parseSecondaryNotes(noteElement: Element): SecondaryNoteLDSSource[] {
+    console.log(noteElement.querySelectorAll(`[id="${noteElement.id}"] > div`));
+
+    return Array.from(
+      noteElement.querySelectorAll(`[id="${noteElement.id}"] > div`),
+    ).map(
+      (secondaryNoteElement): SecondaryNoteLDSSource => {
+        // console.log(secondaryNoteElement);
+        const secondaryNote = new SecondaryNoteLDSSource();
+
+        secondaryNote.classList = Array.from(secondaryNoteElement.classList);
+        secondaryNote.id = secondaryNote.id;
+        secondaryNote.notePhrase = this.getTextContent(
+          secondaryNoteElement,
+          '.note-phrase',
+        );
+        secondaryNote.noteRefs = this.parseNoteRefs(secondaryNoteElement);
+        return secondaryNote;
+      },
+    );
+  }
+
+  public parseNotes(noteChapterElement: Element, dataAid: string): void {
+    Array.from(noteChapterElement.querySelectorAll('note')).map(
+      (noteElement): void => {
+        const note = new NoteLDSSource();
+        note.chaterDataAid = dataAid;
+        note._id = noteElement.id;
+        note.noteShortTitle = this.getTextContent(
+          noteElement,
+          '.note-short-title',
+        );
+        note.noteTitle = this.getTextContent(noteElement, '.note-title');
+        // console.log(note);
+
+        note.secondaryNotes = this.parseSecondaryNotes(noteElement);
+        // console.log(note);
+        if (!this.allNotes) {
+          this.allNotes = [];
+        }
+        this.allNotes.push(note);
+
+        //  this.getAttribute(noteElement, 'offset');
+      },
+    );
+    console.log(this.allNotes);
   }
   public async loadChapterFile(file: string): Promise<void> {
     const domParser = new DOMParser();
@@ -50,13 +124,12 @@ export class DataService {
 
       this.chapterDocument = newDocument;
 
-      const chapterRoot = newDocument.querySelector('html');
-
-      const chapterDataAid = chapterRoot
-        ? chapterRoot.getAttribute('data-aid')
+      const chapterRoot = this.chapterDocument.querySelector('[data-aid]');
+      this.chapterDataAid = chapterRoot
+        ? this.getAttribute(chapterRoot, 'data-aid')
         : undefined;
 
-      if (!chapterDataAid) {
+      if (!this.chapterDataAid) {
         this.chapterDocument = undefined;
         alert('asodifj');
       }
@@ -65,11 +138,17 @@ export class DataService {
         this.verses = verses;
 
         if (this.notesDocument) {
-          const chapterNotes = document.querySelector(
-            `div.chapter[data-aid="${chapterDataAid}"]`,
+          const chapterNotes = this.notesDocument.querySelector(
+            `div.chapter[data-aid="${this.chapterDataAid}"]`,
           );
-          if (chapterNotes) {
+          if (chapterNotes && this.allNotes) {
             console.log(chapterNotes.id);
+            this.notes = this.allNotes.filter(
+              (note): boolean => {
+                return note.chaterDataAid === this.chapterDataAid;
+              },
+            );
+            console.log(this.notes);
           }
         } else {
           this.addNoteTemplates(newDocument);
@@ -83,24 +162,24 @@ export class DataService {
     } catch (error) {}
   }
 
-  private loadNavigation(): void {
-    if (!this.navigation && this.notesDocument) {
-      this.navigation = [];
-      Array.from(
-        this.notesDocument.querySelectorAll('body > ul > li > p > a'),
-      ).map(
-        (a: HTMLAnchorElement): void => {
-          const nav: Navigation = {
-            text: a.textContent,
-            href: a.href,
-          };
-          if (nav.text && nav.href && this.navigation) {
-            this.navigation.push(nav);
-          }
-        },
-      );
-    }
-  }
+  // private loadNavigation(): void {
+  //   if (!this.navigation && this.notesDocument) {
+  //     this.navigation = [];
+  //     Array.from(
+  //       this.notesDocument.querySelectorAll('body > ul > li > p > a'),
+  //     ).map(
+  //       (a: HTMLAnchorElement): void => {
+  //         const nav: Navigation = {
+  //           text: a.textContent,
+  //           href: a.href,
+  //         };
+  //         if (nav.text && nav.href && this.navigation) {
+  //           this.navigation.push(nav);
+  //         }
+  //       },
+  //     );
+  //   }
+  // }
 
   private getVerseNumber(verse: Element): string {
     const verseNumber = verse.querySelector('.verse-number');

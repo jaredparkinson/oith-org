@@ -10,6 +10,8 @@ import { SecondaryNoteComponent } from './components/secondary-note/secondary-no
 import { NoteTitleComponent } from './components/note-title/note-title.component';
 import { NotePhraseComponent } from './components/note-phrase/note-phrase.component';
 import { NoteReferenceComponent } from './components/note-reference/note-reference.component';
+import { DataService } from './services/data.service';
+import { VerseComponent } from './components/verse/verse.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,11 @@ import { NoteReferenceComponent } from './components/note-reference/note-referen
     SecondaryNoteComponent,
     NoteTitleComponent,
     NotePhraseComponent,
-    NoteReferenceComponent
+    NoteReferenceComponent,
+    VerseComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule],
+  providers: [DataService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

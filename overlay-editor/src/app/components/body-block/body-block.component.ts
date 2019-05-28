@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Verse } from '../../../../../oith.shared';
 
 @Component({
   selector: 'app-body-block',
   templateUrl: './body-block.component.html',
-  styleUrls: ['./body-block.component.scss']
+  styleUrls: ['./body-block.component.scss'],
 })
 export class BodyBlockComponent implements OnInit {
+  @Input() public verses: Verse[];
+  public constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  public ngOnInit(): void {}
 }

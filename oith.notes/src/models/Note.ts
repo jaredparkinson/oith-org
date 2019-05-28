@@ -9,6 +9,7 @@ export class Note {
 }
 
 export class NoteLDSSource {
+  public chaterDataAid: string;
   public _id: string | undefined;
   public _rev: string | undefined;
   public noteShortTitle: string;
@@ -19,7 +20,6 @@ export class NoteLDSSource {
 export class SecondaryNoteLDSSource {
   public classList: string[] | undefined;
   public id: string;
-  public noteMarker: string | undefined | null;
   public notePhrase: string | undefined;
   public noteRefs: string[] = [];
   public offset: string;

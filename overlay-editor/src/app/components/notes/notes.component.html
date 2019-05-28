@@ -1,8 +1,6 @@
-<ng-container
-  *ngIf="this.dataService.notes && this.dataService.notes.length > 0"
->
+<ng-container *ngIf="notes.length > 0">
   <ul>
-    <li *ngFor="let note of this.dataService.notes">
+    <li *ngFor="let note of this.notes">
       <p class="note-title">{{ note.noteTitle }}s</p>
       <p class="note-short-title">{{ note.noteShortTitle }}</p>
       <ng-container
