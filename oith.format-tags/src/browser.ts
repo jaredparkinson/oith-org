@@ -115,3 +115,4 @@ window.addEventListener(
     await loadNotes();
   },
 );
+export function main() {}

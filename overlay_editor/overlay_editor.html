@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Overlay Editor</title>
+  </head>
+  <body>
+    <div id="app">
+      <div v-if="verses">
+        <verse-item
+          v-for="verse in verses"
+          v-bind:verse="verse"
+          v-bind:key="verse.id"
+        ></verse-item>
+      </div>
+      <span v-else
+        ><input type="file" name="notes-file" id="notesFileOpener"
+      /></span>
+    </div>
+  </body>
+  <script src="./dist/main.js"></script>
+</html>
