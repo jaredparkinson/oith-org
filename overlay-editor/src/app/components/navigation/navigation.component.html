@@ -1,0 +1,8 @@
+<ul>
+  <li
+    *ngFor="let nav of this.dataService.navigation"
+    (click)="this.openChapter(nav)"
+  >
+    {{ nav.text }}
+  </li>
+</ul>

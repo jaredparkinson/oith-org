@@ -6,6 +6,7 @@
     "node": ">= 10.13"
   },
   "devDependencies": {
+    "@angular/cli": "^7.3.9",
     "@types/jest": "^23.3.12",
     "@types/lodash": "^4.14.132",
     "@types/node": "^10.12.18",
