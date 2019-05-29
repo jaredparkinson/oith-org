@@ -1,15 +1,21 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Note } from '../../../../../oith.shared';
-import { Verse } from '../../../../../oith.format-tags/src/models/Verse';
+import {
+  Verse,
+  LDSSourceVerse,
+} from '../../../../../oith.format-tags/src/models/Verse';
+import { NoteLDSSource } from '../../../../../oith.notes/src/models/Note';
 @Component({
   selector: 'app-verse',
   templateUrl: './verse.component.html',
   styleUrls: ['./verse.component.scss'],
 })
 export class VerseComponent implements OnInit {
-  @Input() public notes: Note[];
-  @Input() public verse: Verse;
+  @Input() public notes: NoteLDSSource[];
+  @Input() public verse: LDSSourceVerse;
   public constructor() {}
 
-  public ngOnInit() {}
+  public ngOnInit(): void {
+    console.log(this.verse.note);
+  }
 }

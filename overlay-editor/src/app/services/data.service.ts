@@ -2,7 +2,10 @@ import { Injectable } from '@angular/core';
 import { Navigation } from '../models/Navigation';
 import { run } from '../../../../oith.format-tags/src/run';
 import { Environment } from '../../../../oith.format-tags/src/Environment';
-import { Verse } from '../../../../oith.format-tags/src/models/Verse';
+import {
+  Verse,
+  LDSSourceVerse,
+} from '../../../../oith.format-tags/src/models/Verse';
 import { Note, SecondaryNote } from '../../../../oith.shared';
 import { queryVerseElements } from '../../../../oith.format-tags/src/functions/queryVerseElements';
 import {
@@ -20,7 +23,7 @@ export class DataService {
   public noteDataAids: Map<string, boolean> = new Map();
   public chapterDocument: Document | undefined;
 
-  public verses: Verse[] | undefined;
+  public verses: LDSSourceVerse[] | undefined;
   public notes: NoteLDSSource[] | undefined;
   public allNotes: NoteLDSSource[] | undefined;
   public chapterDataAid: string | undefined;
@@ -132,7 +135,10 @@ export class DataService {
         alert('asodifj');
       }
       try {
-        const verses = await run(newDocument, Environment.browser);
+        const verses = (await run(
+          newDocument,
+          Environment.browser,
+        )) as LDSSourceVerse[];
         this.verses = verses;
 
         if (this.notesDocument) {
@@ -140,16 +146,16 @@ export class DataService {
             `div.chapter[data-aid="${this.chapterDataAid}"]`,
           );
           if (chapterNotes && this.allNotes) {
-            // console.log(chapterNotes.id);
             this.notes = this.allNotes.filter(
               (note): boolean => {
                 return note.chaterDataAid === this.chapterDataAid;
               },
             );
+            this.addExistingNotesToVerses(this.verses, this.notes);
             // console.log(this.notes);
           }
         } else {
-          this.addNoteTemplates(newDocument);
+          this.addNoteTemplates(newDocument, this.verses);
         }
         // console.log(this.verses);
       } catch (error) {
@@ -158,6 +164,24 @@ export class DataService {
       }
       // this.loadNavigation();
     } catch (error) {}
+  }
+  public addExistingNotesToVerses(
+    verses: LDSSourceVerse[],
+    notes: NoteLDSSource[],
+  ): void {
+    notes.map(
+      (note): void => {
+        const verse = verses.find(
+          (verse): boolean => {
+            const id = note._id ? note._id.replace('note', 'p') : '';
+            return verse.id === id;
+          },
+        );
+        if (verse) {
+          verse.note = note;
+        }
+      },
+    );
   }
 
   // private loadNavigation(): void {
@@ -220,7 +244,10 @@ export class DataService {
       }
     }
   }
-  private async addNoteTemplates(document: Document): Promise<void> {
+  private async addNoteTemplates(
+    document: Document,
+    verses: LDSSourceVerse[],
+  ): Promise<void> {
     const verseElements = await queryVerseElements(document);
     const titleElemment = document.querySelector('title');
     const title =
@@ -228,30 +255,63 @@ export class DataService {
         ? titleElemment.textContent
         : '';
     this.notes = [];
-    if (verseElements) {
-      this.getHeaderNotes(document, title);
-      const chapterNote = new NoteLDSSource();
 
-      chapterNote.noteShortTitle = `${title} Notes`;
-      chapterNote.noteShortTitle = `${title} Notes`;
-
-      verseElements.map(
-        (verse): void => {
-          const verseNumber = this.getVerseNumber(verse);
-          if (verseNumber.trim() !== '') {
-            const note = new NoteLDSSource();
-            note._id = `note${verseNumber}`;
-            note.noteTitle = `${title}:${verseNumber} Notes`;
-            note.noteShortTitle = `Verse ${verseNumber} Notes`;
-            if (this.notes) {
-              this.notes.push(note);
-            }
-            // console.log(verseNumber);
+    verses.map(
+      (verse): void => {
+        const verseElement = document.getElementById(verse._id);
+        if (verseElement) {
+          const verseNumber = this.getVerseNumber(verseElement);
+          const note = new NoteLDSSource();
+          note._id = `note${verseNumber}`;
+          note.noteTitle = `${title}:${verseNumber} Notes`;
+          note.noteShortTitle = `Verse ${verseNumber} Notes`;
+          if (this.notes) {
+            this.notes.push(note);
           }
-        },
-      );
-    }
+          verse.note = note;
+        }
+      },
+    );
+    // if (verseElements) {
+    //   this.getHeaderNotes(document, title);
+    //   const chapterNote = new NoteLDSSource();
+
+    //   chapterNote.noteShortTitle = `${title} Notes`;
+    //   chapterNote.noteShortTitle = `${title} Notes`;
+
+    //   verseElements.map(
+    //     (verse): void => {
+    //       const verseNumber = this.getVerseNumber(verse);
+    //       if (verseNumber.trim() !== '') {
+    //         const note = new NoteLDSSource();
+    //         note._id = `note${verseNumber}`;
+    //         note.noteTitle = `${title}:${verseNumber} Notes`;
+    //         note.noteShortTitle = `Verse ${verseNumber} Notes`;
+    //         if (this.notes) {
+    //           this.notes.push(note);
+    //         }
+    //         // console.log(verseNumber);
+    //       }
+    //     },
+    //   );
+    // }
 
     // console.log(this.notes);
   }
+}
+function parseOffset(compressedOffset: string): number[] {
+  let offsetSplit: number[] = [];
+  compressedOffset.split(',').map(
+    (r): void => {
+      if (r.indexOf('-') !== -1) {
+        const split2 = r.split('-');
+        const f = parseInt(split2[0]);
+        const l = parseInt(split2[1]);
+        offsetSplit = offsetSplit.concat(range(f, l));
+      } else {
+        offsetSplit.push(parseInt(r));
+      }
+    },
+  );
+  return offsetSplit;
 }

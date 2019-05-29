@@ -62,7 +62,7 @@
 		<note id="note1">
 			<p class="note-title">Mark 1:1 Notes</p>
 			<p class="note-short-title">Verse 1 Notes</p>
-			<div class="eng-note" id="128397862" offset="23-28">
+			<div class="eng-note" id="128397862" offset="23-28,30,31">
 				<p class="note-phrase">“gospel”</p>
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/gospel">Gospel</a>.</p>
 			</div>
