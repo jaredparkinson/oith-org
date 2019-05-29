@@ -110,9 +110,6 @@ export class DataService {
           noteElement,
           '.note-short-title',
         );
-        if (note.noteShortTitle === 'Verse 36 Notes') {
-          console.log('Verse 36 Notes');
-        }
         note.noteTitle = this.getTextContent(noteElement, '.note-title');
         // console.log(note);
 

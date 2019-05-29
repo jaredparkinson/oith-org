@@ -22,7 +22,7 @@ export async function normalizeCharacterCounts(
       studyNoteRef.classList.remove('scripture-ref');
     },
   );
-  Array.from(document.querySelectorAll('.clarity-word')).map(
+  Array.from(document.querySelectorAll('.clarity-word,.dominant')).map(
     (clarityWord): void => {
       const a = clarityWord.querySelector('a') as HTMLAnchorElement;
 

@@ -6,6 +6,11 @@ export async function verifyVerseFlatness(
   return (
     verseSelectors.filter(
       (verseSelector): boolean => {
+        console.log(verseSelector);
+
+        console.log(document.querySelectorAll(`${verseSelector} > * > *`));
+
+
         return document.querySelectorAll(`${verseSelector} > * > *`).length > 0;
       },
     ).length === 0

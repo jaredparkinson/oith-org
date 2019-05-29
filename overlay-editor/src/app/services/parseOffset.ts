@@ -1,5 +1,8 @@
 import { range } from 'lodash';
-export function parseOffset(compressedOffset: string): number[] {
+export function parseOffset(compressedOffset: string): number[] | undefined {
+  if (compressedOffset === '') {
+    return undefined;
+  }
   let offsetSplit: number[] = [];
   compressedOffset.split(',').map(
     (r): void => {

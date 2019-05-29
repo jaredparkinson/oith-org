@@ -9,8 +9,8 @@ import axios from 'axios';
 export class AppComponent implements OnInit {
   public async ngOnInit(): Promise<void> {
     try {
-      const noteFile = await axios.get('assets/new-notes-mark.xml');
-      const chapterFile = await axios.get('assets/14.html');
+      const noteFile = await axios.get('assets/eng-notes-mark.xml');
+      const chapterFile = await axios.get('assets/1.html');
       this.dataService.loadNotesDocument(noteFile.data);
       this.dataService.loadChapterFile(chapterFile.data);
       console.log(noteFile);
