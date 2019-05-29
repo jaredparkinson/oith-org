@@ -8,8 +8,9 @@ import { Verse, Note } from '../../../../../oith.shared';
 })
 export class BodyBlockComponent implements OnInit {
   @Input() public verses: Verse[];
-  @Input() public notes: Note[];
   public constructor() {}
 
-  public ngOnInit(): void {}
+  public ngOnInit(): void {
+    console.log(this.verses);
+  }
 }

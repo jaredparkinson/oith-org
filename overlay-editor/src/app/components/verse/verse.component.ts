@@ -11,11 +11,8 @@ import { NoteLDSSource } from '../../../../../oith.notes/src/models/Note';
   styleUrls: ['./verse.component.scss'],
 })
 export class VerseComponent implements OnInit {
-  @Input() public notes: NoteLDSSource[];
   @Input() public verse: LDSSourceVerse;
   public constructor() {}
 
-  public ngOnInit(): void {
-    console.log(this.verse.note);
-  }
+  public ngOnInit(): void {}
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html>
 	<head>
-		<meta charset="UTF-8"/>
+		<meta charset="UTF-8"><note/>
 		<!-- scripts and css go here -->
 	</head>
 	<body>
@@ -131,7 +131,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/lev/11.22">Lev. 11:22</a>.</p>
 			</div>
 		</note>
-		<note id="note7"/>
+		<note id="note7"><note/>
 		<note id="note8">
 			<p class="note-title">Mark 1:8 Notes</p>
 			<p class="note-short-title">Verse 8 Notes</p>
@@ -160,7 +160,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/holy-ghost-dove-sign-of">Holy Ghost, Dove, Sign of</a>.</p>
 			</div>
 		</note>
-		<note id="note11"/>
+		<note id="note11"><note/>
 		<note id="note12">
 			<p class="note-title">Mark 1:12 Notes</p>
 			<p class="note-short-title">Verse 12 Notes</p>
@@ -173,7 +173,7 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>desert.</p>
 			</div>
 		</note>
-		<note id="note13"/>
+		<note id="note13"><note/>
 		<note id="note14">
 			<p class="note-title">Mark 1:14 Notes</p>
 			<p class="note-short-title">Verse 14 Notes</p>
@@ -207,7 +207,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/faith">Faith</a>.</p>
 			</div>
 		</note>
-		<note id="note16"/>
+		<note id="note16"><note/>
 		<note id="note17">
 			<p class="note-title">Mark 1:17 Notes</p>
 			<p class="note-short-title">Verse 17 Notes</p>
@@ -216,9 +216,9 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/apostles">Apostles</a>; <a class="scripture-ref" href="#/tg/missionary-work">Missionary Work</a>.</p>
 			</div>
 		</note>
-		<note id="note18"/>
-		<note id="note19"/>
-		<note id="note20"/>
+		<note id="note18"><note/>
+		<note id="note19"><note/>
+		<note id="note20"><note/>
 		<note id="note21">
 			<p class="note-title">Mark 1:21 Notes</p>
 			<p class="note-short-title">Verse 21 Notes</p>
@@ -283,8 +283,8 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/authority">Authority</a>; <a class="scripture-ref" href="#/tg/jesus-christ-authority-of">Jesus Christ, Authority of</a>.</p>
 			</div>
 		</note>
-		<note id="note28"/>
-		<note id="note29"/>
+		<note id="note28"><note/>
+		<note id="note29"><note/>
 		<note id="note30">
 			<p class="note-title">Mark 1:30 Notes</p>
 			<p class="note-short-title">Verse 30 Notes</p>
@@ -301,8 +301,8 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/heal">Heal</a>.</p>
 			</div>
 		</note>
-		<note id="note32"/>
-		<note id="note33"/>
+		<note id="note32"><note/>
+		<note id="note33"><note/>
 		<note id="note34">
 			<p class="note-title">Mark 1:34 Notes</p>
 			<p class="note-short-title">Verse 34 Notes</p>
@@ -320,9 +320,9 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>did not allow.</p>
 			</div>
 		</note>
-		<note id="note35"/>
-		<note id="note36"/>
-		<note id="note37"/>
+		<note id="note35"><note/>
+		<note id="note36"><note/>
+		<note id="note37"><note/>
 		<note id="note38">
 			<p class="note-title">Mark 1:38 Notes</p>
 			<p class="note-short-title">Verse 38 Notes</p>
@@ -359,7 +359,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/compassion">Compassion</a>.</p>
 			</div>
 		</note>
-		<note id="note42"/>
+		<note id="note42"><note/>
 		<note id="note43">
 			<p class="note-title">Mark 1:43 Notes</p>
 			<p class="note-short-title">Verse 43 Notes</p>
@@ -368,7 +368,7 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>warned him sternly.</p>
 			</div>
 		</note>
-		<note id="note44"/>
+		<note id="note44"><note/>
 		<note id="note45">
 			<p class="note-title">Mark 1:45 Notes</p>
 			<p class="note-short-title">Verse 45 Notes</p>
@@ -403,7 +403,7 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>carried.</p>
 			</div>
 		</note>
-		<note id="note4"/>
+		<note id="note4"><note/>
 		<note id="note5">
 			<p class="note-title">Mark 2:5 Notes</p>
 			<p class="note-short-title">Verse 5 Notes</p>
@@ -412,7 +412,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/luke/7.48">Luke 7:48</a>; <a class="scripture-ref" href="#/james/5.15.14-15">James 5:15 (14–15)</a>.</p>
 			</div>
 		</note>
-		<note id="note6"/>
+		<note id="note6"><note/>
 		<note id="note7">
 			<p class="note-title">Mark 2:7 Notes</p>
 			<p class="note-short-title">Verse 7 Notes</p>
@@ -421,8 +421,8 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/blaspheme">Blaspheme</a>.</p>
 			</div>
 		</note>
-		<note id="note8"/>
-		<note id="note9"/>
+		<note id="note8"><note/>
+		<note id="note9"><note/>
 		<note id="note10">
 			<p class="note-title">Mark 2:10 Notes</p>
 			<p class="note-short-title">Verse 10 Notes</p>
@@ -443,8 +443,8 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/3-ne/7.22">3 Ne. 7:22</a>.</p>
 			</div>
 		</note>
-		<note id="note12"/>
-		<note id="note13"/>
+		<note id="note12"><note/>
+		<note id="note13"><note/>
 		<note id="note14">
 			<p class="note-title">Mark 2:14 Notes</p>
 			<p class="note-short-title">Verse 14 Notes</p>
@@ -453,7 +453,7 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>tax office.</p>
 			</div>
 		</note>
-		<note id="note15"/>
+		<note id="note15"><note/>
 		<note id="note16">
 			<p class="note-title">Mark 2:16 Notes</p>
 			<p class="note-short-title">Verse 16 Notes</p>
@@ -490,7 +490,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/dc/65.3">D&amp;C 65:3</a>.</p>
 			</div>
 		</note>
-		<note id="note20"/>
+		<note id="note20"><note/>
 		<note id="note21">
 			<p class="note-title">Mark 2:21 Notes</p>
 			<p class="note-short-title">Verse 21 Notes</p>
@@ -499,7 +499,7 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>unshrunken or unsized.</p>
 			</div>
 		</note>
-		<note id="note22"/>
+		<note id="note22"><note/>
 		<note id="note23">
 			<p class="note-title">Mark 2:23 Notes</p>
 			<p class="note-short-title">Verse 23 Notes</p>
@@ -508,9 +508,9 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>occasionally picking some grain.</p>
 			</div>
 		</note>
-		<note id="note24"/>
-		<note id="note25"/>
-		<note id="note26"/>
+		<note id="note24"><note/>
+		<note id="note25"><note/>
+		<note id="note26"><note/>
 		<note id="note27">
 			<p class="note-title">Mark 2:27 Notes</p>
 			<p class="note-short-title">Verse 27 Notes</p>
@@ -533,7 +533,7 @@
 		</note>
 	</div>
 	<div class="chapter" data-aid="128398316" data-aid-version="3" data-uri="/scriptures/nt/mark/3" lang="eng">
-		<note id="note1"/>
+		<note id="note1"><note/>
 		<note id="note2">
 			<p class="note-title">Mark 3:2 Notes</p>
 			<p class="note-short-title">Verse 2 Notes</p>
@@ -542,7 +542,7 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>watched carefully, maliciously.</p>
 			</div>
 		</note>
-		<note id="note3"/>
+		<note id="note3"><note/>
 		<note id="note4">
 			<p class="note-title">Mark 3:4 Notes</p>
 			<p class="note-short-title">Verse 4 Notes</p>
@@ -576,8 +576,8 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/counsel">Counsel</a>.</p>
 			</div>
 		</note>
-		<note id="note7"/>
-		<note id="note8"/>
+		<note id="note7"><note/>
+		<note id="note8"><note/>
 		<note id="note9">
 			<p class="note-title">Mark 3:9 Notes</p>
 			<p class="note-short-title">Verse 9 Notes</p>
@@ -602,7 +602,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/spirits-evil-or-unclean">Spirits, Evil or Unclean</a>.</p>
 			</div>
 		</note>
-		<note id="note12"/>
+		<note id="note12"><note/>
 		<note id="note13">
 			<p class="note-title">Mark 3:13 Notes</p>
 			<p class="note-short-title">Verse 13 Notes</p>
@@ -640,7 +640,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/devil">Devil</a>.</p>
 			</div>
 		</note>
-		<note id="note16"/>
+		<note id="note16"><note/>
 		<note id="note17">
 			<p class="note-title">Mark 3:17 Notes</p>
 			<p class="note-short-title">Verse 17 Notes</p>
@@ -649,7 +649,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/luke/9.54">Luke 9:54</a>.</p>
 			</div>
 		</note>
-		<note id="note18"/>
+		<note id="note18"><note/>
 		<note id="note19">
 			<p class="note-title">Mark 3:19 Notes</p>
 			<p class="note-short-title">Verse 19 Notes</p>
@@ -674,12 +674,12 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>out of his senses.</p>
 			</div>
 		</note>
-		<note id="note22"/>
-		<note id="note23"/>
-		<note id="note24"/>
-		<note id="note25"/>
-		<note id="note26"/>
-		<note id="note27"/>
+		<note id="note22"><note/>
+		<note id="note23"><note/>
+		<note id="note24"><note/>
+		<note id="note25"><note/>
+		<note id="note26"><note/>
+		<note id="note27"><note/>
 		<note id="note28">
 			<p class="note-title">Mark 3:28 Notes</p>
 			<p class="note-short-title">Verse 28 Notes</p>
@@ -708,7 +708,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/damnation">Damnation</a>; <a class="scripture-ref" href="#/tg/eternity">Eternity</a>; <a class="scripture-ref" href="#/tg/punish">Punish</a>.</p>
 			</div>
 		</note>
-		<note id="note30"/>
+		<note id="note30"><note/>
 		<note id="note31">
 			<p class="note-title">Mark 3:31 Notes</p>
 			<p class="note-short-title">Verse 31 Notes</p>
@@ -721,9 +721,9 @@
 				<p class="note-reference"><span class="reference-label-or"> </span>outside.</p>
 			</div>
 		</note>
-		<note id="note32"/>
-		<note id="note33"/>
-		<note id="note34"/>
+		<note id="note32"><note/>
+		<note id="note33"><note/>
+		<note id="note34"><note/>
 		<note id="note35">
 			<p class="note-title">Mark 3:35 Notes</p>
 			<p class="note-short-title">Verse 35 Notes</p>
@@ -758,12 +758,12 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/dc/86.2.2-3">D&amp;C 86:2 (2–3)</a>.</p>
 			</div>
 		</note>
-		<note id="note4"/>
-		<note id="note5"/>
-		<note id="note6"/>
-		<note id="note7"/>
-		<note id="note8"/>
-		<note id="note9"/>
+		<note id="note4"><note/>
+		<note id="note5"><note/>
+		<note id="note6"><note/>
+		<note id="note7"><note/>
+		<note id="note8"><note/>
+		<note id="note9"><note/>
 		<note id="note10">
 			<p class="note-title">Mark 4:10 Notes</p>
 			<p class="note-short-title">Verse 10 Notes</p>
@@ -797,8 +797,8 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/forgive">Forgive</a>.</p>
 			</div>
 		</note>
-		<note id="note13"/>
-		<note id="note14"/>
+		<note id="note13"><note/>
+		<note id="note14"><note/>
 		<note id="note15">
 			<p class="note-title">Mark 4:15 Notes</p>
 			<p class="note-short-title">Verse 15 Notes</p>
@@ -828,7 +828,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/persecution">Persecution</a>.</p>
 			</div>
 		</note>
-		<note id="note18"/>
+		<note id="note18"><note/>
 		<note id="note19">
 			<p class="note-title">Mark 4:19 Notes</p>
 			<p class="note-short-title">Verse 19 Notes</p>
@@ -841,7 +841,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/lust">Lust</a>.</p>
 			</div>
 		</note>
-		<note id="note20"/>
+		<note id="note20"><note/>
 		<note id="note21">
 			<p class="note-title">Mark 4:21 Notes</p>
 			<p class="note-short-title">Verse 21 Notes</p>
@@ -850,7 +850,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/3-ne/18.24">3 Ne. 18:24</a>.</p>
 			</div>
 		</note>
-		<note id="note22"/>
+		<note id="note22"><note/>
 		<note id="note23">
 			<p class="note-title">Mark 4:23 Notes</p>
 			<p class="note-short-title">Verse 23 Notes</p>
@@ -883,7 +883,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/dc/43.10">D&amp;C 43:10</a>; <a class="scripture-ref" href="#/dc/60.3">60:3</a>.</p>
 			</div>
 		</note>
-		<note id="note26"/>
+		<note id="note26"><note/>
 		<note id="note27">
 			<p class="note-title">Mark 4:27 Notes</p>
 			<p class="note-short-title">Verse 27 Notes</p>
@@ -908,9 +908,9 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/harvest">Harvest</a>.</p>
 			</div>
 		</note>
-		<note id="note30"/>
-		<note id="note31"/>
-		<note id="note32"/>
+		<note id="note30"><note/>
+		<note id="note31"><note/>
+		<note id="note32"><note/>
 		<note id="note33">
 			<p class="note-title">Mark 4:33 Notes</p>
 			<p class="note-short-title">Verse 33 Notes</p>
@@ -919,11 +919,11 @@
 				<p class="note-reference"><span class="reference-label-quotation"> </span><small>JST</small> Mark 4:26 … able to <em>bear;</em> but without …</p>
 			</div>
 		</note>
-		<note id="note34"/>
-		<note id="note35"/>
-		<note id="note36"/>
-		<note id="note37"/>
-		<note id="note38"/>
+		<note id="note34"><note/>
+		<note id="note35"><note/>
+		<note id="note36"><note/>
+		<note id="note37"><note/>
+		<note id="note38"><note/>
 		<note id="note39">
 			<p class="note-title">Mark 4:39 Notes</p>
 			<p class="note-short-title">Verse 39 Notes</p>
@@ -948,12 +948,12 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/alma/44.4.1-5">Alma 44:4 (1–5)</a>; <a class="scripture-ref" href="#/dc/4.5.1-7">D&amp;C 4:5 (1–7)</a>.</p>
 			</div>
 		</note>
-		<note id="note41"/>
+		<note id="note41"><note/>
 	</div>
 	<div class="chapter" data-aid="128398453" data-aid-version="3" data-uri="/scriptures/nt/mark/5" lang="eng">
-		<note id="note1"/>
-		<note id="note2"/>
-		<note id="note3"/>
+		<note id="note1"><note/>
+		<note id="note2"><note/>
+		<note id="note3"><note/>
 		<note id="note4">
 			<p class="note-title">Mark 5:4 Notes</p>
 			<p class="note-short-title">Verse 4 Notes</p>
@@ -966,8 +966,8 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>was any man strong enough to tame him.</p>
 			</div>
 		</note>
-		<note id="note5"/>
-		<note id="note6"/>
+		<note id="note5"><note/>
+		<note id="note6"><note/>
 		<note id="note7">
 			<p class="note-title">Mark 5:7 Notes</p>
 			<p class="note-short-title">Verse 7 Notes</p>
@@ -988,10 +988,10 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/heal">Heal</a>.</p>
 			</div>
 		</note>
-		<note id="note9"/>
-		<note id="note10"/>
-		<note id="note11"/>
-		<note id="note12"/>
+		<note id="note9"><note/>
+		<note id="note10"><note/>
+		<note id="note11"><note/>
+		<note id="note12"><note/>
 		<note id="note13">
 			<p class="note-title">Mark 5:13 Notes</p>
 			<p class="note-short-title">Verse 13 Notes</p>
@@ -1000,7 +1000,7 @@
 				<p class="note-reference"><span class="reference-label-or"> </span>drowned.</p>
 			</div>
 		</note>
-		<note id="note14"/>
+		<note id="note14"><note/>
 		<note id="note15">
 			<p class="note-title">Mark 5:15 Notes</p>
 			<p class="note-short-title">Verse 15 Notes</p>
@@ -1013,9 +1013,9 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/mind">Mind</a>.</p>
 			</div>
 		</note>
-		<note id="note16"/>
-		<note id="note17"/>
-		<note id="note18"/>
+		<note id="note16"><note/>
+		<note id="note17"><note/>
+		<note id="note18"><note/>
 		<note id="note19">
 			<p class="note-title">Mark 5:19 Notes</p>
 			<p class="note-short-title">Verse 19 Notes</p>
@@ -1032,8 +1032,8 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/luke/8.39">Luke 8:39</a>.</p>
 			</div>
 		</note>
-		<note id="note21"/>
-		<note id="note22"/>
+		<note id="note21"><note/>
+		<note id="note22"><note/>
 		<note id="note23">
 			<p class="note-title">Mark 5:23 Notes</p>
 			<p class="note-short-title">Verse 23 Notes</p>
@@ -1042,7 +1042,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/administrations-to-the-sick">Administrations to the Sick</a>; <a class="scripture-ref" href="#/tg/hands-laying-on-of">Hands, Laying on of</a>.</p>
 			</div>
 		</note>
-		<note id="note24"/>
+		<note id="note24"><note/>
 		<note id="note25">
 			<p class="note-title">Mark 5:25 Notes</p>
 			<p class="note-short-title">Verse 25 Notes</p>
@@ -1051,7 +1051,7 @@
 				<p class="note-reference"><span class="reference-label-or"> </span>hemorrhage.</p>
 			</div>
 		</note>
-		<note id="note26"/>
+		<note id="note26"><note/>
 		<note id="note27">
 			<p class="note-title">Mark 5:27 Notes</p>
 			<p class="note-short-title">Verse 27 Notes</p>
@@ -1060,8 +1060,8 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/matt/14.36">Matt. 14:36</a>.</p>
 			</div>
 		</note>
-		<note id="note28"/>
-		<note id="note29"/>
+		<note id="note28"><note/>
+		<note id="note29"><note/>
 		<note id="note30">
 			<p class="note-title">Mark 5:30 Notes</p>
 			<p class="note-short-title">Verse 30 Notes</p>
@@ -1071,9 +1071,9 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/luke/6.19.17-19">Luke 6:19 (17–19)</a>; <a class="scripture-ref" href="#/luke/8.46.41-48">8:46 (41–48)</a>.</p>
 			</div>
 		</note>
-		<note id="note31"/>
-		<note id="note32"/>
-		<note id="note33"/>
+		<note id="note31"><note/>
+		<note id="note32"><note/>
+		<note id="note33"><note/>
 		<note id="note34">
 			<p class="note-title">Mark 5:34 Notes</p>
 			<p class="note-short-title">Verse 34 Notes</p>
@@ -1086,7 +1086,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/peace-of-god">Peace of God</a>.</p>
 			</div>
 		</note>
-		<note id="note35"/>
+		<note id="note35"><note/>
 		<note id="note36">
 			<p class="note-title">Mark 5:36 Notes</p>
 			<p class="note-short-title">Verse 36 Notes</p>
@@ -1095,8 +1095,8 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>exercise faith.</p>
 			</div>
 		</note>
-		<note id="note37"/>
-		<note id="note38"/>
+		<note id="note37"><note/>
+		<note id="note38"><note/>
 		<note id="note39">
 			<p class="note-title">Mark 5:39 Notes</p>
 			<p class="note-short-title">Verse 39 Notes</p>
@@ -1139,7 +1139,7 @@
 		</note>
 	</div>
 	<div class="chapter" data-aid="128398521" data-aid-version="3" data-uri="/scriptures/nt/mark/6" lang="eng">
-		<note id="note1"/>
+		<note id="note1"><note/>
 		<note id="note2">
 			<p class="note-title">Mark 6:2 Notes</p>
 			<p class="note-short-title">Verse 2 Notes</p>
@@ -1160,7 +1160,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/jesus-christ-family-of">Jesus Christ, Family of</a>.</p>
 			</div>
 		</note>
-		<note id="note4"/>
+		<note id="note4"><note/>
 		<note id="note5">
 			<p class="note-title">Mark 6:5 Notes</p>
 			<p class="note-short-title">Verse 5 Notes</p>
@@ -1205,8 +1205,8 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/matt/10.10.9-11">Matt. 10:10 (9–11)</a>.</p>
 			</div>
 		</note>
-		<note id="note9"/>
-		<note id="note10"/>
+		<note id="note9"><note/>
+		<note id="note10"><note/>
 		<note id="note11">
 			<p class="note-title">Mark 6:11 Notes</p>
 			<p class="note-short-title">Verse 11 Notes</p>
@@ -1240,11 +1240,11 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/luke/9.7.7-9">Luke 9:7 (7–9)</a>.</p>
 			</div>
 		</note>
-		<note id="note15"/>
-		<note id="note16"/>
-		<note id="note17"/>
-		<note id="note18"/>
-		<note id="note19"/>
+		<note id="note15"><note/>
+		<note id="note16"><note/>
+		<note id="note17"><note/>
+		<note id="note18"><note/>
+		<note id="note19"><note/>
 		<note id="note20">
 			<p class="note-title">Mark 6:20 Notes</p>
 			<p class="note-short-title">Verse 20 Notes</p>
@@ -1269,7 +1269,7 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>nobles, military commanders, and prominent men.</p>
 			</div>
 		</note>
-		<note id="note22"/>
+		<note id="note22"><note/>
 		<note id="note23">
 			<p class="note-title">Mark 6:23 Notes</p>
 			<p class="note-short-title">Verse 23 Notes</p>
@@ -1282,7 +1282,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/esth/5.3">Esth. 5:3</a>.</p>
 			</div>
 		</note>
-		<note id="note24"/>
+		<note id="note24"><note/>
 		<note id="note25">
 			<p class="note-title">Mark 6:25 Notes</p>
 			<p class="note-short-title">Verse 25 Notes</p>
@@ -1315,10 +1315,10 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>he did not desire to refuse.</p>
 			</div>
 		</note>
-		<note id="note27"/>
-		<note id="note28"/>
-		<note id="note29"/>
-		<note id="note30"/>
+		<note id="note27"><note/>
+		<note id="note28"><note/>
+		<note id="note29"><note/>
+		<note id="note30"><note/>
 		<note id="note31">
 			<p class="note-title">Mark 6:31 Notes</p>
 			<p class="note-short-title">Verse 31 Notes</p>
@@ -1339,7 +1339,7 @@
 				<p class="note-reference"><span class="reference-label-quotation"> </span><small>JST</small> Mark 6:33 … <em>solitary</em> …</p>
 			</div>
 		</note>
-		<note id="note33"/>
+		<note id="note33"><note/>
 		<note id="note34">
 			<p class="note-title">Mark 6:34 Notes</p>
 			<p class="note-short-title">Verse 34 Notes</p>
@@ -1364,7 +1364,7 @@
 				<p class="note-reference"><span class="reference-label-quotation"> </span><small>JST</small> Mark 6:36 … This is a <em>solitary</em> place, and now the time <em>for departure</em> is <em>come</em> …</p>
 			</div>
 		</note>
-		<note id="note36"/>
+		<note id="note36"><note/>
 		<note id="note37">
 			<p class="note-title">Mark 6:37 Notes</p>
 			<p class="note-short-title">Verse 37 Notes</p>
@@ -1373,12 +1373,12 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span><span class="language" lang="lat"><i>denarii;</i></span> one <span class="language" lang="lat"><i>denarius</i></span> was a workman’s daily wage.</p>
 			</div>
 		</note>
-		<note id="note38"/>
-		<note id="note39"/>
-		<note id="note40"/>
-		<note id="note41"/>
-		<note id="note42"/>
-		<note id="note43"/>
+		<note id="note38"><note/>
+		<note id="note39"><note/>
+		<note id="note40"><note/>
+		<note id="note41"><note/>
+		<note id="note42"><note/>
+		<note id="note43"><note/>
 		<note id="note44">
 			<p class="note-title">Mark 6:44 Notes</p>
 			<p class="note-short-title">Verse 44 Notes</p>
@@ -1387,7 +1387,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/matt/14.21.13-21">Matt. 14:21 (13–21)</a>; <a class="scripture-ref" href="#/luke/9.14.10-17">Luke 9:14 (10–17)</a>; <a class="scripture-ref" href="#/john/6.10.1-13">John 6:10 (1–13)</a>.</p>
 			</div>
 		</note>
-		<note id="note45"/>
+		<note id="note45"><note/>
 		<note id="note46">
 			<p class="note-title">Mark 6:46 Notes</p>
 			<p class="note-short-title">Verse 46 Notes</p>
@@ -1396,7 +1396,7 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>bid them farewell.</p>
 			</div>
 		</note>
-		<note id="note47"/>
+		<note id="note47"><note/>
 		<note id="note48">
 			<p class="note-title">Mark 6:48 Notes</p>
 			<p class="note-short-title">Verse 48 Notes</p>
@@ -1405,7 +1405,7 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>struggling at their oars.</p>
 			</div>
 		</note>
-		<note id="note49"/>
+		<note id="note49"><note/>
 		<note id="note50">
 			<p class="note-title">Mark 6:50 Notes</p>
 			<p class="note-short-title">Verse 50 Notes</p>
@@ -1414,7 +1414,7 @@
 				<p class="note-reference"><span class="reference-label-or"> </span>terrified.</p>
 			</div>
 		</note>
-		<note id="note51"/>
+		<note id="note51"><note/>
 		<note id="note52">
 			<p class="note-title">Mark 6:52 Notes</p>
 			<p class="note-short-title">Verse 52 Notes</p>
@@ -1428,14 +1428,14 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/hardheartedness">Hardheartedness</a>.</p>
 			</div>
 		</note>
-		<note id="note53"/>
-		<note id="note54"/>
-		<note id="note55"/>
-		<note id="note56"/>
+		<note id="note53"><note/>
+		<note id="note54"><note/>
+		<note id="note55"><note/>
+		<note id="note56"><note/>
 	</div>
 	<div class="chapter" data-aid="128396520" data-aid-version="3" data-uri="/scriptures/nt/mark/7" lang="eng">
-		<note id="note1"/>
-		<note id="note2"/>
+		<note id="note1"><note/>
+		<note id="note2"><note/>
 		<note id="note3">
 			<p class="note-title">Mark 7:3 Notes</p>
 			<p class="note-short-title">Verse 3 Notes</p>
@@ -1444,7 +1444,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/purification">Purification</a>.</p>
 			</div>
 		</note>
-		<note id="note4"/>
+		<note id="note4"><note/>
 		<note id="note5">
 			<p class="note-title">Mark 7:5 Notes</p>
 			<p class="note-short-title">Verse 5 Notes</p>
@@ -1461,7 +1461,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/apostasy-of-israel">Apostasy of Israel</a>; <a class="scripture-ref" href="#/tg/hypocrisy">Hypocrisy</a>.</p>
 			</div>
 		</note>
-		<note id="note7"/>
+		<note id="note7"><note/>
 		<note id="note8">
 			<p class="note-title">Mark 7:8 Notes</p>
 			<p class="note-short-title">Verse 8 Notes</p>
@@ -1470,7 +1470,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/traditions-of-men">Traditions of Men</a>.</p>
 			</div>
 		</note>
-		<note id="note9"/>
+		<note id="note9"><note/>
 		<note id="note10">
 			<p class="note-title">Mark 7:10 Notes</p>
 			<p class="note-short-title">Verse 10 Notes</p>
@@ -1491,9 +1491,9 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/matt/15.5">Matt. 15:5</a>.</p>
 			</div>
 		</note>
-		<note id="note12"/>
-		<note id="note13"/>
-		<note id="note14"/>
+		<note id="note12"><note/>
+		<note id="note13"><note/>
+		<note id="note14"><note/>
 		<note id="note15">
 			<p class="note-title">Mark 7:15 Notes</p>
 			<p class="note-short-title">Verse 15 Notes</p>
@@ -1506,10 +1506,10 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/titus/1.15">Titus 1:15</a>; <a class="scripture-ref" href="#/2-ne/19.17">2 Ne. 19:17</a>; <a class="scripture-ref" href="#/dc/93.35">D&amp;C 93:35</a>.</p>
 			</div>
 		</note>
-		<note id="note16"/>
-		<note id="note17"/>
-		<note id="note18"/>
-		<note id="note19"/>
+		<note id="note16"><note/>
+		<note id="note17"><note/>
+		<note id="note18"><note/>
+		<note id="note19"><note/>
 		<note id="note20">
 			<p class="note-title">Mark 7:20 Notes</p>
 			<p class="note-short-title">Verse 20 Notes</p>
@@ -1570,8 +1570,8 @@
 				<p class="note-reference"><span class="reference-label-quotation"> </span><small>JST</small> Mark 7:22–23 … and would <em>that</em> no man <em>should come unto him.</em> But he could not <em>deny them; for he had compassion upon all men.</em></p>
 			</div>
 		</note>
-		<note id="note25"/>
-		<note id="note26"/>
+		<note id="note25"><note/>
+		<note id="note26"><note/>
 		<note id="note27">
 			<p class="note-title">Mark 7:27 Notes</p>
 			<p class="note-short-title">Verse 27 Notes</p>
@@ -1584,8 +1584,8 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/dc/41.6">D&amp;C 41:6</a>.</p>
 			</div>
 		</note>
-		<note id="note28"/>
-		<note id="note29"/>
+		<note id="note28"><note/>
+		<note id="note29"><note/>
 		<note id="note30">
 			<p class="note-title">Mark 7:30 Notes</p>
 			<p class="note-short-title">Verse 30 Notes</p>
@@ -1594,7 +1594,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/1-ne/11.31">1 Ne. 11:31</a>.</p>
 			</div>
 		</note>
-		<note id="note31"/>
+		<note id="note31"><note/>
 		<note id="note32">
 			<p class="note-title">Mark 7:32 Notes</p>
 			<p class="note-short-title">Verse 32 Notes</p>
@@ -1603,8 +1603,8 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/administrations-to-the-sick">Administrations to the Sick</a>; <a class="scripture-ref" href="#/tg/hands-laying-on-of">Hands, Laying on of</a>.</p>
 			</div>
 		</note>
-		<note id="note33"/>
-		<note id="note34"/>
+		<note id="note33"><note/>
+		<note id="note34"><note/>
 		<note id="note35">
 			<p class="note-title">Mark 7:35 Notes</p>
 			<p class="note-short-title">Verse 35 Notes</p>
@@ -1621,11 +1621,11 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/matt/9.31">Matt. 9:31</a>.</p>
 			</div>
 		</note>
-		<note id="note37"/>
+		<note id="note37"><note/>
 	</div>
 	<div class="chapter" data-aid="128398548" data-aid-version="3" data-uri="/scriptures/nt/mark/8" lang="eng">
-		<note id="note1"/>
-		<note id="note2"/>
+		<note id="note1"><note/>
+		<note id="note2"><note/>
 		<note id="note3">
 			<p class="note-title">Mark 8:3 Notes</p>
 			<p class="note-short-title">Verse 3 Notes</p>
@@ -1634,13 +1634,13 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>some.</p>
 			</div>
 		</note>
-		<note id="note4"/>
-		<note id="note5"/>
-		<note id="note6"/>
-		<note id="note7"/>
-		<note id="note8"/>
-		<note id="note9"/>
-		<note id="note10"/>
+		<note id="note4"><note/>
+		<note id="note5"><note/>
+		<note id="note6"><note/>
+		<note id="note7"><note/>
+		<note id="note8"><note/>
+		<note id="note9"><note/>
+		<note id="note10"><note/>
 		<note id="note11">
 			<p class="note-title">Mark 8:11 Notes</p>
 			<p class="note-short-title">Verse 11 Notes</p>
@@ -1657,10 +1657,10 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/matt/16.4.1-12">Matt. 16:4 (1–12)</a>.</p>
 			</div>
 		</note>
-		<note id="note13"/>
-		<note id="note14"/>
-		<note id="note15"/>
-		<note id="note16"/>
+		<note id="note13"><note/>
+		<note id="note14"><note/>
+		<note id="note15"><note/>
+		<note id="note16"><note/>
 		<note id="note17">
 			<p class="note-title">Mark 8:17 Notes</p>
 			<p class="note-short-title">Verse 17 Notes</p>
@@ -1673,11 +1673,11 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/hardheartedness">Hardheartedness</a>.</p>
 			</div>
 		</note>
-		<note id="note18"/>
-		<note id="note19"/>
-		<note id="note20"/>
-		<note id="note21"/>
-		<note id="note22"/>
+		<note id="note18"><note/>
+		<note id="note19"><note/>
+		<note id="note20"><note/>
+		<note id="note21"><note/>
+		<note id="note22"><note/>
 		<note id="note23">
 			<p class="note-title">Mark 8:23 Notes</p>
 			<p class="note-short-title">Verse 23 Notes</p>
@@ -1690,7 +1690,7 @@
 				<p class="note-reference"><span class="reference-label-or"> </span>anything.</p>
 			</div>
 		</note>
-		<note id="note24"/>
+		<note id="note24"><note/>
 		<note id="note25">
 			<p class="note-title">Mark 8:25 Notes</p>
 			<p class="note-short-title">Verse 25 Notes</p>
@@ -1699,9 +1699,9 @@
 				<p class="note-reference"><span class="reference-label-or"> </span>everything.</p>
 			</div>
 		</note>
-		<note id="note26"/>
-		<note id="note27"/>
-		<note id="note28"/>
+		<note id="note26"><note/>
+		<note id="note27"><note/>
+		<note id="note28"><note/>
 		<note id="note29">
 			<p class="note-title">Mark 8:29 Notes</p>
 			<p class="note-short-title">Verse 29 Notes</p>
@@ -1726,7 +1726,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/jesus-christ-teaching-mode-of">Jesus Christ, Teaching Mode of</a>.</p>
 			</div>
 		</note>
-		<note id="note32"/>
+		<note id="note32"><note/>
 		<note id="note33">
 			<p class="note-title">Mark 8:33 Notes</p>
 			<p class="note-short-title">Verse 33 Notes</p>
@@ -1803,7 +1803,7 @@
 		</note>
 	</div>
 	<div class="chapter" data-aid="128398651" data-aid-version="3" data-uri="/scriptures/nt/mark/9" lang="eng">
-		<note id="note1"/>
+		<note id="note1"><note/>
 		<note id="note2">
 			<p class="note-title">Mark 9:2 Notes</p>
 			<p class="note-short-title">Verse 2 Notes</p>
@@ -1820,7 +1820,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/matt/17.2.1-13">Matt. 17:2 (1–13)</a>; <a class="scripture-ref" href="#/luke/9.29.28-36">Luke 9:29 (28–36)</a>.</p>
 			</div>
 		</note>
-		<note id="note3"/>
+		<note id="note3"><note/>
 		<note id="note4">
 			<p class="note-title">Mark 9:4 Notes</p>
 			<p class="note-short-title">Verse 4 Notes</p>
@@ -1829,8 +1829,8 @@
 				<p class="note-reference"><span class="reference-label-quotation"> </span><a class="scripture-ref" href="#/jst/jst-mark/9.3"><small>JST</small> Mark 9:3</a> … Moses, <em>or in other words, John the Baptist and Moses</em> …</p>
 			</div>
 		</note>
-		<note id="note5"/>
-		<note id="note6"/>
+		<note id="note5"><note/>
+		<note id="note6"><note/>
 		<note id="note7">
 			<p class="note-title">Mark 9:7 Notes</p>
 			<p class="note-short-title">Verse 7 Notes</p>
@@ -1843,7 +1843,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/matt/3.17">Matt. 3:17</a>; <a class="scripture-ref" href="#/luke/9.35.34-36">Luke 9:35 (34–36)</a>.</p>
 			</div>
 		</note>
-		<note id="note8"/>
+		<note id="note8"><note/>
 		<note id="note9">
 			<p class="note-title">Mark 9:9 Notes</p>
 			<p class="note-short-title">Verse 9 Notes</p>
@@ -1860,7 +1860,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/john/20.9">John 20:9</a>.</p>
 			</div>
 		</note>
-		<note id="note11"/>
+		<note id="note11"><note/>
 		<note id="note12">
 			<p class="note-title">Mark 9:12 Notes</p>
 			<p class="note-short-title">Verse 12 Notes</p>
@@ -1897,10 +1897,10 @@
 				<p class="note-reference"><span class="reference-label-quotation"> </span><small>JST</small> Mark 9:11 … him; <em>and he bore record of me, and they received him not. Verily this was Elias.</em></p>
 			</div>
 		</note>
-		<note id="note14"/>
-		<note id="note15"/>
-		<note id="note16"/>
-		<note id="note17"/>
+		<note id="note14"><note/>
+		<note id="note15"><note/>
+		<note id="note16"><note/>
+		<note id="note17"><note/>
 		<note id="note18">
 			<p class="note-title">Mark 9:18 Notes</p>
 			<p class="note-short-title">Verse 18 Notes</p>
@@ -1909,7 +1909,7 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>dashes on the ground, convulses, lacerates.</p>
 			</div>
 		</note>
-		<note id="note19"/>
+		<note id="note19"><note/>
 		<note id="note20">
 			<p class="note-title">Mark 9:20 Notes</p>
 			<p class="note-short-title">Verse 20 Notes</p>
@@ -1918,7 +1918,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/mark/1.26">Mark 1:26</a>.</p>
 			</div>
 		</note>
-		<note id="note21"/>
+		<note id="note21"><note/>
 		<note id="note22">
 			<p class="note-title">Mark 9:22 Notes</p>
 			<p class="note-short-title">Verse 22 Notes</p>
@@ -1960,7 +1960,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/spirits-evil-or-unclean">Spirits, Evil or Unclean</a>.</p>
 			</div>
 		</note>
-		<note id="note26"/>
+		<note id="note26"><note/>
 		<note id="note27">
 			<p class="note-title">Mark 9:27 Notes</p>
 			<p class="note-short-title">Verse 27 Notes</p>
@@ -1969,7 +1969,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/acts/3.7">Acts 3:7</a>.</p>
 			</div>
 		</note>
-		<note id="note28"/>
+		<note id="note28"><note/>
 		<note id="note29">
 			<p class="note-title">Mark 9:29 Notes</p>
 			<p class="note-short-title">Verse 29 Notes</p>
@@ -1978,7 +1978,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/problem-solving">Problem-Solving</a>.</p>
 			</div>
 		</note>
-		<note id="note30"/>
+		<note id="note30"><note/>
 		<note id="note31">
 			<p class="note-title">Mark 9:31 Notes</p>
 			<p class="note-short-title">Verse 31 Notes</p>
@@ -1991,7 +1991,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/jesus-christ-resurrection">Jesus Christ, Resurrection</a>.</p>
 			</div>
 		</note>
-		<note id="note32"/>
+		<note id="note32"><note/>
 		<note id="note33">
 			<p class="note-title">Mark 9:33 Notes</p>
 			<p class="note-short-title">Verse 33 Notes</p>
@@ -2024,7 +2024,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/meek">Meek</a>.</p>
 			</div>
 		</note>
-		<note id="note36"/>
+		<note id="note36"><note/>
 		<note id="note37">
 			<p class="note-title">Mark 9:37 Notes</p>
 			<p class="note-short-title">Verse 37 Notes</p>
@@ -2101,7 +2101,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/hell">Hell</a>.</p>
 			</div>
 		</note>
-		<note id="note44"/>
+		<note id="note44"><note/>
 		<note id="note45">
 			<p class="note-title">Mark 9:45 Notes</p>
 			<p class="note-short-title">Verse 45 Notes</p>
@@ -2110,8 +2110,8 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>cause thee to stumble.</p>
 			</div>
 		</note>
-		<note id="note46"/>
-		<note id="note47"/>
+		<note id="note46"><note/>
+		<note id="note47"><note/>
 		<note id="note48">
 			<p class="note-title">Mark 9:48 Notes</p>
 			<p class="note-short-title">Verse 48 Notes</p>
@@ -2139,12 +2139,12 @@
 		</note>
 	</div>
 	<div class="chapter" data-aid="128397788" data-aid-version="3" data-uri="/scriptures/nt/mark/10" lang="eng">
-		<note id="note1"/>
-		<note id="note2"/>
-		<note id="note3"/>
-		<note id="note4"/>
-		<note id="note5"/>
-		<note id="note6"/>
+		<note id="note1"><note/>
+		<note id="note2"><note/>
+		<note id="note3"><note/>
+		<note id="note4"><note/>
+		<note id="note5"><note/>
+		<note id="note6"><note/>
 		<note id="note7">
 			<p class="note-title">Mark 10:7 Notes</p>
 			<p class="note-short-title">Verse 7 Notes</p>
@@ -2157,7 +2157,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/marriage-wives">Marriage, Wives</a>.</p>
 			</div>
 		</note>
-		<note id="note8"/>
+		<note id="note8"><note/>
 		<note id="note9">
 			<p class="note-title">Mark 10:9 Notes</p>
 			<p class="note-short-title">Verse 9 Notes</p>
@@ -2170,10 +2170,10 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/divorce">Divorce</a>.</p>
 			</div>
 		</note>
-		<note id="note10"/>
-		<note id="note11"/>
-		<note id="note12"/>
-		<note id="note13"/>
+		<note id="note10"><note/>
+		<note id="note11"><note/>
+		<note id="note12"><note/>
+		<note id="note13"><note/>
 		<note id="note14">
 			<p class="note-title">Mark 10:14 Notes</p>
 			<p class="note-short-title">Verse 14 Notes</p>
@@ -2200,7 +2200,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/salvation-of-little-children">Salvation of Little Children</a>.</p>
 			</div>
 		</note>
-		<note id="note17"/>
+		<note id="note17"><note/>
 		<note id="note18">
 			<p class="note-title">Mark 10:18 Notes</p>
 			<p class="note-short-title">Verse 18 Notes</p>
@@ -2233,7 +2233,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/honoring-father-and-mother">Honoring Father and Mother</a>.</p>
 			</div>
 		</note>
-		<note id="note20"/>
+		<note id="note20"><note/>
 		<note id="note21">
 			<p class="note-title">Mark 10:21 Notes</p>
 			<p class="note-short-title">Verse 21 Notes</p>
@@ -2246,8 +2246,8 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/jesus-christ-exemplar">Jesus Christ, Exemplar</a>.</p>
 			</div>
 		</note>
-		<note id="note22"/>
-		<note id="note23"/>
+		<note id="note22"><note/>
+		<note id="note23"><note/>
 		<note id="note24">
 			<p class="note-title">Mark 10:24 Notes</p>
 			<p class="note-short-title">Verse 24 Notes</p>
@@ -2260,8 +2260,8 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/treasure">Treasure</a>.</p>
 			</div>
 		</note>
-		<note id="note25"/>
-		<note id="note26"/>
+		<note id="note25"><note/>
+		<note id="note26"><note/>
 		<note id="note27">
 			<p class="note-title">Mark 10:27 Notes</p>
 			<p class="note-short-title">Verse 27 Notes</p>
@@ -2274,8 +2274,8 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/god-power-of">God, Power of</a>.</p>
 			</div>
 		</note>
-		<note id="note28"/>
-		<note id="note29"/>
+		<note id="note28"><note/>
+		<note id="note29"><note/>
 		<note id="note30">
 			<p class="note-title">Mark 10:30 Notes</p>
 			<p class="note-short-title">Verse 30 Notes</p>
@@ -2296,7 +2296,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/jacob/5.63">Jacob 5:63</a>; <a class="scripture-ref" href="#/ether/13.12.10-12">Ether 13:12 (10–12)</a>.</p>
 			</div>
 		</note>
-		<note id="note32"/>
+		<note id="note32"><note/>
 		<note id="note33">
 			<p class="note-title">Mark 10:33 Notes</p>
 			<p class="note-short-title">Verse 33 Notes</p>
@@ -2321,9 +2321,9 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/jesus-christ-resurrection">Jesus Christ, Resurrection</a>.</p>
 			</div>
 		</note>
-		<note id="note35"/>
-		<note id="note36"/>
-		<note id="note37"/>
+		<note id="note35"><note/>
+		<note id="note36"><note/>
+		<note id="note37"><note/>
 		<note id="note38">
 			<p class="note-title">Mark 10:38 Notes</p>
 			<p class="note-short-title">Verse 38 Notes</p>
@@ -2332,10 +2332,10 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/jesus-christ-baptism-of">Jesus Christ, Baptism of</a>.</p>
 			</div>
 		</note>
-		<note id="note39"/>
-		<note id="note40"/>
-		<note id="note41"/>
-		<note id="note42"/>
+		<note id="note39"><note/>
+		<note id="note40"><note/>
+		<note id="note41"><note/>
+		<note id="note42"><note/>
 		<note id="note43">
 			<p class="note-title">Mark 10:43 Notes</p>
 			<p class="note-short-title">Verse 43 Notes</p>
@@ -2368,8 +2368,8 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/matt/20.30.29-34">Matt. 20:30 (29–34)</a>.</p>
 			</div>
 		</note>
-		<note id="note47"/>
-		<note id="note48"/>
+		<note id="note47"><note/>
+		<note id="note48"><note/>
 		<note id="note49">
 			<p class="note-title">Mark 10:49 Notes</p>
 			<p class="note-short-title">Verse 49 Notes</p>
@@ -2378,8 +2378,8 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/1-ne/17.51">1 Ne. 17:51</a>.</p>
 			</div>
 		</note>
-		<note id="note50"/>
-		<note id="note51"/>
+		<note id="note50"><note/>
+		<note id="note51"><note/>
 		<note id="note52">
 			<p class="note-title">Mark 10:52 Notes</p>
 			<p class="note-short-title">Verse 52 Notes</p>
@@ -2390,12 +2390,12 @@
 		</note>
 	</div>
 	<div class="chapter" data-aid="128397969" data-aid-version="3" data-uri="/scriptures/nt/mark/11" lang="eng">
-		<note id="note1"/>
-		<note id="note2"/>
-		<note id="note3"/>
-		<note id="note4"/>
-		<note id="note5"/>
-		<note id="note6"/>
+		<note id="note1"><note/>
+		<note id="note2"><note/>
+		<note id="note3"><note/>
+		<note id="note4"><note/>
+		<note id="note5"><note/>
+		<note id="note6"><note/>
 		<note id="note7">
 			<p class="note-title">Mark 11:7 Notes</p>
 			<p class="note-short-title">Verse 7 Notes</p>
@@ -2404,7 +2404,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/zech/9.9">Zech. 9:9</a>.</p>
 			</div>
 		</note>
-		<note id="note8"/>
+		<note id="note8"><note/>
 		<note id="note9">
 			<p class="note-title">Mark 11:9 Notes</p>
 			<p class="note-short-title">Verse 9 Notes</p>
@@ -2421,13 +2421,13 @@
 				<p class="note-reference"><span class="reference-label-quotation"> </span><small>JST</small> Mark 11:11–12 <em>That bringeth</em> the kingdom of our father David; <em>Blessed is he</em> that cometh in the name of the Lord …</p>
 			</div>
 		</note>
-		<note id="note11"/>
-		<note id="note12"/>
-		<note id="note13"/>
-		<note id="note14"/>
-		<note id="note15"/>
-		<note id="note16"/>
-		<note id="note17"/>
+		<note id="note11"><note/>
+		<note id="note12"><note/>
+		<note id="note13"><note/>
+		<note id="note14"><note/>
+		<note id="note15"><note/>
+		<note id="note16"><note/>
+		<note id="note17"><note/>
 		<note id="note18">
 			<p class="note-title">Mark 11:18 Notes</p>
 			<p class="note-short-title">Verse 18 Notes</p>
@@ -2436,9 +2436,9 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/jesus-christ-betrayal-of">Jesus Christ, Betrayal of</a>.</p>
 			</div>
 		</note>
-		<note id="note19"/>
-		<note id="note20"/>
-		<note id="note21"/>
+		<note id="note19"><note/>
+		<note id="note20"><note/>
+		<note id="note21"><note/>
 		<note id="note22">
 			<p class="note-title">Mark 11:22 Notes</p>
 			<p class="note-short-title">Verse 22 Notes</p>
@@ -2487,7 +2487,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/dc/64.9.7-10">D&amp;C 64:9 (7–10)</a>.</p>
 			</div>
 		</note>
-		<note id="note27"/>
+		<note id="note27"><note/>
 		<note id="note28">
 			<p class="note-title">Mark 11:28 Notes</p>
 			<p class="note-short-title">Verse 28 Notes</p>
@@ -2496,21 +2496,21 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/priesthood-authority">Priesthood, Authority</a>.</p>
 			</div>
 		</note>
-		<note id="note29"/>
-		<note id="note30"/>
-		<note id="note31"/>
-		<note id="note32"/>
-		<note id="note33"/>
+		<note id="note29"><note/>
+		<note id="note30"><note/>
+		<note id="note31"><note/>
+		<note id="note32"><note/>
+		<note id="note33"><note/>
 	</div>
 	<div class="chapter" data-aid="128396395" data-aid-version="3" data-uri="/scriptures/nt/mark/12" lang="eng">
-		<note id="note1"/>
-		<note id="note2"/>
-		<note id="note3"/>
-		<note id="note4"/>
-		<note id="note5"/>
-		<note id="note6"/>
-		<note id="note7"/>
-		<note id="note8"/>
+		<note id="note1"><note/>
+		<note id="note2"><note/>
+		<note id="note3"><note/>
+		<note id="note4"><note/>
+		<note id="note5"><note/>
+		<note id="note6"><note/>
+		<note id="note7"><note/>
+		<note id="note8"><note/>
 		<note id="note9">
 			<p class="note-title">Mark 12:9 Notes</p>
 			<p class="note-short-title">Verse 9 Notes</p>
@@ -2527,8 +2527,8 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/cornerstone">Cornerstone</a>.</p>
 			</div>
 		</note>
-		<note id="note11"/>
-		<note id="note12"/>
+		<note id="note11"><note/>
+		<note id="note12"><note/>
 		<note id="note13">
 			<p class="note-title">Mark 12:13 Notes</p>
 			<p class="note-short-title">Verse 13 Notes</p>
@@ -2537,7 +2537,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/matt/22.15.15-22">Matt. 22:15 (15–22)</a>; <a class="scripture-ref" href="#/luke/11.54.53-54">Luke 11:54 (53–54)</a>; <a class="scripture-ref" href="#/luke/20.20.19-26">20:20 (19–26)</a>.</p>
 			</div>
 		</note>
-		<note id="note14"/>
+		<note id="note14"><note/>
 		<note id="note15">
 			<p class="note-title">Mark 12:15 Notes</p>
 			<p class="note-short-title">Verse 15 Notes</p>
@@ -2546,9 +2546,9 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/test">Test</a>.</p>
 			</div>
 		</note>
-		<note id="note16"/>
-		<note id="note17"/>
-		<note id="note18"/>
+		<note id="note16"><note/>
+		<note id="note17"><note/>
+		<note id="note18"><note/>
 		<note id="note19">
 			<p class="note-title">Mark 12:19 Notes</p>
 			<p class="note-short-title">Verse 19 Notes</p>
@@ -2557,10 +2557,10 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/deut/25.5">Deut. 25:5</a>; <a class="scripture-ref" href="#/matt/22.24">Matt. 22:24</a>; <a class="scripture-ref" href="#/luke/20.28">Luke 20:28</a>.</p>
 			</div>
 		</note>
-		<note id="note20"/>
-		<note id="note21"/>
-		<note id="note22"/>
-		<note id="note23"/>
+		<note id="note20"><note/>
+		<note id="note21"><note/>
+		<note id="note22"><note/>
+		<note id="note23"><note/>
 		<note id="note24">
 			<p class="note-title">Mark 12:24 Notes</p>
 			<p class="note-short-title">Verse 24 Notes</p>
@@ -2633,8 +2633,8 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/strength">Strength</a>.</p>
 			</div>
 		</note>
-		<note id="note31"/>
-		<note id="note32"/>
+		<note id="note31"><note/>
+		<note id="note32"><note/>
 		<note id="note33">
 			<p class="note-title">Mark 12:33 Notes</p>
 			<p class="note-short-title">Verse 33 Notes</p>
@@ -2644,8 +2644,8 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/sacrifice">Sacrifice</a>.</p>
 			</div>
 		</note>
-		<note id="note34"/>
-		<note id="note35"/>
+		<note id="note34"><note/>
+		<note id="note35"><note/>
 		<note id="note36">
 			<p class="note-title">Mark 12:36 Notes</p>
 			<p class="note-short-title">Verse 36 Notes</p>
@@ -2654,7 +2654,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/ps/110.1">Ps. 110:1</a>.</p>
 			</div>
 		</note>
-		<note id="note37"/>
+		<note id="note37"><note/>
 		<note id="note38">
 			<p class="note-title">Mark 12:38 Notes</p>
 			<p class="note-short-title">Verse 38 Notes</p>
@@ -2667,7 +2667,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/john/12.43.42-43">John 12:43 (42–43)</a>.</p>
 			</div>
 		</note>
-		<note id="note39"/>
+		<note id="note39"><note/>
 		<note id="note40">
 			<p class="note-title">Mark 12:40 Notes</p>
 			<p class="note-short-title">Verse 40 Notes</p>
@@ -2676,7 +2676,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/damnation">Damnation</a>.</p>
 			</div>
 		</note>
-		<note id="note41"/>
+		<note id="note41"><note/>
 		<note id="note42">
 			<p class="note-title">Mark 12:42 Notes</p>
 			<p class="note-short-title">Verse 42 Notes</p>
@@ -2727,8 +2727,8 @@
 				<p class="note-reference"><span class="reference-label-ie"> </span>The text of<small>JST</small> Mark 13 is the same as<small>JST</small> Matthew 24. See <a class="scripture-ref" href="#/js-m/1">Pearl of Great Price, JS—M</a>.</p>
 			</div>
 		</note>
-		<note id="note2"/>
-		<note id="note3"/>
+		<note id="note2"><note/>
+		<note id="note3"><note/>
 		<note id="note4">
 			<p class="note-title">Mark 13:4 Notes</p>
 			<p class="note-short-title">Verse 4 Notes</p>
@@ -2737,7 +2737,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/signs">Signs</a>.</p>
 			</div>
 		</note>
-		<note id="note5"/>
+		<note id="note5"><note/>
 		<note id="note6">
 			<p class="note-title">Mark 13:6 Notes</p>
 			<p class="note-short-title">Verse 6 Notes</p>
@@ -2746,7 +2746,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/matt/24.5">Matt. 24:5</a>.</p>
 			</div>
 		</note>
-		<note id="note7"/>
+		<note id="note7"><note/>
 		<note id="note8">
 			<p class="note-title">Mark 13:8 Notes</p>
 			<p class="note-short-title">Verse 8 Notes</p>
@@ -2787,7 +2787,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/holy-ghost-mission-of">Holy Ghost, Mission of</a>.</p>
 			</div>
 		</note>
-		<note id="note12"/>
+		<note id="note12"><note/>
 		<note id="note13">
 			<p class="note-title">Mark 13:13 Notes</p>
 			<p class="note-short-title">Verse 13 Notes</p>
@@ -2800,11 +2800,11 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/matt/10.22.22-33">Matt. 10:22 (22–33)</a>; <a class="scripture-ref" href="#/3-ne/15.9">3 Ne. 15:9</a>.</p>
 			</div>
 		</note>
-		<note id="note14"/>
-		<note id="note15"/>
-		<note id="note16"/>
-		<note id="note17"/>
-		<note id="note18"/>
+		<note id="note14"><note/>
+		<note id="note15"><note/>
+		<note id="note16"><note/>
+		<note id="note17"><note/>
+		<note id="note18"><note/>
 		<note id="note19">
 			<p class="note-title">Mark 13:19 Notes</p>
 			<p class="note-short-title">Verse 19 Notes</p>
@@ -2821,7 +2821,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/dc/29.7">D&amp;C 29:7</a>; <a class="scripture-ref" href="#/dc/84.34">84:34</a>.</p>
 			</div>
 		</note>
-		<note id="note21"/>
+		<note id="note21"><note/>
 		<note id="note22">
 			<p class="note-title">Mark 13:22 Notes</p>
 			<p class="note-short-title">Verse 22 Notes</p>
@@ -2838,8 +2838,8 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/signs">Signs</a>.</p>
 			</div>
 		</note>
-		<note id="note23"/>
-		<note id="note24"/>
+		<note id="note23"><note/>
+		<note id="note24"><note/>
 		<note id="note25">
 			<p class="note-title">Mark 13:25 Notes</p>
 			<p class="note-short-title">Verse 25 Notes</p>
@@ -2856,7 +2856,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/jesus-christ-son-of-man">Jesus Christ, Son of Man</a>.</p>
 			</div>
 		</note>
-		<note id="note27"/>
+		<note id="note27"><note/>
 		<note id="note28">
 			<p class="note-title">Mark 13:28 Notes</p>
 			<p class="note-short-title">Verse 28 Notes</p>
@@ -2865,7 +2865,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/dc/45.37">D&amp;C 45:37</a>.</p>
 			</div>
 		</note>
-		<note id="note29"/>
+		<note id="note29"><note/>
 		<note id="note30">
 			<p class="note-title">Mark 13:30 Notes</p>
 			<p class="note-short-title">Verse 30 Notes</p>
@@ -2911,7 +2911,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/authority">Authority</a>.</p>
 			</div>
 		</note>
-		<note id="note35"/>
+		<note id="note35"><note/>
 		<note id="note36">
 			<p class="note-title">Mark 13:36 Notes</p>
 			<p class="note-short-title">Verse 36 Notes</p>
@@ -2920,7 +2920,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/procrastination">Procrastination</a>; <a class="scripture-ref" href="#/tg/sleep">Sleep</a>.</p>
 			</div>
 		</note>
-		<note id="note37"/>
+		<note id="note37"><note/>
 	</div>
 	<div class="chapter" data-aid="128398084" data-aid-version="3" data-uri="/scriptures/nt/mark/14" lang="eng">
 		<note id="note1">
@@ -2935,8 +2935,8 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/matt/26.4.2-5">Matt. 26:4 (2–5)</a>; <a class="scripture-ref" href="#/luke/22.2.1-2">Luke 22:2 (1–2)</a>.</p>
 			</div>
 		</note>
-		<note id="note2"/>
-		<note id="note3"/>
+		<note id="note2"><note/>
+		<note id="note3"><note/>
 		<note id="note4">
 			<p class="note-title">Mark 14:4 Notes</p>
 			<p class="note-short-title">Verse 4 Notes</p>
@@ -2945,8 +2945,8 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/dc/117.4.4-7">D&amp;C 117:4 (4–7)</a>.</p>
 			</div>
 		</note>
-		<note id="note5"/>
-		<note id="note6"/>
+		<note id="note5"><note/>
+		<note id="note6"><note/>
 		<note id="note7">
 			<p class="note-title">Mark 14:7 Notes</p>
 			<p class="note-short-title">Verse 7 Notes</p>
@@ -2979,7 +2979,7 @@
 				<p class="note-reference"><span class="reference-label-quotation"> </span><small>JST</small> Mark 14:31 … to betray <em>Jesus</em> unto them; <em>for he turned away from him, and was offended because of his words.</em></p>
 			</div>
 		</note>
-		<note id="note11"/>
+		<note id="note11"><note/>
 		<note id="note12">
 			<p class="note-title">Mark 14:12 Notes</p>
 			<p class="note-short-title">Verse 12 Notes</p>
@@ -2996,14 +2996,14 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/luke/22.8.7-13">Luke 22:8 (7–13)</a>.</p>
 			</div>
 		</note>
-		<note id="note14"/>
-		<note id="note15"/>
-		<note id="note16"/>
-		<note id="note17"/>
-		<note id="note18"/>
-		<note id="note19"/>
-		<note id="note20"/>
-		<note id="note21"/>
+		<note id="note14"><note/>
+		<note id="note15"><note/>
+		<note id="note16"><note/>
+		<note id="note17"><note/>
+		<note id="note18"><note/>
+		<note id="note19"><note/>
+		<note id="note20"><note/>
+		<note id="note21"><note/>
 		<note id="note22">
 			<p class="note-title">Mark 14:22 Notes</p>
 			<p class="note-short-title">Verse 22 Notes</p>
@@ -3028,7 +3028,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/thanksgiving">Thanksgiving</a>.</p>
 			</div>
 		</note>
-		<note id="note24"/>
+		<note id="note24"><note/>
 		<note id="note25">
 			<p class="note-title">Mark 14:25 Notes</p>
 			<p class="note-short-title">Verse 25 Notes</p>
@@ -3037,7 +3037,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/matt/26.29">Matt. 26:29</a>; <a class="scripture-ref" href="#/luke/22.18">Luke 22:18</a>; <a class="scripture-ref" href="#/dc/27.5">D&amp;C 27:5</a>.</p>
 			</div>
 		</note>
-		<note id="note26"/>
+		<note id="note26"><note/>
 		<note id="note27">
 			<p class="note-title">Mark 14:27 Notes</p>
 			<p class="note-short-title">Verse 27 Notes</p>
@@ -3046,10 +3046,10 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/zech/13.7">Zech. 13:7</a>.</p>
 			</div>
 		</note>
-		<note id="note28"/>
-		<note id="note29"/>
-		<note id="note30"/>
-		<note id="note31"/>
+		<note id="note28"><note/>
+		<note id="note29"><note/>
+		<note id="note30"><note/>
+		<note id="note31"><note/>
 		<note id="note32">
 			<p class="note-title">Mark 14:32 Notes</p>
 			<p class="note-short-title">Verse 32 Notes</p>
@@ -3074,8 +3074,8 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/ps/69.20">Ps. 69:20</a>.</p>
 			</div>
 		</note>
-		<note id="note34"/>
-		<note id="note35"/>
+		<note id="note34"><note/>
+		<note id="note35"><note/>
 		<note id="note36">
 			<p class="note-title">Mark 14:36 Notes</p>
 			<p class="note-short-title">Verse 36 Notes</p>
@@ -3108,11 +3108,11 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/dc/20.33">D&amp;C 20:33</a>; <a class="scripture-ref" href="#/dc/23.1">23:1</a>; <a class="scripture-ref" href="#/dc/31.12">31:12</a>.</p>
 			</div>
 		</note>
-		<note id="note39"/>
-		<note id="note40"/>
-		<note id="note41"/>
-		<note id="note42"/>
-		<note id="note43"/>
+		<note id="note39"><note/>
+		<note id="note40"><note/>
+		<note id="note41"><note/>
+		<note id="note42"><note/>
+		<note id="note43"><note/>
 		<note id="note44">
 			<p class="note-title">Mark 14:44 Notes</p>
 			<p class="note-short-title">Verse 44 Notes</p>
@@ -3121,12 +3121,12 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/jesus-christ-betrayal-of">Jesus Christ, Betrayal of</a>.</p>
 			</div>
 		</note>
-		<note id="note45"/>
-		<note id="note46"/>
-		<note id="note47"/>
-		<note id="note48"/>
-		<note id="note49"/>
-		<note id="note50"/>
+		<note id="note45"><note/>
+		<note id="note46"><note/>
+		<note id="note47"><note/>
+		<note id="note48"><note/>
+		<note id="note49"><note/>
+		<note id="note50"><note/>
 		<note id="note51">
 			<p class="note-title">Mark 14:51 Notes</p>
 			<p class="note-short-title">Verse 51 Notes</p>
@@ -3135,9 +3135,9 @@
 				<p class="note-reference"><span class="reference-label-quotation"> </span><small>JST</small> Mark 14:57 … <em>a disciple,</em> having …</p>
 			</div>
 		</note>
-		<note id="note52"/>
-		<note id="note53"/>
-		<note id="note54"/>
+		<note id="note52"><note/>
+		<note id="note53"><note/>
+		<note id="note54"><note/>
 		<note id="note55">
 			<p class="note-title">Mark 14:55 Notes</p>
 			<p class="note-short-title">Verse 55 Notes</p>
@@ -3154,7 +3154,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/lying">Lying</a>.</p>
 			</div>
 		</note>
-		<note id="note57"/>
+		<note id="note57"><note/>
 		<note id="note58">
 			<p class="note-title">Mark 14:58 Notes</p>
 			<p class="note-short-title">Verse 58 Notes</p>
@@ -3163,8 +3163,8 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/matt/26.61">Matt. 26:61</a>; <a class="scripture-ref" href="#/matt/27.40">27:40</a>; <a class="scripture-ref" href="#/john/2.19.18-22">John 2:19 (18–22)</a>; <a class="scripture-ref" href="#/heb/9.11">Heb. 9:11</a>.</p>
 			</div>
 		</note>
-		<note id="note59"/>
-		<note id="note60"/>
+		<note id="note59"><note/>
+		<note id="note60"><note/>
 		<note id="note61">
 			<p class="note-title">Mark 14:61 Notes</p>
 			<p class="note-short-title">Verse 61 Notes</p>
@@ -3185,7 +3185,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/jesus-christ-son-of-man">Jesus Christ, Son of Man</a>.</p>
 			</div>
 		</note>
-		<note id="note63"/>
+		<note id="note63"><note/>
 		<note id="note64">
 			<p class="note-title">Mark 14:64 Notes</p>
 			<p class="note-short-title">Verse 64 Notes</p>
@@ -3198,17 +3198,17 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/guilt">Guilt</a>.</p>
 			</div>
 		</note>
-		<note id="note65"/>
-		<note id="note66"/>
-		<note id="note67"/>
-		<note id="note68"/>
-		<note id="note69"/>
-		<note id="note70"/>
-		<note id="note71"/>
-		<note id="note72"/>
+		<note id="note65"><note/>
+		<note id="note66"><note/>
+		<note id="note67"><note/>
+		<note id="note68"><note/>
+		<note id="note69"><note/>
+		<note id="note70"><note/>
+		<note id="note71"><note/>
+		<note id="note72"><note/>
 	</div>
 	<div class="chapter" data-aid="128398083" data-aid-version="3" data-uri="/scriptures/nt/mark/15" lang="eng">
-		<note id="note1"/>
+		<note id="note1"><note/>
 		<note id="note2">
 			<p class="note-title">Mark 15:2 Notes</p>
 			<p class="note-short-title">Verse 2 Notes</p>
@@ -3229,8 +3229,8 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/isa/53.7.7-8">Isa. 53:7 (7–8)</a>; <a class="scripture-ref" href="#/mosiah/14.7.6-8">Mosiah 14:7 (6–8)</a>.</p>
 			</div>
 		</note>
-		<note id="note4"/>
-		<note id="note5"/>
+		<note id="note4"><note/>
+		<note id="note5"><note/>
 		<note id="note6">
 			<p class="note-title">Mark 15:6 Notes</p>
 			<p class="note-short-title">Verse 6 Notes</p>
@@ -3239,8 +3239,8 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>usually released.</p>
 			</div>
 		</note>
-		<note id="note7"/>
-		<note id="note8"/>
+		<note id="note7"><note/>
+		<note id="note8"><note/>
 		<note id="note9">
 			<p class="note-title">Mark 15:9 Notes</p>
 			<p class="note-short-title">Verse 9 Notes</p>
@@ -3257,12 +3257,12 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/envy">Envy</a>.</p>
 			</div>
 		</note>
-		<note id="note11"/>
-		<note id="note12"/>
-		<note id="note13"/>
-		<note id="note14"/>
-		<note id="note15"/>
-		<note id="note16"/>
+		<note id="note11"><note/>
+		<note id="note12"><note/>
+		<note id="note13"><note/>
+		<note id="note14"><note/>
+		<note id="note15"><note/>
+		<note id="note16"><note/>
 		<note id="note17">
 			<p class="note-title">Mark 15:17 Notes</p>
 			<p class="note-short-title">Verse 17 Notes</p>
@@ -3271,7 +3271,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/jesus-christ-trials-of">Jesus Christ, Trials of</a>.</p>
 			</div>
 		</note>
-		<note id="note18"/>
+		<note id="note18"><note/>
 		<note id="note19">
 			<p class="note-title">Mark 15:19 Notes</p>
 			<p class="note-short-title">Verse 19 Notes</p>
@@ -3288,9 +3288,9 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/mocking">Mocking</a>.</p>
 			</div>
 		</note>
-		<note id="note21"/>
-		<note id="note22"/>
-		<note id="note23"/>
+		<note id="note21"><note/>
+		<note id="note22"><note/>
+		<note id="note23"><note/>
 		<note id="note24">
 			<p class="note-title">Mark 15:24 Notes</p>
 			<p class="note-short-title">Verse 24 Notes</p>
@@ -3299,8 +3299,8 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/ps/22.18">Ps. 22:18</a>.</p>
 			</div>
 		</note>
-		<note id="note25"/>
-		<note id="note26"/>
+		<note id="note25"><note/>
+		<note id="note26"><note/>
 		<note id="note27">
 			<p class="note-title">Mark 15:27 Notes</p>
 			<p class="note-short-title">Verse 27 Notes</p>
@@ -3317,9 +3317,9 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/isa/53.12">Isa. 53:12</a>.</p>
 			</div>
 		</note>
-		<note id="note29"/>
-		<note id="note30"/>
-		<note id="note31"/>
+		<note id="note29"><note/>
+		<note id="note30"><note/>
+		<note id="note31"><note/>
 		<note id="note32">
 			<p class="note-title">Mark 15:32 Notes</p>
 			<p class="note-short-title">Verse 32 Notes</p>
@@ -3348,7 +3348,7 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/jesus-christ-crucifixion-of">Jesus Christ, Crucifixion of</a>.</p>
 			</div>
 		</note>
-		<note id="note35"/>
+		<note id="note35"><note/>
 		<note id="note36">
 			<p class="note-title">Mark 15:36 Notes</p>
 			<p class="note-short-title">Verse 36 Notes</p>
@@ -3365,10 +3365,10 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/spirits-disembodied">Spirits, Disembodied</a>.</p>
 			</div>
 		</note>
-		<note id="note38"/>
-		<note id="note39"/>
-		<note id="note40"/>
-		<note id="note41"/>
+		<note id="note38"><note/>
+		<note id="note39"><note/>
+		<note id="note40"><note/>
+		<note id="note41"><note/>
 		<note id="note42">
 			<p class="note-title">Mark 15:42 Notes</p>
 			<p class="note-short-title">Verse 42 Notes</p>
@@ -3389,8 +3389,8 @@
 				<p class="note-reference"><span class="reference-label-greek"> </span>requested, desired.</p>
 			</div>
 		</note>
-		<note id="note44"/>
-		<note id="note45"/>
+		<note id="note44"><note/>
+		<note id="note45"><note/>
 		<note id="note46">
 			<p class="note-title">Mark 15:46 Notes</p>
 			<p class="note-short-title">Verse 46 Notes</p>
@@ -3399,10 +3399,10 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/mosiah/14.9">Mosiah 14:9</a>.</p>
 			</div>
 		</note>
-		<note id="note47"/>
+		<note id="note47"><note/>
 	</div>
 	<div class="chapter" data-aid="128398264" data-aid-version="3" data-uri="/scriptures/nt/mark/16" lang="eng">
-		<note id="note1"/>
+		<note id="note1"><note/>
 		<note id="note2">
 			<p class="note-title">Mark 16:2 Notes</p>
 			<p class="note-short-title">Verse 2 Notes</p>
@@ -3415,7 +3415,7 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/john/20.1">John 20:1</a>.</p>
 			</div>
 		</note>
-		<note id="note3"/>
+		<note id="note3"><note/>
 		<note id="note4">
 			<p class="note-title">Mark 16:4 Notes</p>
 			<p class="note-short-title">Verse 4 Notes</p>
@@ -3444,8 +3444,8 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/immortality">Immortality</a>.</p>
 			</div>
 		</note>
-		<note id="note7"/>
-		<note id="note8"/>
+		<note id="note7"><note/>
+		<note id="note8"><note/>
 		<note id="note9">
 			<p class="note-title">Mark 16:9 Notes</p>
 			<p class="note-short-title">Verse 9 Notes</p>
@@ -3462,10 +3462,10 @@
 				<p class="note-reference"><span class="reference-label-cross-ref"> </span><a class="scripture-ref" href="#/luke/8.2">Luke 8:2</a>.</p>
 			</div>
 		</note>
-		<note id="note10"/>
-		<note id="note11"/>
-		<note id="note12"/>
-		<note id="note13"/>
+		<note id="note10"><note/>
+		<note id="note11"><note/>
+		<note id="note12"><note/>
+		<note id="note13"><note/>
 		<note id="note14">
 			<p class="note-title">Mark 16:14 Notes</p>
 			<p class="note-short-title">Verse 14 Notes</p>
@@ -3573,6 +3573,6 @@
 				<p class="note-reference"><span class="reference-label-tg"> </span><a class="scripture-ref" href="#/tg/jesus-christ-lord">Jesus Christ, Lord</a>.</p>
 			</div>
 		</note>
-		<note id="note20"/>
+		<note id="note20"><note/>
 	</div>
 </html>

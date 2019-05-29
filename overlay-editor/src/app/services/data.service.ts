@@ -46,6 +46,8 @@ export class DataService {
         },
       );
 
+      console.log(this.allNotes);
+
       // this.loadNavigation();
     } catch (error) {
       console.log(error);
@@ -70,9 +72,14 @@ export class DataService {
     );
   }
 
-  public parseSecondaryNotes(noteElement: Element): SecondaryNoteLDSSource[] {
+  public parseSecondaryNotes(
+    noteElement: Element,
+    dataAid: string,
+  ): SecondaryNoteLDSSource[] {
     return Array.from(
-      noteElement.querySelectorAll(`[id="${noteElement.id}"] > div`),
+      noteElement.querySelectorAll(
+        `div.chapter[data-aid="${dataAid}"] [id="${noteElement.id}"] > div`,
+      ),
     ).map(
       (secondaryNoteElement): SecondaryNoteLDSSource => {
         // console.log(secondaryNoteElement);
@@ -100,10 +107,13 @@ export class DataService {
           noteElement,
           '.note-short-title',
         );
+        if (note.noteShortTitle === 'Verse 36 Notes') {
+          console.log('Verse 36 Notes');
+        }
         note.noteTitle = this.getTextContent(noteElement, '.note-title');
         // console.log(note);
 
-        note.secondaryNotes = this.parseSecondaryNotes(noteElement);
+        note.secondaryNotes = this.parseSecondaryNotes(noteElement, dataAid);
         // console.log(note);
         if (!this.allNotes) {
           this.allNotes = [];
@@ -130,6 +140,12 @@ export class DataService {
         ? this.getAttribute(chapterRoot, 'data-aid')
         : undefined;
 
+      const titleElemment = newDocument.querySelector('title');
+      const title =
+        titleElemment && titleElemment.textContent
+          ? titleElemment.textContent
+          : '';
+
       if (!this.chapterDataAid) {
         this.chapterDocument = undefined;
         alert('asodifj');
@@ -151,13 +167,18 @@ export class DataService {
                 return note.chaterDataAid === this.chapterDataAid;
               },
             );
-            this.addExistingNotesToVerses(this.verses, this.notes);
+            this.addExistingNotesToVerses(
+              this.verses,
+              this.allNotes,
+              this.chapterDataAid as string,
+              title,
+            );
             // console.log(this.notes);
           } else {
-            await this.addNoteTemplates(newDocument, this.verses);
+            await this.addNoteTemplates(newDocument, this.verses, title);
           }
         } else {
-          await this.addNoteTemplates(newDocument, this.verses);
+          await this.addNoteTemplates(newDocument, this.verses, title);
         }
         // console.log(this.verses);
       } catch (error) {
@@ -170,20 +191,49 @@ export class DataService {
   public addExistingNotesToVerses(
     verses: LDSSourceVerse[],
     notes: NoteLDSSource[],
+    chapterDataAid: string,
+    title: string,
   ): void {
-    notes.map(
-      (note): void => {
-        const verse = verses.find(
-          (verse): boolean => {
-            const id = note._id ? note._id.replace('note', 'p') : '';
-            return verse.id === id;
-          },
-        );
-        if (verse) {
-          verse.note = note;
+    verses.map(
+      (verse): void => {
+        if (verse.id.startsWith('p')) {
+          const id = verse.id.replace('p', 'note');
+
+          const note = notes.find(
+            (note): boolean => {
+              return note.chaterDataAid === chapterDataAid && note._id === id;
+            },
+          );
+          console.log(note);
+          if (note) {
+            verse.note = note;
+            this.createEmptyNote(verse, note, title);
+            // this.fillEmptyNote(verse, note);
+          }
         }
       },
     );
+    console.log(verses);
+
+    // notes
+    //   .filter(
+    //     (note): boolean => {
+    //       return note.chaterDataAid === chapterDataAid;
+    //     },
+    //   )
+    //   .map(
+    //     (note): void => {
+    //       const verse = verses.find(
+    //         (verse): boolean => {
+    //           const id = note._id ? note._id.replace('note', 'p') : '';
+    //           return verse.id === id && note.chaterDataAid === chapterDataAid;
+    //         },
+    //       );
+    //       if (verse) {
+    //         verse.note = note;
+    //       }
+    //     },
+    //   );
   }
 
   // private loadNavigation(): void {
@@ -249,13 +299,14 @@ export class DataService {
   private async addNoteTemplates(
     document: Document,
     verses: LDSSourceVerse[],
+    title: string,
   ): Promise<void> {
-    const verseElements = await queryVerseElements(document);
-    const titleElemment = document.querySelector('title');
-    const title =
-      titleElemment && titleElemment.textContent
-        ? titleElemment.textContent
-        : '';
+    // const verseElements = await queryVerseElements(document);
+    // const titleElemment = document.querySelector('title');
+    // const title =
+    //   titleElemment && titleElemment.textContent
+    //     ? titleElemment.textContent
+    //     : '';
     this.notes = [];
 
     verses.map(
@@ -264,13 +315,8 @@ export class DataService {
         if (verseElement) {
           const verseNumber = this.getVerseNumber(verseElement);
           const note = new NoteLDSSource();
-          note._id = `note${verseNumber}`;
-          note.noteTitle = `${title}:${verseNumber} Notes`;
-          note.noteShortTitle = `Verse ${verseNumber} Notes`;
-          if (this.notes) {
-            this.notes.push(note);
-          }
-          verse.note = note;
+          // this.createEmptyNote(note, verseNumber, title, verse);
+          this.createEmptyNote(verse, note, title);
         }
       },
     );
@@ -299,6 +345,23 @@ export class DataService {
     // }
 
     // console.log(this.notes);
+  }
+
+  private createEmptyNote(
+    verse: LDSSourceVerse,
+    note: NoteLDSSource,
+    title: string,
+  ): void {
+    const verseNumber = verse.id.startsWith('p')
+      ? verse.id.replace('p', '')
+      : verse.id;
+    note._id = `note${verseNumber}`;
+    note.noteTitle = `${title}:${verseNumber} Notes`;
+    note.noteShortTitle = `Verse ${verseNumber} Notes`;
+    if (this.notes) {
+      this.notes.push(note);
+    }
+    verse.note = note;
   }
 }
 function parseOffset(compressedOffset: string): number[] {

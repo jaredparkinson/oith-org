@@ -9,7 +9,6 @@ import { Note } from '../../../../../oith.shared';
 })
 export class FormatGroupComponent implements OnInit {
   @Input() public formatGroup: FormatGroup;
-  @Input() public notes: Note;
   constructor() {}
 
   ngOnInit() {}
