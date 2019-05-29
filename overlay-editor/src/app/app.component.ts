@@ -1,12 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataService } from './services/data.service';
-
+import axios from 'axios';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  public async ngOnInit(): Promise<void> {
+    try {
+      const noteFile = await axios.get('assets/new-notes-mark.xml');
+      const chapterFile = await axios.get('assets/14.html');
+      this.dataService.loadNotesDocument(noteFile.data);
+      this.dataService.loadChapterFile(chapterFile.data);
+      console.log(noteFile);
+      console.log(chapterFile);
+    } catch (error) {}
+  }
   public title = 'overlay-editor';
 
   public constructor(public dataService: DataService) {}

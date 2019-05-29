@@ -9,5 +9,7 @@ export class VerseComponent implements OnInit {
   @Input() public verse: LDSSourceVerse;
   public constructor() {}
 
-  public ngOnInit(): void {}
+  public ngOnInit(): void {
+    // console.log(this.verse.formatTags);
+  }
 }

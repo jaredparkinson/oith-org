@@ -208,7 +208,7 @@ export class DataService {
               return note.chaterDataAid === chapterDataAid && note._id === id;
             },
           );
-          console.log(note);
+          // console.log(note);
           if (note) {
             verse.note = note;
             this.createEmptyNote(verse, note, title);
