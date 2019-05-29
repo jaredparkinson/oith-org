@@ -7,7 +7,7 @@
     {
       "type": "edge",
       "request": "launch",
-      "version": "canary",
+      "version": "dev",
       "name": "Launch Chrome against localhost",
       "url": "http://localhost:4200",
       "webRoot": "${workspaceFolder}"

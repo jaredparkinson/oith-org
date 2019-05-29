@@ -5,17 +5,16 @@
   <ng-container *ngIf="!dataService.verses && !dataService.notes">
     <div id="chapterDocumentLoader">
       <ng-container *ngIf="!dataService.chapterDocument && !dataService.verses">
-        <label for="chapterFileOpener">Load Chapter File</label>
-
-        <input
-          type="file"
-          name="chapter-file"
-          id="chapterFileOpener"
-          (change)="this.loadChapterFile($event)"
-        />
+        <div>
+          <label for="chapterFileOpener">Load Chapter File</label><br />
+          <input
+            type="file"
+            name="chapter-file"
+            id="chapterFileOpener"
+            (change)="this.loadChapterFile($event)"
+          />
+        </div>
       </ng-container>
-    </div>
-    <div id="notesDocumentLoader">
       <ng-container *ngIf="!dataService.notesDocument && !dataService.notes">
         <div>
           <label for="notesFileOpener">Load Notes File</label>
@@ -29,12 +28,13 @@
         </div>
       </ng-container>
     </div>
+    <!-- <div id="notesDocumentLoader"></div> -->
   </ng-container>
   <ng-container *ngIf="dataService.verses && dataService.notes">
     <app-body-block
       [verses]="dataService.verses"
       [notes]="dataService.notes"
     ></app-body-block>
-    <app-notes [notes]="dataService.notes"></app-notes>
+    <!-- <app-notes [notes]="dataService.notes"></app-notes> -->
   </ng-container>
 </div>

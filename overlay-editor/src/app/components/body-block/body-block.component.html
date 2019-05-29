@@ -1,5 +1,21 @@
-<app-verse
-  *ngFor="let verse of verses"
-  [verse]="verse"
-  [notes]="this.notes"
-></app-verse>
+<table>
+  <tr *ngFor="let verse of verses">
+    <td><app-verse [verse]="verse" [notes]="this.notes"></app-verse></td>
+    <td>
+      <ng-container *ngIf="verse.note">
+        <p class="note-title">{{ verse.note.noteTitle }}s</p>
+        <p class="note-short-title">{{ verse.note.noteShortTitle }}</p>
+        <ng-container
+          *ngIf="
+            verse.note.secondaryNotes && verse.note.secondaryNotes.length > 0
+          "
+        >
+          <app-secondary-note
+            [secondaryNote]="secondaryNote"
+            *ngFor="let secondaryNote of verse.note.secondaryNotes"
+          ></app-secondary-note>
+        </ng-container>
+      </ng-container>
+    </td>
+  </tr>
+</table>

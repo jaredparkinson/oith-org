@@ -153,9 +153,11 @@ export class DataService {
             );
             this.addExistingNotesToVerses(this.verses, this.notes);
             // console.log(this.notes);
+          } else {
+            await this.addNoteTemplates(newDocument, this.verses);
           }
         } else {
-          this.addNoteTemplates(newDocument, this.verses);
+          await this.addNoteTemplates(newDocument, this.verses);
         }
         // console.log(this.verses);
       } catch (error) {
@@ -258,7 +260,7 @@ export class DataService {
 
     verses.map(
       (verse): void => {
-        const verseElement = document.getElementById(verse._id);
+        const verseElement = document.getElementById(verse.id);
         if (verseElement) {
           const verseNumber = this.getVerseNumber(verseElement);
           const note = new NoteLDSSource();
