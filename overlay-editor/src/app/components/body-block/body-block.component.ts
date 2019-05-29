@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Verse, Note } from '../../../../../oith.shared';
+import { Verse } from '../../../../../oith.shared';
 
 @Component({
   selector: 'app-body-block',

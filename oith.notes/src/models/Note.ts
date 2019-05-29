@@ -22,5 +22,5 @@ export class SecondaryNoteLDSSource {
   public id: string;
   public notePhrase: string | undefined;
   public noteRefs: string[] = [];
-  public offset: string;
+  public offsets: string;
 }

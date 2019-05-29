@@ -1,7 +1,7 @@
 <div
   [class]="this.getClassList()"
   id="this.secondaryNote._id"
-  offset="this.getOffsets()"
+  [attr.offset]="this.secondaryNote.offsets"
 >
   <app-note-phrase [notePhrase]="this.getNotePhrase()"></app-note-phrase>
   <app-note-reference

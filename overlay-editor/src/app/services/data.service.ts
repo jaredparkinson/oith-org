@@ -2,12 +2,7 @@ import { Injectable } from '@angular/core';
 import { Navigation } from '../models/Navigation';
 import { run } from '../../../../oith.format-tags/src/run';
 import { Environment } from '../../../../oith.format-tags/src/Environment';
-import {
-  Verse,
-  LDSSourceVerse,
-} from '../../../../oith.format-tags/src/models/Verse';
-import { Note, SecondaryNote } from '../../../../oith.shared';
-import { queryVerseElements } from '../../../../oith.format-tags/src/functions/queryVerseElements';
+import { LDSSourceVerse } from '../../../../oith.format-tags/src/models/Verse';
 import {
   NoteLDSSource,
   SecondaryNoteLDSSource,
@@ -92,6 +87,14 @@ export class DataService {
           '.note-phrase',
         );
         secondaryNote.noteRefs = this.parseNoteRefs(secondaryNoteElement);
+        secondaryNote.offsets = this.getAttribute(
+          secondaryNoteElement,
+          'offset',
+        );
+        if (secondaryNote.offsets.length > 0) {
+          console.log(secondaryNote.offsets);
+        }
+
         return secondaryNote;
       },
     );
@@ -114,6 +117,7 @@ export class DataService {
         // console.log(note);
 
         note.secondaryNotes = this.parseSecondaryNotes(noteElement, dataAid);
+
         // console.log(note);
         if (!this.allNotes) {
           this.allNotes = [];
@@ -313,7 +317,7 @@ export class DataService {
       (verse): void => {
         const verseElement = document.getElementById(verse.id);
         if (verseElement) {
-          const verseNumber = this.getVerseNumber(verseElement);
+          // const verseNumber = this.getVerseNumber(verseElement);
           const note = new NoteLDSSource();
           // this.createEmptyNote(note, verseNumber, title, verse);
           this.createEmptyNote(verse, note, title);
@@ -363,20 +367,4 @@ export class DataService {
     }
     verse.note = note;
   }
-}
-function parseOffset(compressedOffset: string): number[] {
-  let offsetSplit: number[] = [];
-  compressedOffset.split(',').map(
-    (r): void => {
-      if (r.indexOf('-') !== -1) {
-        const split2 = r.split('-');
-        const f = parseInt(split2[0]);
-        const l = parseInt(split2[1]);
-        offsetSplit = offsetSplit.concat(range(f, l));
-      } else {
-        offsetSplit.push(parseInt(r));
-      }
-    },
-  );
-  return offsetSplit;
 }

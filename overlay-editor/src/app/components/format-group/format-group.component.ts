@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormatGroup } from '../../../../../oith.format-tags/src/models/format_groups/FormatGroup';
-import { Note } from '../../../../../oith.shared';
 
 @Component({
   selector: 'app-format-group',
@@ -9,7 +8,7 @@ import { Note } from '../../../../../oith.shared';
 })
 export class FormatGroupComponent implements OnInit {
   @Input() public formatGroup: FormatGroup;
-  constructor() {}
+  public constructor() {}
 
-  ngOnInit() {}
+  public ngOnInit(): void {}
 }
