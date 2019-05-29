@@ -1,4 +1,4 @@
-import { range } from 'lodash';
+import { range, flatten } from 'lodash';
 export function parseOffset(compressedOffset: string): number[] | undefined {
   if (compressedOffset === '') {
     return undefined;
@@ -17,4 +17,17 @@ export function parseOffset(compressedOffset: string): number[] | undefined {
     },
   );
   return offsetSplit;
+}
+export function parseOffsetNumbers(
+  compressedOffset: [number, number][] | undefined,
+): number[] | undefined {
+  return compressedOffset
+    ? flatten(
+        compressedOffset.map(
+          (compressedOff): number[] => {
+            return range(compressedOff[0], compressedOff[1]);
+          },
+        ),
+      )
+    : undefined;
 }
