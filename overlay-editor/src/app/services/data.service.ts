@@ -68,8 +68,6 @@ export class DataService {
   }
 
   public parseSecondaryNotes(noteElement: Element): SecondaryNoteLDSSource[] {
-    console.log(noteElement.querySelectorAll(`[id="${noteElement.id}"] > div`));
-
     return Array.from(
       noteElement.querySelectorAll(`[id="${noteElement.id}"] > div`),
     ).map(
@@ -112,7 +110,7 @@ export class DataService {
         //  this.getAttribute(noteElement, 'offset');
       },
     );
-    console.log(this.allNotes);
+    // console.log(this.allNotes);
   }
   public async loadChapterFile(file: string): Promise<void> {
     const domParser = new DOMParser();
@@ -142,18 +140,18 @@ export class DataService {
             `div.chapter[data-aid="${this.chapterDataAid}"]`,
           );
           if (chapterNotes && this.allNotes) {
-            console.log(chapterNotes.id);
+            // console.log(chapterNotes.id);
             this.notes = this.allNotes.filter(
               (note): boolean => {
                 return note.chaterDataAid === this.chapterDataAid;
               },
             );
-            console.log(this.notes);
+            // console.log(this.notes);
           }
         } else {
           this.addNoteTemplates(newDocument);
         }
-        console.log(this.verses);
+        // console.log(this.verses);
       } catch (error) {
         console.log(error);
         this.chapterDocument = undefined;
@@ -248,12 +246,12 @@ export class DataService {
             if (this.notes) {
               this.notes.push(note);
             }
-            console.log(verseNumber);
+            // console.log(verseNumber);
           }
         },
       );
     }
 
-    console.log(this.notes);
+    // console.log(this.notes);
   }
 }

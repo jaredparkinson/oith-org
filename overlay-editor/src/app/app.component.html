@@ -31,7 +31,10 @@
     </div>
   </ng-container>
   <ng-container *ngIf="dataService.verses && dataService.notes">
-    <app-body-block [verses]="dataService.verses"></app-body-block>
+    <app-body-block
+      [verses]="dataService.verses"
+      [notes]="dataService.notes"
+    ></app-body-block>
     <app-notes [notes]="dataService.notes"></app-notes>
   </ng-container>
 </div>

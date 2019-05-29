@@ -1,14 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Verse } from '../../../../../oith.shared';
-
+import { Note } from '../../../../../oith.shared';
+import { Verse } from '../../../../../oith.format-tags/src/models/Verse';
 @Component({
   selector: 'app-verse',
   templateUrl: './verse.component.html',
   styleUrls: ['./verse.component.scss'],
 })
 export class VerseComponent implements OnInit {
+  @Input() public notes: Note[];
   @Input() public verse: Verse;
-  constructor() {}
+  public constructor() {}
 
-  ngOnInit() {}
+  public ngOnInit() {}
 }

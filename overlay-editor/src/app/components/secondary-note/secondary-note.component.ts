@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { NotePhrase, NoteRef } from '../../../../../oith.shared';
 import { SecondaryNoteLDSSource } from '../../../../../oith.notes/src/models/Note';
 
 @Component({
@@ -11,9 +10,7 @@ export class SecondaryNoteComponent implements OnInit {
   @Input() public secondaryNote: SecondaryNoteLDSSource;
   public constructor() {}
 
-  public ngOnInit(): void {
-    console.log(this.secondaryNote);
-  }
+  public ngOnInit(): void {}
 
   public getClassList(): string {
     return '';

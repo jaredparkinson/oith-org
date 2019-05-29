@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {
+  NgModule,
+  CUSTOM_ELEMENTS_SCHEMA,
+  NO_ERRORS_SCHEMA,
+} from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
@@ -12,6 +16,7 @@ import { NotePhraseComponent } from './components/note-phrase/note-phrase.compon
 import { NoteReferenceComponent } from './components/note-reference/note-reference.component';
 import { DataService } from './services/data.service';
 import { VerseComponent } from './components/verse/verse.component';
+import { FormatGroupComponent } from './components/format-group/format-group.component';
 
 @NgModule({
   declarations: [
@@ -25,9 +30,11 @@ import { VerseComponent } from './components/verse/verse.component';
     NotePhraseComponent,
     NoteReferenceComponent,
     VerseComponent,
+    FormatGroupComponent,
   ],
   imports: [BrowserModule],
   providers: [DataService],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class AppModule {}
