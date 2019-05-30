@@ -10,7 +10,7 @@ export function parseOffset(compressedOffset: string): number[] | undefined {
         const split2 = r.split('-');
         const f = parseInt(split2[0]);
         const l = parseInt(split2[1]);
-        offsetSplit = offsetSplit.concat(range(f, l));
+        offsetSplit = offsetSplit.concat(range(f, l + 1));
       } else {
         offsetSplit.push(parseInt(r));
       }

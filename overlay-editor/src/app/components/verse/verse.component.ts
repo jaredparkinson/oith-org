@@ -27,7 +27,9 @@ export class VerseComponent implements OnInit {
     return this.verse.formatTags
       ? (this.verse.formatTags.map(
           (formatTag): F => {
-            formatTag.offsets = parseOffsetNumbers(formatTag.compressedOffsets);
+            formatTag.offsets = parseOffsetNumbers(
+              formatTag.compressedOffsets,
+            ) as number[];
             return formatTag;
           },
         ) as FormatTagLDSSource[])
@@ -42,6 +44,8 @@ export class VerseComponent implements OnInit {
             secondaryNote.offsets,
           );
           if (secondaryNote.uncompressedOffsets) {
+            console.log(secondaryNote.notePhrase);
+
             console.log(secondaryNote.uncompressedOffsets);
           }
         },

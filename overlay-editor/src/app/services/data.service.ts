@@ -102,6 +102,8 @@ export class DataService {
           'offset',
         );
         if (secondaryNote.offsets.length > 0) {
+          console.log(secondaryNote.notePhrase);
+
           console.log(secondaryNote.offsets);
         }
 

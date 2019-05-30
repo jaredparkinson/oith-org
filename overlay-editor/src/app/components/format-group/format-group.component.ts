@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormatGroup } from '../../../../../oith.format-tags/src/models/format_groups/FormatGroup';
-import { Note, SecondaryNote } from '../../../../../oith.shared';
 import { FormatTagLDSSource } from '../../../../../oith.format-tags/src/models/format_tags/F';
 import { parseOffset, parseOffsetNumbers } from 'src/app/services/parseOffset';
 import { NoteLDSSource } from '../../../../../oith.notes/src/models/Note';
@@ -27,6 +26,17 @@ export class FormatGroupComponent implements OnInit {
       this.formatGroup.compressedOffsets,
     );
 
+    if (
+      this.note &&
+      this.note.secondaryNotes &&
+      this.note.secondaryNotes.filter(
+        (sn): boolean => {
+          return sn.notePhrase !== undefined && sn.notePhrase.includes('voice');
+        },
+      )
+    ) {
+      console.log(this.note.secondaryNotes);
+    }
     if (this.formatGroup.offsets) {
       const newFormatTags: FormatTagLDSSource[] = [];
       let lastFormatTag: FormatTagLDSSource | undefined;
