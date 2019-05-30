@@ -26,17 +26,17 @@ export class FormatGroupComponent implements OnInit {
       this.formatGroup.compressedOffsets,
     );
 
-    if (
-      this.note &&
-      this.note.secondaryNotes &&
-      this.note.secondaryNotes.filter(
-        (sn): boolean => {
-          return sn.notePhrase !== undefined && sn.notePhrase.includes('voice');
-        },
-      )
-    ) {
-      console.log(this.note.secondaryNotes);
-    }
+    // if (
+    //   this.note &&
+    //   this.note.secondaryNotes &&
+    //   this.note.secondaryNotes.filter(
+    //     (sn): boolean => {
+    //       return sn.notePhrase !== undefined && sn.notePhrase.includes('voice');
+    //     },
+    //   )
+    // ) {
+    //   console.log(this.note.secondaryNotes);
+    // }
     if (this.formatGroup.offsets) {
       const newFormatTags: FormatTagLDSSource[] = [];
       let lastFormatTag: FormatTagLDSSource | undefined;

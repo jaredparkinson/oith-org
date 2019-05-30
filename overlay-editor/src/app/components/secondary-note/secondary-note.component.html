@@ -2,6 +2,7 @@
   [class]="this.getClassList()"
   id="this.secondaryNote._id"
   [attr.offset]="this.secondaryNote.offsets"
+  *ngIf="!this.editMode"
 >
   <secondary-note>
     <p>
@@ -11,19 +12,71 @@
         *ngFor="let noteRef of this.getNoteRefs()"
       >
       </app-note-reference>
-      <button>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
+    </p>
+    <span>
+      <button (click)="this.editMode = !this.editMode">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
           <path
             d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
           />
           <path d="M0 0h24v24H0z" fill="none" />
         </svg>
       </button>
+    </span>
+  </secondary-note>
+</div>
+<div
+  [class]="this.getClassList()"
+  id="this.secondaryNote._id"
+  [attr.offset]="this.secondaryNote.offsets"
+  *ngIf="this.editMode"
+>
+  <secondary-note>
+    <p>
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="1"
+        (keyup)="this.updateSecondaryNote($event, 'notePhrase')"
+        >{{ this.getNotePhrase() }}</textarea
+      >
+      <app-note-phrase [notePhrase]="this.getNotePhrase()"></app-note-phrase>
+      <ng-container *ngFor="let noteRef of this.getNoteRefs()">
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          *ngFor="let noteRef of this.getNoteRefs()"
+          (keyup)="this.updateNoteRef($event,noteRef)"
+          >{{ noteRef.noteRef }}</textarea
+        >
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          (keyup)="this.updateSecondaryNote($event, 'offsets')"
+          >{{ this.secondaryNote.offsets }}</textarea
+        >
+      </ng-container>
+
+      <app-note-reference
+        [noteRef]="noteRef"
+        *ngFor="let noteRef of this.getNoteRefs()"
+      >
+      </app-note-reference>
     </p>
+    <span>
+      <button (click)="this.editMode = !this.editMode">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+          <path
+            d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+          />
+          <path d="M0 0h24v24H0z" fill="none" />
+        </svg>
+      </button>
+    </span>
   </secondary-note>
 </div>

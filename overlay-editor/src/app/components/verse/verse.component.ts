@@ -43,11 +43,11 @@ export class VerseComponent implements OnInit {
           secondaryNote.uncompressedOffsets = parseOffset(
             secondaryNote.offsets,
           );
-          if (secondaryNote.uncompressedOffsets) {
-            console.log(secondaryNote.notePhrase);
+          // if (secondaryNote.uncompressedOffsets) {
+          //   console.log(secondaryNote.notePhrase);
 
-            console.log(secondaryNote.uncompressedOffsets);
-          }
+          //   console.log(secondaryNote.uncompressedOffsets);
+          // }
         },
       );
     }

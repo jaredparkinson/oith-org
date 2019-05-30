@@ -11,6 +11,26 @@ import {
 })
 export class SecondaryNoteComponent implements OnInit {
   @Input() public secondaryNote: SecondaryNoteLDSSource;
+  public editMode: boolean = false;
+
+  public noteRefText: string = '';
+  public offsets: string = '';
+  public notePhraseText: string = '';
+
+  public editModeClick(): void {
+    this.editMode !== this.editMode;
+  }
+
+  /**
+   * updateNotePhrase
+   */
+  public updateSecondaryNote(event: Event, property: string): void {
+    this.secondaryNote[property] = (event as KeyboardEvent).target.value;
+  }
+  public updateNoteRef(event: Event, noteRef: NoteRegLds): void {
+    noteRef.noteRef = (event as KeyboardEvent).target.value;
+  }
+
   public constructor() {}
 
   public ngOnInit(): void {}
