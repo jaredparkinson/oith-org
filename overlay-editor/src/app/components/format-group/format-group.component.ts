@@ -28,7 +28,6 @@ export class FormatGroupComponent implements OnInit {
     );
 
     if (this.formatGroup.offsets) {
-      // console.log(this.formatGroup.offsets);
       const newFormatTags: FormatTagLDSSource[] = [];
       let lastFormatTag: FormatTagLDSSource | undefined;
 
@@ -37,8 +36,6 @@ export class FormatGroupComponent implements OnInit {
           const newF = new FormatTagLDSSource();
           newF.offsets = [offset];
           newF.classList = [this.getOffsetClass(this.note, offset)];
-
-          // console.log(offset);
 
           this.formatTags
             .filter(
@@ -74,7 +71,6 @@ export class FormatGroupComponent implements OnInit {
       if (lastFormatTag) {
         newFormatTags.push(lastFormatTag);
       }
-      console.log(newFormatTags);
 
       newFormatTags.map(
         (f): void => {
@@ -93,8 +89,6 @@ export class FormatGroupComponent implements OnInit {
     if (note && note.secondaryNotes) {
       const length = note.secondaryNotes.filter(
         (secondaryNote): boolean => {
-          // console.log(secondaryNote.uncompressedOffsets);
-
           return (
             secondaryNote.uncompressedOffsets !== undefined &&
             secondaryNote.uncompressedOffsets.includes(offset)
@@ -102,7 +96,6 @@ export class FormatGroupComponent implements OnInit {
           );
         },
       ).length;
-      // console.log(`${offset} ${length}`);
 
       return length > 1
         ? 'f-ref-multi'

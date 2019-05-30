@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SecondaryNoteLDSSource } from '../../../../../oith.notes/src/models/Note';
+import {
+  SecondaryNoteLDSSource,
+  NoteRegLds,
+} from '../../../../../oith.notes/src/models/Note';
 
 @Component({
   selector: 'app-secondary-note',
@@ -22,7 +25,60 @@ export class SecondaryNoteComponent implements OnInit {
     return this.secondaryNote.notePhrase ? this.secondaryNote.notePhrase : '';
   }
 
-  public getNoteRefs(): string[] {
+  public getNoteRefs(): NoteRegLds[] {
     return this.secondaryNote.noteRefs ? this.secondaryNote.noteRefs : [];
+  }
+
+  public getRefLabel(refl: string): string {
+    switch (refl) {
+      case 'reference-label-alt': {
+        return 'ALT';
+      }
+      case 'reference-label-bd': {
+        return 'BD';
+      }
+      case 'reference-label-cross-ref': {
+        return 'CR';
+      }
+      case 'reference-label-error': {
+        return '';
+      }
+      case 'reference-label-geography': {
+        return 'GEO';
+      }
+      case 'reference-label-gs': {
+        return 'GS';
+      }
+      case 'reference-label-harmony': {
+        return 'HMY';
+      }
+      case 'reference-label-hebrew': {
+        return 'HEB';
+      }
+      case 'reference-label-history': {
+        return 'HST';
+      }
+      case 'reference-label-ie': {
+        return 'IE';
+      }
+      case 'reference-label-or': {
+        return 'OR';
+      }
+      case 'reference-label-phrasing': {
+        return 'PHR';
+      }
+      case 'reference-label-quotation': {
+        return 'QUO';
+      }
+      case 'reference-label-tg': {
+        return 'TG';
+      }
+      case 'reference-label-translation': {
+        return 'TRN';
+      }
+
+      default:
+        return '';
+    }
   }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NoteRef } from '../../../../../oith.shared';
 import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
+import { NoteRegLds } from '../../../../../oith.notes/src/models/Note';
 
 @Component({
   selector: 'app-note-reference',
@@ -8,12 +9,12 @@ import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./note-reference.component.scss'],
 })
 export class NoteReferenceComponent implements OnInit {
-  @Input() public noteRef: string;
+  @Input() public noteRef: NoteRegLds;
   public constructor(public sanitizer: DomSanitizer) {}
 
   public ngOnInit(): void {}
 
   public noteRefAsSafeHtml(): SafeHtml {
-    return this.sanitizer.bypassSecurityTrustHtml(this.noteRef);
+    return this.sanitizer.bypassSecurityTrustHtml(this.noteRef.noteRef);
   }
 }

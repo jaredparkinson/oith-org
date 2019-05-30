@@ -1,10 +1,8 @@
-<table>
+<!-- <table>
   <tr *ngFor="let verse of verses">
     <td><app-verse [verse]="verse"></app-verse></td>
     <td>
       <ng-container *ngIf="verse.note">
-        <!-- <p class="note-title">{{ verse.note.noteTitle }}</p>
-        <p class="note-short-title">{{ verse.note.noteShortTitle }}</p> -->
         <ng-container
           *ngIf="
             verse.note.secondaryNotes && verse.note.secondaryNotes.length > 0
@@ -18,8 +16,29 @@
       </ng-container>
     </td>
   </tr>
-</table>
+</table> -->
 
+<ul>
+  <li *ngFor="let verse of verses">
+    <app-verse [verse]="verse"></app-verse>
+    <ng-container *ngIf="verse.note">
+      <note>
+        <!-- <p class="note-title">{{ verse.note.noteTitle }}</p>
+        <p class="note-short-title">{{ verse.note.noteShortTitle }}</p> -->
+        <ng-container
+          *ngIf="
+            verse.note.secondaryNotes && verse.note.secondaryNotes.length > 0
+          "
+        >
+          <app-secondary-note
+            [secondaryNote]="secondaryNote"
+            *ngFor="let secondaryNote of verse.note.secondaryNotes"
+          ></app-secondary-note>
+        </ng-container>
+      </note>
+    </ng-container>
+  </li>
+</ul>
 <button
   (click)="addNoteTest()"
   style="position: fixed; left: 0px; top: 0px; height: 48px; width: 48px; color: black"

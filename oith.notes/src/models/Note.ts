@@ -21,7 +21,13 @@ export class SecondaryNoteLDSSource {
   public classList: string[] | undefined;
   public id: string;
   public notePhrase: string | undefined;
-  public noteRefs: string[] = [];
+  public noteRefs: NoteRegLds[] = [];
   public offsets: string;
   public uncompressedOffsets: number[] | undefined;
+  public refLabel: [string, string, number];
+}
+
+export class NoteRegLds {
+  public refLabel: [string, string, number];
+  public noteRef: string;
 }

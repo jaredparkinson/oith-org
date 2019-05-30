@@ -3,9 +3,11 @@
   id="this.secondaryNote._id"
   [attr.offset]="this.secondaryNote.offsets"
 >
-  <app-note-phrase [notePhrase]="this.getNotePhrase()"></app-note-phrase>
-  <app-note-reference
-    [noteRef]="noteRef"
-    *ngFor="let noteRef of this.getNoteRefs()"
-  ></app-note-reference>
+  <secondary-note>
+    <app-note-phrase [notePhrase]="this.getNotePhrase()"></app-note-phrase>
+    <app-note-reference
+      [noteRef]="noteRef"
+      *ngFor="let noteRef of this.getNoteRefs()"
+    ></app-note-reference>
+  </secondary-note>
 </div>

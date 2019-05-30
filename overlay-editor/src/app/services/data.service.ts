@@ -6,7 +6,9 @@ import { LDSSourceVerse } from '../../../../oith.format-tags/src/models/Verse';
 import {
   NoteLDSSource,
   SecondaryNoteLDSSource,
+  NoteRegLds,
 } from '../../../../oith.notes/src/models/Note';
+import { parseRefLabel } from './parseRefLabel';
 
 @Injectable({
   providedIn: 'root',
@@ -55,14 +57,21 @@ export class DataService {
     return child && child.textContent ? child.textContent : '';
   }
 
-  public parseNoteRefs(secondaryNoteElement: Element): string[] {
+  public parseNoteRefs(secondaryNoteElement: Element): NoteRegLds[] {
     return Array.from(
       secondaryNoteElement.querySelectorAll(
         `[id="${secondaryNoteElement.id}"] > .note-reference`,
       ),
     ).map(
-      (noteRefElement): string => {
-        return noteRefElement.innerHTML;
+      (noteRefElement): NoteRegLds => {
+        console.log();
+
+        return {
+          noteRef: noteRefElement.innerHTML,
+          refLabel: parseRefLabel(
+            (noteRefElement.childNodes[0] as Element).className,
+          ),
+        };
       },
     );
   }
@@ -86,6 +95,7 @@ export class DataService {
           secondaryNoteElement,
           '.note-phrase',
         );
+
         secondaryNote.noteRefs = this.parseNoteRefs(secondaryNoteElement);
         secondaryNote.offsets = this.getAttribute(
           secondaryNoteElement,
