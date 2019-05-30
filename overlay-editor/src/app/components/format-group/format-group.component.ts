@@ -86,7 +86,7 @@ export class FormatGroupComponent implements OnInit {
         (f): void => {
           const fi = first(f.offsets);
           const l = last(f.offsets);
-          f.text = this.verse.text.slice(fi, l + 1);
+          f.text = this.verse.text.slice(fi, (l as number) + 1);
         },
       );
       return newFormatTags;

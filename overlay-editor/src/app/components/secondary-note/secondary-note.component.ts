@@ -25,10 +25,11 @@ export class SecondaryNoteComponent implements OnInit {
    * updateNotePhrase
    */
   public updateSecondaryNote(event: Event, property: string): void {
-    this.secondaryNote[property] = (event as KeyboardEvent).target.value;
+    this.secondaryNote[property] = ((event as KeyboardEvent)
+      .target as any).value;
   }
   public updateNoteRef(event: Event, noteRef: NoteRegLds): void {
-    noteRef.noteRef = (event as KeyboardEvent).target.value;
+    noteRef.noteRef = ((event as KeyboardEvent).target as any).value;
   }
 
   public constructor() {}
