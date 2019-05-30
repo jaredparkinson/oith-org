@@ -1,4 +1,14 @@
 secondary-note {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: minmax(48px, auto);
+    > span {
+        margin: 5px;
+
+        // display: grid;
+        // grid-template-columns: auto 48px;
+        button{
+            height: 48px; width: 48px;;
+        }
+    }
 }
