@@ -1,1 +1,3 @@
-<f *ngFor="let f of this.getFormatTags()"></f>
+<f [class]="getClassList(f.classList)" *ngFor="let f of this.getFormatTags()">{{
+  f.text
+}}</f>

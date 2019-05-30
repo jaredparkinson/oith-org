@@ -1,8 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormatGroup } from '../../../../../oith.format-tags/src/models/format_groups/FormatGroup';
-import { Note } from '../../../../../oith.shared';
+import { Note, SecondaryNote } from '../../../../../oith.shared';
 import { FormatTagLDSSource } from '../../../../../oith.format-tags/src/models/format_tags/F';
 import { parseOffset, parseOffsetNumbers } from 'src/app/services/parseOffset';
+import { NoteLDSSource } from '../../../../../oith.notes/src/models/Note';
+import { isEqual, last, first } from 'lodash';
+import { LDSSourceVerse } from '../../../../../oith.format-tags/src/models/Verse';
 
 @Component({
   selector: 'app-format-group',
@@ -11,8 +14,10 @@ import { parseOffset, parseOffsetNumbers } from 'src/app/services/parseOffset';
 })
 export class FormatGroupComponent implements OnInit {
   @Input() public formatGroup: FormatGroup;
-  @Input() public note: Note;
+  @Input() public note: NoteLDSSource;
+  @Input() public verse: LDSSourceVerse;
 
+  @Input() public formatTags: FormatTagLDSSource[];
   public constructor() {}
 
   public ngOnInit(): void {}
@@ -23,9 +28,91 @@ export class FormatGroupComponent implements OnInit {
     );
 
     if (this.formatGroup.offsets) {
-      console.log(this.formatGroup.offsets);
+      // console.log(this.formatGroup.offsets);
+      const newFormatTags: FormatTagLDSSource[] = [];
+      let lastFormatTag: FormatTagLDSSource | undefined;
+
+      this.formatGroup.offsets.map(
+        (offset): void => {
+          const newF = new FormatTagLDSSource();
+          newF.offsets = [offset];
+          newF.classList = [this.getOffsetClass(this.note, offset)];
+
+          // console.log(offset);
+
+          this.formatTags
+            .filter(
+              (u): boolean => {
+                return u.offsets !== undefined && u.offsets.includes(offset);
+              },
+            )
+            .map(
+              (u): void => {
+                newF.classList =
+                  newF.classList && u.classList
+                    ? newF.classList.concat(u.classList)
+                    : newF.classList;
+              },
+            );
+
+          if (!lastFormatTag) {
+            lastFormatTag = newF;
+          } else {
+            if (
+              newF.classList &&
+              lastFormatTag.classList &&
+              isEqual(newF.classList, lastFormatTag.classList)
+            ) {
+              (lastFormatTag.offsets as number[]).push(offset);
+            } else {
+              newFormatTags.push(lastFormatTag);
+              lastFormatTag = newF;
+            }
+          }
+        },
+      );
+      if (lastFormatTag) {
+        newFormatTags.push(lastFormatTag);
+      }
+      console.log(newFormatTags);
+
+      newFormatTags.map(
+        (f): void => {
+          const fi = first(f.offsets);
+          const l = last(f.offsets);
+          f.text = this.verse.text.slice(fi, l + 1);
+        },
+      );
+      return newFormatTags;
     }
 
     return [];
+  }
+
+  public getOffsetClass(note: NoteLDSSource, offset: number): string {
+    if (note && note.secondaryNotes) {
+      const length = note.secondaryNotes.filter(
+        (secondaryNote): boolean => {
+          // console.log(secondaryNote.uncompressedOffsets);
+
+          return (
+            secondaryNote.uncompressedOffsets !== undefined &&
+            secondaryNote.uncompressedOffsets.includes(offset)
+            // const f=
+          );
+        },
+      ).length;
+      // console.log(`${offset} ${length}`);
+
+      return length > 1
+        ? 'f-ref-multi'
+        : length === 1
+        ? 'f-ref-single'
+        : 'no-underline';
+    }
+    return 'no-underline';
+  }
+  public getClassList(classList: string[] | undefined): string {
+    return classList ? classList.toString().replace(/,/s, ' ') : '';
   }
 }

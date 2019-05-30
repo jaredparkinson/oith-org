@@ -3,7 +3,7 @@ import { FType } from '../../enums/FType';
 // public compressedOffsets: [number, number];
 // public offsets: number[] | undefined;
 export abstract class F {
-  public offsets: number[];
+  public offsets: number[]|undefined;
   public compressedOffsets: [number, number][];
   public optional: boolean | undefined;
   public FType: FType;

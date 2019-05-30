@@ -3,5 +3,7 @@
     *ngFor="let formatGroup of this.verse.formatGroups"
     [formatGroup]="formatGroup"
     [note]="getNote()"
+    [verse]="verse"
+    [formatTags]="getFormatTags()"
   ></app-format-group>
 </verse>
