@@ -142,7 +142,7 @@ function convertFormatTempTagToFormatTag(
 ): F | undefined {
   let formatTag: F | undefined;
 
-  const firstLast = getFirstAndLast(formatTempTag.offsets);
+  const firstLast = getFirstAndLast(formatTempTag.offsets ? formatTempTag.offsets : []);
   if (environment === Environment.browser) {
     formatTag = new FormatTagLDSSource();
 
