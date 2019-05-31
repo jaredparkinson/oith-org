@@ -1,12 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { DataService } from './services/data.service';
 import axios from 'axios';
+import { ReQueue } from './services/ReQueue';
+import { saveAs } from 'file-saver';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+  @HostListener('window:keyup', ['$event'])
+  public keyEvent(event: KeyboardEvent): void {
+    if (event.ctrlKey) {
+      if (event.key === 'z') {
+        this.dataService.reQueueNotes(ReQueue.UNDO);
+        console.log(event);
+      }
+      if (event.key === 'y') {
+        this.dataService.reQueueNotes(ReQueue.REDO);
+
+        console.log(event);
+      }
+    }
+  }
   public async ngOnInit(): Promise<void> {
     try {
       const noteFile = await axios.get('assets/eng-notes-mark.xml');

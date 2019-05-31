@@ -1,3 +1,4 @@
+import { saveAs } from 'file-saver';
 import { Component, OnInit, Input } from '@angular/core';
 import { Verse } from '../../../../../oith.shared';
 import { LDSSourceVerse } from '../../../../../oith.format-tags/src/models/Verse';
@@ -21,5 +22,18 @@ export class BodyBlockComponent implements OnInit {
     this.dataService.reQueueNotes(req);
 
     console.log('hhh');
+  }
+
+  public save(): void {
+    if (this.dataService.notesDocument) {
+      const notesDocument = new XMLSerializer().serializeToString(
+        this.dataService.notesDocument,
+      );
+      const blob = new Blob([notesDocument], {
+        type: 'text/html;charset=utf=8',
+      });
+      saveAs(blob, 'test.html');
+      console.log(blob);
+    }
   }
 }

@@ -4,8 +4,6 @@ import {
   NoteRegLds,
 } from '../../../../../oith.notes/src/models/Note';
 import { DataService } from 'src/app/services/data.service';
-import * as tinymce from 'tinymce';
-import { EditorModule } from '@tinymce/tinymce-angular';
 
 @Component({
   selector: 'app-secondary-note',
