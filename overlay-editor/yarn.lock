@@ -319,6 +319,13 @@
     semver "5.6.0"
     semver-intersect "1.4.0"
 
+"@tinymce/tinymce-angular@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@tinymce/tinymce-angular/-/tinymce-angular-3.0.1.tgz#4746c6cc3340ce4c73e22576127dc122e11d6b73"
+  integrity sha512-L6wL/hhyqWCtkA08Mq3Cck5rcFaZaDy6ETATlr40hCfDhLNP9W9f8ibxHmsj7EUJNDxhANS67zFLlSc0IXUvZg==
+  dependencies:
+    tslib "^1.9.0"
+
 "@types/jasmine@*":
   version "3.3.12"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.3.12.tgz#bf282cb540e9ad7a0a04b742082c073b655eab39"
@@ -335,6 +342,13 @@
   integrity sha512-2ZOKrxb8bKRmP/po5ObYnRDgFE4i+lQiEB27bAMmtMWLgJSqlIDqlLx6S0IRorpOmOPRQ6O80NujTmQAtBkeNw==
   dependencies:
     "@types/jasmine" "*"
+
+"@types/jquery@*":
+  version "3.3.29"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.3.29.tgz#680a2219ce3c9250483722fccf5570d1e2d08abd"
+  integrity sha512-FhJvBninYD36v3k6c+bVk1DSZwh7B5Dpb/Pyk3HKVsiohn0nhbefZZ+3JXbWQhFyt0MxSl2jRDdGQPHeOHFXrQ==
+  dependencies:
+    "@types/sizzle" "*"
 
 "@types/lodash@^4.14.132":
   version "4.14.132"
@@ -361,10 +375,22 @@
   resolved "https://registry.yarnpkg.com/@types/selenium-webdriver/-/selenium-webdriver-3.0.16.tgz#50a4755f8e33edacd9c406729e9b930d2451902a"
   integrity sha512-lMC2G0ItF2xv4UCiwbJGbnJlIuUixHrioOhNGHSCsYCJ8l4t9hMCUimCytvFv7qy6AfSzRxhRHoGa+UqaqwyeA==
 
+"@types/sizzle@*":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@types/sizzle/-/sizzle-2.3.2.tgz#a811b8c18e2babab7d542b3365887ae2e4d9de47"
+  integrity sha512-7EJYyKTL7tFR8+gDbB6Wwz/arpGa0Mywk1TJbNzKzHtzbwVmY4HR9WqS5VV7dsBUKQmPNr192jHr/VpBluj/hg==
+
 "@types/source-list-map@*":
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/@types/source-list-map/-/source-list-map-0.1.2.tgz#0078836063ffaf17412349bba364087e0ac02ec9"
   integrity sha512-K5K+yml8LTo9bWJI/rECfIPrGgxdpeNbj+d53lwN4QjW1MCwlkhUms+gtdzigTeUyBr09+u8BwOIY3MXvHdcsA==
+
+"@types/tinymce@^4.5.22":
+  version "4.5.22"
+  resolved "https://registry.yarnpkg.com/@types/tinymce/-/tinymce-4.5.22.tgz#134827d2d6cfd7c7ed14d7ee1bfbfe4d66f7eb84"
+  integrity sha512-qmvmXUYgkdQ6jAbsRSQclfttq3nk8mbJYi6xthyhF2J9GFgzbNPcBntsrOr9CpnY6uE1Z8L0NBB1eA7TA+5GKA==
+  dependencies:
+    "@types/jquery" "*"
 
 "@types/webpack-sources@^0.1.5":
   version "0.1.5"
@@ -6883,6 +6909,11 @@ timers-browserify@^2.0.4:
   integrity sha512-YvC1SV1XdOUaL6gx5CoGroT3Gu49pK9+TZ38ErPldOWW4j49GI1HKs9DV+KGq/w6y+LZ72W1c8cKz2vzY+qpzg==
   dependencies:
     setimmediate "^1.0.4"
+
+tinymce@^5.0.6:
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/tinymce/-/tinymce-5.0.6.tgz#a31972acf3fe4c4440229d3223b17b965a302258"
+  integrity sha512-9/pcrO8awssCrbfSeNzlt2talFO4ZBCxiwWFLTrSOy5kJI4gXKGKHsZzstoyt7cbwbT1cUjLlUiDqW8IgmL6JA==
 
 tmp@0.0.30:
   version "0.0.30"

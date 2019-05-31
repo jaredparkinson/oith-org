@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Verse } from '../../../../../oith.shared';
 import { LDSSourceVerse } from '../../../../../oith.format-tags/src/models/Verse';
 import { DataService } from 'src/app/services/data.service';
-import { ReQueue } from "src/app/services/ReQueue";
+import { ReQueue } from 'src/app/services/ReQueue';
 
 @Component({
   selector: 'app-body-block',
@@ -19,6 +19,7 @@ export class BodyBlockComponent implements OnInit {
 
   public addNoteTest(req: ReQueue): void {
     this.dataService.reQueueNotes(req);
+
     console.log('hhh');
   }
 }

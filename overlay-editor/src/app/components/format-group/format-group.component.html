@@ -1,3 +1,9 @@
-<f [class]="getClassList(f.classList)" *ngFor="let f of this.getFormatTags()">{{
-  f.text
-}}</f>
+<format-group [attr.verseid]="verse.id" [attr.offsets]="getGroupOffsets()">
+  <f
+    [attr.verseid]="verse.id"
+    [attr.offsets]="getOffsets(f)"
+    [class]="getClassList(f.classList)"
+    *ngFor="let f of this.getFormatTags()"
+    >{{ f.text }}</f
+  >
+</format-group>

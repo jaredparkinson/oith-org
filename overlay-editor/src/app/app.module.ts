@@ -17,6 +17,7 @@ import { NoteReferenceComponent } from './components/note-reference/note-referen
 import { DataService } from './services/data.service';
 import { VerseComponent } from './components/verse/verse.component';
 import { FormatGroupComponent } from './components/format-group/format-group.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { FormatGroupComponent } from './components/format-group/format-group.com
     VerseComponent,
     FormatGroupComponent,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, EditorModule],
   providers: [DataService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],

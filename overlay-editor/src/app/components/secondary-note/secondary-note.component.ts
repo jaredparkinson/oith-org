@@ -4,6 +4,8 @@ import {
   NoteRegLds,
 } from '../../../../../oith.notes/src/models/Note';
 import { DataService } from 'src/app/services/data.service';
+import * as tinymce from 'tinymce';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 @Component({
   selector: 'app-secondary-note',
@@ -20,9 +22,63 @@ export class SecondaryNoteComponent implements OnInit {
 
   public editModeClick(): void {
     this.dataService.editMode = !this.dataService.editMode;
+    // if (this.dataService.editMode) {
+    //   setTimeout(() => {
+    //     try {
+    //       tinymce.init({
+    //         selector: '.note-phrase',
+    //         inline: true,
+    //       });
+    //     } catch (error) {
+    //       console.log(error);
+    //     }
+    //   }, 5000);
+    // }
     // this.editMode !== this.editMode;
   }
+  /**
+   * addOffsets
+   */
+  public addOffsets(): void {
+    const g = window.getSelection();
+    if (g) {
+      const g7 = g.getRangeAt(0);
+      const s = this.parseRange(g7.startContainer);
+      const e = this.parseRange(g7.endContainer);
+      if (s && e) {
+        console.log(s);
+        console.log(g7.startOffset);
+        console.log(e);
+        console.log(g7.endOffset);
+        console.log(this.secondaryNote.offsets);
+        s[1] = g7.startOffset === 0 ? s[1] : s[1] + g7.startOffset - 1;
+        e[1] = g7.endOffset === 0 ? e[1] : e[1] + g7.endOffset - 1;
+        this.secondaryNote.offsets = `${this.secondaryNote.offsets},${s[1]}-${
+          e[1]
+        }`;
+      }
+    }
+  }
+  public parseRange(
+    startContainer: Node,
+  ): [string, number, number] | undefined {
+    try {
+      const container =
+        startContainer.nodeName === '#text'
+          ? startContainer.parentElement
+          : startContainer;
+      const vId = (container as Element).getAttribute('verseid');
+      const offsets = (container as Element).getAttribute('offsets');
+      if (vId && offsets) {
+        const split = offsets.split(',');
+        return [vId, parseInt(split[0]), parseInt(split[1])];
+      }
+    } catch (error) {
+      console.log(error);
 
+      return undefined;
+    }
+  }
   /**
    * updateNotePhrase
    */

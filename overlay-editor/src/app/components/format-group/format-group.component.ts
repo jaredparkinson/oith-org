@@ -118,4 +118,12 @@ export class FormatGroupComponent implements OnInit {
   public getClassList(classList: string[] | undefined): string {
     return classList ? classList.toString().replace(/,/s, ' ') : '';
   }
+  public getOffsets(f: FormatTagLDSSource): string {
+    return `${first(f.offsets)},${last(f.offsets)}`;
+  }
+  public getGroupOffsets(): string {
+    return `${first(this.formatGroup.offsets)},${last(
+      this.formatGroup.offsets,
+    )}`;
+  }
 }
