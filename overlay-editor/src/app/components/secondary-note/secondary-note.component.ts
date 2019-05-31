@@ -3,6 +3,7 @@ import {
   SecondaryNoteLDSSource,
   NoteRegLds,
 } from '../../../../../oith.notes/src/models/Note';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-secondary-note',
@@ -18,21 +19,24 @@ export class SecondaryNoteComponent implements OnInit {
   public notePhraseText: string = '';
 
   public editModeClick(): void {
-    this.editMode !== this.editMode;
+    this.dataService.editMode = !this.dataService.editMode;
+    // this.editMode !== this.editMode;
   }
 
   /**
    * updateNotePhrase
    */
   public updateSecondaryNote(event: Event, property: string): void {
+    this.dataService.editNotes();
     this.secondaryNote[property] = ((event as KeyboardEvent)
       .target as any).value;
   }
   public updateNoteRef(event: Event, noteRef: NoteRegLds): void {
+    this.dataService.editNotes();
     noteRef.noteRef = ((event as KeyboardEvent).target as any).value;
   }
 
-  public constructor() {}
+  public constructor(public dataService: DataService) {}
 
   public ngOnInit(): void {}
 

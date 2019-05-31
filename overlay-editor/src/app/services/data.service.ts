@@ -9,6 +9,8 @@ import {
   NoteRegLds,
 } from '../../../../oith.notes/src/models/Note';
 import { parseRefLabel } from './parseRefLabel';
+import { ReQueue } from './ReQueue';
+import { cloneDeep } from 'lodash';
 
 @Injectable({
   providedIn: 'root',
@@ -24,6 +26,10 @@ export class DataService {
   public notes: NoteLDSSource[] | undefined;
   public allNotes: NoteLDSSource[] | undefined;
   public chapterDataAid: string | undefined;
+
+  public editMode = false;
+  public undoNotes: NoteLDSSource[][] = [];
+  public redoNotes: NoteLDSSource[][] = [];
   public constructor() {}
 
   public loadNotesDocument(file: string): void {
@@ -48,6 +54,51 @@ export class DataService {
       // this.loadNavigation();
     } catch (error) {
       console.log(error);
+    }
+  }
+
+  public editNotes(): void {
+    if (this.verses) {
+      const notes = this.verses.map(
+        (verse): NoteLDSSource => {
+          return verse.note;
+        },
+      );
+      this.undoNotes.push(cloneDeep(notes));
+      this.redoNotes = [];
+    }
+  }
+
+  public reQueueNotes(reQueue: ReQueue): void {
+    let changedNotes: NoteLDSSource[] | undefined;
+    if (this.verses) {
+      const notes = this.verses.map(
+        (verse): NoteLDSSource => {
+          return verse.note;
+        },
+      );
+      if (reQueue === ReQueue.UNDO && notes && this.undoNotes.length > 0) {
+        changedNotes = this.undoNotes.pop();
+        this.redoNotes.push(cloneDeep(notes));
+      } else if (
+        reQueue === ReQueue.REDO &&
+        notes &&
+        this.redoNotes.length > 0
+      ) {
+        changedNotes = this.redoNotes.pop();
+        this.undoNotes.push(cloneDeep(notes));
+      }
+
+      if (notes && changedNotes) {
+        for (let x = 0; x < notes.length; x++) {
+          const note = notes[x];
+          const cnote = changedNotes[x];
+
+          if (note && cnote) {
+            note.secondaryNotes = cnote.secondaryNotes;
+          }
+        }
+      }
     }
   }
 
