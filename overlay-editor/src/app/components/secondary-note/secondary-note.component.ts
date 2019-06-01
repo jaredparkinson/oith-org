@@ -49,8 +49,11 @@ export class SecondaryNoteComponent implements OnInit {
         console.log(e);
         console.log(g7.endOffset);
         console.log(this.secondaryNote.offsets);
-        s[1] = g7.startOffset === 0 ? s[1] : s[1] + g7.startOffset - 1;
+        s[1] = g7.startOffset === 0 ? s[1] : s[1] + g7.startOffset;
         e[1] = g7.endOffset === 0 ? e[1] : e[1] + g7.endOffset - 1;
+        // if (e[1] - s[1] === 1) {
+        //   s[1] = e[1];
+        // }
         this.secondaryNote.offsets = `${this.secondaryNote.offsets},${s[1]}-${
           e[1]
         }`;

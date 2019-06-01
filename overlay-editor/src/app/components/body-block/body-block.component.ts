@@ -6,7 +6,7 @@ import { DataService } from 'src/app/services/data.service';
 import { ReQueue } from 'src/app/services/ReQueue';
 import { SecondaryNoteLDSSource } from '../../../../../oith.notes/src/models/Note';
 import { getRanges } from './getRanges';
-
+import { sortBy } from 'lodash';
 @Component({
   selector: 'app-body-block',
   templateUrl: './body-block.component.html',
@@ -35,19 +35,41 @@ export class BodyBlockComponent implements OnInit {
         const notePhraseString = `<p class="note-phrase">${
           secondaryNote.notePhrase
         }</p>`;
-        const noteRefString = secondaryNote.noteRefs.map(
-          (noteRef): string => {
-            return `<p class="note-reference">${noteRef.noteRef}</p>`;
+        let noteRefString = '';
+        secondaryNote.noteRefs.map(
+          (noteRef): void => {
+            noteRefString = `${noteRefString}<p class="note-reference">${
+              noteRef.noteRef
+            }</p>`;
           },
         );
+        let ranges: string[] = [];
         if (secondaryNote.uncompressedOffsets) {
           console.log(secondaryNote.offsets);
 
-          console.log(getRanges(secondaryNote.uncompressedOffsets as number[]));
+          ranges = sortBy(
+            getRanges(secondaryNote.uncompressedOffsets).filter(
+              (r): boolean => {
+                return r[0] !== NaN;
+              },
+            ),
+            (r): number => {
+              return r[0];
+            },
+          ).map(
+            (r): string => {
+              if (r[0] === r[1]) {
+                return r[0].toString();
+              } else {
+                return `${r[0]}-${r[1]}`;
+              }
+            },
+          );
+          console.log(ranges);
         }
         const secondaryNoteToString = `<div class="${
           secondaryNote.classList
-        }" id="${secondaryNote.id}" offset="${secondaryNote.offsets}">
+        }" id="${secondaryNote.id}" offset="${ranges.length > 0 ? ranges : ''}">
 				${notePhraseString}
         ${noteRefString}</div>`;
         secondaryNoteStrings = `${secondaryNoteStrings}${secondaryNoteToString}`;
