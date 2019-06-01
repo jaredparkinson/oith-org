@@ -141,7 +141,7 @@ export class DataService {
         const secondaryNote = new SecondaryNoteLDSSource();
 
         secondaryNote.classList = Array.from(secondaryNoteElement.classList);
-        secondaryNote.id = secondaryNote.id;
+        secondaryNote.id = secondaryNoteElement.id;
         secondaryNote.notePhrase = this.getTextContent(
           secondaryNoteElement,
           '.note-phrase',

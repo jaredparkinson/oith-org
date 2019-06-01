@@ -1,6 +1,6 @@
 <div
   [class]="this.getClassList()"
-  id="this.secondaryNote._id"
+  id="{{this.secondaryNote.id}}"
   [attr.offset]="this.secondaryNote.offsets"
   *ngIf="!this.dataService.editMode"
 >
@@ -22,7 +22,7 @@
 </div>
 <div
   [class]="this.getClassList()"
-  id="this.secondaryNote._id"
+  id="{{this.secondaryNote.id}}"
   [attr.offset]="this.secondaryNote.offsets"
   *ngIf="this.dataService.editMode"
 >
