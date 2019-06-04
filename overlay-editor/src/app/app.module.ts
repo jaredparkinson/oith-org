@@ -33,7 +33,7 @@ import { FormatGroupComponent } from './components/format-group/format-group.com
     FormatGroupComponent,
   ],
   imports: [BrowserModule],
-  providers: [DataService],
+  providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })

@@ -3,7 +3,7 @@ import {
   SecondaryNoteLDSSource,
   NoteRegLds,
 } from '../../../../../oith.notes/src/models/Note';
-import { DataService } from 'src/app/services/data.service';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-secondary-note',

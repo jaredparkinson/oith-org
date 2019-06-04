@@ -11,6 +11,7 @@ import {
 import { parseRefLabel } from './parseRefLabel';
 import { ReQueue } from './ReQueue';
 import { cloneDeep } from 'lodash';
+import { getLanguage, getID } from '../../../../oith.shared';
 
 @Injectable({
   providedIn: 'root',
@@ -25,11 +26,12 @@ export class DataService {
   public verses: LDSSourceVerse[] | undefined;
   public notes: NoteLDSSource[] | undefined;
   public allNotes: NoteLDSSource[] | undefined;
-  public chapterDataAid: string | undefined;
+  // public chapterDataAid: string | undefined;
 
   public editMode = false;
   public undoNotes: NoteLDSSource[][] = [];
   public redoNotes: NoteLDSSource[][] = [];
+  public id: string;
   public constructor() {}
 
   public loadNotesDocument(file: string): void {
@@ -45,7 +47,7 @@ export class DataService {
           if (dataAid) {
             this.noteDataAids.set(dataAid, true);
           }
-          this.parseNotes(chapter, dataAid as string);
+          this.parseNotes(chapter, chapter.id);
         },
       );
 
@@ -131,11 +133,12 @@ export class DataService {
     noteElement: Element,
     dataAid: string,
   ): SecondaryNoteLDSSource[] {
-    return Array.from(
+    const asdf = Array.from(
       noteElement.querySelectorAll(
-        `div.chapter[data-aid="${dataAid}"] [id="${noteElement.id}"] > div`,
+        `div.chapter[id="${dataAid}"] [id="${noteElement.id}"] > div`,
       ),
-    ).map(
+    );
+    return asdf.map(
       (secondaryNoteElement): SecondaryNoteLDSSource => {
         // console.log(secondaryNoteElement);
         const secondaryNote = new SecondaryNoteLDSSource();
@@ -196,13 +199,17 @@ export class DataService {
       console.log('loaded Chapter File');
 
       const newDocument = domParser.parseFromString(file, 'text/html');
+      const language = await getLanguage(newDocument);
+      this.id = `${await getID(newDocument, language)}-chapter`;
+
+      console.log(`${this.id}-chapter`);
 
       this.chapterDocument = newDocument;
 
-      const chapterRoot = this.chapterDocument.querySelector('[data-aid]');
-      this.chapterDataAid = chapterRoot
-        ? this.getAttribute(chapterRoot, 'data-aid')
-        : undefined;
+      const chapterRoot = this.chapterDocument.querySelector(this.id);
+      // this.chapterDataAid = chapterRoot
+      //   ? this.getAttribute(chapterRoot, 'data-aid')
+      //   : undefined;
 
       const titleElemment = newDocument.querySelector('title');
       const title =
@@ -210,10 +217,10 @@ export class DataService {
           ? titleElemment.textContent
           : '';
 
-      if (!this.chapterDataAid) {
-        this.chapterDocument = undefined;
-        alert('asodifj');
-      }
+      // if (!chapterRoot) {
+      //   this.chapterDocument = undefined;
+      //   alert('asodifj');
+      // }
       try {
         const verses = (await run(
           newDocument,
@@ -223,18 +230,18 @@ export class DataService {
 
         if (this.notesDocument) {
           const chapterNotes = this.notesDocument.querySelector(
-            `div.chapter[data-aid="${this.chapterDataAid}"]`,
+            `div.chapter[id="${this.id}"]`,
           );
           if (chapterNotes && this.allNotes) {
             this.notes = this.allNotes.filter(
               (note): boolean => {
-                return note.chaterDataAid === this.chapterDataAid;
+                return note.chaterDataAid === this.id;
               },
             );
             this.addExistingNotesToVerses(
               this.verses,
               this.allNotes,
-              this.chapterDataAid as string,
+              this.id as string,
               title,
             );
             // console.log(this.notes);
@@ -261,11 +268,14 @@ export class DataService {
     verses.map(
       (verse): void => {
         if (verse.id.startsWith('p')) {
-          const id = verse.id.replace('p', 'note');
+          const id2 = `${chapterDataAid.replace(
+            'eng-chapter',
+            verse.id.replace('p', ''),
+          )}-eng-note`;
 
           const note = notes.find(
             (note): boolean => {
-              return note.chaterDataAid === chapterDataAid && note._id === id;
+              return note.chaterDataAid === chapterDataAid && note._id === id2;
             },
           );
           // console.log(note);

@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   }
   public async ngOnInit(): Promise<void> {
     try {
-      const noteFile = await axios.get('assets/eng-notes-mark.xml');
+      const noteFile = await axios.get('assets/eng-notes-nt.xml');
       const chapterFile = await axios.get('assets/1.html');
       this.dataService.loadNotesDocument(noteFile.data);
       this.dataService.loadChapterFile(chapterFile.data);

@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { NoteRef } from '../../../../../oith.shared';
 import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
 import { NoteRegLds } from '../../../../../oith.notes/src/models/Note';
 

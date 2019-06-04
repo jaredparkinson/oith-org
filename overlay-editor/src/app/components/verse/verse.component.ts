@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { LDSSourceVerse } from '../../../../../oith.format-tags/src/models/Verse';
 import { NoteLDSSource } from '../../../../../oith.notes/src/models/Note';
-import { parseOffset, parseOffsetNumbers } from 'src/app/services/parseOffset';
 import {
   FormatTagLDSSource,
   F,
 } from '../../../../../oith.format-tags/src/models/format_tags/F';
+import { parseOffsetNumbers, parseOffset } from '../../services/parseOffset';
 @Component({
   selector: 'app-verse',
   templateUrl: './verse.component.html',

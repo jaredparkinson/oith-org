@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/services/data.service';
-import { Navigation } from 'src/app/models/Navigation';
-import axios from 'axios';
+import { DataService } from '../../services/data.service';
+import { Navigation } from '../../models/Navigation';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -11,6 +10,4 @@ export class NavigationComponent implements OnInit {
   public constructor(public dataService: DataService) {}
 
   public ngOnInit(): void {}
-
-  public openChapter(nav: Navigation): void {}
 }

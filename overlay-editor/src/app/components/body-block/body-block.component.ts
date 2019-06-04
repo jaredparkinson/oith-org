@@ -2,11 +2,13 @@ import { saveAs } from 'file-saver';
 import { Component, OnInit, Input } from '@angular/core';
 import { Verse } from '../../../../../oith.shared';
 import { LDSSourceVerse } from '../../../../../oith.format-tags/src/models/Verse';
-import { DataService } from 'src/app/services/data.service';
-import { ReQueue } from 'src/app/services/ReQueue';
+// import { DataService } from 'src/app/services/data.service';
+// import { ReQueue } from 'src/app/services/ReQueue';
 import { SecondaryNoteLDSSource } from '../../../../../oith.notes/src/models/Note';
 import { getRanges } from './getRanges';
 import { sortBy } from 'lodash';
+import { DataService } from '../../services/data.service';
+import { ReQueue } from '../../services/ReQueue';
 @Component({
   selector: 'app-body-block',
   templateUrl: './body-block.component.html',

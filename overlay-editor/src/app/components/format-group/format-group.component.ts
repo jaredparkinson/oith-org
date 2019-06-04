@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormatGroup } from '../../../../../oith.format-tags/src/models/format_groups/FormatGroup';
 import { FormatTagLDSSource } from '../../../../../oith.format-tags/src/models/format_tags/F';
-import { parseOffset, parseOffsetNumbers } from 'src/app/services/parseOffset';
 import { NoteLDSSource } from '../../../../../oith.notes/src/models/Note';
 import { isEqual, last, first } from 'lodash';
 import { LDSSourceVerse } from '../../../../../oith.format-tags/src/models/Verse';
+import { parseOffsetNumbers } from '../../services/parseOffset';
 
 @Component({
   selector: 'app-format-group',
